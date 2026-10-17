@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "diagrad/dataset_record/v2",
+  "title": "DiaGrad dataset record (schema v2, D24; adapted from OpenGrad registry/dataset_record.schema.json @ 76645059)",
+  "description": "One JSON file per dataset in data/registry/, named <id>.json. Checked by src/diagrad/registry/validate.py (standard library; this file documents the contract, the validator enforces it). Fields not listed here are allowed and kept (scan statistics, notes).",
+  "type": "object",
+  "required": ["schema_version", "id", "display_name", "role", "lifecycle", "purpose", "languages",
+               "source_revision", "distribution", "license", "use_class", "text_origin", "redistribution",
+               "attribution", "sample_count", "contamination", "forbidden_uses", "decisions", "retrieved"],
+  "properties": {
+    "schema_version": {"const": 2},
+    "id": {"type": "string", "description": "Equals the file name without .json."},
+    "display_name": {"type": "string"},
+    "role": {"enum": ["UPSTREAM_SOURCE", "DERIVED_CORPUS"],
+             "description": "UPSTREAM_SOURCE: data DiaGrad did not create. DERIVED_CORPUS: what DiaGrad built; needs derived_from and processed_sha256."},
+    "lifecycle": {"enum": ["ACTIVE", "HISTORICAL", "EXCLUDED"],
+                  "description": "EXCLUDED records exist so an exclusion is explicit; they may not list a TRAIN_* purpose."},
+    "purpose": {"type": "array", "items": {"enum": ["TRAIN_PARALLEL", "TRAIN_MONOLINGUAL", "DEV", "GATE_TEST", "DIAGNOSTIC",
+                                                     "PROBE", "E1_EVALUATION", "LABELLING_SAMPLE", "MEASUREMENT_ONLY"]},
+                "description": "What the data may be used for. Held-out purposes (DEV, GATE_TEST, DIAGNOSTIC, E1_EVALUATION) never combine with TRAIN_*."},
+    "languages": {"type": "array", "items": {"type": "string"}},
+    "source_revision": {
+      "type": "object", "required": ["kind", "value", "verified", "source"],
+      "properties": {
+        "kind": {"enum": ["GIT_COMMIT", "HF_REVISION", "VERSIONED_URL", "SERVER_FILE"],
+                 "description": "GIT_COMMIT / HF_REVISION: full 40-hex id. VERSIONED_URL: the version is part of every content_url (e.g. OPUS .../v9/...). SERVER_FILE: an unversioned file; every distribution entry then needs its own sha256, which is the anchor."},
+        "value": {"type": "string"},
+        "verified": {"type": "boolean"},
+        "source": {"type": "string", "description": "Where the revision was read."}
+      }
+    },
+    "distribution": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "required": ["name", "content_url", "sha256", "bytes"],
+                "properties": {"name": {"type": "string"}, "content_url": {"type": "string"},
+                               "local_path": {"type": "string"}, "sha256": {"type": ["string", "null"]},
+                               "bytes": {"type": ["integer", "null"]}, "verified_from": {"type": "string"}}}
+    },
+    "license": {"type": "object", "required": ["spdx", "quote", "source"],
+                "properties": {"spdx": {"type": "string", "description": "SPDX id, LicenseRef-<name>, or NOASSERTION."},
+                               "quote": {"type": "string", "description": "Verbatim licence wording read at the pinned revision."},
+                               "source": {"type": "string"}}},
+    "use_class": {"enum": ["COMMERCIAL_OK", "COMMERCIAL_ATTRIBUTION", "SHARE_ALIKE", "RESEARCH_ONLY", "NOT_FOR_TRAINING"]},
+    "text_origin": {
+      "type": "object", "required": ["kind"],
+      "properties": {"kind": {"enum": ["HUMAN", "MINED", "MACHINE_TRANSLATED", "MIXED", "UNKNOWN"]},
+                     "generator_model": {"type": "string"},
+                     "generator_license": {"type": "string", "description": "Required when kind is MACHINE_TRANSLATED or MIXED."},
+                     "notes": {"type": "string"}}
+    },
+    "redistribution": {"type": "object", "required": ["status"],
+                       "properties": {"status": {"enum": ["REDISTRIBUTION_WITH_ATTRIBUTION", "SHARE_ALIKE", "PER_SOURCE",
+                                                          "NOT_ASSESSED", "NOT_PERMITTED"]},
+                                      "basis": {"type": "string", "description": "Required unless NOT_ASSESSED."}}},
+    "attribution": {"type": "object", "required": ["required"],
+                    "properties": {"required": {"type": "boolean"}, "text": {"type": "string"},
+                                   "citation_target": {"type": "string"}, "link_required": {"type": "string"}}},
+    "sample_count": {"type": "object", "required": ["published", "unit", "source"],
+                     "properties": {"published": {"type": ["integer", "null"]}, "unit": {"type": "string"},
+                                    "source": {"type": "string"}, "measured": {"type": ["integer", "null"]}}},
+    "contamination": {"type": "object", "required": ["status"],
+                      "properties": {"status": {"enum": ["NOT_CHECKED", "CHECKED_CLEAN", "CHECKED_FLAGGED", "IS_HELDOUT_OR_EVALUATION"]},
+                                     "report": {"type": "string"}}},
+    "forbidden_uses": {"type": "array", "items": {"type": "string"}},
+    "derived_from": {"type": "array", "items": {"type": "object", "required": ["id"],
+                                                 "properties": {"id": {"type": "string"}, "revision": {"type": "string"}, "sha256": {"type": "string"}}}},
+    "processed_sha256": {"type": "string"},
+    "decisions": {"type": "array", "items": {"type": "string", "pattern": "^D[0-9]+$"}},
+    "retrieved": {"type": "string"}
+  }
+}

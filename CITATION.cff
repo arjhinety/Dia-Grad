@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "DiaGrad: posterior routing for Critique-Augmented Mixture-of-Experts"
+type: software
+message: "Please cite DiaGrad using the repository URL until a paper exists."
+authors:
+  - given-names: Arjhine
+    family-names: Ty
+    affiliation: "Experimental Intelligence; SapinSapin AI"
+    email: arjhine@experimentalmachines.org
+repository-code: https://github.com/arjhinety/Dia-Grad
+license: Apache-2.0
+keywords:
+  - mixture-of-experts
+  - posterior routing
+  - machine translation
+  - Filipino
+  - Tagalog

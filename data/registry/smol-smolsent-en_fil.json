@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "id": "smol-smolsent-en_fil",
+  "display_name": "SMOL SmolSent, English-Filipino (google/smol, smolsent/en_fil)",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "GATE_TEST"
+  ],
+  "languages": [
+    "eng_Latn",
+    "fil_Latn"
+  ],
+  "source_revision": {
+    "kind": "HF_REVISION",
+    "value": "fdaff3a1a019f89fa30a562a85d7c1d3e9150444",
+    "verified": true,
+    "source": "Hugging Face API (google/smol), 2026-10-08"
+  },
+  "distribution": [
+    {
+      "name": "smolsent/en_fil.jsonl",
+      "content_url": "https://huggingface.co/datasets/google/smol/resolve/fdaff3a1a019f89fa30a562a85d7c1d3e9150444/smolsent/en_fil.jsonl",
+      "local_path": "~/data/raw/smol-en_fil/smolsent_en_fil.jsonl",
+      "sha256": "35301612ef891484e33b76a4d083f8261f843c3359f3c3aaa241f9491ba9eaa9",
+      "bytes": 201728,
+      "verified_from": "sha256 computed locally after download at the pinned revision"
+    },
+    {
+      "name": "smolsent/fil_en.jsonl",
+      "content_url": "https://huggingface.co/datasets/google/smol/resolve/fdaff3a1a019f89fa30a562a85d7c1d3e9150444/smolsent/fil_en.jsonl",
+      "local_path": "~/data/raw/smol-en_fil/smolsent_fil_en.jsonl",
+      "sha256": "a365c8959297df5df49e82db273977a45b45cb4a745b53c1329c0580cb4889af",
+      "bytes": 202482,
+      "verified_from": "sha256 computed locally after download at the pinned revision"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "quote": "This data is released under cc-by-4.0",
+    "source": "google/smol dataset card at the pinned revision"
+  },
+  "use_class": "COMMERCIAL_ATTRIBUTION",
+  "text_origin": {
+    "kind": "HUMAN",
+    "notes": "Professional translation vendors (card)."
+  },
+  "redistribution": {
+    "status": "REDISTRIBUTION_WITH_ATTRIBUTION",
+    "basis": "CC BY 4.0. As our gate test set it is never republished inside a DiaGrad training dataset (A5 3.2 step 12)."
+  },
+  "attribution": {
+    "required": true,
+    "text": "SMOL (Google), CC BY 4.0.",
+    "citation_target": "SMOL paper named on the google/smol card (arXiv 2502.12301 per the 2026-10-07 survey) [verify; not yet in references.bib]"
+  },
+  "sample_count": {
+    "published": 754,
+    "unit": "sentence pairs",
+    "source": "google/smol card table (SmolSent en_fil)",
+    "measured": 754
+  },
+  "contamination": {
+    "status": "IS_HELDOUT_OR_EVALUATION",
+    "report": "data/heldout/contamination-nllb-2026-10-08.json (15/754 flagged vs NLLB; gate uses the clean subset, D20)"
+  },
+  "forbidden_uses": [
+    "TRAIN_PARALLEL",
+    "TRAIN_MONOLINGUAL",
+    "PUBLISH_IN_TRAINING_DATASET",
+    "MODEL_SELECTION"
+  ],
+  "decisions": [
+    "D19",
+    "D20"
+  ],
+  "retrieved": "2026-10-08",
+  "name": "SMOL SmolSent, English-Filipino (google/smol, smolsent/en_fil)",
+  "source": "https://huggingface.co/datasets/google/smol/resolve/fdaff3a1a019f89fa30a562a85d7c1d3e9150444/smolsent/en_fil.jsonl",
+  "dataset": "google/smol",
+  "revision": "fdaff3a1a019f89fa30a562a85d7c1d3e9150444",
+  "raw_files": {
+    "~/data/raw/smol-en_fil/smolsent_en_fil.jsonl": "35301612ef891484e33b76a4d083f8261f843c3359f3c3aaa241f9491ba9eaa9",
+    "~/data/raw/smol-en_fil/smolsent_fil_en.jsonl": "a365c8959297df5df49e82db273977a45b45cb4a745b53c1329c0580cb4889af"
+  },
+  "rows": 754,
+  "derived": {
+    "file": "~/data/t1/heldout/test_smol.jsonl",
+    "sha256": "6bdf3e7b6a05c86d773fbc6181f179320b449344f308b363c93bc49394464888",
+    "pairs": 754,
+    "built_by": "data/heldout/build_heldout.py",
+    "manifest": "data/heldout/manifest.json"
+  },
+  "notes": [
+    "smolsent/en_fil and smolsent/fil_en contain the same 754 pairs reversed (same ids, same text).",
+    "Professional translation; Filipino side written for SMOL (released 2025), so it postdates MADLAD-400 [inference].",
+    "Exact-match check vs all 63,581,148 NLLB en-tl lines: 0 of 754 found on either side (2026-10-08).",
+    "Mean 14.2 English / 16.1 Filipino words; po/opo in 1 pair; non-initial 'ay' in 21.",
+    "A5 section-3 n-gram check (task C1) still to run before the set is frozen."
+  ],
+  "used_by": [
+    "tranche-1 gate (prereg 7a)"
+  ]
+}

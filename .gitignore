@@ -1,0 +1,31 @@
+# Paper files: local copies only. Many licenses (e.g. arXiv non-exclusive) don't permit redistribution.
+# Integrity is tracked by sha256 in research/papers/registry.json.
+research/papers/pdf/
+research/papers/md/
+research/papers/txt/
+research/papers/.build.log
+__pycache__/
+*.pyc
+
+# Experiment artifacts (checkpoints, large outputs): hashes are recorded in each RUN.md
+experiments/runs/*/artifacts/
+
+# LaTeX build by-products (the .bib copy is regenerated from research/papers/references.bib)
+pitch/*/build.out
+pitch/*/main.log
+pitch/roadmap/roadmap.log
+pitch/brief/brief.log
+pitch/*/main.xdv
+pitch/*/references.bib
+pitch/*/main.blg
+
+# hyperresearch (2026-10-17): the local vault and the installed step skills are regenerable
+# (`hyperresearch init`, `hyperresearch install --steps-only`). Fetched source notes and raw pages hold
+# full text of web pages and papers (licences, as for research/papers/pdf); only our own reports and
+# run artifacts are committed.
+.hyperresearch/
+.claude/skills/hyperresearch-*/
+research/raw/
+research/notes/*.md
+!research/notes/final_report_*.md
+research/runs/*/temp/hplt-html/

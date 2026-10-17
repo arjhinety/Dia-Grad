@@ -1,0 +1,105 @@
+{
+  "schema_version": 2,
+  "id": "massive-1.1-tl-PH",
+  "display_name": "MASSIVE 1.1, tl-PH aligned to en-US by id",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "DEV",
+    "DIAGNOSTIC"
+  ],
+  "languages": [
+    "eng_Latn",
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "VERSIONED_URL",
+    "value": "1.1",
+    "verified": true,
+    "source": "archive file name and AmazonScience/massive loader rev ff6bd8e4b27c3543e4f8fe2108f32bb95a6f8740"
+  },
+  "distribution": [
+    {
+      "name": "amazon-massive-dataset-1.1.tar.gz",
+      "content_url": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",
+      "local_path": "~/data/raw/massive-1.1/amazon-massive-dataset-1.1.tar.gz",
+      "sha256": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577",
+      "bytes": 40251390,
+      "verified_from": "sha256 computed locally"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-4.0",
+    "quote": "cc-by-4.0",
+    "source": "Hugging Face API cardData.license for AmazonScience/massive; LICENSE file in the archive"
+  },
+  "use_class": "COMMERCIAL_ATTRIBUTION",
+  "text_origin": {
+    "kind": "HUMAN",
+    "notes": "Localised (not translated) by crowd workers; entities swapped."
+  },
+  "redistribution": {
+    "status": "REDISTRIBUTION_WITH_ATTRIBUTION",
+    "basis": "CC BY 4.0. Dev/diagnostic set: never republished inside a DiaGrad training dataset."
+  },
+  "attribution": {
+    "required": true,
+    "text": "MASSIVE (Amazon), CC BY 4.0.",
+    "citation_target": "MASSIVE paper named on the AmazonScience/massive card [verify; not yet in references.bib]"
+  },
+  "sample_count": {
+    "published": 16521,
+    "unit": "tl-PH utterances (all splits)",
+    "source": "AmazonScience/massive card table",
+    "measured": 16521
+  },
+  "contamination": {
+    "status": "IS_HELDOUT_OR_EVALUATION",
+    "report": "data/heldout/contamination-nllb-2026-10-08.json"
+  },
+  "forbidden_uses": [
+    "TRAIN_PARALLEL",
+    "TRAIN_MONOLINGUAL",
+    "PUBLISH_IN_TRAINING_DATASET"
+  ],
+  "decisions": [
+    "D19",
+    "D20"
+  ],
+  "retrieved": "2026-10-08",
+  "name": "MASSIVE 1.1, tl-PH aligned to en-US by id",
+  "source": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",
+  "dataset": "AmazonScience/massive (loader rev ff6bd8e4b27c3543e4f8fe2108f32bb95a6f8740 points to the source URL)",
+  "raw_files": {
+    "~/data/raw/massive-1.1/amazon-massive-dataset-1.1.tar.gz": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577"
+  },
+  "rows": {
+    "tl-PH train": 11514,
+    "tl-PH dev": 2033,
+    "tl-PH test": 2974
+  },
+  "derived": {
+    "dev_massive": {
+      "file": "~/data/t1/heldout/dev_massive.jsonl",
+      "sha256": "7f2597ba32630c611b4325e0218dfe4568b6be1f1430b41c343183775714711a",
+      "pairs": 1963,
+      "removed_found_in_nllb": 70
+    },
+    "diag_massive_test": {
+      "file": "~/data/t1/heldout/diag_massive_test.jsonl",
+      "sha256": "2623200dcd623ceb5a643c2bd72551ae300c4832e100610455fd01509b241b96",
+      "pairs": 2862,
+      "removed_found_in_nllb": 112
+    }
+  },
+  "notes": [
+    "Localised, not translated: entities are swapped (e.g. 'California' -> 'Pangasinan'); some lines are loose. Not suitable as a gate test set (D19).",
+    "Short voice-assistant commands: mean 6.8 English / 7.8 Filipino words (test split).",
+    "Pairs whose normalised English or Filipino side appears in NLLB en-tl were removed from the derived files (stock phrases such as 'how about you').",
+    "Card: worker ids from MTurk."
+  ],
+  "used_by": [
+    "tranche-1 dev curves",
+    "diagnostic reports"
+  ]
+}

@@ -1,0 +1,10 @@
+# Direct dependencies for tranche-1 code. torch comes from the NGC base image and must not be replaced.
+transformers
+datasets
+sentencepiece
+protobuf
+accelerate
+sacrebleu
+scikit-learn
+pyyaml
+pytest

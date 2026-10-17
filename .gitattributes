@@ -1,0 +1,6 @@
+# Data files must stay byte-identical so their sha256 matches data/registry and research/papers records.
+*.jsonl -text
+studies/**/data/** -text
+data/** -text
+research/papers/*.json -text
+research/papers/*.jsonl -text

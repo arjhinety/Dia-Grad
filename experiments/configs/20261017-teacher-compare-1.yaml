@@ -1,0 +1,48 @@
+# Run 20261017-teacher-compare-1 (exploratory; D25, D26). Run record: experiments/runs/20261017-teacher-compare-1/RUN.md
+run_id: 20261017-teacher-compare-1
+seed: 20261017
+
+data:
+  path: /data/t1/heldout/dev_massive.jsonl     # inside the container (~/data mounted at /data)
+  registry_id: massive-1.1-tl-PH
+  sha256_prefix: 7f2597ba                      # checked before sampling
+  n: 1000
+  directions: [en-fil, fil-en]
+
+out_dir: /repo/experiments/runs/20261017-teacher-compare-1/artifacts
+
+decoding:
+  seq2seq: {num_beams: 4, max_new_tokens: 256, batch_size: 32}
+  causal:  {do_sample: false, max_new_tokens: 256, batch_size: 16, enable_thinking: false}
+
+# One fixed prompt for the chat models, written before any output was seen.
+prompt:
+  en-fil: "Translate the following English text into Filipino (Tagalog). Reply with the translation only.\n\n{src}"
+  fil-en: "Translate the following Filipino (Tagalog) text into English. Reply with the translation only.\n\n{src}"
+
+models:
+  - {name: madlad-3b,  repo: google/madlad400-3b-mt,  revision: fa184c675da0b5c9e1c8694fccd4e12e2d422094, kind: madlad, use: candidate}
+  - {name: madlad-7b,  repo: google/madlad400-7b-mt,  revision: 1ff63ce7ddd571a69d45cad9672c553428419671, kind: madlad, use: candidate}
+  - {name: madlad-10b, repo: google/madlad400-10b-mt, revision: 9f2797629c31e69617186dbe5f0ca43bf662f36d, kind: madlad, use: candidate}
+  - {name: qwen3-14b,  repo: Qwen/Qwen3-14B,          revision: 40c069824f4251a91eefaf281ebe4c544efd3e18, kind: causal, use: candidate}
+  - {name: qwen3-32b,  repo: Qwen/Qwen3-32B,          revision: 9216db5781bf21249d130ec9da846c4624c16137, kind: causal, use: candidate, loader: by_shard}  # added 2026-10-17 after an OOM; weights identical (RUN.md)
+  # U6 only (D25): outputs are compared, never kept as training data.
+  - {name: nllb-3.3b,  repo: facebook/nllb-200-3.3B,  revision: 1a07f7d195896b2114afcb79b7b57ab512e7b43e, kind: nllb, use: U6-evaluation-only}
+
+lang_codes:
+  madlad: {en: "<2en>", fil: "<2fil>"}
+  nllb:   {en: eng_Latn, fil: tgl_Latn}
+
+metrics:
+  chrf_word_order: 2            # chrF++
+  bootstrap_resamples: 10000
+  reference_model: nllb-3.3b    # paired gap: reference minus each candidate
+
+# D26 decision rule: NLLB ahead of the BEST candidate by > 5 chrF++ in BOTH directions, with the 95%
+# paired-bootstrap interval of the gap above 0  =>  bring a research-only deviation back as a new decision.
+decision_rule: {gap_chrf: 5.0, ci: 0.95}
+
+naturalness:
+  judge: codex gpt-6.1-sol      # D26; advisory, blind to model names
+  per_model_per_direction: 50
+  hidden_repeats: 15             # per direction, out of 300 items

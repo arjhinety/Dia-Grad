@@ -1,0 +1,10 @@
+name: Filipino-language finding
+description: A grammar, orthography, naturalness or labelling point about Filipino or another Philippine language
+body:
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: What is wrong or missing, with an example you wrote yourself (do not paste held-out evaluation sentences).
+    validations:
+      required: true

@@ -1,0 +1,885 @@
+{
+ "_about": "Screening decisions for search hits (research/search/log.jsonl). Screened on 2026-09-24 from titles (exclusions) and abstracts (inclusions); not yet reviewed. Papers not listed here are 'title-screened': seen, not yet assessed.",
+ "decisions": {
+  "1603.08983": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "1701.06538": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "1707.06347": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "1806.06259": {
+   "status": "excluded",
+   "reason": "embedding probing benchmark (old)"
+  },
+  "1909.00142": {
+   "status": "excluded",
+   "reason": "discourse benchmarks"
+  },
+  "1911.02116": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2005.14165": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2007.02798": {
+   "status": "excluded",
+   "reason": "generic generative method, not text"
+  },
+  "2010.06354": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2010.11934": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2101.03961": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2104.14478": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2106.03193": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2106.13638": {
+   "status": "excluded",
+   "reason": "off-topic (power systems)"
+  },
+  "2202.05148": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2204.04636": {
+   "status": "excluded",
+   "reason": "adversarial detection"
+  },
+  "2205.00978": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2207.04672": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2207.05221": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2303.07109": {
+   "status": "excluded",
+   "reason": "off-topic (world models for RL)"
+  },
+  "2306.03856": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2308.07286": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2308.11466": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2308.16884": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2309.04662": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2309.09400": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2309.09546": {
+   "status": "excluded",
+   "reason": "speech early-exit (per-frame), not text"
+  },
+  "2310.05703": {
+   "status": "excluded",
+   "reason": "attribution for Siamese encoders"
+  },
+  "2310.06816": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2310.10482": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2310.13988": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2311.08362": {
+   "status": "excluded",
+   "reason": "off-topic (in-context regression theory)"
+  },
+  "2311.08692": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2311.09828": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2312.02780": {
+   "status": "excluded",
+   "reason": "adversarial attacks"
+  },
+  "2401.06066": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2402.03300": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2402.18191": {
+   "status": "excluded",
+   "reason": "instruction data selection"
+  },
+  "2403.13807": {
+   "status": "excluded",
+   "reason": "text-to-image editing"
+  },
+  "2405.05254": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2405.07288": {
+   "status": "excluded",
+   "reason": "text-to-image unlearning"
+  },
+  "2405.15198": {
+   "status": "excluded",
+   "reason": "retrieval early-exit, not critique"
+  },
+  "2406.03136": {
+   "status": "excluded",
+   "reason": "off-topic (LoRA theory)"
+  },
+  "2406.03893": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2406.10118": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2406.11580": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2407.21530": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2409.15380": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2410.01265": {
+   "status": "excluded",
+   "reason": "off-topic (econometrics in-context)"
+  },
+  "2410.16699": {
+   "status": "excluded",
+   "reason": "off-topic (graph transformers, electric flow)"
+  },
+  "2411.03923": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2412.02542": {
+   "status": "excluded",
+   "reason": "text-to-image concept attribution"
+  },
+  "2412.06769": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2412.08117": {
+   "status": "excluded",
+   "reason": "speech synthesis"
+  },
+  "2412.08821": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2412.13053": {
+   "status": "excluded",
+   "reason": "off-topic (continuous-control RL)"
+  },
+  "2412.19437": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2501.18771": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2502.00745": {
+   "status": "excluded",
+   "reason": "vision early-exit"
+  },
+  "2502.03444": {
+   "status": "excluded",
+   "reason": "image tokenizers"
+  },
+  "2502.04314": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2502.05171": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2502.08561": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2502.12404": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2502.14301": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2502.14911": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2502.17416": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2502.19279": {
+   "status": "excluded",
+   "reason": "data-quality criteria, not MoE"
+  },
+  "2503.10267": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2505.03188": {
+   "status": "excluded",
+   "reason": "off-topic (solar forecasting)"
+  },
+  "2505.20428": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2505.23836": {
+   "status": "excluded",
+   "reason": "evaluation awareness, not error detection"
+  },
+  "2506.01241": {
+   "status": "excluded",
+   "reason": "benchmark, not architecture"
+  },
+  "2506.04557": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2506.08403": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2506.09644": {
+   "status": "excluded",
+   "reason": "image autoencoders"
+  },
+  "2506.18035": {
+   "status": "excluded",
+   "reason": "speech early-exit"
+  },
+  "2506.20920": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2507.02092": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2508.03523": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2508.20511": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2509.19702": {
+   "status": "excluded",
+   "reason": "off-topic (numerical algorithms)"
+  },
+  "2509.21823": {
+   "status": "excluded",
+   "reason": "GUI-agent reward system, not MoE"
+  },
+  "2509.23886": {
+   "status": "excluded",
+   "reason": "subliminal learning"
+  },
+  "2510.04347": {
+   "status": "excluded",
+   "reason": "backdoor defense"
+  },
+  "2510.07358": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2510.11052": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2510.11370": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2510.18941": {
+   "status": "excluded",
+   "reason": "benchmark"
+  },
+  "2511.11562": {
+   "status": "excluded",
+   "reason": "benchmark"
+  },
+  "2512.08123": {
+   "status": "excluded",
+   "reason": "adversarial suffixes"
+  },
+  "2512.17776": {
+   "status": "excluded",
+   "reason": "benchmark"
+  },
+  "2512.20578": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2601.07372": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2601.16208": {
+   "status": "excluded",
+   "reason": "text-to-image"
+  },
+  "2602.01897": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2602.11047": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2602.11590": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2602.17038": {
+   "status": "excluded",
+   "reason": "agentic RL MoE, not routing by critique"
+  },
+  "2603.08391": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2603.16309": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2603.16331": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2603.16606": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2603.25222": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2603.29239": {
+   "status": "excluded",
+   "reason": "image diffusion"
+  },
+  "2604.00477": {
+   "status": "excluded",
+   "reason": "agent evaluation measurement"
+  },
+  "2604.02368": {
+   "status": "excluded",
+   "reason": "benchmark"
+  },
+  "2604.12493": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2604.15163": {
+   "status": "excluded",
+   "reason": "text-to-SQL selection"
+  },
+  "2604.17393": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2605.06548": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2605.18324": {
+   "status": "excluded",
+   "reason": "image autoencoders"
+  },
+  "2605.19908": {
+   "status": "excluded",
+   "reason": "authorship attribution"
+  },
+  "2606.12689": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2606.19348": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2607.01208": {
+   "status": "excluded",
+   "reason": "bias detection"
+  },
+  "2607.05147": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2607.20519": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2607.28319": {
+   "status": "excluded",
+   "reason": "fairness pruning"
+  },
+  "2608.09766": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2609.04173": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2609.19969": {
+   "status": "included",
+   "reason": "in seed.json"
+  },
+  "2312.10193": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (S103): per-token learner gating under user budgets; no per-action cost heterogeneity or RL cost penalty, not cited"
+  },
+  "2602.08864": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (S103): token-level halting analysis; no per-stage cost penalty, not cited"
+  },
+  "2502.12701": {
+   "status": "candidate",
+   "reason": "screened 2026-10-07 (S107): MT cascade deferral by QE compared with random selection at the same deferral budget, plus human evaluation; precedent for D14's random-redo-at-matched-rate test (B5). Not in seed.json; add before citing"
+  },
+  "2605.13368": {
+   "status": "candidate",
+   "reason": "screened 2026-10-07 (S107): always-refine MT mainly improves fluency, little adequacy (MQM + human); relevant to how strong B4 may be at the target stage. Not in seed.json; add before citing"
+  },
+  "2602.08948": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (S107): confidence-guided refinement controller for LLM reasoning; no matched-rate random baseline found in abstract"
+  },
+  "1910.10073": {
+   "status": "excluded",
+   "reason": "title-screened 2026-10-07 (S109): depth-adaptive MT decoder (2019); abstract not read; popescu2026adaptive already covers the fixed-depth comparison"
+  },
+  "2305.15425": {
+   "status": "included",
+   "reason": "in seed.json (petrov2023language); S117-S118 2026-10-07: tokenization length disparity across languages, basis for D14 per-language compute matching"
+  },
+  "2305.13707": {
+   "status": "candidate",
+   "reason": "title-screened 2026-10-07 (S117): tokenization cost across languages for commercial LMs; abstract not read; candidate if a second source is needed"
+  },
+  "2510.21909": {
+   "status": "candidate",
+   "reason": "title-screened 2026-10-07 (S117): crosslingual tokenizer inequities; abstract not read; candidate"
+  },
+  "2103.12028": {
+   "status": "candidate",
+   "reason": "screened 2026-10-07 (data survey), S125: audits CCAligned en-tl_XX at 13% correct of 100 sampled pairs (Table 11); cited in research/data-survey/en-fil-parallel-2026-10-07.md; recommend adding to seed.json before citing in the paper"
+  },
+  "2502.19074": {
+   "status": "candidate",
+   "reason": "screened 2026-10-07 (data survey), S125: debiasing heuristics for web-mined low-resource bitext; title only, relevant to filtering NLLB/CCMatrix en-tl; abstract not read"
+  },
+  "2203.08111": {
+   "status": "candidate",
+   "reason": "screened 2026-10-07 (data survey), S125: corpus quality vs. size for low-resource languages; title only; abstract not read"
+  },
+  "1907.05791": {
+   "status": "candidate",
+   "reason": "screened 2026-10-07 (data survey), S125: WikiMatrix source paper (LASER-mined from Wikipedia); cite if WikiMatrix is used"
+  },
+  "2007.03541": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S124: English-Thai corpus, not Filipino"
+  },
+  "2009.09359": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S124: Bengali-English, not Filipino"
+  },
+  "2007.07691": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S124: Indian languages, not Filipino"
+  },
+  "2301.02773": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S124: Luganda-English, not Filipino"
+  },
+  "2103.15625": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S124: English-Twi, not Filipino"
+  },
+  "2511.00486": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S124: Bhili-Hindi-English, not Filipino"
+  },
+  "2207.04452": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S126: extreme classification, off-topic"
+  },
+  "2603.24917": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S126: extraction risk in LMs, off-topic for bitext mining"
+  },
+  "2203.13920": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S126: canary extraction in NLU, off-topic"
+  },
+  "2210.11773": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S126: dense retrieval negatives, off-topic"
+  },
+  "2406.12150": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S126: attribution benchmark, off-topic"
+  },
+  "2402.14029": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S126: lottery tickets, off-topic"
+  },
+  "2203.05437": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S127: Indic NLG datasets, not Filipino"
+  },
+  "2604.18423": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S127: Indian NLP survey, not Filipino"
+  },
+  "2404.06976": {
+   "status": "excluded",
+   "reason": "screened 2026-10-07 (data survey), S127: Portuguese IR dataset, off-topic"
+  },
+  "2311.07171": {
+   "status": "candidate",
+   "reason": "screened 2026-10-07 (data survey), S127: calamanCy Tagalog toolkit; possibly useful for the rule-based ay-inversion detector (tranche-1 probes); title only"
+  },
+  "1808.09381": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S128: back-translation at scale; sampling vs beam, 80K low-resource setting reverses the finding; read in full via pwc"
+  },
+  "1606.07947": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S130: sequence-level knowledge distillation (origin of training a student on teacher translations); read via pwc"
+  },
+  "2004.09813": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S133/S134: multilingual knowledge distillation of sentence embeddings (MSE to teacher); Tagalog Tatoeba 86.2/84.0 from 36k pairs; read via pwc"
+  },
+  "2205.12654": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S133: LASER3 teacher-student encoders for low-resource languages, mined bitext gains; read via pwc"
+  },
+  "2505.14423": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S131: GPT-4o forward-translated Europarl into 7 low-resource languages, pivoting to 147 pairs, human eval of synthetic data; read via pwc"
+  },
+  "2408.06537": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S140: NewsPaLM, LLM-generated MBR/QE parallel data beats 300x larger web-crawled data (en-de); read via pwc"
+  },
+  "2508.08680": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S131: TopXGen, LLM-generated target text back-translated with NLLB-200-3.3B; example of NLLB outputs used as training data; read via pwc"
+  },
+  "2402.06619": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S144: Aya Collection translated with NLLB-3.3B and released Apache-2.0; key example for the NLLB-output licence question; read via pwc"
+  },
+  "2604.11290": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S148/S151: Polyglot Teachers, choosing LLM teachers for multilingual synthetic data, includes a Tagalog case study; read via pwc"
+  },
+  "2603.25489": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S129/S150: augmentation direction should follow the resource gradient (back-translate the low-resource side); fine-tuned NLLB released CC-BY-NC; read via pwc"
+  },
+  "2502.12301": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S138: SMOL, professional translation plus post-edited Gemini drafts (Indonesian, ~70% changed); our gate test set (D19); read via pwc"
+  },
+  "2402.01939": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S131/S150: morphology-aware dictionary-based augmentation from seed bitext plus lexicon; read via pwc"
+  },
+  "2305.16724": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S137: GLOSS code-switched text synthesis on top of a pretrained MT model; candidate for Taglish augmentation; abstract"
+  },
+  "2110.01811": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S142: pre-training and (tagged) back-translation are complementary; relevant because our space starts from pretrained MADLAD; abstract"
+  },
+  "2305.14124": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S128: BT helps only when monolingual, parallel and test domains match; brittle at small scale; abstract"
+  },
+  "2004.03672": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S128/S129: data selection and weighting for iterative back-translation; abstract"
+  },
+  "1911.04944": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S135: CCMatrix margin-based mining at web scale (method for our own mining); abstract"
+  },
+  "2401.12413": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S132: tiny multi-parallel data unlocks zero-shot directions; relevant to pivot route; abstract"
+  },
+  "2205.04651": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S132/S148: synthetic paraphrase corpora from MT samples; possible paraphrase/hard-negative source; abstract"
+  },
+  "2401.00368": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S148: LLM-generated synthetic data for text-embedding training; title only, not read"
+  },
+  "2306.12907": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S135: xSIM++ proxy for bitext-mining quality in low-resource languages; possible evaluation tool; title only"
+  },
+  "2007.01852": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S134: LaBSE (Apache-2.0 per HF card) as a permissive miner/filter; title only here"
+  },
+  "1812.10464": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S133: LASER (original), background for mining; title only"
+  },
+  "2511.18411": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S138: ensemble QE-filtered translation at scale (Arabic); example of U2 filtering of synthetic data; abstract"
+  },
+  "2502.19941": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S139: distribution shift in synthetic QE data; title only"
+  },
+  "2209.07351": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S139: round-trip translation for MT evaluation; relevant to round-trip filtering; title only"
+  },
+  "2410.14815": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S151: translation-based synthetic pretraining corpus (Hindi); abstract"
+  },
+  "2502.08468": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S148: high-quality synthetic data for multilingual embeddings (mmE5); title only"
+  },
+  "2207.12759": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S148: sentence encoders from automatically mined paraphrases; title only"
+  },
+  "2302.08387": {
+   "status": "candidate",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), S133: LEALLA, distilled lightweight language-agnostic sentence embeddings; title only"
+  },
+  "1707.07250": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "1906.01815": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2407.11351": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2505.13777": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2306.05426": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2501.12352": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2503.18371": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2506.03164": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2411.18447": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2106.15078": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2504.01908": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2101.05716": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "1809.02922": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2109.02846": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2404.06996": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2512.13884": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2601.03136": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2603.16601": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2603.29221": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2305.13989": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2208.06957": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2010.05549": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2107.01573": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2310.07423": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2112.06223": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2502.18913": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "1912.00582": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2504.02768": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2406.19892": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2005.02324": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2305.11527": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "1710.02095": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "1711.02281": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2605.01374": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2604.07466": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2511.02833": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2310.03188": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2412.14964": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  },
+  "2504.06036": {
+   "status": "excluded",
+   "reason": "screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering"
+  }
+ }
+}

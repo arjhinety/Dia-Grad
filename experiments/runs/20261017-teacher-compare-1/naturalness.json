@@ -1,0 +1,105 @@
+{
+ "judge": "codex gpt-6.1-sol, blind (model names in key files only), rubric RUBRIC in src/diagrad/t1/teacher_compare.py",
+ "scale": "0-2",
+ "per_model_per_direction": 50,
+ "results": {
+  "en-fil": {
+   "madlad-3b": {
+    "naturalness_mean": 1,
+    "naturalness_0": 12,
+    "meaning_mean": 1.5,
+    "meaning_0": 9,
+    "n": 50
+   },
+   "madlad-7b": {
+    "naturalness_mean": 1.14,
+    "naturalness_0": 10,
+    "meaning_mean": 1.38,
+    "meaning_0": 11,
+    "n": 50
+   },
+   "madlad-10b": {
+    "naturalness_mean": 1.14,
+    "naturalness_0": 10,
+    "meaning_mean": 1.46,
+    "meaning_0": 9,
+    "n": 50
+   },
+   "qwen3-14b": {
+    "naturalness_mean": 1.6,
+    "naturalness_0": 1,
+    "meaning_mean": 1.28,
+    "meaning_0": 16,
+    "n": 50
+   },
+   "qwen3-32b": {
+    "naturalness_mean": 1.62,
+    "naturalness_0": 1,
+    "meaning_mean": 1.42,
+    "meaning_0": 9,
+    "n": 50
+   },
+   "nllb-3.3b": {
+    "naturalness_mean": 1.58,
+    "naturalness_0": 3,
+    "meaning_mean": 1.56,
+    "meaning_0": 6,
+    "n": 50
+   },
+   "_hidden_repeats": {
+    "n": 15,
+    "naturalness_same": 15,
+    "meaning_same": 15
+   }
+  },
+  "fil-en": {
+   "madlad-3b": {
+    "naturalness_mean": 1.62,
+    "naturalness_0": 2,
+    "meaning_mean": 1.62,
+    "meaning_0": 6,
+    "n": 50
+   },
+   "madlad-7b": {
+    "naturalness_mean": 1.64,
+    "naturalness_0": 4,
+    "meaning_mean": 1.74,
+    "meaning_0": 4,
+    "n": 50
+   },
+   "madlad-10b": {
+    "naturalness_mean": 1.6,
+    "naturalness_0": 4,
+    "meaning_mean": 1.62,
+    "meaning_0": 7,
+    "n": 50
+   },
+   "qwen3-14b": {
+    "naturalness_mean": 1.7,
+    "naturalness_0": 0,
+    "meaning_mean": 1.68,
+    "meaning_0": 6,
+    "n": 50
+   },
+   "qwen3-32b": {
+    "naturalness_mean": 1.7,
+    "naturalness_0": 0,
+    "meaning_mean": 1.62,
+    "meaning_0": 6,
+    "n": 50
+   },
+   "nllb-3.3b": {
+    "naturalness_mean": 1.7,
+    "naturalness_0": 0,
+    "meaning_mean": 1.6,
+    "meaning_0": 5,
+    "n": 50
+   },
+   "_hidden_repeats": {
+    "n": 15,
+    "naturalness_same": 15,
+    "meaning_same": 15
+   }
+  }
+ }
+}

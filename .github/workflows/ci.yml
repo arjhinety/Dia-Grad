@@ -1,0 +1,20 @@
+name: checks
+on:
+  push:
+  pull_request:
+# The workflow reads the repository and nothing else.
+permissions:
+  contents: read
+jobs:
+  cpu-checks:
+    runs-on: ubuntu-24.04
+    steps:
+      # Pinned to a commit, not a movable tag (tag noted beside it); same pin as OpenGrad.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      # The runner's system Python; a venv because Ubuntu 24.04 blocks system-wide pip installs.
+      - run: python3 -m venv .venv
+      - run: .venv/bin/pip install pytest numpy pyyaml sacrebleu==2.6.0
+      # tests/test_t1.py needs torch, transformers and the pinned tokenizers: it runs in the GB10 container.
+      - run: PYTHONPATH=src .venv/bin/pytest -q --ignore=tests/test_t1.py
+      - run: PYTHONPATH=src .venv/bin/python -m diagrad.registry.validate
+      - run: .venv/bin/python scripts/check_publication_hygiene.py

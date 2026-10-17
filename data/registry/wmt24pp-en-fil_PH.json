@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "id": "wmt24pp-en-fil_PH",
+  "display_name": "WMT24++ English->Filipino (en-fil_PH)",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "E1_EVALUATION"
+  ],
+  "languages": [
+    "eng_Latn",
+    "fil_Latn"
+  ],
+  "source_revision": {
+    "kind": "HF_REVISION",
+    "value": "fd7405c06494bc66a57b25f55d217a72f96e60dc",
+    "verified": true,
+    "source": "Hugging Face API (google/wmt24pp), 2026-09-24"
+  },
+  "distribution": [
+    {
+      "name": "en-fil_PH.jsonl",
+      "content_url": "https://huggingface.co/datasets/google/wmt24pp/resolve/fd7405c06494bc66a57b25f55d217a72f96e60dc/en-fil_PH.jsonl",
+      "local_path": "studies/E1-error-study/data/source/wmt24pp-en-fil_PH.jsonl",
+      "sha256": "357a443df049a898b79e026f29a2a582f9f95c3ff68c173fc563deeeb9f2797e",
+      "bytes": 808766,
+      "verified_from": "sha256 computed locally; file committed in the repo"
+    }
+  ],
+  "license": {
+    "spdx": "Apache-2.0",
+    "quote": "apache-2.0",
+    "source": "google/wmt24pp dataset card metadata at the pinned revision"
+  },
+  "use_class": "NOT_FOR_TRAINING",
+  "text_origin": {
+    "kind": "HUMAN",
+    "notes": "Professional references and post-edits (paper 2.1)."
+  },
+  "redistribution": {
+    "status": "REDISTRIBUTION_WITH_ATTRIBUTION",
+    "basis": "Apache-2.0. Evaluation data: never republished inside a DiaGrad training dataset."
+  },
+  "attribution": {
+    "required": true,
+    "text": "WMT24++ (Google), Apache-2.0.",
+    "citation_target": "arXiv 2502.12404"
+  },
+  "sample_count": {
+    "published": 998,
+    "unit": "paragraph segments",
+    "source": "dataset file at the pinned revision",
+    "measured": 998
+  },
+  "contamination": {
+    "status": "IS_HELDOUT_OR_EVALUATION",
+    "report": "research/diligence/A5-contamination.md"
+  },
+  "forbidden_uses": [
+    "TRAIN_PARALLEL",
+    "TRAIN_MONOLINGUAL",
+    "PUBLISH_IN_TRAINING_DATASET"
+  ],
+  "decisions": [],
+  "retrieved": "2026-09-24T08:04:57+00:00",
+  "name": "WMT24++ English->Filipino (en-fil_PH)",
+  "source": "https://huggingface.co/datasets/google/wmt24pp/resolve/fd7405c06494bc66a57b25f55d217a72f96e60dc/en-fil_PH.jsonl",
+  "dataset": "google/wmt24pp",
+  "revision": "fd7405c06494bc66a57b25f55d217a72f96e60dc",
+  "paper": "arXiv 2502.12404v1 (research/papers)",
+  "file": "studies/E1-error-study/data/source/wmt24pp-en-fil_PH.jsonl",
+  "sha256": "357a443df049a898b79e026f29a2a582f9f95c3ff68c173fc563deeeb9f2797e",
+  "rows": 998,
+  "domains": {
+    "canary": 1,
+    "news": 149,
+    "social": 531,
+    "speech": 111,
+    "literary": 206
+  },
+  "is_bad_source_rows": 38,
+  "rows_where_postedit_differs_from_reference": 202,
+  "fields": {
+    "source": "English source segment (paragraph level)",
+    "original_target": "professional human reference translation",
+    "target": "professional post-edit of the reference; sometimes a full rewrite (paper §2.1)",
+    "is_bad_source": "flag for unusable source segments",
+    "domain": "literary/news/social/speech, plus one canary row"
+  },
+  "notes": [
+    "Row with domain 'canary' is a contamination-detection GUID, not data; exclude it.",
+    "The canary row is itself flagged is_bad_source, so usable rows = 998 - 38 = 960 (checked 2026-09-24; an earlier note elsewhere said 959, which counted the canary twice).",
+    "Segments are paragraph-level: usable sources average 33.6 words and about 2.5 sentences; about half (46-52% depending on the splitter) are a single sentence.",
+    "References and post-edits are human; the dataset contains no MT outputs, so E1 must generate MT outputs itself.",
+    "Contamination: released 2025; newer than MADLAD-400's crawl (2022). Models trained after 2025 may have seen it (A5)."
+  ],
+  "used_by": [
+    "studies/E1-error-study"
+  ]
+}

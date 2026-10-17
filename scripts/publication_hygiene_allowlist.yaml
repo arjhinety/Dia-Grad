@@ -1,0 +1,8 @@
+# Accepted findings of scripts/check_publication_hygiene.py. Each entry: path (glob), category, the
+# EXACT number of findings, and why it is acceptable. A changed count fails the check.
+# DiaGrad discusses AI systems as research subjects and discloses AI use (README),
+# so naming ChatGPT or Copilot is content, not a leftover note.
+- path: research/papers/registry.json
+  category: assistant_reference
+  count: 2
+  reason: Paper abstracts (generated from arXiv metadata) that mention ChatGPT.

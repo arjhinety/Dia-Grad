@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "id": "opus-GlobalVoices-v2018q4-en-fil",
+  "display_name": "Global Voices 2018Q4 English-Filipino (OPUS)",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "TRAIN_PARALLEL"
+  ],
+  "languages": [
+    "eng_Latn",
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "VERSIONED_URL",
+    "value": "v2018q4",
+    "verified": true,
+    "source": "release named in the inner README; pair count equals the OPUS API (2026-10-17)"
+  },
+  "distribution": [
+    {
+      "name": "moses/en-fil.txt.zip",
+      "content_url": "https://object.pouta.csc.fi/OPUS-GlobalVoices/v2018q4/moses/en-fil.txt.zip",
+      "local_path": "~/data/raw/opus-GlobalVoices-v2018q4-en-fil/OPUS-GlobalVoices.en-fil.txt.zip",
+      "sha256": "05b4540f1dec4598b9275fce52ec81f4b0b258591e4f39dcf1c8444c0e4780d4",
+      "bytes": 248349,
+      "verified_from": "downloaded on a separate machine (OPUS store unreachable from the GB10 workstation, D23) and transferred; line counts equal the OPUS API count; inner README names this release"
+    }
+  ],
+  "license": {
+    "spdx": "NOASSERTION",
+    "quote": "The data set comes with the same license as the original sources. Please, check the information about the source that is given on http://opus.nlpl.eu/GlobalVoices-2018Q4.php",
+    "source": "OPUS GlobalVoices 2018Q4 LICENSE file inside the zip"
+  },
+  "use_class": "RESEARCH_ONLY",
+  "text_origin": {
+    "kind": "HUMAN",
+    "notes": "Translated news articles from globalvoices.org, sentence-aligned. Site licence believed CC-BY [verify on globalvoices.org]."
+  },
+  "redistribution": {
+    "status": "NOT_ASSESSED",
+    "basis": "Same licence as the original source (LICENSE); check globalvoices.org before publication (D21)."
+  },
+  "attribution": {
+    "required": true,
+    "citation_target": "Tiedemann 2012 (OPUS README) [verify; not yet in references.bib]"
+  },
+  "sample_count": {
+    "published": 2742,
+    "unit": "sentence pairs",
+    "source": "OPUS API",
+    "measured": 2742
+  },
+  "contamination": {
+    "status": "NOT_CHECKED"
+  },
+  "forbidden_uses": [],
+  "decisions": [
+    "D15",
+    "D22",
+    "D23"
+  ],
+  "retrieved": "2026-10-17",
+  "notes": [
+    "Downloaded on a separate machine because the OPUS object store is unreachable from the GB10 workstation (D23); verified on the GB10 workstation 2026-10-17."
+  ]
+}

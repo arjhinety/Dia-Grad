@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "id": "opus-OpenSubtitles-v2024-en-tl",
+  "display_name": "OpenSubtitles v2024 English-Tagalog (OPUS)",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "TRAIN_PARALLEL"
+  ],
+  "languages": [
+    "eng_Latn",
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "VERSIONED_URL",
+    "value": "v2024",
+    "verified": true,
+    "source": "release named in the inner README; pair count equals the OPUS API (2026-10-17)"
+  },
+  "distribution": [
+    {
+      "name": "moses/en-tl.txt.zip",
+      "content_url": "https://object.pouta.csc.fi/OPUS-OpenSubtitles/v2024/moses/en-tl.txt.zip",
+      "local_path": "~/data/raw/opus-OpenSubtitles-v2024-en-tl/OPUS-OpenSubtitles.en-tl.txt.zip",
+      "sha256": "fd0fe6bc30fe82454b50eb3c7e7aa8787d773dbad8224b752d1316f9b6704950",
+      "bytes": 24403055,
+      "verified_from": "downloaded on a separate machine (OPUS store unreachable from the GB10 workstation, D23) and transferred; line counts equal the OPUS API count; inner README names this release"
+    }
+  ],
+  "license": {
+    "spdx": "NOASSERTION",
+    "quote": "We do not own any of the text from which the data has been extracted. We only offer files that we believe we are free to redistribute. If any doubt occurs about the legality of any of our file downloads we will take them off right away after contacting us. For more information, please check the info",
+    "source": "OPUS OpenSubtitles v2024 LICENSE file inside the zip"
+  },
+  "use_class": "RESEARCH_ONLY",
+  "text_origin": {
+    "kind": "HUMAN",
+    "notes": "Subtitles written by users of opensubtitles.org, sentence-aligned automatically. Whether some subtitles are machine translated is [unknown]."
+  },
+  "redistribution": {
+    "status": "NOT_ASSESSED",
+    "basis": "No licence; OPUS asks for a link to opensubtitles.org. Decide before publication (D21)."
+  },
+  "attribution": {
+    "required": true,
+    "citation_target": "Lison and Tiedemann 2016 (OPUS README) [verify; not yet in references.bib]; link to http://www.opensubtitles.org/"
+  },
+  "sample_count": {
+    "published": 1072914,
+    "unit": "sentence pairs",
+    "source": "OPUS API",
+    "measured": 1072914
+  },
+  "contamination": {
+    "status": "NOT_CHECKED"
+  },
+  "forbidden_uses": [],
+  "decisions": [
+    "D15",
+    "D22",
+    "D23"
+  ],
+  "retrieved": "2026-10-17",
+  "notes": [
+    "Downloaded on a separate machine because the OPUS object store is unreachable from the GB10 workstation (D23); verified on the GB10 workstation 2026-10-17."
+  ]
+}

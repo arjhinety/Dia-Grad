@@ -1,0 +1,10 @@
+name: Dataset issue
+description: Report a dataset licence, provenance, split or contamination concern
+body:
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern
+      description: Name the registry record (data/registry/<id>.json) and give the evidence URL and revision.
+    validations:
+      required: true

@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "id": "opus-bible-uedin-v1-en-tl",
+  "display_name": "bible-uedin v1 English-Tagalog (OPUS; Christodoulopoulos and Steedman Bible corpus)",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "TRAIN_PARALLEL"
+  ],
+  "languages": [
+    "eng_Latn",
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "VERSIONED_URL",
+    "value": "v1",
+    "verified": true,
+    "source": "release named in the inner README; pair count equals the OPUS API (2026-10-17)"
+  },
+  "distribution": [
+    {
+      "name": "moses/en-tl.txt.zip",
+      "content_url": "https://object.pouta.csc.fi/OPUS-bible-uedin/v1/moses/en-tl.txt.zip",
+      "local_path": "~/data/raw/opus-bible-uedin-v1-en-tl/OPUS-bible-uedin.en-tl.txt.zip",
+      "sha256": "7cdc830450dbd0c8522053ca69ace4e08a10825ac1d42711e697670b98880d42",
+      "bytes": 5429055,
+      "verified_from": "downloaded on a separate machine (OPUS store unreachable from the GB10 workstation, D23) and transferred; line counts equal the OPUS API count; inner README names this release"
+    }
+  ],
+  "license": {
+    "spdx": "CC0-1.0",
+    "quote": "License: CC0 1.0",
+    "source": "OPUS bible-uedin v1 README inside the zip"
+  },
+  "use_class": "RESEARCH_ONLY",
+  "text_origin": {
+    "kind": "HUMAN",
+    "notes": "Bible translations aligned by verse. Which Tagalog translation, and its own copyright, is [verify]; kept RESEARCH_ONLY until then. Overlaps eBible (ebible-tglulb-engwebp) in content, not necessarily in translation."
+  },
+  "redistribution": {
+    "status": "NOT_ASSESSED",
+    "basis": "CC0 packaging; the underlying translation's rights are unverified (D21)."
+  },
+  "attribution": {
+    "required": false,
+    "citation_target": "Christodoulopoulos and Steedman, A massively parallel corpus: the Bible in 100 languages (OPUS README) [verify; not yet in references.bib]"
+  },
+  "sample_count": {
+    "published": 62195,
+    "unit": "sentence pairs",
+    "source": "OPUS API",
+    "measured": 62195
+  },
+  "contamination": {
+    "status": "NOT_CHECKED"
+  },
+  "forbidden_uses": [],
+  "decisions": [
+    "D15",
+    "D22",
+    "D23"
+  ],
+  "retrieved": "2026-10-17",
+  "notes": [
+    "Downloaded on a separate machine because the OPUS object store is unreachable from the GB10 workstation (D23); verified on the GB10 workstation 2026-10-17."
+  ]
+}

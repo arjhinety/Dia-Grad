@@ -1,0 +1,81 @@
+{
+  "schema_version": 2,
+  "id": "hf-opus_paracrawl-v9-en-tl",
+  "display_name": "ParaCrawl v9 English-Tagalog (OPUS), Hugging Face copy Helsinki-NLP/opus_paracrawl",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "TRAIN_PARALLEL"
+  ],
+  "languages": [
+    "eng_Latn",
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "HF_REVISION",
+    "value": "8bb0bcf0c038a0cb762690b4dbce088b861423ed",
+    "verified": true,
+    "source": "Hugging Face API, 2026-10-17"
+  },
+  "distribution": [
+    {
+      "name": "en-tl/train-00000-of-00001.parquet",
+      "content_url": "https://huggingface.co/datasets/Helsinki-NLP/opus_paracrawl/resolve/8bb0bcf0c038a0cb762690b4dbce088b861423ed/en-tl/train-00000-of-00001.parquet",
+      "local_path": "~/data/raw/hf-opus_paracrawl-8bb0bcf0c038a0cb762690b4dbce088b861423ed-en-tl/train-00000-of-00001.parquet",
+      "sha256": "6a0e963ba6d912295ac9394e91c0739318044aa472802075a649f3a8954d8a38",
+      "bytes": 54686324,
+      "verified_from": "equals the Hub LFS sha256 (api/datasets/.../revision/<rev>?blobs=true)"
+    }
+  ],
+  "license": {
+    "spdx": "CC0-1.0",
+    "quote": "The data is released under the Creative Commons CC0 license (no rights reserved)",
+    "source": "OPUS ParaCrawl v9 README (Helsinki-NLP/OPUS @ 42d4fbe3, survey 2026-10-07); HF cardData.license cc0-1.0 at the pinned revision"
+  },
+  "use_class": "RESEARCH_ONLY",
+  "text_origin": {
+    "kind": "MINED",
+    "notes": "Web crawl of targeted sites with document and sentence alignment; CC0 covers the packaging, the web text itself is not cleared."
+  },
+  "redistribution": {
+    "status": "NOT_ASSESSED",
+    "basis": "CC0 packaging; underlying web text unlicensed (D21, decide before publication)."
+  },
+  "attribution": {
+    "required": false,
+    "citation_target": "ParaCrawl paper named in the OPUS README [verify; not yet in references.bib]"
+  },
+  "sample_count": {
+    "published": 248689,
+    "unit": "sentence pairs",
+    "source": "OPUS API ParaCrawl v9 en-tl",
+    "measured": 248689
+  },
+  "contamination": {
+    "status": "NOT_CHECKED"
+  },
+  "forbidden_uses": [],
+  "decisions": [
+    "D17",
+    "D22",
+    "D23"
+  ],
+  "retrieved": "2026-10-17",
+  "notes": [
+    "OPUS object store is unreachable from the GB10 workstation (D23); this HF copy has the same pair count as OPUS v9 en-tl."
+  ],
+  "measurements_2026_10_17": {
+    "pairs": 248689,
+    "madlad_tokens": 20583256,
+    "tokens_per_pair": 82.77,
+    "duplicate_pairs_within": 8798,
+    "in_nllb_pair": 60427,
+    "in_nllb_en_side": 64396,
+    "in_nllb_tl_side": 108546,
+    "rate_pair_in_nllb": 0.243,
+    "new_pairs_after_dedup": 180993,
+    "report": "data/mix/measure-paracrawl-ebible-2026-10-17.json",
+    "script": "data/mix/measure_sources.py",
+    "note": "overlap against all 63,581,148 NLLB en-tl lines after diagrad.t1.contamination.norm"
+  }
+}

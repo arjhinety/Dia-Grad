@@ -1,0 +1,98 @@
+{
+  "schema_version": 2,
+  "id": "ebible-tglulb-engwebp",
+  "display_name": "eBible corpus: Tagalog Unlocked Literal Bible (tglulb) verse-aligned to the World English Bible (engwebp)",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "TRAIN_PARALLEL"
+  ],
+  "languages": [
+    "eng_Latn",
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "GIT_COMMIT",
+    "value": "c531ff2da02843ded6d09afbe29a197ab844981f",
+    "verified": true,
+    "source": "git ls-remote https://github.com/BibleNLP/ebible.git HEAD, 2026-10-17"
+  },
+  "distribution": [
+    {
+      "name": "corpus/tgl-tglulb.txt",
+      "content_url": "https://raw.githubusercontent.com/BibleNLP/ebible/c531ff2da02843ded6d09afbe29a197ab844981f/corpus/tgl-tglulb.txt",
+      "local_path": "~/data/raw/ebible-c531ff2da02843ded6d09afbe29a197ab844981f/tgl-tglulb.txt",
+      "sha256": "9c701436562f7135cf9b7f5083f0c531af6c69dae26905d5e489891974201fed",
+      "bytes": 4940324,
+      "verified_from": "git hash-object faf5bdcf7346e68f9576eab7fe6657ae0c7c6a80 equals the blob id in the pinned tree"
+    },
+    {
+      "name": "corpus/eng-engwebp.txt",
+      "content_url": "https://raw.githubusercontent.com/BibleNLP/ebible/c531ff2da02843ded6d09afbe29a197ab844981f/corpus/eng-engwebp.txt",
+      "local_path": "~/data/raw/ebible-c531ff2da02843ded6d09afbe29a197ab844981f/eng-engwebp.txt",
+      "sha256": "a9cbd39e2cf499d3dde45ac5c8991b257137e8e57fa89c1ce2508c87fedc3611",
+      "bytes": 4024726,
+      "verified_from": "git hash-object 6651f1414751516e5239e0d0bf38d52355bef9dd equals the blob id in the pinned tree"
+    },
+    {
+      "name": "metadata/vref.txt",
+      "content_url": "https://raw.githubusercontent.com/BibleNLP/ebible/c531ff2da02843ded6d09afbe29a197ab844981f/metadata/vref.txt",
+      "local_path": "~/data/raw/ebible-c531ff2da02843ded6d09afbe29a197ab844981f/vref.txt",
+      "sha256": "a7575f550dd2260cf707f98c909a551f5b1ef9c0b52e1e3ccce96df1f2dba845",
+      "bytes": 389928,
+      "verified_from": "git hash-object 93eeaf7efa57b877a3ed2be5de3fa595a99e069f equals the blob id in the pinned tree"
+    }
+  ],
+  "license": {
+    "spdx": "CC-BY-SA-4.0",
+    "quote": "This translation is made available to you under the terms of the Creative Commons Attribution Share-Alike license 4.0.",
+    "source": "https://ebible.org/tglulb/copyright.htm (Tagalog side); English engwebp is listed as public domain in metadata/translations.csv"
+  },
+  "use_class": "SHARE_ALIKE",
+  "text_origin": {
+    "kind": "HUMAN",
+    "notes": "Door43 World Missions Community, literal translation (Tagalog); World English Bible (English)."
+  },
+  "redistribution": {
+    "status": "SHARE_ALIKE",
+    "basis": "CC BY-SA 4.0: \"If you redistribute this text, you must distribute your contributions under the same license as the original.\""
+  },
+  "attribution": {
+    "required": true,
+    "text": "Banal na Bibliya: Unlocked Literal Bible (Tagalog), Door43 World Missions Community, CC BY-SA 4.0; World English Bible (public domain).",
+    "citation_target": "eBible corpus paper, arXiv 2304.09919 (fetched 2026-10-17) [not yet in references.bib]"
+  },
+  "sample_count": {
+    "published": 31103,
+    "unit": "verses (tglulb: 23,144 OT + 7,959 NT)",
+    "source": "metadata/translations.csv at the pinned commit",
+    "measured": 30959
+  },
+  "contamination": {
+    "status": "NOT_CHECKED"
+  },
+  "forbidden_uses": [],
+  "decisions": [
+    "D22",
+    "D23"
+  ],
+  "retrieved": "2026-10-17",
+  "notes": [
+    "measured = vref lines where both the English and the Tagalog verse are non-empty (30,959 of 41,899 vref lines).",
+    "English verses overlap bible-uedin entirely; the Tagalog translation is probably different [inference]."
+  ],
+  "measurements_2026_10_17": {
+    "pairs": 30958,
+    "madlad_tokens": 2335589,
+    "tokens_per_pair": 75.44,
+    "duplicate_pairs_within": 107,
+    "in_nllb_pair": 17,
+    "in_nllb_en_side": 2944,
+    "in_nllb_tl_side": 156,
+    "rate_pair_in_nllb": 0.0005,
+    "new_pairs_after_dedup": 30834,
+    "report": "data/mix/measure-paracrawl-ebible-2026-10-17.json",
+    "script": "data/mix/measure_sources.py",
+    "note": "overlap against all 63,581,148 NLLB en-tl lines after diagrad.t1.contamination.norm"
+  }
+}

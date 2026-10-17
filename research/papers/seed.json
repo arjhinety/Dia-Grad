@@ -1,0 +1,2379 @@
+{
+ "_about": "Hand-maintained list of papers DiaGrad builds on. Everything else (authors, versions, dates, license, hashes) is fetched by tools/build_provenance.py. 'why' notes were drafted from each paper's abstract on 2026-09-24 and are not yet reviewed; reviewed=true marks checked entries. Entries with a 'proceedings' block instead of 'arxiv' are non-arXiv papers: metadata from the publisher's BibTeX, cross-checked with OpenAlex (build_provenance.py --proceedings-only refreshes just these).",
+ "papers": [
+  {
+   "arxiv": "2601.07372",
+   "topics": [
+    "memory",
+    "engram"
+   ],
+   "items": [
+    5
+   ],
+   "role": "foundation",
+   "reviewed": false,
+   "why": "Engram: hashed N-gram lookup memory as a sparsity axis complementary to MoE; U-shaped allocation law between MoE compute and static memory. The Engram half of CAMOE builds directly on this."
+  },
+  {
+   "arxiv": "2609.19969",
+   "topics": [
+    "deepseek",
+    "engram",
+    "encoder-decoder",
+    "verification"
+   ],
+   "items": [
+    1,
+    5
+   ],
+   "role": "foundation",
+   "reviewed": false,
+   "why": "DeepSeek-V4.1-Flash: confirms Engram is built in (196B params, 2 modules at layers 1 and 14). Its Causal Encoder-Decoder splits the stack into encoder/decoder halves, and DSpark adds draft + confidence-scheduled verification. Closest production reference for CAMOE's base architecture."
+  },
+  {
+   "arxiv": "2606.19348",
+   "topics": [
+    "deepseek",
+    "moe"
+   ],
+   "items": [
+    1
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "DeepSeek-V4 (Pro/Flash) preview: hybrid compressed attention, mHC residuals, Muon. Predecessor of V4.1-Flash; baseline architecture context."
+  },
+  {
+   "arxiv": "2607.05147",
+   "topics": [
+    "verification",
+    "draft"
+   ],
+   "items": [
+    1,
+    4
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "DSpark: a drafter proposes several tokens, a confidence head predicts which will be accepted, verification length is scheduled. A draft-then-check mechanism inside a production model, but judged for speed/acceptance, not quality."
+  },
+  {
+   "arxiv": "2405.05254",
+   "topics": [
+    "encoder-decoder"
+   ],
+   "items": [
+    1
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "YOCO: decoder-decoder architecture that V4.1-Flash's Causal Encoder-Decoder is inspired by. Needed to understand where a whole-input representation exists in the stack."
+  },
+  {
+   "arxiv": "2507.02092",
+   "topics": [
+    "critic-in-latent",
+    "verification",
+    "iterative-refinement"
+   ],
+   "items": [
+    1,
+    3,
+    6
+   ],
+   "role": "closest-relative",
+   "reviewed": false,
+   "why": "Energy-Based Transformers: learn a verifier that scores (input, candidate prediction) compatibility from unsupervised pretraining alone, then refine the prediction by minimising that score. A learned internal critic that drives refinement; key reference for item 3 (critic training signal)."
+  },
+  {
+   "arxiv": "2412.08821",
+   "topics": [
+    "sentence-latent",
+    "planning"
+   ],
+   "items": [
+    1
+   ],
+   "role": "closest-relative",
+   "reviewed": false,
+   "why": "Large Concept Models: language modelling over whole-sentence embeddings (SONAR, 200 languages) instead of tokens. Precedent for a whole-sentence internal representation, the thing option (c) critiques."
+  },
+  {
+   "arxiv": "2605.06548",
+   "topics": [
+    "sentence-latent",
+    "diffusion",
+    "iterative-refinement"
+   ],
+   "items": [
+    1
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Cola DLM: text -> continuous latent (VAE), global semantic prior via diffusion in latent space, then decode. Separates global meaning from surface wording; a possible substrate for a latent whole-sentence draft."
+  },
+  {
+   "arxiv": "2502.05171",
+   "topics": [
+    "looping",
+    "adaptive-compute"
+   ],
+   "items": [
+    1,
+    4
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Recurrent-depth model (3.5B, 800B tokens) that iterates a block in latent space to scale test-time compute. Mechanism for 'another internal pass' without writing text."
+  },
+  {
+   "arxiv": "2510.07358",
+   "topics": [
+    "looping",
+    "adaptive-compute"
+   ],
+   "items": [
+    1,
+    4
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Encode-Think-Decode: iterate only a subset of reasoning-relevant layers; includes adaptive per-token depth. Shows repasses can be added to an existing architecture."
+  },
+  {
+   "arxiv": "2607.20519",
+   "topics": [
+    "halting",
+    "adaptive-compute"
+   ],
+   "items": [
+    1,
+    4
+   ],
+   "role": "closest-relative",
+   "reviewed": false,
+   "why": "Diagnoses learned halting gates in looped Transformers: simple confidence readouts often match learned gates; joint gate training distorts trajectories. Directly relevant to 'critic decides whether another pass is needed'."
+  },
+  {
+   "arxiv": "2603.08391",
+   "topics": [
+    "looping",
+    "memory",
+    "halting"
+   ],
+   "items": [
+    1,
+    5
+   ],
+   "role": "closest-relative",
+   "reviewed": false,
+   "why": "Adaptive per-layer looping with learned halting plus gated memory banks; the combination beats an iso-FLOP baseline. The nearest structural analogue to 'repass + memory' found so far."
+  },
+  {
+   "arxiv": "2502.17416",
+   "topics": [
+    "looping"
+   ],
+   "items": [
+    1
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Looped transformers: a k-layer model looped L times nearly matches a kL-layer model on reasoning. Theory/evidence that repeated internal passes can substitute for depth."
+  },
+  {
+   "arxiv": "1603.08983",
+   "topics": [
+    "halting",
+    "adaptive-compute"
+   ],
+   "items": [
+    1,
+    4
+   ],
+   "role": "foundation",
+   "reviewed": false,
+   "why": "Adaptive Computation Time (Graves): a network learns how many steps to take before emitting output. The original learned 'when to stop thinking' mechanism."
+  },
+  {
+   "arxiv": "2412.06769",
+   "topics": [
+    "latent-reasoning"
+   ],
+   "items": [
+    1,
+    6
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Coconut: reason in continuous hidden states instead of written chain-of-thought. Supports item 6's position that thinking need not be verbalised."
+  },
+  {
+   "arxiv": "2604.12493",
+   "topics": [
+    "planning",
+    "interpretability"
+   ],
+   "items": [
+    1,
+    6
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Latent planning emerges with scale (Qwen-3 0.6B-14B): models internally plan future words (e.g. 'an' before 'accountant'). Evidence on whether a whole-sentence plan exists inside ordinary models, and how to measure it."
+  },
+  {
+   "arxiv": "2510.11052",
+   "topics": [
+    "diffusion",
+    "iterative-refinement"
+   ],
+   "items": [
+    1
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Latent Refinement Decoding for diffusion LMs: keep uncertain positions as soft beliefs, refine with a feedback loop, stop by KL convergence. A whole-sequence refine-until-stable mechanism."
+  },
+  {
+   "arxiv": "2602.11590",
+   "topics": [
+    "diffusion",
+    "self-correction"
+   ],
+   "items": [
+    1,
+    3
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "ProSeCo: masked diffusion model trained to correct its own already-generated tokens across the whole sequence. Shows a way to train correction from the model's own outputs."
+  },
+  {
+   "arxiv": "2205.00978",
+   "topics": [
+    "translation-quality",
+    "critic-signal"
+   ],
+   "items": [
+    3,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Quality-aware decoding for NMT: use quality-estimation models to rerank/choose translations. External-critic baseline in output space (the option (b) family)."
+  },
+  {
+   "arxiv": "2502.08561",
+   "topics": [
+    "translation-quality",
+    "critic-signal"
+   ],
+   "items": [
+    3,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Token-level QE model that scores partial translations and is integrated into decoding. A critic that judges unfinished output; contrast point for option (c)."
+  },
+  {
+   "arxiv": "2310.13988",
+   "topics": [
+    "translation-quality",
+    "error-taxonomy"
+   ],
+   "items": [
+    3,
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "GEMBA-MQM: LLM marks translation error spans by MQM category without references. Possible tool for labelling Filipino translation errors (authors caution about using it to claim improvements)."
+  },
+  {
+   "arxiv": "2308.07286",
+   "topics": [
+    "translation-quality",
+    "error-taxonomy"
+   ],
+   "items": [
+    3,
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "AutoMQM: LLMs identify and categorise individual translation errors (MQM). Method for the Filipino error study and a possible critic training signal."
+  },
+  {
+   "arxiv": "2508.03523",
+   "topics": [
+    "filipino",
+    "benchmark"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "FilBench: Filipino, Tagalog and Cebuano benchmark over 27 LLMs; finds weaknesses in reading comprehension and translation. Starting point for which Filipino errors matter."
+  },
+  {
+   "arxiv": "2409.15380",
+   "topics": [
+    "filipino",
+    "benchmark",
+    "culture"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Kalahi: 150 handcrafted prompts by native speakers for Filipino cultural appropriateness. Covers register/culture errors a critic might target."
+  },
+  {
+   "arxiv": "2502.14301",
+   "topics": [
+    "sea",
+    "benchmark"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "SEA-HELM: holistic Southeast Asian evaluation suite including linguistic pillars. Regional evaluation context for Filipino results."
+  },
+  {
+   "arxiv": "2311.08692",
+   "topics": [
+    "routing",
+    "reward"
+   ],
+   "items": [
+    2
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Zooter: distil reward-model scores into a router that sends each query to the best LLM. Reward-guided routing at model level; reference for the RL critique router idea."
+  },
+  {
+   "arxiv": "2606.12689",
+   "topics": [
+    "interpretability",
+    "latent-reasoning"
+   ],
+   "items": [
+    1,
+    5
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Patterns seen in latent-reasoning models' hidden states also appear in controls and don't always causally affect behaviour: treat latent thoughts as hidden computation, not hidden explanation. Caution for CAMOE's 'not black magic' claim: readability must be shown causally."
+  },
+  {
+   "arxiv": "2603.25222",
+   "topics": [
+    "evaluation",
+    "low-resource",
+    "contamination"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "FRED difficulty metrics for low-resource MT. The abstract credits train-test overlap and pretraining exposure, but the paper's own regression (§3.3, Table 3) finds train-test similarity (R-score) explains most variation (R²=0.582) while pretraining exposure explains almost none (R²=0.0142). Guides contamination checks: check train-test overlap first. (Corrected 2026-09-24 after the A6 review.)"
+  },
+  {
+   "arxiv": "2308.11466",
+   "topics": [
+    "sentence-latent",
+    "substrate"
+   ],
+   "items": [
+    1
+   ],
+   "role": "foundation",
+   "reviewed": false,
+   "why": "SONAR: 200-language fixed-size sentence embedding space built from a pretrained MT encoder-decoder with a single-vector bottleneck, trained with translation + MSE + denoising. Its weights are non-commercial, but this recipe is what DiaGrad would reimplement on a permissive base (ideas/03)."
+  },
+  {
+   "arxiv": "2603.16606",
+   "topics": [
+    "sentence-latent",
+    "substrate",
+    "low-resource"
+   ],
+   "items": [
+    1
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "OmniSONAR: extends SONAR-style embeddings to thousands of language varieties via an LLM-initialised encoder-decoder plus teacher-student distillation. Method reference for scaling to more Philippine languages; no public weights found on HF (2026-09-24)."
+  },
+  {
+   "arxiv": "2309.04662",
+   "topics": [
+    "substrate",
+    "data",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "foundation",
+   "reviewed": false,
+   "why": "MADLAD-400: audited 400+ language web dataset and the Apache-2.0 MT models trained on it (11 Philippine languages on the model card). Proposed permissive starting point for DiaGrad's own sentence space (ideas/03, Path A)."
+  },
+  {
+   "arxiv": "2310.06816",
+   "topics": [
+    "sentence-latent",
+    "inversion"
+   ],
+   "items": [
+    1
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "vec2text: text can be largely reconstructed from embeddings by training an inverting decoder. Basis for Path C (permissive encoder + our own decoder). Repo has no license, so method only."
+  },
+  {
+   "arxiv": "2512.20578",
+   "topics": [
+    "critic-in-latent",
+    "self-verification"
+   ],
+   "items": [
+    1,
+    3
+   ],
+   "role": "closest-relative",
+   "reviewed": false,
+   "why": "Gnosis: a lightweight module reads a frozen LLM's hidden states and attention patterns to predict its own failures, without external judges or text self-critique. The nearest found example of a critic that judges from internal states; CAMOE differs in making the critic a trained architectural component that triggers repasses (to verify)."
+  },
+  {
+   "arxiv": "2207.05221",
+   "topics": [
+    "confidence",
+    "self-verification",
+    "baseline"
+   ],
+   "items": [
+    1,
+    3
+   ],
+   "role": "foundation",
+   "reviewed": false,
+   "why": "Language models are largely calibrated about what they know (P(True), P(IK)). Foundation for the confidence baseline the critic must beat (DILIGENCE T1 #4)."
+  },
+  {
+   "arxiv": "2602.01897",
+   "topics": [
+    "critic-in-latent",
+    "self-verification",
+    "interpretability"
+   ],
+   "items": [
+    1,
+    3
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Internal flow signatures: audits how a decision forms across depth, from internal dynamics, to self-check and refine. Another internal-state checker; possible source of critic input features."
+  },
+  {
+   "arxiv": "2603.16331",
+   "topics": [
+    "critique",
+    "interpretability"
+   ],
+   "items": [
+    3,
+    6
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Studies whether large reasoning models' visible self-critique actually detects inserted errors, and decodes the mechanism. Evidence for item 6 on how reliable text-based 'pseudo-critique' is."
+  },
+  {
+   "arxiv": "2306.03856",
+   "topics": [
+    "translation",
+    "iterative-refinement",
+    "baseline"
+   ],
+   "items": [
+    1,
+    6,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Iterative translation refinement by prompting an LLM to self-correct, inspired by human translation; human evaluators found better fluency. Output-level (option b) baseline; also shows string metrics can drop while quality improves."
+  },
+  {
+   "arxiv": "2506.08403",
+   "topics": [
+    "translation",
+    "cognitive",
+    "multi-agent"
+   ],
+   "items": [
+    6
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "TACTIC: multi-agent translation built on cognitive translation studies. Grounding for item 6 (human multi-pass translation) and an output-level comparison point."
+  },
+  {
+   "arxiv": "2602.11047",
+   "topics": [
+    "sentence-latent",
+    "inversion"
+   ],
+   "items": [
+    1
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Embedding inversion via conditional masked diffusion: a 78M model recovers text from an embedding in 8 passes without access to the encoder. Cheap decoder option for Path C of the sentence-space substrate."
+  },
+  {
+   "arxiv": "2510.11370",
+   "topics": [
+    "routing",
+    "rl",
+    "moe"
+   ],
+   "items": [
+    2,
+    4
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "R3: MoE routing is unstable under RL because training and inference routers disagree; fix by replaying inference routing. Practical hazard for any RL-trained router or critic in an MoE."
+  },
+  {
+   "arxiv": "2311.09828",
+   "topics": [
+    "evaluation",
+    "low-resource",
+    "human-eval"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "AfriMTE/AfriCOMET: simplified MQM protocol for non-expert native speakers plus a COMET built on a regionally trained encoder. Template for a Philippine-language COMET and annotation protocol. (From A6 review.)"
+  },
+  {
+   "arxiv": "2506.04557",
+   "topics": [
+    "evaluation",
+    "low-resource"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "SSA-COMET: 14 African language pairs; chrF++ beat COMET-22 where the encoder lacks the language; LLM judges need few-shot examples and error-span prompting lowered correlation. (From A6 review.)"
+  },
+  {
+   "arxiv": "2406.03893",
+   "topics": [
+    "evaluation",
+    "low-resource"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Zero-shot MT evaluation for four low-resource Indian languages: best learned metrics only reach Kendall tau ~0.32; GEMBA-MQM weaker. Calibrates expectations for metric reliability. (From A6 review.)"
+  },
+  {
+   "arxiv": "2502.12404",
+   "topics": [
+    "evaluation",
+    "filipino",
+    "data"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "WMT24++: English->Filipino references and post-edits (Apache-2.0), ranked by automatic metrics only; authors say human evaluation is still needed. Only large public en-fil MT reference set found. (From A6 review.)"
+  },
+  {
+   "arxiv": "2406.11580",
+   "topics": [
+    "evaluation",
+    "human-eval"
+   ],
+   "items": [
+    3,
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "ESA human-evaluation protocol: cheaper than MQM with comparable quality; reports MQM same-annotator category+severity agreement of only 8.4%, which caps how accurately a critic's named categories can be scored. (From A6 review.)"
+  },
+  {
+   "arxiv": "2604.17393",
+   "topics": [
+    "evaluation",
+    "human-eval"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Recommends comparing metric-human agreement with human-human agreement. Basis for DiaGrad's per-language metric-validation study. (From A6 review.)"
+  },
+  {
+   "arxiv": "2609.04173",
+   "topics": [
+    "evaluation",
+    "challenge-set",
+    "filipino"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Last Translation Benchmark: rule-verified hard translation cases including 36 Filipino items; model for a Philippine challenge set. (From A6 review.)"
+  },
+  {
+   "arxiv": "2508.20511",
+   "topics": [
+    "evaluation",
+    "data-quality"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "FLORES+ quality problems; named-entity copying inflates BLEU. Caution for using FLORES Philippine entries. (From A6 review.)"
+  },
+  {
+   "arxiv": "2502.14911",
+   "topics": [
+    "filipino",
+    "benchmark",
+    "taglish"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Batayan: Filipino/Taglish benchmark; re-translated FLORES Filipino to reduce translationese; evidence that MT over-uses ay-inversion. Source for Philippine-specific error categories. (From A6 review.)"
+  },
+  {
+   "arxiv": "2505.20428",
+   "topics": [
+    "filipino",
+    "linguistics"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "UD-NewsCrawl Tagalog treebank: describes the Tagalog voice/focus system (ang/ng/sa marking) behind the proposed voice/focus error category. (From A6 review.)"
+  },
+  {
+   "arxiv": "1911.02116",
+   "topics": [
+    "evaluation",
+    "encoder-coverage"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "XLM-R: its CC-100 language table (Filipino the only Philippine language) determines COMET-family metric coverage. (From A6 review.)"
+  },
+  {
+   "arxiv": "2010.11934",
+   "topics": [
+    "evaluation",
+    "encoder-coverage",
+    "substrate"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "mT5: mC4 language table (fil, ceb) determines MetricX coverage; also the Path B substrate candidate. (From A6 review.)"
+  },
+  {
+   "arxiv": "2202.05148",
+   "topics": [
+    "evaluation",
+    "failure-modes"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "COMET is blind to number and named-entity errors (found via MBR decoding). Failure mode to guard against. (From A6 review.)"
+  },
+  {
+   "arxiv": "2104.14478",
+   "topics": [
+    "evaluation",
+    "human-eval"
+   ],
+   "items": [
+    7
+   ],
+   "role": "foundation",
+   "reviewed": false,
+   "why": "Freitag et al.: MQM by professional translators outperforms crowd direct assessment; basis of modern MQM evaluation. (From A6 review.)"
+  },
+  {
+   "arxiv": "2310.10482",
+   "topics": [
+    "evaluation",
+    "critic-signal"
+   ],
+   "items": [
+    3,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "xCOMET: open span-level error metric (severity only); baseline for the critic's error spans. Weights are CC-BY-NC-SA: evaluation only, not a training signal. (From A6 review.)"
+  },
+  {
+   "arxiv": "2603.16309",
+   "topics": [
+    "evaluation",
+    "low-resource",
+    "long-tail"
+   ],
+   "items": [
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Omnilingual MT: BLASER 3, Met-BOUQuET and the XSTS+R+P human protocol for long-tail languages; Philippine coverage unchecked. (From A6 review.)"
+  },
+  {
+   "arxiv": "2207.04672",
+   "topics": [
+    "benchmark",
+    "contamination",
+    "nllb"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "NLLB: defines FLORES-200 and its hidden test split. Cited for benchmark provenance only; NLLB weights are non-commercial and must not generate training data. (From A5 review.)"
+  },
+  {
+   "arxiv": "2106.03193",
+   "topics": [
+    "benchmark",
+    "contamination"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "FLORES-101: origin of spBLEU; Tagalog and Cebuano FLORES public since 2021, so exposure to web crawls is plausible. (From A5 review.)"
+  },
+  {
+   "arxiv": "2308.16884",
+   "topics": [
+    "benchmark",
+    "contamination"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Belebele: reading comprehension built on FLORES passages; a FLORES leak also leaks Belebele passages (not questions). Authors warn about crawl contamination. (From A5 review.)"
+  },
+  {
+   "arxiv": "2010.06354",
+   "topics": [
+    "benchmark",
+    "contamination"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Tatoeba Challenge: documents test-train overlap with OPUS. Reason Tatoeba Philippine pairs are diagnostics only. (From A5 review.)"
+  },
+  {
+   "arxiv": "2501.18771",
+   "topics": [
+    "contamination",
+    "translation"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Controlled study of MT contamination: leaking both source and reference inflated BLEU by up to 30 points at 8B scale; little effect for languages the model barely knows. Tagalog/Cebuano more exposed than smaller languages. (From A5 review.)"
+  },
+  {
+   "arxiv": "2411.03923",
+   "topics": [
+    "contamination",
+    "method"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "ConTAM: longest-match n-gram contamination detection with small n; method for DiaGrad's pre-evaluation check. (From A5 review.)"
+  },
+  {
+   "arxiv": "2407.21530",
+   "topics": [
+    "contamination",
+    "database"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "CONDA 2024 contamination database: lists FLORES inside xP3 and several models (BLOOMZ, mT0, Claude 3 Opus). (From A5 review.)"
+  },
+  {
+   "arxiv": "2005.14165",
+   "topics": [
+    "contamination",
+    "method"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "GPT-3: origin of the 13-gram overlap / clean-subset reporting convention. (From A5 review.)"
+  },
+  {
+   "arxiv": "2502.04314",
+   "topics": [
+    "benchmark",
+    "hidden-eval"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "BOUQuET: hand-written MT benchmark with hidden evaluation, including Tagalog. Lower contamination risk. (From A5 review.)"
+  },
+  {
+   "arxiv": "2506.20920",
+   "topics": [
+    "data",
+    "crawl"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "FineWeb2: multilingual pretraining corpus; its crawl window bounds which benchmarks it can contain. (From A5 review.)"
+  },
+  {
+   "arxiv": "2309.09400",
+   "topics": [
+    "data",
+    "crawl"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "CulturaX: multilingual corpus (mC4 + OSCAR); crawl window and license terms need checking (no license found at source by the audit). (From A5 review.)"
+  },
+  {
+   "arxiv": "2503.10267",
+   "topics": [
+    "data",
+    "crawl"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "HPLT v2: multilingual web corpus; crawl window for contamination reasoning. (From A5 review.)"
+  },
+  {
+   "arxiv": "2412.19437",
+   "topics": [
+    "deepseek",
+    "data"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "DeepSeek-V3: V4 inherits its data preprocessing; closest statement of DeepSeek's data handling (still no decontamination detail for Philippine languages). (From A5 review.)"
+  },
+  {
+   "arxiv": "2406.10118",
+   "topics": [
+    "data",
+    "sea",
+    "catalogue"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "SEACrowd: catalogue of Southeast Asian and Philippine datasets; source for finding further evaluation and training sets. (From A5 review.)"
+  },
+  {
+   "arxiv": "2608.09766",
+   "topics": [
+    "benchmark",
+    "overfitting"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Cultivar: evidence of FLORES overfitting. Caution against headline results on FLORES. (From A5 review.)"
+  },
+  {
+   "arxiv": "1701.06538",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    2
+   ],
+   "role": "foundation",
+   "reviewed": false,
+   "why": "Sparsely-gated MoE: a trainable gating network (router) picks a few experts per example before they run. Defines the 'prior routing' that DiaGrad's posterior routing complements. (Search S40.)"
+  },
+  {
+   "arxiv": "2101.03961",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Switch Transformer: top-1 expert routing with load balancing; standard reference for token-level routing at scale. (Search S42.)"
+  },
+  {
+   "arxiv": "2401.06066",
+   "topics": [
+    "moe",
+    "routing",
+    "deepseek"
+   ],
+   "items": [
+    2
+   ],
+   "role": "foundation",
+   "reviewed": false,
+   "why": "DeepSeekMoE: fine-grained and shared experts; the router design used by DeepSeek-V3/V4/V4.1 that DiaGrad would build next to. (Search S39.)"
+  },
+  {
+   "arxiv": "1707.06347",
+   "topics": [
+    "rl"
+   ],
+   "items": [
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "PPO: standard policy-gradient algorithm; candidate for training the critique router (D5). (Search S38.)"
+  },
+  {
+   "arxiv": "2402.03300",
+   "topics": [
+    "rl"
+   ],
+   "items": [
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "DeepSeekMath: introduces GRPO (group-relative policy optimisation, no value network); candidate for training the critique router (D5). (Search S41.)"
+  },
+  {
+   "arxiv": "2507.10524",
+   "topics": [
+    "adaptive-compute"
+   ],
+   "items": [
+    1
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Mixture-of-Recursions: a learned router decides per-token recursion depth; closest analogue of REPASS as learned adaptive computation (pre-circulation review M4; D7)."
+  },
+  {
+   "arxiv": "2310.12963",
+   "topics": [
+    "routing",
+    "cascades"
+   ],
+   "items": [
+    1
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "AutoMix: self-verification of a small model's written answer decides whether to escalate to a larger model; posterior routing between whole models over written output (review M4; D7)."
+  },
+  {
+   "arxiv": "2305.05176",
+   "topics": [
+    "routing",
+    "cascades"
+   ],
+   "items": [
+    1
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "FrugalGPT: LLM cascade with a learned scorer deciding whether to accept an answer or call a stronger model; posterior routing between models over written output (review M4; D7)."
+  },
+  {
+   "arxiv": "2508.10925",
+   "topics": [
+    "moe",
+    "decoder-only"
+   ],
+   "items": [
+    1
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "gpt-oss-120b and gpt-oss-20b model card: decoder-only MoE that Sapin-sapin AI continued-pretrained; candidate later target for porting posterior routing (review O1; D7). Licence to be audited."
+  },
+  {
+   "id": "neurips2017-deliberation",
+   "proceedings": {
+    "bibtex_url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/c6036a69be21cb660499b75718a3ef24-Bibtex.bib",
+    "pdf_url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/c6036a69be21cb660499b75718a3ef24-Paper.pdf",
+    "openalex": "W2752047430"
+   },
+   "topics": [
+    "mt",
+    "multi-pass"
+   ],
+   "items": [
+    1
+   ],
+   "role": "closest-relative",
+   "reviewed": false,
+   "why": "Deliberation Networks (NIPS 2017): a first-pass decoder writes a raw sequence and a second-pass decoder polishes it, the classic two-pass 'think twice' MT design. The first pass is decoded text and every sentence gets the second pass; no critic decides and no experts are routed. Not on arXiv; added after review M4 (2026-09-24)."
+  },
+  {
+   "arxiv": "2410.03983",
+   "topics": [
+    "evaluation",
+    "metrics"
+   ],
+   "items": [
+    2
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "MetricX-24 (WMT 2024 metrics task): the learned MT metric used as the critique router's reward Q in the first prototype (D7/D8); Apache-2.0 per our licence audit; excluded from the evidence because it trains the router."
+  },
+  {
+   "arxiv": "1706.03762",
+   "topics": [
+    "foundations"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Transformer (Attention Is All You Need): attention, FFN, encoder-decoder; foundation chapter. S74 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "1910.10683",
+   "topics": [
+    "foundations"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "T5: encoder-decoder text-to-text transformer; base family of mT5/MADLAD. S70 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2203.15556",
+   "topics": [
+    "foundations",
+    "compute"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Chinchilla: compute-optimal training; FLOP accounting context. S72 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "1308.3432",
+   "topics": [
+    "foundations",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Bengio et al.: straight-through estimator and conditional computation; gradients through discrete choices. S71 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "1312.4314",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Eigen et al.: deep (stacked) mixture of experts; step from 1991 MoE to deep nets. S55/S59 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2006.16668",
+   "topics": [
+    "moe",
+    "mt"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "GShard: first very large MoE Transformer, for multilingual MT; top-2 gating, capacity, auxiliary loss. S46 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2202.08906",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "ST-MoE: training instability and router z-loss; what experts specialise in. S47 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2202.09368",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Expert-choice routing: experts pick tokens; variable compute per token. S48 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2106.04426",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Hash layers: routing by hashing with no learned router; baseline for 'does the router matter'. S49 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2103.16716",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "BASE layers: routing as balanced linear assignment. S50 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2308.00951",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Soft MoE: experts process weighted mixtures of tokens. S51 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2408.15664",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Auxiliary-loss-free load balancing via per-expert bias (used by DeepSeek-V3). S52 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2212.05055",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Sparse upcycling: MoE initialised from a dense checkpoint; relevant to our encoder MoE. S53 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2211.15841",
+   "topics": [
+    "moe",
+    "systems"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "MegaBlocks: dropless MoE training with block-sparse kernels; systems chapter. S54 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2401.04088",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Mixtral: open sparse MoE, 8 experts top-2; routing analysis. S55 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2409.02060",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "OLMoE: fully open MoE with specialisation analysis. S56 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2402.07871",
+   "topics": [
+    "moe",
+    "scaling"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Scaling laws for fine-grained MoE (granularity). S57 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2202.01169",
+   "topics": [
+    "moe",
+    "scaling"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Unified scaling laws for routed language models. S58 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2407.06204",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "A Survey on Mixture of Experts: overview for the explainer. S73 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2501.11873",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Demons in the Detail: implementing the load-balancing loss and its effect on expert specialisation (2025). S52/S62 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2505.10860",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Statistical benefits of shared experts and normalised sigmoid gating in DeepSeekMoE (2025). S45 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2604.04230",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Three phases of expert routing during MoE training (2026). S45/S59/S60 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2601.03425",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "The Illusion of Specialization: domain-invariant 'standing committee' of experts (2026). S45/S59/S61 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2604.14419",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Equifinality: routing topology does not determine LM quality (2026). S45/S60 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2510.04694",
+   "topics": [
+    "moe",
+    "multilingual"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Multilingual Routing in Mixture-of-Experts (2025): how MoE routes across languages. S60 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2507.17702",
+   "topics": [
+    "moe",
+    "scaling"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Scaling laws for efficient MoE language models (2025). S57 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2505.22323",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Advancing Expert Specialization for Better MoE (2025). S61/S62 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2507.23279",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Super Experts in MoE LLMs (2025): a few experts matter disproportionately; relevant to rerouting away from hub experts. S61/S73 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2512.23447",
+   "topics": [
+    "moe",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Coupling experts and routers via an auxiliary loss (2025). S60 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2212.07571",
+   "topics": [
+    "moe",
+    "mt"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Fixing MoE over-fitting on low-resource languages in multilingual MT. S63 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2603.04445",
+   "topics": [
+    "routing",
+    "cascades"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Survey of dynamic model routing and cascading (2026): context for posterior routing between models. S73 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "1807.03819",
+   "topics": [
+    "adaptive-compute"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Universal Transformers: recurrent depth with adaptive computation. S66 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2107.05407",
+   "topics": [
+    "adaptive-compute"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "PonderNet: learned probabilistic halting. S65 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2404.02258",
+   "topics": [
+    "adaptive-compute",
+    "routing"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Mixture-of-Depths: routing tokens around blocks to allocate compute. S64 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2207.07061",
+   "topics": [
+    "adaptive-compute"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "CALM: confidence-based early exit per token. S67 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2210.10760",
+   "topics": [
+    "rl"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Reward model overoptimisation scaling laws (Goodhart evidence). S68 (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2405.04434",
+   "topics": [
+    "moe"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "DeepSeek-V2: MLA and DeepSeekMoE at scale; lineage between DeepSeekMoE and V3. (DeepSeek lineage; direct ID) (explainer extension 2026-09-24)"
+  },
+  {
+   "id": "neco1991-jacobs",
+   "publication": {
+    "doi": "10.1162/neco.1991.3.1.79",
+    "openalex": "W2150884987"
+   },
+   "topics": [
+    "foundations"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Jacobs, Jordan, Nowlan, Hinton 1991: Adaptive Mixtures of Local Experts, the origin of MoE (gating network + experts). No open PDF: abstract only. (explainer extension 2026-09-24)"
+  },
+  {
+   "id": "neco1994-jordan",
+   "publication": {
+    "doi": "10.1162/neco.1994.6.2.181",
+    "openalex": "W2025653905"
+   },
+   "topics": [
+    "foundations"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Jordan and Jacobs 1994: hierarchical mixtures of experts trained with EM. No open PDF: abstract only. (explainer extension 2026-09-24)"
+  },
+  {
+   "id": "ml1992-williams",
+   "publication": {
+    "doi": "10.1007/BF00992696",
+    "openalex": "W2119717200"
+   },
+   "topics": [
+    "foundations"
+   ],
+   "items": [
+    1,
+    2
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Williams 1992: REINFORCE, the basic policy-gradient estimator with a baseline; foundation for the router's RL. Springer's PDF link returns a web page to scripts and OpenAlex has no abstract, so this record is metadata only: cite for attribution, and check claims via papers that describe REINFORCE. (explainer extension 2026-09-24)"
+  },
+  {
+   "arxiv": "2502.20395",
+   "topics": [
+    "routing",
+    "moe"
+   ],
+   "items": [
+    1,
+    3
+   ],
+   "role": "closest-relative",
+   "reviewed": false,
+   "why": "R2-T2: re-routing in test-time for multimodal MoE. Moves a test sample's routing weights towards those of correctly answered neighbours; no base-model training. Nearest prior on re-routing experts at inference; differs from DiaGrad: the signal is neighbour success, not a critic judging the model's own draft, and there is no learned accept/redo policy. (prior-work audit r3, S75/S77/S83, D10, 2026-10-02)"
+  },
+  {
+   "arxiv": "2504.07964",
+   "topics": [
+    "routing",
+    "moe"
+   ],
+   "items": [
+    1,
+    3
+   ],
+   "role": "closest-relative",
+   "reviewed": false,
+   "why": "C3PO: test-time expert re-mixing in critical layers and core experts, optimising a surrogate from successful reference neighbours; reports a 10-20% accuracy gap left by pretrained expert selection. Supports DiaGrad's motivation; differs as R2-T2 does. (prior-work audit r3, S75/S77/S83, D10, 2026-10-02)"
+  },
+  {
+   "arxiv": "2509.22572",
+   "topics": [
+    "routing",
+    "moe",
+    "verification"
+   ],
+   "items": [
+    1,
+    3
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Dynamic Experts Search: varies the number of active experts at test time to diversify reasoning paths and selects with a verifier. Verifier plus expert-space variation, but over written outputs and without critique-directed rerouting. (prior-work audit r3, S75/S77/S83, D10, 2026-10-02)"
+  },
+  {
+   "arxiv": "2604.14246",
+   "topics": [
+    "routing",
+    "moe"
+   ],
+   "items": [
+    1,
+    3
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Counterfactual Routing (ACL 2026): training-free inference that shifts expert activation towards causally important 'dormant' experts at a constant activation count. Rerouting at equal compute, without a critic. (prior-work audit r3, S75/S77/S83, D10, 2026-10-02)"
+  },
+  {
+   "arxiv": "2609.13058",
+   "topics": [
+    "routing",
+    "moe",
+    "rl"
+   ],
+   "items": [
+    1,
+    3
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "ESRL: expert-space exploration in MoE RL. Finds that perturbing routing alters outputs much like raising decoding temperature. Motivates DiaGrad's random-direction reroute baseline: a REROUTE gain could come from diversity alone. (prior-work audit r3, S75/S77/S83, D10, 2026-10-02)"
+  },
+  {
+   "arxiv": "2010.06595",
+   "topics": [
+    "evaluation",
+    "statistics",
+    "human-eval"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Statistical power in NLP: underpowered comparisons are common; small test sets and typical human-rating designs often cannot detect small model differences, inflating claimed gains. Sizes DiaGrad's D5 and human-eval designs before claiming a REROUTE gain."
+  },
+  {
+   "arxiv": "2406.10229",
+   "topics": [
+    "evaluation",
+    "statistics",
+    "seeds"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Quantifies benchmark variance (seed variance across initialisations, monotonicity during training) and gives recommendations. A difference smaller than the seed variance it measures is not a result; informs how many seeds tranche-1 needs."
+  },
+  {
+   "arxiv": "1806.08295",
+   "topics": [
+    "evaluation",
+    "statistics",
+    "seeds"
+   ],
+   "items": [
+    4,
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "How many random seeds: links seed count to error rates for t-test and bootstrap comparisons of two algorithms, and shows violated test assumptions distort them. Seeds cost compute (item 4) and set what a comparison can detect (item 7)."
+  },
+  {
+   "arxiv": "2205.11134",
+   "topics": [
+    "evaluation",
+    "statistics"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Argues for bootstrap confidence intervals on the difference between systems instead of SOTA status or bare significance tests. Reporting format for CAMOE vs baselines."
+  },
+  {
+   "arxiv": "1411.2664",
+   "topics": [
+    "evaluation",
+    "statistics",
+    "overfitting"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Adaptive data analysis: choosing analyses after seeing holdout results breaks standard inference and false-discovery control. Why D5 is read once and the prereg fixes analyses before tranche-1 data."
+  },
+  {
+   "arxiv": "2310.17623",
+   "topics": [
+    "contamination",
+    "evaluation"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Provable black-box contamination test: a contaminated model finds a benchmark's canonical example order much likelier than shuffled orders. Usable on public Filipino sets (FLORES, Belebele) as part of the A5 audit."
+  },
+  {
+   "arxiv": "2410.03249",
+   "topics": [
+    "contamination",
+    "evaluation",
+    "scaling"
+   ],
+   "items": [
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Contamination is forgotten only when training runs far past Chinchilla-scale tokens; at Chinchilla scale even minor contamination overfits. Small fine-tuning runs cannot assume leaked items wash out."
+  },
+  {
+   "arxiv": "2502.01534",
+   "topics": [
+    "evaluation",
+    "llm-judge",
+    "contamination"
+   ],
+   "items": [
+    3,
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Preference leakage: LLM judges favour outputs from the model, family or descendant that generated the training data. Another reason an LLM judge is not evidence and a critic trained on one model's data is suspect."
+  },
+  {
+   "arxiv": "2410.02736",
+   "topics": [
+    "evaluation",
+    "llm-judge"
+   ],
+   "items": [
+    3,
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "CALM: quantifies 12 biases of LLM-as-a-judge; significant biases persist in specific tasks. Supports human evaluation as primary evidence and caution with LLM critics as label sources."
+  },
+  {
+   "arxiv": "2312.09244",
+   "topics": [
+    "reward",
+    "rl",
+    "critic-signal"
+   ],
+   "items": [
+    3
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Reward models are underspecified: optimising against one does not raise reward under another trained on the same data; ensembles mitigate but do not eliminate reward hacking. Relevant to RL reward Q for the critique router and the metric-as-evidence rule."
+  },
+  {
+   "arxiv": "2407.04549",
+   "topics": [
+    "self-correction",
+    "iterative-refinement",
+    "reward",
+    "critique"
+   ],
+   "items": [
+    2,
+    3,
+    6
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Iterative self-refinement with a same-model evaluator drifts from human judgment: evaluator ratings rise while quality stagnates (reward hacking). Direct risk for a critic sharing weights with workers; human eval is the check."
+  },
+  {
+   "arxiv": "2310.01798",
+   "topics": [
+    "self-correction",
+    "critique"
+   ],
+   "items": [
+    2,
+    6
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "LLMs cannot self-correct reasoning without external feedback and sometimes get worse. Item 6 contrast: visible intrinsic self-critique fails, so CAMOE's critic must add information the worker lacks; REPASS-without-critic is the baseline."
+  },
+  {
+   "arxiv": "2404.17140",
+   "topics": [
+    "self-correction",
+    "critic-signal",
+    "verification"
+   ],
+   "items": [
+    2,
+    3
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Small (<=13B) LMs self-correct reasoning mainly when paired with a strong verifier; training on critiques of their own errors helps. Bears on critic strength vs worker strength and where critic labels come from."
+  },
+  {
+   "arxiv": "2305.15425",
+   "topics": [
+    "tokenization",
+    "low-resource",
+    "filipino"
+   ],
+   "items": [
+    4,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Tokenizers encode the same text at very different lengths across languages (up to 15x). Token budgets, context limits and per-token compute are not comparable across Philippine languages; compare in words or characters."
+  },
+  {
+   "arxiv": "2305.10930",
+   "topics": [
+    "translation",
+    "mt",
+    "failure-modes"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Off-target (wrong-language) translation rises when languages' vocabularies are lexically close. Closely related Philippine languages need language-ID checks before chrF++ credit."
+  },
+  {
+   "arxiv": "2310.03693",
+   "topics": [
+    "fine-tuning",
+    "safety",
+    "failure-modes"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Fine-tuning an aligned model can erode its safety behaviour, even without malicious data. Post-training side effects appear on behaviours the held-out set does not cover; mainly OpenGrad-relevant, kept for any DiaGrad fine-tune of an aligned base."
+  },
+  {
+   "arxiv": "2011.10566",
+   "topics": [
+    "foundations"
+   ],
+   "items": [
+    1
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "SimSiam: one encoder shared by two branches with a stop-gradient on one; the shared encoder still trains through the other branch. Cited in the maths guide to explain what detaching the first draft does and does not do (D13, 2026-10-04)."
+  },
+  {
+   "arxiv": "1808.09381",
+   "topics": [
+    "data",
+    "low-resource",
+    "mt"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Back-translation at scale. Sampling beats beam except in the 80K low-resource setting, where beam wins. Basis for the back-translation generation setting (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "1906.06442",
+   "topics": [
+    "data",
+    "mt"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Tagged back-translation: one tag token matches or beats noising. Basis for tagging every synthetic slice (U3) (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "1908.05204",
+   "topics": [
+    "data",
+    "evaluation",
+    "translation-quality"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Human evaluation shows back-translation helps natural-source text too, and BLEU misses it. Argues for human evaluation on natural-source sets (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "1606.07947",
+   "topics": [
+    "data",
+    "mt"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Sequence-level knowledge distillation: train on teacher translations (bigger-teacher re-translation) (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2004.09813",
+   "topics": [
+    "sentence-latent",
+    "data",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Multilingual knowledge distillation of sentence embeddings (MSE to a teacher); Tagalog Tatoeba 86.2/84.0 from 36k pairs (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2205.12654",
+   "topics": [
+    "sentence-latent",
+    "data",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "LASER3 teacher-student encoders plus MLM and curriculum; the miner behind our NLLB en-tl pairs (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2502.12301",
+   "topics": [
+    "evaluation",
+    "data",
+    "filipino",
+    "human-eval"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "SMOL: our D19 gate test set, and the post-editing precedent (Gemini drafts, about 70% of sentences changed) (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2505.14423",
+   "topics": [
+    "data",
+    "low-resource",
+    "human-eval"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Forward-translated synthetic data with human ratings; Bicleaner-AI weakly correlated with humans (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2508.08680",
+   "topics": [
+    "data",
+    "low-resource",
+    "nllb"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "TopXGen: LLM-written low-resource text back-translated with NLLB-3.3B; example for the NLLB-output question (D25) (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2402.06619",
+   "topics": [
+    "data",
+    "nllb",
+    "multilingual"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Aya Collection: translated with NLLB-3.3B and released Apache-2.0; licence-practice example for D25 (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2604.11290",
+   "topics": [
+    "data",
+    "filipino",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Polyglot Teachers: which teacher model to use for synthetic data; Tagalog case study (D25 teacher comparison) (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2603.25489",
+   "topics": [
+    "data",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Augmentation direction should follow the resource gradient (back-translate the low-resource side) (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2408.06537",
+   "topics": [
+    "data",
+    "mt"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "NewsPaLM: LLM-generated MBR/QE-selected data beats 300x larger web data (en-de) (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2402.01939",
+   "topics": [
+    "data",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Morphology-aware dictionary augmentation (Taglish / lexicon augmentation) (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "1911.04944",
+   "topics": [
+    "data",
+    "crawl"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "CCMatrix: margin-based bitext mining at web scale; one of our D22 corpora (2026-10-17 techniques survey, research/data-survey/data-gathering-techniques-2026-10-17.md)"
+  },
+  {
+   "arxiv": "2402.07446",
+   "topics": [
+    "data",
+    "low-resource",
+    "translation-quality"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Quality Does Matter: top-ranked slices of web-mined corpora (incl. NLLB) beat random or bottom slices; NLLB top is religious-heavy. Evidence for D22 filtering (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2210.10692",
+   "topics": [
+    "data",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "Separating Grains from the Chaff: strict classifier filtering of mined data wins for African languages (WMT22). Evidence for D22 filtering (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2410.07830",
+   "topics": [
+    "data",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "NusaMT-7B: LASER3 floor 1.09, GlotLID 0.9 and OpusFilter heuristics for mined data; our rank 5M sits at 1.09 (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2111.06787",
+   "topics": [
+    "data",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "BitextEdit: keeping the 1.05-1.06 CCMatrix band helped when data was scarce; the counter-evidence to hard filtering (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2401.05749",
+   "topics": [
+    "data",
+    "translation-quality"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "A Shocking Amount of the Web is Machine Translated: LASER favours MT output; multi-way-parallel text is mostly MT. Explains MT-heavy top of NLLB en-tl (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2103.12028",
+   "topics": [
+    "data",
+    "contamination",
+    "translation-quality"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "evaluation",
+   "reviewed": false,
+   "why": "Quality at a Glance: audit of web-crawled corpora; CCAligned en-tl 13% correct. Basis for excluding CCAligned (D22) (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2305.16307",
+   "topics": [
+    "data",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "related",
+   "reviewed": false,
+   "why": "IndicTrans2: LaBSE >= 0.80 re-filter of allenai/nllb dropped 76% and gained chrF++. Basis for the second-opinion filter (D22) (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2511.01066",
+   "topics": [
+    "data",
+    "multilingual"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "HPLT 3.0: bilingual data for 28 European languages only; no Tagalog pairs (D22 screening) (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2403.14009",
+   "topics": [
+    "data",
+    "multilingual"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "HPLT v1: 18 English-paired languages, no Tagalog (D22 screening) (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2506.00469",
+   "topics": [
+    "data",
+    "multilingual"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "MaLA bilingual corpus: re-packages NLLB/OPUS/Tatoeba; excluded for missing per-row provenance (D22 screening) (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2304.09919",
+   "topics": [
+    "data",
+    "low-resource"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "eBible corpus: source of the Tagalog Unlocked Literal Bible pairs (D22) (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2305.17493",
+   "topics": [
+    "data",
+    "foundations"
+   ],
+   "items": [
+    1,
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "The Curse of Recursion: training on generated data loses distribution tails; risk note for synthetic data (D22 Mix 4, D25) (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  }
+ ]
+}

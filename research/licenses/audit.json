@@ -1,0 +1,407 @@
+{
+  "generated": "2026-10-07T14:24:57+00:00",
+  "results": [
+    {
+      "kind": "hf-model",
+      "id": "google/madlad400-3b-mt",
+      "role": "Path A base for our own sentence space",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/google/madlad400-3b-mt",
+      "checked": "2026-10-07T14:24:27+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "google/madlad400-7b-mt",
+      "role": "Path A, larger",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/google/madlad400-7b-mt",
+      "checked": "2026-10-07T14:24:27+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "google/madlad400-10b-mt",
+      "role": "Path A, largest",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/google/madlad400-10b-mt",
+      "checked": "2026-10-07T14:24:28+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "google/mt5-base",
+      "role": "Path B cheap prototype",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/google/mt5-base",
+      "checked": "2026-10-07T14:24:28+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "google/byt5-base",
+      "role": "Path B, byte-level (no tokenizer bias against PH languages)",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/google/byt5-base",
+      "checked": "2026-10-07T14:24:29+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "sentence-transformers/LaBSE",
+      "role": "Path C encoder",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/sentence-transformers/LaBSE",
+      "checked": "2026-10-07T14:24:29+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "intfloat/multilingual-e5-large",
+      "role": "Path C encoder",
+      "license": "mit",
+      "source": "https://huggingface.co/api/models/intfloat/multilingual-e5-large",
+      "checked": "2026-10-07T14:24:30+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "BAAI/bge-m3",
+      "role": "Path C encoder",
+      "license": "mit",
+      "source": "https://huggingface.co/api/models/BAAI/bge-m3",
+      "checked": "2026-10-07T14:24:30+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "Alibaba-NLP/gte-multilingual-base",
+      "role": "Path C encoder",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/Alibaba-NLP/gte-multilingual-base",
+      "checked": "2026-10-07T14:24:32+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "facebook/mbart-large-50",
+      "role": "alternative encoder-decoder",
+      "license": "mit",
+      "source": "https://huggingface.co/api/models/facebook/mbart-large-50",
+      "checked": "2026-10-07T14:24:32+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "facebook/SONAR",
+      "role": "excluded reference (non-commercial)",
+      "license": "cc-by-nc-4.0",
+      "source": "https://huggingface.co/api/models/facebook/SONAR",
+      "checked": "2026-10-07T14:24:33+00:00",
+      "class": "non-commercial"
+    },
+    {
+      "kind": "hf-model",
+      "id": "facebook/nllb-200-distilled-600M",
+      "role": "excluded reference (non-commercial); must not be used to make training data",
+      "license": "cc-by-nc-4.0",
+      "source": "https://huggingface.co/api/models/facebook/nllb-200-distilled-600M",
+      "checked": "2026-10-07T14:24:35+00:00",
+      "class": "non-commercial"
+    },
+    {
+      "kind": "hf-model",
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "role": "architecture reference with built-in Engram",
+      "license": "mit",
+      "source": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4.1-Flash",
+      "checked": "2026-10-07T14:24:35+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "role": "architecture reference",
+      "license": "mit",
+      "source": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4-Flash",
+      "checked": "2026-10-07T14:24:35+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "allenai/OLMo-2-0425-1B",
+      "role": "fully open small base model (used by Encode-Think-Decode)",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/allenai/OLMo-2-0425-1B",
+      "checked": "2026-10-07T14:24:36+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "Qwen/Qwen3-0.6B",
+      "role": "small open base model for quick experiments",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/Qwen/Qwen3-0.6B",
+      "checked": "2026-10-07T14:24:36+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "ByteDance/Ouro-1.4B",
+      "role": "looped model studied by the halting-gate paper",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/ByteDance/Ouro-1.4B",
+      "checked": "2026-10-07T14:24:36+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "tomg-group-umd/huginn-0125",
+      "role": "recurrent-depth model (2502.05171)",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/tomg-group-umd/huginn-0125",
+      "checked": "2026-10-07T14:24:38+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "Unbabel/wmt22-comet-da",
+      "role": "evaluation metric",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/Unbabel/wmt22-comet-da",
+      "checked": "2026-10-07T14:24:38+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-model",
+      "id": "Unbabel/wmt22-cometkiwi-da",
+      "role": "evaluation metric (reference-free)",
+      "license": "cc-by-nc-sa-4.0",
+      "source": "https://huggingface.co/api/models/Unbabel/wmt22-cometkiwi-da",
+      "gated": "auto",
+      "checked": "2026-10-07T14:24:38+00:00",
+      "class": "non-commercial"
+    },
+    {
+      "kind": "hf-model",
+      "id": "Unbabel/XCOMET-XL",
+      "role": "evaluation metric with error spans",
+      "license": "cc-by-nc-sa-4.0",
+      "source": "https://huggingface.co/api/models/Unbabel/XCOMET-XL",
+      "gated": "auto",
+      "checked": "2026-10-07T14:24:38+00:00",
+      "class": "non-commercial"
+    },
+    {
+      "kind": "hf-model",
+      "id": "google/metricx-24-hybrid-large-v2p6",
+      "role": "evaluation metric",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/models/google/metricx-24-hybrid-large-v2p6",
+      "checked": "2026-10-07T14:24:39+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "github",
+      "id": "deepseek-ai/Engram",
+      "role": "Engram reference implementation",
+      "license": "apache-2.0",
+      "source": "https://github.com/deepseek-ai/Engram",
+      "checked": "2026-10-07T14:24:40+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "github",
+      "id": "facebookresearch/large_concept_model",
+      "role": "LCM code (sentence-space modelling)",
+      "license": "mit",
+      "source": "https://github.com/facebookresearch/large_concept_model",
+      "checked": "2026-10-07T14:24:40+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "github",
+      "id": "facebookresearch/SONAR",
+      "role": "SONAR code (MIT) vs weights (NC)",
+      "license": null,
+      "source": "https://github.com/facebookresearch/SONAR",
+      "note": "GitHub could not identify the license file (NOASSERTION)",
+      "checked": "2026-10-07T14:24:41+00:00",
+      "class": "unknown"
+    },
+    {
+      "kind": "github",
+      "id": "alexiglad/EBT",
+      "role": "Energy-Based Transformers code",
+      "license": "apache-2.0",
+      "source": "https://github.com/alexiglad/EBT",
+      "checked": "2026-10-07T14:24:41+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "github",
+      "id": "seal-rg/recurrent-pretraining",
+      "role": "recurrent-depth training code",
+      "license": "apache-2.0",
+      "source": "https://github.com/seal-rg/recurrent-pretraining",
+      "checked": "2026-10-07T14:24:42+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "github",
+      "id": "facebookresearch/coconut",
+      "role": "continuous latent reasoning code",
+      "license": "mit",
+      "source": "https://github.com/facebookresearch/coconut",
+      "checked": "2026-10-07T14:24:42+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "github",
+      "id": "jxmorris12/vec2text",
+      "role": "embedding inversion code (Path C)",
+      "license": null,
+      "source": "https://github.com/jxmorris12/vec2text",
+      "checked": "2026-10-07T14:24:43+00:00",
+      "class": "unknown"
+    },
+    {
+      "kind": "github",
+      "id": "google-research/metricx",
+      "role": "MetricX code",
+      "license": "apache-2.0",
+      "source": "https://github.com/google-research/metricx",
+      "checked": "2026-10-07T14:24:43+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "github",
+      "id": "Unbabel/COMET",
+      "role": "COMET code",
+      "license": "apache-2.0",
+      "source": "https://github.com/Unbabel/COMET",
+      "checked": "2026-10-07T14:24:44+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "allenai/MADLAD-400",
+      "role": "monolingual pretraining data incl. PH languages",
+      "license": "odc-by",
+      "source": "https://huggingface.co/api/datasets/allenai/MADLAD-400",
+      "checked": "2026-10-07T14:24:48+00:00",
+      "class": "permissive-attribution"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "openlanguagedata/flores_plus",
+      "role": "evaluation (must stay out of training)",
+      "license": "cc-by-sa-4.0",
+      "source": "https://huggingface.co/api/datasets/openlanguagedata/flores_plus",
+      "gated": "auto",
+      "checked": "2026-10-07T14:24:48+00:00",
+      "class": "share-alike"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "facebook/belebele",
+      "role": "evaluation (reading comprehension)",
+      "license": "cc-by-sa-4.0",
+      "source": "https://huggingface.co/api/datasets/facebook/belebele",
+      "checked": "2026-10-07T14:24:48+00:00",
+      "class": "share-alike"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "HuggingFaceFW/fineweb-2",
+      "role": "monolingual pretraining data",
+      "license": "odc-by",
+      "source": "https://huggingface.co/api/datasets/HuggingFaceFW/fineweb-2",
+      "checked": "2026-10-07T14:24:49+00:00",
+      "class": "permissive-attribution"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "uonlp/CulturaX",
+      "role": "monolingual pretraining data",
+      "license": null,
+      "source": "https://huggingface.co/api/datasets/uonlp/CulturaX",
+      "gated": "auto",
+      "checked": "2026-10-07T14:24:50+00:00",
+      "class": "unknown"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "allenai/nllb",
+      "role": "mined parallel data (check terms carefully)",
+      "license": null,
+      "source": "https://huggingface.co/api/datasets/allenai/nllb",
+      "checked": "2026-10-07T14:24:50+00:00",
+      "class": "unknown"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "UD-Filipino/filbench",
+      "role": "evaluation (FilBench) — id to verify",
+      "license": null,
+      "source": "https://huggingface.co/api/datasets/UD-Filipino/filbench",
+      "error": "HTTP 401",
+      "checked": "2026-10-07T14:24:51+00:00",
+      "class": "unknown"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "aisingapore/kalahi",
+      "role": "evaluation (Kalahi) — id to verify",
+      "license": "cc-by-4.0",
+      "source": "https://huggingface.co/api/datasets/aisingapore/kalahi",
+      "checked": "2026-10-07T14:24:51+00:00",
+      "class": "permissive-attribution"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "google/smol",
+      "role": "en-fil parallel (SmolSent 754 sentences, SmolDoc 60 docs; human translation): tranche-1 held-out candidate (data survey 2026-10-07)",
+      "license": "cc-by-4.0",
+      "source": "https://huggingface.co/api/datasets/google/smol",
+      "checked": "2026-10-07T14:24:51+00:00",
+      "class": "permissive-attribution"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "AmazonScience/massive",
+      "role": "en-US/tl-PH parallel utterances (16,521; human localisation, card names MTurk worker ids): tranche-1 held-out candidate (data survey 2026-10-07)",
+      "license": "cc-by-4.0",
+      "source": "https://huggingface.co/api/datasets/AmazonScience/massive",
+      "checked": "2026-10-07T14:24:52+00:00",
+      "class": "permissive-attribution"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "mutiyama/alt",
+      "role": "ALT en-fil parallel (18,088 in OPUS; Wikinews, human translation): tranche-1 candidate (data survey 2026-10-07)",
+      "license": "cc-by-4.0",
+      "source": "https://huggingface.co/api/datasets/mutiyama/alt",
+      "checked": "2026-10-07T14:24:52+00:00",
+      "class": "permissive-attribution"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "HPLT/HPLT2.0_cleaned",
+      "role": "Filipino monolingual text (tgl_Latn) for the target encoder's denoising loss (data survey 2026-10-07)",
+      "license": "cc0-1.0",
+      "source": "https://huggingface.co/api/datasets/HPLT/HPLT2.0_cleaned",
+      "checked": "2026-10-07T14:24:56+00:00",
+      "class": "permissive"
+    },
+    {
+      "kind": "hf-dataset",
+      "id": "google/wmt24pp",
+      "role": "E1 evaluation data (en-fil_PH); must stay out of every training and held-out set",
+      "license": "apache-2.0",
+      "source": "https://huggingface.co/api/datasets/google/wmt24pp",
+      "checked": "2026-10-07T14:24:57+00:00",
+      "class": "permissive"
+    }
+  ]
+}

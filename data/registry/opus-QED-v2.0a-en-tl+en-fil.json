@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "id": "opus-QED-v2.0a-en-tl+en-fil",
+  "display_name": "QED v2.0a English-Tagalog and English-Filipino (OPUS; educational video subtitles)",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "TRAIN_PARALLEL"
+  ],
+  "languages": [
+    "eng_Latn",
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "VERSIONED_URL",
+    "value": "v2.0a",
+    "verified": true,
+    "source": "release named in the inner README; pair count equals the OPUS API (2026-10-17)"
+  },
+  "distribution": [
+    {
+      "name": "moses/en-tl.txt.zip",
+      "content_url": "https://object.pouta.csc.fi/OPUS-QED/v2.0a/moses/en-tl.txt.zip",
+      "local_path": "~/data/raw/opus-QED-v2.0a-en-tl/OPUS-QED.en-tl.txt.zip",
+      "sha256": "d17b10a5a0a697945150a631c9b207ffbd30b6fba4f294b0f6e20100e4f2c407",
+      "bytes": 169448,
+      "verified_from": "downloaded on a separate machine (OPUS store unreachable from the GB10 workstation, D23) and transferred; line counts equal the OPUS API count; inner README names this release"
+    },
+    {
+      "name": "moses/en-fil.txt.zip",
+      "content_url": "https://object.pouta.csc.fi/OPUS-QED/v2.0a/moses/en-fil.txt.zip",
+      "local_path": "~/data/raw/opus-QED-v2.0a-en-fil/OPUS-QED.en-fil.txt.zip",
+      "sha256": "018f06d4bfb4b54fbf321b5f971af97ff510ae2eb46300e0d03fc8c445b65eeb",
+      "bytes": 2149583,
+      "verified_from": "downloaded on a separate machine (OPUS store unreachable from the GB10 workstation, D23) and transferred; line counts equal the OPUS API count; inner README names this release"
+    }
+  ],
+  "license": {
+    "spdx": "LicenseRef-QED-research-only",
+    "quote": "The QED Corpus is made public for RESEARCH purpose only.",
+    "source": "OPUS QED v2.0a LICENSE file inside both zips"
+  },
+  "use_class": "RESEARCH_ONLY",
+  "text_origin": {
+    "kind": "HUMAN",
+    "notes": "Educational video subtitles (QCRI QED). 3,092 en-tl + 42,864 en-fil pairs."
+  },
+  "redistribution": {
+    "status": "NOT_PERMITTED",
+    "basis": "RESEARCH purpose only (LICENSE); never republished (screening note)."
+  },
+  "attribution": {
+    "required": true,
+    "citation_target": "QED corpus paper named in the OPUS README [verify; not yet in references.bib]"
+  },
+  "sample_count": {
+    "published": 45956,
+    "unit": "sentence pairs",
+    "source": "OPUS API",
+    "measured": 45956
+  },
+  "contamination": {
+    "status": "NOT_CHECKED"
+  },
+  "forbidden_uses": [
+    "REDISTRIBUTION"
+  ],
+  "decisions": [
+    "D15",
+    "D22",
+    "D23"
+  ],
+  "retrieved": "2026-10-17",
+  "notes": [
+    "Downloaded on a separate machine because the OPUS object store is unreachable from the GB10 workstation (D23); verified on the GB10 workstation 2026-10-17."
+  ]
+}

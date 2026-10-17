@@ -1,0 +1,115 @@
+{
+ "nllb_lines_scanned": 63581148,
+ "union": {
+  "distinct_pairs_all_sources": 4279806,
+  "new_pairs_not_in_nllb": 4060618,
+  "new_pairs_madlad_tokens": 135610347,
+  "note": "dedup across all listed sources and against NLLB; tokens of the first occurrence"
+ },
+ "tokenizer": [
+  "google/madlad400-3b-mt",
+  "fa184c675da0b5c9e1c8694fccd4e12e2d422094"
+ ],
+ "normalisation": "diagrad.t1.contamination.norm",
+ "sources": {
+  "ccmatrix": {
+   "pairs": 3113828,
+   "madlad_tokens": 101658875,
+   "tokens_per_pair": 32.65,
+   "duplicate_pairs_within": 141425,
+   "in_nllb_pair": 169618,
+   "in_nllb_en_side": 236587,
+   "in_nllb_tl_side": 1570354,
+   "rate_pair_in_nllb": 0.0545,
+   "new_pairs_after_dedup": 2828188
+  },
+  "opensubtitles": {
+   "pairs": 1072914,
+   "madlad_tokens": 21783752,
+   "tokens_per_pair": 20.3,
+   "duplicate_pairs_within": 202627,
+   "in_nllb_pair": 10721,
+   "in_nllb_en_side": 124799,
+   "in_nllb_tl_side": 89532,
+   "rate_pair_in_nllb": 0.01,
+   "new_pairs_after_dedup": 866948
+  },
+  "wikimatrix": {
+   "pairs": 75446,
+   "madlad_tokens": 5057808,
+   "tokens_per_pair": 67.04,
+   "duplicate_pairs_within": 0,
+   "in_nllb_pair": 11913,
+   "in_nllb_en_side": 13557,
+   "in_nllb_tl_side": 37296,
+   "rate_pair_in_nllb": 0.1579,
+   "new_pairs_after_dedup": 63533
+  },
+  "bible_uedin": {
+   "pairs": 62195,
+   "madlad_tokens": 4846456,
+   "tokens_per_pair": 77.92,
+   "duplicate_pairs_within": 1032,
+   "in_nllb_pair": 5386,
+   "in_nllb_en_side": 7584,
+   "in_nllb_tl_side": 39495,
+   "rate_pair_in_nllb": 0.0866,
+   "new_pairs_after_dedup": 55937
+  },
+  "qed_tl": {
+   "pairs": 3092,
+   "madlad_tokens": 118761,
+   "tokens_per_pair": 38.41,
+   "duplicate_pairs_within": 294,
+   "in_nllb_pair": 101,
+   "in_nllb_en_side": 270,
+   "in_nllb_tl_side": 299,
+   "rate_pair_in_nllb": 0.0327,
+   "new_pairs_after_dedup": 2702
+  },
+  "qed_fil": {
+   "pairs": 42864,
+   "madlad_tokens": 1542878,
+   "tokens_per_pair": 35.99,
+   "duplicate_pairs_within": 4406,
+   "in_nllb_pair": 629,
+   "in_nllb_en_side": 3738,
+   "in_nllb_tl_side": 3415,
+   "rate_pair_in_nllb": 0.0147,
+   "new_pairs_after_dedup": 37940
+  },
+  "globalvoices": {
+   "pairs": 2517,
+   "madlad_tokens": 153319,
+   "tokens_per_pair": 60.91,
+   "duplicate_pairs_within": 41,
+   "in_nllb_pair": 537,
+   "in_nllb_en_side": 619,
+   "in_nllb_tl_side": 1119,
+   "rate_pair_in_nllb": 0.2133,
+   "new_pairs_after_dedup": 1941
+  },
+  "paracrawl": {
+   "pairs": 248689,
+   "madlad_tokens": 20583256,
+   "tokens_per_pair": 82.77,
+   "duplicate_pairs_within": 8798,
+   "in_nllb_pair": 60427,
+   "in_nllb_en_side": 64396,
+   "in_nllb_tl_side": 108546,
+   "rate_pair_in_nllb": 0.243,
+   "new_pairs_after_dedup": 180993
+  },
+  "ebible": {
+   "pairs": 30958,
+   "madlad_tokens": 2335589,
+   "tokens_per_pair": 75.44,
+   "duplicate_pairs_within": 107,
+   "in_nllb_pair": 17,
+   "in_nllb_en_side": 2944,
+   "in_nllb_tl_side": 156,
+   "rate_pair_in_nllb": 0.0005,
+   "new_pairs_after_dedup": 30834
+  }
+ }
+}

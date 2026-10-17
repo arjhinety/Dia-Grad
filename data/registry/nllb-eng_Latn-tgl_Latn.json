@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "id": "nllb-eng_Latn-tgl_Latn",
+  "display_name": "NLLB mined bitext, English-Tagalog (allenai/nllb, eng_Latn-tgl_Latn)",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "TRAIN_PARALLEL",
+    "LABELLING_SAMPLE"
+  ],
+  "languages": [
+    "eng_Latn",
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "SERVER_FILE",
+    "value": "Last-Modified Mon, 08 Aug 2022 00:16:07 GMT; loader allenai/nllb rev c36967abb45f06ff7659849372ab41e01838193e",
+    "verified": true,
+    "source": "HTTP response headers and nllb.py at the loader revision (2026-10-08)"
+  },
+  "distribution": [
+    {
+      "name": "eng_Latn-tgl_Latn.gz",
+      "content_url": "https://storage.googleapis.com/allennlp-data-bucket/nllb/eng_Latn-tgl_Latn.gz",
+      "local_path": "~/data/raw/nllb-eng_Latn-tgl_Latn/eng_Latn-tgl_Latn.gz",
+      "sha256": "99c85a3b5262ccc6ced18637cb9f10bb92811ba06af8eb76159442b4ebc1b876",
+      "bytes": 10734851951,
+      "verified_from": "md5 matched the server x-goog-hash; sha256 computed locally"
+    }
+  ],
+  "license": {
+    "spdx": "ODC-By-1.0",
+    "quote": "The dataset is released under the terms of ODC-BY. By using this, you are also bound to the respective Terms of Use and License of the original source.",
+    "source": "allenai/nllb dataset card, rev c36967abb45f06ff7659849372ab41e01838193e"
+  },
+  "use_class": "RESEARCH_ONLY",
+  "text_origin": {
+    "kind": "MINED",
+    "notes": "LASER3-mined from Common Crawl / ParaCrawl web text (stopes). Card: \"Some of the translations are in fact machine translations\" by unknown web MT systems; top-ranked pairs are often MT (2026-10-08 sample; arXiv 2401.05749)."
+  },
+  "redistribution": {
+    "status": "NOT_ASSESSED",
+    "basis": "ODC-By packaging allows redistribution with attribution, but the underlying web text has no licence; decide before any publication (D21)."
+  },
+  "attribution": {
+    "required": true,
+    "text": "NLLB Team et al. (2022), No Language Left Behind; data from allenai/nllb under ODC-By 1.0.",
+    "citation_target": "arXiv 2207.04672"
+  },
+  "sample_count": {
+    "published": 63581148,
+    "unit": "sentence pairs",
+    "source": "OPUS API (NLLB v1) and HF loader",
+    "measured": 63581148
+  },
+  "contamination": {
+    "status": "CHECKED_FLAGGED",
+    "report": "data/heldout/contamination-nllb-2026-10-08.json (D20: SMOL 15/754 flagged at 8 words; MASSIVE dev 246/1,963)"
+  },
+  "forbidden_uses": [],
+  "decisions": [
+    "D15",
+    "D17",
+    "D20",
+    "D22"
+  ],
+  "retrieved": "2026-10-08T03:44:19Z",
+  "name": "NLLB mined bitext, English-Tagalog (allenai/nllb, eng_Latn-tgl_Latn)",
+  "source": "https://storage.googleapis.com/allennlp-data-bucket/nllb/eng_Latn-tgl_Latn.gz",
+  "dataset": "allenai/nllb",
+  "loader_revision": "c36967abb45f06ff7659849372ab41e01838193e (nllb.py points to the source URL above)",
+  "server_last_modified": "Mon, 08 Aug 2022 00:16:07 GMT",
+  "file": "~/data/raw/nllb-eng_Latn-tgl_Latn/eng_Latn-tgl_Latn.gz on the GB10 workstation (outside the repo)",
+  "bytes": 10734851951,
+  "md5_base64": "gNSZmpFmfAKeqC3k14kT5A== (matches the server's x-goog-hash)",
+  "sha256": "99c85a3b5262ccc6ced18637cb9f10bb92811ba06af8eb76159442b4ebc1b876",
+  "rows": 63581148,
+  "fields": [
+    "english",
+    "tagalog",
+    "laser_score",
+    "eng_lid",
+    "tgl_lid",
+    "eng_source",
+    "eng_url",
+    "tgl_source",
+    "tgl_url"
+  ],
+  "scan_2026_10_08": {
+    "script": "data/samples/scan_nllb.py",
+    "order_violations": 0,
+    "laser_score_max": 1.2499868,
+    "laser_score_min": 1.05,
+    "laser_score_at_line": {
+      "1000": 1.2254474,
+      "100000": 1.16001,
+      "250000": 1.146786,
+      "500000": 1.1357187,
+      "1000000": 1.123235,
+      "2000000": 1.1090323,
+      "5000000": 1.0897857,
+      "10000000": 1.077436,
+      "20000000": 1.0667216,
+      "40000000": 1.0566857,
+      "60000000": 1.0508422
+    },
+    "duplicate_pairs_in_top_1M (case-insensitive exact)": 15979,
+    "per_100k_band_from_line": {
+      "0": {
+        "n": 100000,
+        "en_len": 13.8059,
+        "tl_len": 15.637,
+        "identical": 0.0001,
+        "po": 0.0033,
+        "ay": 0.4638,
+        "lid_low": 0.0155,
+        "short": 0.0007
+      },
+      "100000": {
+        "n": 100000,
+        "en_len": 14.9844,
+        "tl_len": 17.0155,
+        "identical": 0.0,
+        "po": 0.0027,
+        "ay": 0.4844,
+        "lid_low": 0.0159,
+        "short": 0.0008
+      },
+      "500000": {
+        "n": 100000,
+        "en_len": 16.3061,
+        "tl_len": 18.5645,
+        "identical": 0.0,
+        "po": 0.0037,
+        "ay": 0.5009,
+        "lid_low": 0.0158,
+        "short": 0.0026
+      },
+      "1000000": {
+        "n": 100000,
+        "en_len": 16.4444,
+        "tl_len": 18.7292,
+        "identical": 0.0,
+        "po": 0.0053,
+        "ay": 0.4824,
+        "lid_low": 0.0211,
+        "short": 0.005
+      },
+      "2000000": {
+        "n": 100000,
+        "en_len": 15.0803,
+        "tl_len": 17.073,
+        "identical": 0.0001,
+        "po": 0.0098,
+        "ay": 0.4121,
+        "lid_low": 0.0356,
+        "short": 0.0125
+      },
+      "5000000": {
+        "n": 100000,
+        "en_len": 11.3527,
+        "tl_len": 12.5008,
+        "identical": 0.0001,
+        "po": 0.0193,
+        "ay": 0.2626,
+        "lid_low": 0.0663,
+        "short": 0.0268
+      },
+      "20000000": {
+        "n": 100000,
+        "en_len": 9.6379,
+        "tl_len": 10.1678,
+        "identical": 0.0,
+        "po": 0.0286,
+        "ay": 0.1676,
+        "lid_low": 0.0928,
+        "short": 0.0351
+      },
+      "60000000": {
+        "n": 100000,
+        "en_len": 10.4605,
+        "tl_len": 10.8105,
+        "identical": 0.0,
+        "po": 0.0298,
+        "ay": 0.1586,
+        "lid_low": 0.1038,
+        "short": 0.0384
+      }
+    },
+    "band_fields": "en_len/tl_len = mean words; identical = share with same text both sides; po = share with po/opo in Tagalog; ay = share with non-initial 'ay'; lid_low = share with either LID score < 0.9; short = share with < 4 Tagalog words"
+  },
+  "notes": [
+    "Sorted by LASER3 score, decreasing (verified: 0 order violations over all lines).",
+    "Card: some translations are machine translations from unknown systems; the data is noisy; it includes some dev/test sets of other datasets (xlsum), so overlap with test sets is possible.",
+    "Built 2022: cannot contain WMT24++ references [inference]. FLORES overlap status unknown; Tatoeba overlap possible (A5). Run the A5 section-3 check before any evaluation.",
+    "Decision D17: first learning runs take a top slice of about 1M pairs; the cut is chosen after reading data/samples/nllb-en-tl-top1M-sample100.tsv.",
+    "2026-10-08: labelling worksheet for the 100-pair sample (shuffled, seed 20261008; scores hidden): data/samples/worksheet/ (make_worksheet.py builds the PDF, read_worksheet.py reads a returned one, item-map.tsv maps items to NLLB lines). Labels G/M/W by a fluent speaker, to be returned through the project."
+  ],
+  "used_by": []
+}
