@@ -1,0 +1,137 @@
+{
+  "schema_version": 2,
+  "id": "t1-mono-slice-v1",
+  "display_name": "Tranche-1 monolingual Filipino slice v1 (D28): FinePDFs, FineWeb-2 and HPLT 2.0, MADLAD-400 paragraphs removed",
+  "role": "DERIVED_CORPUS",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "TRAIN_MONOLINGUAL"
+  ],
+  "languages": [
+    "fil_Latn",
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "GIT_COMMIT",
+    "value": "9323b0b379a4fe078d2760787b14dfd6ee302a6e",
+    "verified": true,
+    "source": "builder commit (data/mix/build_mono_slice.py, data/mix/mono-slice-v1.yaml), recorded in every row's normaliser_version"
+  },
+  "distribution": [
+    {
+      "name": "slice.jsonl.gz",
+      "content_url": "local build, not published: python -m data.mix.build_mono_slice pool|select data/mix/mono-slice-v1.yaml @ 9323b0b379a4fe078d2760787b14dfd6ee302a6e",
+      "local_path": "~/data/t1/mono/slice-v1/slice.jsonl.gz",
+      "sha256": "a09f54ea4256f9790d02bc23661411f6e9c2d207023ab704995955bae37daef3",
+      "bytes": 1643210564,
+      "verified_from": "sha256sum of the built file, 2026-10-18"
+    }
+  ],
+  "license": {
+    "spdx": "NOASSERTION",
+    "quote": "Mixed: FinePDFs and FineWeb-2 ODC-By 1.0 plus CommonCrawl Terms of Use; HPLT 2.0 CC0 for the packaging only. Each row carries its source's SPDX id in source_license.",
+    "source": "the three source records"
+  },
+  "use_class": "RESEARCH_ONLY",
+  "text_origin": {
+    "kind": "MINED",
+    "notes": "Web and PDF text from CommonCrawl and the Internet Archive; no generated text added. Paragraphs, then sentence-packed segments of at most 127 MADLAD tokens."
+  },
+  "redistribution": {
+    "status": "NOT_ASSESSED",
+    "basis": "Underlying web text unlicensed (D21); not published."
+  },
+  "attribution": {
+    "required": true,
+    "citation_target": "penedo2025fineweb (2506.20920); burchell2025expanded (2503.10267); FinePDFs dataset card [verify]"
+  },
+  "sample_count": {
+    "published": null,
+    "unit": "segments (rows)",
+    "source": "data/mix/mono-slice-v1-stats.json",
+    "measured": 10792835
+  },
+  "contamination": {
+    "status": "CHECKED_FLAGGED",
+    "report": "data/heldout/contamination-t1-mono-slice-v1-2026-10-18.json (D20, fold, 8 words: SMOL test 0/754; MASSIVE dev 152/1,963 and diagnostic 187/2,862, all by whole sides under 8 words, none by an 8-word run)"
+  },
+  "forbidden_uses": [
+    "PUBLISH_IN_TRAINING_DATASET"
+  ],
+  "derived_from": [
+    {
+      "id": "hf-finepdfs-fil_Latn",
+      "revision": "220bac3acbf07789502c621d2d33952f51ac7f86"
+    },
+    {
+      "id": "hf-fineweb-2-fil_Latn",
+      "revision": "af9c13333eb981300149d5ca60a8e9d659b276b9"
+    },
+    {
+      "id": "hf-hplt2.0-cleaned-tgl_Latn",
+      "revision": "d1324a5283f762ee62c2a5c81de08fc6450ea540"
+    }
+  ],
+  "processed_sha256": "a0a439c94530e97e94a6c660bf824cde931d2331fdd964243f62c9bf4bc9847a",
+  "decisions": [
+    "D28"
+  ],
+  "retrieved": "2026-10-18",
+  "notes": [
+    "Selection: FinePDFs whole; FineWeb-2 and HPLT 2.0 paragraphs by ascending seeded rank (seed 20261018) below rank_cut until about 0.5B estimated tokens.",
+    "Filters per paragraph, in order: in MADLAD-400 fil (clean or noisy) removed; exact duplicates removed (earlier source wins); held-out overlap removed (D28 item 6).",
+    "98 of 10,792,835 segments are over 127 tokens: single whitespace-free strings that cannot be trimmed by words; the collator truncates them.",
+    "Build 1 on 2026-10-18 was discarded before registration: 21 duplicate row ids (FinePDFs splits one PDF into rows with the same doc id) and 3,862 segments over 127 tokens; fixed in the builder commit above.",
+    "Not filtered for quality beyond these rules (filters are D6/D22). Probe sets do not exist yet; when built (D3) they must be checked against this slice."
+  ],
+  "measurements_2026_10_18": {
+    "tokens": 507331139,
+    "by_source": {
+      "finepdfs_fil": {
+        "paragraphs": 1612622,
+        "segments": 1831187,
+        "tokens": 89900654
+      },
+      "fineweb2_fil": {
+        "paragraphs": 4798647,
+        "segments": 5287319,
+        "tokens": 254017135
+      },
+      "hplt2_tgl": {
+        "paragraphs": 3246283,
+        "segments": 3674329,
+        "tokens": 163413350
+      }
+    },
+    "pool": {
+      "finepdfs_fil": {
+        "documents": 28898,
+        "paragraphs": 1886580,
+        "in_madlad": 104337,
+        "duplicate": 169546,
+        "heldout": 75,
+        "kept": 1612622,
+        "kept_words": 54741463
+      },
+      "fineweb2_fil": {
+        "documents": 2349050,
+        "paragraphs": 39401578,
+        "in_madlad": 22429201,
+        "duplicate": 2844606,
+        "heldout": 816,
+        "kept": 14126955,
+        "kept_words": 479444941
+      },
+      "hplt2_tgl": {
+        "documents": 1868959,
+        "paragraphs": 41520990,
+        "in_madlad": 21171309,
+        "duplicate": 10797100,
+        "heldout": 1213,
+        "kept": 9551368,
+        "kept_words": 292745242
+      }
+    },
+    "report": "data/mix/mono-slice-v1-stats.json, data/mix/mono-pool-v1-stats.json"
+  }
+}

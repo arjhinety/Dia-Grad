@@ -1,0 +1,29 @@
+{
+ "finepdfs_fil": {
+  "documents": 28898,
+  "paragraphs": 1886580,
+  "in_madlad": 104337,
+  "duplicate": 169546,
+  "heldout": 75,
+  "kept": 1612622,
+  "kept_words": 54741463
+ },
+ "fineweb2_fil": {
+  "documents": 2349050,
+  "paragraphs": 39401578,
+  "in_madlad": 22429201,
+  "duplicate": 2844606,
+  "heldout": 816,
+  "kept": 14126955,
+  "kept_words": 479444941
+ },
+ "hplt2_tgl": {
+  "documents": 1868959,
+  "paragraphs": 41520990,
+  "in_madlad": 21171309,
+  "duplicate": 10797100,
+  "heldout": 1213,
+  "kept": 9551368,
+  "kept_words": 292745242
+ }
+}

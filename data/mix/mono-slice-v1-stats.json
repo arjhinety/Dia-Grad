@@ -1,0 +1,24 @@
+{
+ "rank_cut": 6271462963407263792,
+ "estimated_tokens_rest": 408291710.23686284,
+ "sources": {
+  "finepdfs_fil": {
+   "paragraphs": 1612622,
+   "segments": 1831187,
+   "tokens": 89900654
+  },
+  "fineweb2_fil": {
+   "paragraphs": 4798647,
+   "segments": 5287319,
+   "tokens": 254017135
+  },
+  "hplt2_tgl": {
+   "paragraphs": 3246283,
+   "segments": 3674329,
+   "tokens": 163413350
+  }
+ },
+ "tokens": 507331139,
+ "normaliser_version": "9323b0b379a4fe078d2760787b14dfd6ee302a6e",
+ "processed_sha256": "a0a439c94530e97e94a6c660bf824cde931d2331fdd964243f62c9bf4bc9847a"
+}

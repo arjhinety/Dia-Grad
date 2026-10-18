@@ -24,7 +24,7 @@ needs? Pass rule in the [README](README.md#tranche-1-the-feasibility-gate).
 - [x] Teacher comparison: permissive teachers against NLLB-3.3B (D25, D26): NLLB not ahead by more than 5 chrF++; D25 stands
 - [ ] Filter calibration on the hand-labelled NLLB sample (D18; waits for labellers)
 - [ ] Probe data for *po/opo* and *ay*-inversion, with hand labels
-- [ ] Monolingual text for the denoising term (D28: sources chosen; Codex check, slice build, then re-run the contamination check)
+- [x] Monolingual text for the denoising term (D28): slice `t1-mono-slice-v1`, 507M tokens; SMOL 0/754 flagged
 - [ ] Freeze the preregistration
 - [ ] Train the sentence space; run the gate
 
