@@ -1,0 +1,29 @@
+# Run 20261018-mono-filter-quality-1 (exploratory; D28). Run record: experiments/runs/20261018-mono-filter-quality-1/RUN.md
+run_id: 20261018-mono-filter-quality-1
+seed: 20261018
+
+# Option A pool (inside diagrad:t1: ~/data/raw at /raw, ~/data/t1/mono-measure at /lines)
+pool:
+  - fineweb2_fil=parquet:/raw/fineweb2-fil_Latn-af9c133/data/fil_Latn/train    # registry hf-fineweb-2-fil_Latn
+  - hplt2_tgl=parquet:/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn             # registry hf-hplt2.0-cleaned-tgl_Latn
+lines_dir: /lines                     # unique-paragraph hashes from data/mix/measure_mono.py stats
+madlad_clean: madlad400_fil_clean.lines.npy
+madlad_noisy: [madlad400_fil_noisy.lines.npy, madlad400_fil_noisy1.lines.npy]
+
+select_mod: 4000                      # candidate when seeded hash % 4000 == 0 (about 12k of 47M)
+n_per_group: 100
+max_words: 150                        # longer paragraphs left out of both groups; share reported
+out_dir: /repo/experiments/runs/20261018-mono-filter-quality-1/artifacts
+
+# Codex gpt-6.1-sol, blind (rubric: RUBRIC in data/mix/quality_check.py)
+batches: 4
+hidden_repeats: 20                    # each in a different batch from its original
+bootstrap_resamples: 10000
+
+# Fixed before any rating (decisions/DECISIONS.md §D28)
+decision_rule:
+  min_gap:                            # dropped minus kept; trips on any one score
+    quality: 0.3                      # 0-2, Filipino/Taglish paragraphs only
+    naturalness: 0.3                  # 0-2, Filipino/Taglish paragraphs only
+    eligible: 0.10                    # share labelled Filipino/Taglish, all paragraphs (added after a rubric review)
+  max_repeat_disagreement: 0.2        # above this share of repeat pairs differing, no verdict

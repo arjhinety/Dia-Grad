@@ -1,7 +1,7 @@
 {
  "source": "private DiaGrad working repository",
- "source_commit": "301c62a275bdac5c0b0d1ddaa2232a869f51fa8d",
- "files": 99,
+ "source_commit": "15ecf9599e60cf9319281f924250f7b2f6f726a7",
+ "files": 103,
  "excluded_files_by_category": {
   "Dataset rows (fetched by revision and sha256, not republished)": 4,
   "Internal working records: decision logs, working notes and consultations, idea refinement": 39,
@@ -16,6 +16,7 @@
   "CONTRIBUTING.md": 2,
   "README.md": 19,
   "ROADMAP.md": 1,
+  "data/mix/quality_check.py": 1,
   "data/registry/README.md": 2,
   "data/registry/nllb-eng_Latn-tgl_Latn.json": 1,
   "data/registry/opus-CCMatrix-v1-en-tl.json": 1,
@@ -28,7 +29,9 @@
   "data/releases/README.md": 1,
   "docs/FOLDER-MAP.md": 12,
   "experiments/T1-SETUP.md": 1,
+  "experiments/configs/20261018-mono-filter-quality-1.yaml": 2,
   "experiments/runs/20261017-teacher-compare-1/RUN.md": 3,
+  "experiments/runs/20261018-mono-filter-quality-1/RUN.md": 7,
   "prereg/PREREGISTRATION.md": 9,
   "research/diligence/A4-baselines-ablations.md": 1,
   "research/diligence/A5-contamination.md": 1,
