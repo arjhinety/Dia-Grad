@@ -11,10 +11,9 @@ sources:                              # order matters: earlier sources keep shar
 registry_dir: /repo/data/registry
 lines_dir: /t1/mono-measure
 madlad_lines: [madlad400_fil_clean.lines.npy, madlad400_fil_noisy.lines.npy, madlad400_fil_noisy1.lines.npy]
-heldout:                              # D20 rule applied per paragraph; the same files the D20 check uses
-  - /t1/heldout/test_smol.jsonl
-  - /t1/heldout/dev_massive.jsonl
-  - /t1/heldout/diag_massive_test.jsonl
+heldout:                              # D28 item 6: the D20 rule per paragraph for the gate set; 8-word runs for MASSIVE
+  full_rule: [/t1/heldout/test_smol.jsonl]
+  eight_word_runs_only: [/t1/heldout/dev_massive.jsonl, /t1/heldout/diag_massive_test.jsonl]
 pool_dir: /t1/mono/pool-v1
 slice_dir: /t1/mono/slice-v1
 token_budget: 500000000               # roadmap A6: about 0.5B MADLAD tokens

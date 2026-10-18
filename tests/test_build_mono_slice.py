@@ -23,6 +23,8 @@ def test_heldout_hit_uses_8_words_and_whole_short_sides():
     assert not heldout_hit(idx, norm("turn on the lights in the garden now please"))     # 4-word run only
     assert heldout_hit(idx, norm("Kaya buksan mo ang ilaw sa sala bago matulog."))        # whole 4-word side
     assert heldout_hit(idx, norm("Kaya bukşan mo ang ilaw sa sala."))                     # fold: diacritics
+    assert not heldout_hit(idx, norm("Kaya buksan mo ang ilaw sa sala."), whole_short_sides=False)
+    assert heldout_hit(idx, norm("turn on the lights in the kitchen now"), whole_short_sides=False)
 
 
 def test_segments_pack_sentences_and_cut_long_ones():
@@ -42,7 +44,7 @@ def test_pool_filters_madlad_duplicates_and_heldout(tmp_path):
     np.save(tmp_path / "m.lines.npy", np.array([h64(norm("Ang talatang ito ay nasa MADLAD na dati."))]))
     held = tmp_path / "h.jsonl"
     held.write_text(json.dumps({"id": "x", "src": "Turn on the light", "tgt": "Buksan mo ang ilaw"}) + "\n")
-    cfg = {"pool_dir": str(tmp_path / "pool"), "heldout": [str(held)], "lines_dir": str(tmp_path),
+    cfg = {"pool_dir": str(tmp_path / "pool"), "heldout": {"full_rule": [str(held)]}, "lines_dir": str(tmp_path),
            "madlad_lines": ["m.lines.npy"], "seed": 1, "workers": 1,
            "sources": [{"name": "a", "path": str(tmp_path / "a.parquet"),
                         "columns": {"text": "text", "id": "id", "url": "url"}}]}

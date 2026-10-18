@@ -8,8 +8,8 @@ pool, per paragraph (newline-separated, >= 5 words after diagrad.t1.contaminatio
 data/mix/measure_mono.py), sources in config order so earlier sources win duplicates:
   1. drop it if its hash is in any MADLAD-400 fil split (clean or noisy; D28 option A);
   2. drop it if an earlier paragraph had the same normalised text (exact dedup across all sources);
-  3. drop it if it shares an 8-word run with any held-out item side, or contains a whole side shorter
-     than 8 words (fold normalisation; the D20 rule of diagrad.t1.contamination, applied per paragraph).
+  3. drop it if it shares an 8-word run with any held-out item side (fold normalisation, as D20), or
+     contains a whole side shorter than 8 words of a `full_rule` set (the gate test set; D28 item 6).
 Kept paragraphs go to POOL/pool-*.jsonl.gz with their seeded rank (quality_check.seeded).
 
 select: sources marked `whole` are taken entirely; the rest by ascending rank until the estimated
@@ -36,21 +36,28 @@ _INDEX = None
 _SENT = re.compile(r"(?<=[.!?])\s+")
 
 
-def heldout_hit(index, text_norm):
-    """True if the paragraph matches a held-out side under the D20 rule (fold variant)."""
+def heldout_hit(index, text_norm, whole_short_sides=True):
+    """True if the paragraph matches a held-out side under the D20 rule (fold variant). With
+    whole_short_sides=False only a run of >= 8 words counts (D28 item 6: MASSIVE sets, whose one- and
+    two-word sides such as "wala" would otherwise remove every paragraph containing that word)."""
     best = {}
     index.scan_words("fold", fold(text_norm).split(), best)
     words = index.words["fold"]
+    if not whole_short_sides:
+        return any(length >= N_FLAG for length, _ in best.values())
     return any(is_flagged(length, len(words[sid]), N_FLAG) for sid, (length, _) in best.items())
 
 
 def _init_index(items):
+    """items = (full-rule items, 8-word-only items)."""
     global _INDEX
-    _INDEX = Index(items)
+    _INDEX = (Index(items[0]), Index(items[1]) if items[1] else None)
 
 
 def _check(batch):
-    return [heldout_hit(_INDEX, n) for _, n in batch]
+    full, run8 = _INDEX
+    return [heldout_hit(full, n) or (run8 is not None and heldout_hit(run8, n, whole_short_sides=False))
+            for _, n in batch]
 
 
 def _pool(cfg, init, arg):
@@ -83,9 +90,9 @@ def pool(cfg):
     import numpy as np
     out = Path(cfg["pool_dir"])
     out.mkdir(parents=True, exist_ok=True)
-    items = []
-    for f in cfg["heldout"]:
-        items += [json.loads(l) for l in open(f, encoding="utf-8") if l.strip()]
+    def load(files):
+        return [json.loads(l) for f in files for l in open(f, encoding="utf-8") if l.strip()]
+    items = (load(cfg["heldout"]["full_rule"]), load(cfg["heldout"].get("eight_word_runs_only", [])))
     ldir = Path(cfg["lines_dir"])
     madlad = np.unique(np.concatenate([np.load(ldir / f) for f in cfg["madlad_lines"]]))
     seen = set()
