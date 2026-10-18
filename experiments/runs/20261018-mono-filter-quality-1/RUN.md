@@ -1,6 +1,6 @@
 # Run 20261018-mono-filter-quality-1
 
-**Status: PLANNED (exploratory).** Decision basis: D28 (`decisions/DECISIONS.md` §D28).
+**Status: DONE 2026-10-18 (exploratory).** Decision basis: D28 (`decisions/DECISIONS.md` §D28).
 
 ## Before (fill in and commit before starting)
 
@@ -40,7 +40,7 @@
   Rubric: `RUBRIC` in `data/mix/quality_check.py`. Advisory only: an LLM judge is not human evaluation (A6).
 - **Metrics:** mean per group and score, count of 0s, mt_suspect count; gap with a 95% percentile
   bootstrap interval (10,000 resamples, each group resampled on its own); repeat-pair disagreement.
-- **Config:** `experiments/configs/20261018-mono-filter-quality-1.yaml` @ commit (filled in at commit).
+- **Config:** `experiments/configs/20261018-mono-filter-quality-1.yaml` @ commit `15ecf9599e60cf9319281f924250f7b2f6f726a7`.
 - **Code:** `data/mix/quality_check.py` (`sample` / `pack` / `score`), tests `tests/test_quality_check.py`.
 - **Kill criterion:** none needed (no training).
 - **Seed(s):** 20261018 (selection and packing; bootstrap uses the same seed).
@@ -71,6 +71,46 @@
   Not adopted: a separate calibration set before rating. It would need constructed
   Filipino examples; the hidden repeats measure consistency instead [judgement].
 
+- 2026-10-18 12:28-12:30 UTC: rating, 4 Codex gpt-6.1-sol calls in parallel (config @ 15ecf95); 220 of 220
+  items answered. Hashes:
+  - `key.json` 9f5463ac15942336f2f4fae06128cff91b9dca38bf510a5b62ebd08e88ac9ddd
+  - `batch-0.answer.md` b7428a3ac5c738697121737d77897ab1bb161d18956f41a0a4aeca635bdae946
+  - `batch-1.answer.md` 09013a3f40f5a6723c56a14a1081cf3b138b21cc0c49b60f065d6f8d1bb5831f
+  - `batch-2.answer.md` b480e57bf663b78880df47984566f5ee5646d53ba4ddecf7612f3c1871095d7a
+  - `batch-3.answer.md` bd227bebc005142180a925d2b36b23b488639ce2ff9162729654c81501e1d3df
 ## After
 
-(to be filled in)
+- **Outcome: option A stands** (`scores.json`). The rule did not trip, and the gaps point the other way:
+  paragraphs the MADLAD filter drops score clearly *lower*.
+
+  | Score | Dropped | Kept | Dropped - kept [95% interval] |
+  |---|---|---|---|
+  | quality (0-2, Filipino/Taglish only) | 1.17 (n 90, 31 zeros) | 1.81 (n 91, 4 zeros) | -0.65 [-0.86, -0.44] |
+  | naturalness (0-2, Filipino/Taglish only) | 1.11 (30 zeros) | 1.63 (2 zeros) | -0.52 [-0.73, -0.30] |
+  | eligible (share Filipino/Taglish) | 0.90 | 0.91 | -0.01 [-0.09, 0.07] |
+  | translation artifacts "present" | 39 of 100 | 16 of 100 | not part of the rule |
+
+- **Judge consistency:** 4 of 20 hidden-repeat pairs differ on at least one label (20%), exactly at the
+  limit, so the judge counts as usable, but only just. Two of the four are language_status only
+  (filipino_tagalog vs taglish, mixed_uncertain vs filipino_tagalog); one is a quality 2 vs 0 on a kept
+  paragraph. Repeats were judged in separate calls, so this is a stricter test than D26's 15/15.
+- **Checks [measured]:** group labels re-derived from the MADLAD hash sets: 0 mismatches
+  (`artifacts/breakdown.py`).
+- **Where the gap comes from [measured, small cells]** (quality means, Filipino/Taglish items):
+  - by MADLAD split: in MADLAD clean 0.77 (n 53); in MADLAD noisy only 1.73 (n 37); in neither 1.81 (n 91);
+  - by source: dropped FineWeb-2 only 0.88 (n 50), dropped in both FineWeb-2 and HPLT 1.40 (n 25),
+    dropped HPLT only 1.73 (n 15); kept 1.64-1.98 in every source cell.
+- **Interpretation:**
+  - The low scores sit in paragraphs that FineWeb-2 and MADLAD-400 *clean* share. A plausible reason is
+    that templated or machine-translated pages (SEO, product spam) repeat across many sites and so
+    survive in several crawls [inference; repetition per paragraph was not measured].
+  - This contradicts, for this pool, the cross-source agreement signal of alrashed2025mix (2512.18834).
+    Their agreement is between independent pipelines at document level after MinHash; ours is exact
+    paragraph match against the base model's own corpus, and one judge on 200 paragraphs [inference].
+  - Side finding: MADLAD-400 clean, the base model's pre-training text, contains this low-scoring material
+    [inference from 53 items; not a measurement of MADLAD-400 as a whole].
+  - Advisory only: one LLM judge, no human labels (A6).
+- **Follow-ups.**
+  - The kept group still has 4 of 91 quality zeros and 16 translation-artifact flags; the slice build
+    should still filter (D28 step 5) [judgement].
+  - Measuring per-paragraph repetition would test the inference above cheaply.

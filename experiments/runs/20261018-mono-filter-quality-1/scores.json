@@ -1,0 +1,100 @@
+{
+ "missing": [],
+ "groups": {
+  "dropped": {
+   "n": 100,
+   "language_status": {
+    "filipino_tagalog": 53,
+    "mixed_uncertain": 5,
+    "other_language": 5,
+    "taglish": 37
+   },
+   "translation_artifacts_present": 39,
+   "quality": {
+    "n": 90,
+    "mean": 1.1666666666666667,
+    "zeros": 31
+   },
+   "naturalness": {
+    "n": 90,
+    "mean": 1.1111111111111112,
+    "zeros": 30
+   },
+   "eligible": {
+    "n": 100,
+    "mean": 0.9,
+    "zeros": 10
+   }
+  },
+  "kept": {
+   "n": 100,
+   "language_status": {
+    "filipino_tagalog": 59,
+    "insufficient_text": 1,
+    "mixed_uncertain": 1,
+    "other_language": 7,
+    "taglish": 32
+   },
+   "translation_artifacts_present": 16,
+   "quality": {
+    "n": 91,
+    "mean": 1.8131868131868132,
+    "zeros": 4
+   },
+   "naturalness": {
+    "n": 91,
+    "mean": 1.6263736263736264,
+    "zeros": 2
+   },
+   "eligible": {
+    "n": 100,
+    "mean": 0.91,
+    "zeros": 9
+   }
+  }
+ },
+ "gaps": {
+  "quality": {
+   "dropped_minus_kept": -0.6465201465201464,
+   "ci95": [
+    -0.856657509157509,
+    -0.4356501831501832
+   ],
+   "min_gap": 0.3,
+   "meets_rule": false
+  },
+  "naturalness": {
+   "dropped_minus_kept": -0.5152625152625152,
+   "ci95": [
+    -0.725885225885226,
+    -0.30414835164835174
+   ],
+   "min_gap": 0.3,
+   "meets_rule": false
+  },
+  "eligible": {
+   "dropped_minus_kept": -0.010000000000000009,
+   "ci95": [
+    -0.09000000000000008,
+    0.07000000000000006
+   ],
+   "min_gap": 0.1,
+   "meets_rule": false
+  }
+ },
+ "repeats": {
+  "pairs": 20,
+  "any_label_differs": 4,
+  "judge_usable": true
+ },
+ "decision_rule": {
+  "min_gap": {
+   "quality": 0.3,
+   "naturalness": 0.3,
+   "eligible": 0.1
+  },
+  "max_repeat_disagreement": 0.2,
+  "tripped": false,
+  "outcome": "option A stands"
+ }
+}

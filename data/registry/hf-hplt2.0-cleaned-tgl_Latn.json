@@ -1,0 +1,228 @@
+{
+  "schema_version": 2,
+  "id": "hf-hplt2.0-cleaned-tgl_Latn",
+  "display_name": "HPLT 2.0 cleaned tgl_Latn, HPLT/HPLT2.0_cleaned",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "TRAIN_MONOLINGUAL"
+  ],
+  "languages": [
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "HF_REVISION",
+    "value": "d1324a5283f762ee62c2a5c81de08fc6450ea540",
+    "verified": true,
+    "source": "Hugging Face API, 2026-10-17"
+  },
+  "distribution": [
+    {
+      "name": "tgl_Latn/train-00000-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00000-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00000-of-00020.parquet",
+      "sha256": "5a2d96fd73e06bcea420aed748779d48a7b0fd10fbbdcd54f2e2447654d3c76c",
+      "bytes": 329641099,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00001-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00001-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00001-of-00020.parquet",
+      "sha256": "49c7f7bc761acc5923514d55a719b2b237971c050c51e1516062ae68eb562193",
+      "bytes": 248849094,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00002-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00002-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00002-of-00020.parquet",
+      "sha256": "f35af0408ec999383d9cb37cb178827e3637b90f3c465c69b73a1ad3aa86f381",
+      "bytes": 235231121,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00003-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00003-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00003-of-00020.parquet",
+      "sha256": "ec3c8561812c2a887268e03ab31d00d003122244a79ff16113a2448cfeadaca6",
+      "bytes": 255551217,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00004-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00004-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00004-of-00020.parquet",
+      "sha256": "e583a933cf57ea115ac065510a6827796037a74fe15a87586b43b8e89d11caeb",
+      "bytes": 242213508,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00005-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00005-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00005-of-00020.parquet",
+      "sha256": "24a05779b2909c73126a531b595df97b7b812e9b6d7b95da2b8882f3bc008b9f",
+      "bytes": 231959054,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00006-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00006-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00006-of-00020.parquet",
+      "sha256": "164bdde902ea576e57ce30d3140bb555d3281e0a1d36cd50cdb51ebc65f79e52",
+      "bytes": 213537535,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00007-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00007-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00007-of-00020.parquet",
+      "sha256": "aa6211228af737346522bfd713046a2d98c713daf08c0c57647cf8d5b0d49fcc",
+      "bytes": 252796279,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00008-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00008-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00008-of-00020.parquet",
+      "sha256": "83586d837e099ac394ed8024a0520fbe4ecdaa3515b37ca72a98e69c036bb2ff",
+      "bytes": 259141412,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00009-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00009-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00009-of-00020.parquet",
+      "sha256": "e692da6ab9383612adb90c7d9b3291e15b28f1b5c06b79a15f87c9790c90413a",
+      "bytes": 253268620,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00010-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00010-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00010-of-00020.parquet",
+      "sha256": "fd02fcd095e911bc553d5139e72b4a474710e165b869af1dfc4120f77b4d975a",
+      "bytes": 247515646,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00011-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00011-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00011-of-00020.parquet",
+      "sha256": "5fd929f33a58058bda4e13f462f881a262dfe9d3b039809ea9d08d3fa51e2d21",
+      "bytes": 253768636,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00012-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00012-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00012-of-00020.parquet",
+      "sha256": "b77d32da52460e4bc2c30f6d3f7a2ae2daa980ecb7d789359743455c16a832a2",
+      "bytes": 256684468,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00013-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00013-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00013-of-00020.parquet",
+      "sha256": "c2d7e1eb9b6e3612dc5e2eeeeda4fd893f39db666e0e206800785617837007dd",
+      "bytes": 266026424,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00014-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00014-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00014-of-00020.parquet",
+      "sha256": "d2fd8915dec9dff37c2e041fbac6aca656c0cdeb3dd4adbc3927d0191d0f2652",
+      "bytes": 238725098,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00015-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00015-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00015-of-00020.parquet",
+      "sha256": "51ca3cd2b6cbde70b2eed920fb8f48bc0c6882fc00e09b84b908d1aac40eeed0",
+      "bytes": 233193682,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00016-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00016-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00016-of-00020.parquet",
+      "sha256": "617bdc597eb0850f3dd8a7a7952e64db423ad045b1703e571f2b91bd6608af49",
+      "bytes": 279168727,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00017-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00017-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00017-of-00020.parquet",
+      "sha256": "a804f26a0678518f5aff8f50ec5a23acb8d21ed6e73ab1f23fc52c39067e8199",
+      "bytes": 280329099,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00018-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00018-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00018-of-00020.parquet",
+      "sha256": "0586294c32e906c57b7a9726424cb0602c69b61103af99f904b1e19f0fd665c3",
+      "bytes": 229599686,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    },
+    {
+      "name": "tgl_Latn/train-00019-of-00020.parquet",
+      "content_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/resolve/d1324a5283f762ee62c2a5c81de08fc6450ea540/tgl_Latn/train-00019-of-00020.parquet",
+      "local_path": "~/data/raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn/train-00019-of-00020.parquet",
+      "sha256": "3beea66469a07c5afd52942179eb0ce31f3bbce4a8bd0cf866a872fb1f81ba91",
+      "bytes": 225773445,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    }
+  ],
+  "license": {
+    "spdx": "CC0-1.0",
+    "quote": "We do not own any of the text from which these text data has been extracted.* We license the actual packaging of these text data under the [Creative Commons CC0 license (\"no rights reserved\")]",
+    "source": "HPLT/HPLT2.0_cleaned dataset card README.md, Terms of Use and Takedown, rev d1324a5283f762ee62c2a5c81de08fc6450ea540"
+  },
+  "use_class": "RESEARCH_ONLY",
+  "text_origin": {
+    "kind": "MINED",
+    "notes": "CommonCrawl and Internet Archive web text (first shard: cc13-cc15 and ArchiveBot), cleaned by HPLT; CC0 covers the packaging only. PII offsets marked on 2.2% of documents of the first shard."
+  },
+  "redistribution": {
+    "status": "NOT_ASSESSED",
+    "basis": "Permissive packaging; underlying web text unlicensed (D21, decide before publication)."
+  },
+  "attribution": {
+    "required": false,
+    "citation_target": "burchell2025expanded (arXiv 2503.10267)"
+  },
+  "sample_count": {
+    "published": null,
+    "unit": "documents",
+    "source": "measured, data/mix/measure_mono.py",
+    "measured": 1868959
+  },
+  "contamination": {
+    "status": "CHECKED_FLAGGED",
+    "report": "data/mix/measure-mono-2026-10-17.json (D20, fold, 8 words: SMOL test 15/754 flagged)"
+  },
+  "forbidden_uses": [],
+  "decisions": [
+    "D28"
+  ],
+  "retrieved": "2026-10-17",
+  "notes": [
+    "297,064 exact duplicate documents within the set (measured); deduplication is part of the D28 slice build."
+  ],
+  "measurements_2026_10_17": {
+    "documents": 1868959,
+    "words": 1345800372,
+    "madlad_tokens_est": 2153802366,
+    "unique_lines": 23815930,
+    "unique_lines_in_madlad_clean_or_noisy": 10723840,
+    "po_opo_rate": 0.016398366461101717,
+    "report": "data/mix/measure-mono-2026-10-17.json",
+    "script": "data/mix/measure_mono.py",
+    "note": "lines = unique normalised paragraphs of >= 5 words; tokens estimated from a 1-in-200 document sample"
+  }
+}

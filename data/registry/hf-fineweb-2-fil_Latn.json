@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "id": "hf-fineweb-2-fil_Latn",
+  "display_name": "FineWeb-2 fil_Latn (train split), HuggingFaceFW/fineweb-2",
+  "role": "UPSTREAM_SOURCE",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "TRAIN_MONOLINGUAL"
+  ],
+  "languages": [
+    "fil_Latn"
+  ],
+  "source_revision": {
+    "kind": "HF_REVISION",
+    "value": "af9c13333eb981300149d5ca60a8e9d659b276b9",
+    "verified": true,
+    "source": "Hugging Face API, 2026-10-17"
+  },
+  "distribution": [
+    {
+      "name": "data/fil_Latn/train/000_00000.parquet",
+      "content_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2/resolve/af9c13333eb981300149d5ca60a8e9d659b276b9/data/fil_Latn/train/000_00000.parquet",
+      "local_path": "~/data/raw/fineweb2-fil_Latn-af9c133/data/fil_Latn/train/000_00000.parquet",
+      "sha256": "14948c3ed6931de8c66c1f5752009cbb015acc163c18afd30e0634abe08195da",
+      "bytes": 3586228404,
+      "verified_from": "equals the Hub LFS sha256 (get_paths_info at the pinned revision), 2026-10-18"
+    }
+  ],
+  "license": {
+    "spdx": "ODC-By-1.0",
+    "quote": "The dataset is released under the **Open Data Commons Attribution License (ODC-By) v1.0** [license](https://opendatacommons.org/licenses/by/1-0/). The use of this dataset is also subject to [CommonCrawl's Terms of Use](https://commoncrawl.org/terms-of-use).",
+    "source": "HuggingFaceFW/fineweb-2 dataset card README.md, Licensing Information, rev af9c13333eb981300149d5ca60a8e9d659b276b9"
+  },
+  "use_class": "RESEARCH_ONLY",
+  "text_origin": {
+    "kind": "MINED",
+    "notes": "CommonCrawl web text, language-identified and filtered by the FineWeb-2 pipeline; ODC-By covers the packaging, the web text itself is not cleared."
+  },
+  "redistribution": {
+    "status": "NOT_ASSESSED",
+    "basis": "Permissive packaging; underlying web text unlicensed (D21, decide before publication)."
+  },
+  "attribution": {
+    "required": true,
+    "citation_target": "penedo2025fineweb (arXiv 2506.20920)"
+  },
+  "sample_count": {
+    "published": null,
+    "unit": "documents",
+    "source": "measured, data/mix/measure_mono.py",
+    "measured": 2349050
+  },
+  "contamination": {
+    "status": "CHECKED_FLAGGED",
+    "report": "data/mix/measure-mono-2026-10-17.json (D20, fold, 8 words: SMOL test 24/754 flagged)"
+  },
+  "forbidden_uses": [],
+  "decisions": [
+    "D28"
+  ],
+  "retrieved": "2026-10-17",
+  "notes": [
+    "The test split (data/fil_Latn/test) is downloaded but not used."
+  ],
+  "measurements_2026_10_17": {
+    "documents": 2349050,
+    "words": 1429143491,
+    "madlad_tokens_est": 2182250169,
+    "unique_lines": 33026750,
+    "unique_lines_in_madlad_clean_or_noisy": 18881025,
+    "po_opo_rate": 0.013595430813973861,
+    "report": "data/mix/measure-mono-2026-10-17.json",
+    "script": "data/mix/measure_mono.py",
+    "note": "lines = unique normalised paragraphs of >= 5 words; tokens estimated from a 1-in-200 document sample"
+  }
+}

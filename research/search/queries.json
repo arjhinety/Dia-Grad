@@ -1447,6 +1447,96 @@
       "purpose": "Data-gathering techniques survey (2026-10-17): LLM teacher distillation for MT",
       "query": "multilingual LLM translation fine-tuning with synthetic data from larger teacher distillation low-resource languages",
       "limit": 8
+    },
+    {
+      "id": "S152",
+      "items": [
+        7
+      ],
+      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): FineWeb-2 pipeline and per-language data",
+      "query": "FineWeb-2 multilingual pretraining data per language",
+      "limit": 8
+    },
+    {
+      "id": "S153",
+      "items": [
+        7
+      ],
+      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): HPLT 2.0 corpus",
+      "query": "HPLT 2.0 multilingual web corpus",
+      "limit": 8
+    },
+    {
+      "id": "S154",
+      "items": [
+        7
+      ],
+      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): CulturaX",
+      "query": "CulturaX cleaned multilingual dataset",
+      "limit": 8
+    },
+    {
+      "id": "S155",
+      "items": [
+        7
+      ],
+      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): audits of web corpora for low-resource languages",
+      "query": "quality audit of multilingual web-crawled datasets low-resource languages",
+      "limit": 8
+    },
+    {
+      "id": "S156",
+      "items": [
+        7
+      ],
+      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): existing Filipino monolingual corpora",
+      "query": "Tagalog Filipino monolingual corpus language model pretraining",
+      "limit": 8
+    },
+    {
+      "id": "S157",
+      "items": [
+        7
+      ],
+      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): MADLAD-400 data audit",
+      "query": "MADLAD-400 multilingual document-level audited dataset",
+      "limit": 8
+    },
+    {
+      "id": "S158",
+      "items": [
+        7
+      ],
+      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): cross-corpus agreement for multilingual pretraining data",
+      "query": "cross-source agreement multilingual pretraining datasets deduplication",
+      "limit": 8
+    },
+    {
+      "id": "S159",
+      "items": [
+        7
+      ],
+      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): denoising pretraining for MT sentence encoders",
+      "query": "multilingual denoising pretraining sequence-to-sequence machine translation",
+      "limit": 8
+    },
+    {
+      "id": "S160",
+      "items": [
+        7
+      ],
+      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): Wikipedia quality for low-resource languages",
+      "query": "Wikipedia data quality low-resource languages audit",
+      "limit": 8
+    },
+    {
+      "id": "S161",
+      "items": [
+        7
+      ],
+      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): Glot500 / MaLA corpora for Tagalog",
+      "query": "massively multilingual corpus 500 languages continued pretraining",
+      "limit": 8
     }
   ],
   "_external": [
