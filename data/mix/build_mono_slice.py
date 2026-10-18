@@ -66,17 +66,22 @@ def _pool(cfg, init, arg):
 
 
 def read_docs(src):
-    """(text, doc_id, url) for every row of every *.parquet under src["path"] (sorted); column names
-    from src["columns"] (keys text, id, url)."""
+    """(text, doc_id, url, record) for every row of every *.parquet under src["path"] (sorted); column
+    names from src["columns"] (keys text, id, url). record = "<file>#<row>": the file relative to
+    src["record_root"] (the registry record's distribution name) and the 0-based row in that file. It is
+    unique where doc ids are not (FinePDFs splits one PDF into several rows with the same id)."""
     import pyarrow.parquet as pq
     col = src["columns"]
     p = Path(src["path"])
+    root = Path(src.get("record_root", p.parent))
     for f in (sorted(p.rglob("*.parquet")) if p.is_dir() else [p]):
+        name, row = f.relative_to(root).as_posix(), 0
         for b in pq.ParquetFile(f).iter_batches(columns=[col["text"], col["id"], col["url"]], batch_size=4096):
             d = b.to_pydict()
             for text, i, u in zip(d[col["text"]], d[col["id"]], d[col["url"]]):
                 if text:
-                    yield text, i, u
+                    yield text, i, u, f"{name}#{row}"
+                row += 1
 
 
 def paragraphs(text):
@@ -121,23 +126,23 @@ def pool(cfg):
                         cand.append(b)
                 chunks = [cand[i:i + 2000] for i in range(0, len(cand), 2000)]
                 flags = [x for part in workers.map(_check, [[(b[0], b[2]) for b in ch] for ch in chunks]) for x in part]
-                for (h, raw, n, doc, url, k), hit in zip(cand, flags):
+                for (h, raw, n, doc, url, rec, k), hit in zip(cand, flags):
                     if hit:
                         c["heldout"] += 1
                         continue
                     w = len(raw.split())
                     c["kept"] += 1
                     c["kept_words"] += w
-                    fh.write(json.dumps({"id": h, "src": name, "doc": doc, "url": url, "para_index": k,
+                    fh.write(json.dumps({"id": h, "src": name, "doc": doc, "url": url, "record": rec, "para_index": k,
                                          "rank": seeded(cfg["seed"], n), "words": w, "text": raw},
                                         ensure_ascii=False) + "\n")
                 buf.clear()
 
-            for text, doc, url in docs:
+            for text, doc, url, rec in docs:
                 c["documents"] += 1
                 for k, (raw, n) in enumerate(paragraphs(text)):
                     c["paragraphs"] += 1
-                    buf.append((h64(n), raw, n, doc, url, k))
+                    buf.append((h64(n), raw, n, doc, url, rec, k))
                 if len(buf) >= 200000:
                     flush()
             flush()
@@ -147,8 +152,21 @@ def pool(cfg):
     (out / "pool-stats.json").write_text(json.dumps(stats, indent=1) + "\n")
 
 
+def fit(seg, tok, max_tokens):
+    """Drop trailing words until the segment tokenises to <= max_tokens (joining or decoding can add
+    tokens that the per-sentence counts did not see)."""
+    words = seg.split()
+    while len(words) > 1 and len(tok(" ".join(words), add_special_tokens=False).input_ids) > max_tokens:
+        words.pop()
+    return " ".join(words)
+
+
 def segments(text, tok, max_tokens):
     """Pack consecutive sentences into segments of <= max_tokens tokens; cut a longer sentence."""
+    return [fit(s, tok, max_tokens) for s in _segments(text, tok, max_tokens)]
+
+
+def _segments(text, tok, max_tokens):
     segs, cur, cur_n = [], [], 0
     for s in _SENT.split(text):
         s = s.strip()
@@ -200,8 +218,9 @@ def _seg_work(args):
     out = []
     for r in rows:
         for k, s in enumerate(segments(r["text"], _TOK, max_tokens)):
-            out.append({"diagrad_id": f"{meta['source_dataset']}:{r['doc']}:{r['para_index']}:{k}", "text": s,
-                        **meta, "source_record_id": r["doc"], "source_url": r["url"] or "",
+            out.append({"diagrad_id": f"{meta['source_dataset']}:{r['record']}:{r['para_index']}:{k}", "text": s,
+                        **meta, "source_record_id": r["record"], "source_doc_id": r["doc"] or "",
+                        "source_url": r["url"] or "",
                         "tokens": len(_TOK(s, add_special_tokens=False).input_ids),
                         "row_sha256": hashlib.sha256(s.encode("utf-8")).hexdigest()})
     return out

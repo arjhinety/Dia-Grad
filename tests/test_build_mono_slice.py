@@ -53,8 +53,8 @@ def test_pool_filters_madlad_duplicates_and_heldout(tmp_path):
     assert stats == {"documents": 2, "paragraphs": 4, "in_madlad": 1, "duplicate": 1, "heldout": 1,
                      "kept": 1, "kept_words": 7}
     rows = [json.loads(l) for l in gzip.open(tmp_path / "pool" / "pool-a.jsonl.gz", "rt")]
-    assert [(r["text"], r["doc"], r["url"], r["para_index"]) for r in rows] == \
-        [("Ang unang talata ay bago at malinis.", "d0", "u0", 0)]
+    assert [(r["text"], r["doc"], r["url"], r["record"], r["para_index"]) for r in rows] == \
+        [("Ang unang talata ay bago at malinis.", "d0", "u0", "a.parquet#0", 0)]
 
 
 def test_select_budget_segments_and_provenance(tmp_path):
@@ -65,7 +65,8 @@ def test_select_budget_segments_and_provenance(tmp_path):
         with gzip.open(pdir / f"pool-{name}.jsonl.gz", "wt") as f:
             for r in rows:
                 f.write(json.dumps(r) + "\n")
-    para = lambda i, rank, text: {"id": i, "src": "x", "doc": f"d{i}", "url": "", "para_index": 0, "rank": rank,
+    para = lambda i, rank, text: {"id": i, "src": "x", "doc": "same", "record": f"f.parquet#{i}", "url": "",
+                                  "para_index": 0, "rank": rank,
                                   "words": len(text.split()), "text": text}
     write("w", [para(1, 9, "Buong talata ng una.")])
     write("r", [para(2, 5, "Ikalawa ito. Tatlo na salita."), para(3, 1, "Una sa ranggo ito."), para(4, 7, "Hindi kasama ito.")])
@@ -85,8 +86,17 @@ def test_select_budget_segments_and_provenance(tmp_path):
     rows = [json.loads(l) for l in gzip.open(tmp_path / "slice" / "slice.jsonl.gz", "rt")]
     # whole source: 4 words; budget 12 - 4 = 8 -> ranks 1 (4 words) and 5 (5 words) taken, rank 7 not.
     # Segments of <= 3 tokens: a 4-word sentence is cut 3 + 1; "Ikalawa ito." (2) + "Tatlo na salita." (3) > 3.
-    assert [r["source_record_id"] for r in rows] == ["d1", "d1", "d2", "d2", "d3", "d3"]
-    assert [r["text"] for r in rows if r["source_record_id"] == "d2"] == ["Ikalawa ito.", "Tatlo na salita."]
-    assert rows[0]["diagrad_id"] == "rw:d1:0:0" and rows[0]["source_dataset"] == "rw" and rows[0]["tokens"] == 3
+    assert [r["source_record_id"] for r in rows] == ["f.parquet#" + i for i in "112233"]
+    assert [r["text"] for r in rows if r["source_record_id"] == "f.parquet#2"] == ["Ikalawa ito.", "Tatlo na salita."]
+    assert len({r["diagrad_id"] for r in rows}) == len(rows) and rows[0]["source_doc_id"] == "same"
+    assert rows[0]["diagrad_id"] == "rw:f.parquet#1:0:0" and rows[0]["source_dataset"] == "rw" and rows[0]["tokens"] == 3
     stats = json.loads((tmp_path / "slice" / "slice-stats.json").read_text())
     assert stats["tokens"] == sum(r["tokens"] for r in rows)
+
+
+def test_fit_trims_until_the_joined_text_fits():
+    class Greedy(WordTok):                      # joining adds a token per space, like a real tokenizer can
+        def __call__(self, s, add_special_tokens=False):
+            return type("T", (), {"input_ids": s.split() + [" "] * s.count(" ")})()
+    from data.mix.build_mono_slice import fit
+    assert fit("isa dalawa tatlo apat", Greedy(), 5) == "isa dalawa tatlo"

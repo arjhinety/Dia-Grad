@@ -3,11 +3,11 @@
 seed: 20261018
 sources:                              # order matters: earlier sources keep shared paragraphs
   - {name: finepdfs_fil, registry_id: hf-finepdfs-fil_Latn, whole: true,
-     path: /raw/finepdfs-fil_Latn-220bac3/data/fil_Latn/train, columns: {text: text, id: id, url: url}}
+     record_root: /raw/finepdfs-fil_Latn-220bac3, path: /raw/finepdfs-fil_Latn-220bac3/data/fil_Latn/train, columns: {text: text, id: id, url: url}}
   - {name: fineweb2_fil, registry_id: hf-fineweb-2-fil_Latn,
-     path: /raw/fineweb2-fil_Latn-af9c133/data/fil_Latn/train, columns: {text: text, id: id, url: url}}
+     record_root: /raw/fineweb2-fil_Latn-af9c133, path: /raw/fineweb2-fil_Latn-af9c133/data/fil_Latn/train, columns: {text: text, id: id, url: url}}
   - {name: hplt2_tgl, registry_id: hf-hplt2.0-cleaned-tgl_Latn,
-     path: /raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn, columns: {text: text, id: id, url: u}}
+     record_root: /raw/hplt2-cleaned-tgl_Latn-d1324a5, path: /raw/hplt2-cleaned-tgl_Latn-d1324a5/tgl_Latn, columns: {text: text, id: id, url: u}}
 registry_dir: /repo/data/registry
 lines_dir: /t1/mono-measure
 madlad_lines: [madlad400_fil_clean.lines.npy, madlad400_fil_noisy.lines.npy, madlad400_fil_noisy1.lines.npy]
