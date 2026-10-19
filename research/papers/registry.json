@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17T15:12:32+00:00",
+  "generated": "2026-10-19T03:35:52+00:00",
   "papers": [
     {
       "arxiv": "2601.07372",
@@ -157,7 +157,7 @@
         "pwc_id": "62620",
         "abs_url": "https://arxiv.org/abs/2601.07372"
       },
-      "metadata_retrieved": "2026-10-17T14:53:19+00:00",
+      "metadata_retrieved": "2026-10-19T03:15:50+00:00",
       "bibkey": "cheng2026conditional"
     },
     {
@@ -2602,7 +2602,7 @@
         "pwc_id": "122015",
         "abs_url": "https://arxiv.org/abs/2609.19969"
       },
-      "metadata_retrieved": "2026-10-17T14:53:26+00:00",
+      "metadata_retrieved": "2026-10-19T03:15:57+00:00",
       "bibkey": "deepseekai2026deepseeka"
     },
     {
@@ -3948,7 +3948,7 @@
         "pwc_id": "98780",
         "abs_url": "https://arxiv.org/abs/2606.19348"
       },
-      "metadata_retrieved": "2026-10-17T14:53:38+00:00",
+      "metadata_retrieved": "2026-10-19T03:16:03+00:00",
       "bibkey": "deepseekai2026deepseekb"
     },
     {
@@ -4151,7 +4151,7 @@
         "pwc_id": "102638",
         "abs_url": "https://arxiv.org/abs/2607.05147"
       },
-      "metadata_retrieved": "2026-10-17T14:53:45+00:00",
+      "metadata_retrieved": "2026-10-19T03:16:10+00:00",
       "bibkey": "cheng2026dspark"
     },
     {
@@ -4260,7 +4260,7 @@
         "pwc_id": "31150",
         "abs_url": "https://arxiv.org/abs/2405.05254v2"
       },
-      "metadata_retrieved": "2026-10-17T14:53:51+00:00",
+      "metadata_retrieved": "2026-10-19T03:16:17+00:00",
       "bibkey": "sun2024only"
     },
     {
@@ -4375,7 +4375,7 @@
         "pwc_id": "51638",
         "abs_url": "https://arxiv.org/abs/2507.02092"
       },
-      "metadata_retrieved": "2026-10-17T14:53:58+00:00",
+      "metadata_retrieved": "2026-10-19T03:16:23+00:00",
       "bibkey": "gladstone2025energy"
     },
     {
@@ -4533,7 +4533,7 @@
         "pwc_id": "41419",
         "abs_url": "https://arxiv.org/abs/2412.08821v2"
       },
-      "metadata_retrieved": "2026-10-17T14:54:05+00:00",
+      "metadata_retrieved": "2026-10-19T03:16:30+00:00",
       "bibkey": "team2024large"
     },
     {
@@ -4649,7 +4649,7 @@
         "pwc_id": "82868",
         "abs_url": "https://arxiv.org/abs/2605.06548"
       },
-      "metadata_retrieved": "2026-10-17T14:54:11+00:00",
+      "metadata_retrieved": "2026-10-19T03:16:36+00:00",
       "bibkey": "guo2026continuous"
     },
     {
@@ -4761,7 +4761,7 @@
         "pwc_id": "43844",
         "abs_url": "https://arxiv.org/abs/2502.05171"
       },
-      "metadata_retrieved": "2026-10-17T14:54:18+00:00",
+      "metadata_retrieved": "2026-10-19T03:16:43+00:00",
       "bibkey": "geiping2025scaling"
     },
     {
@@ -4845,7 +4845,7 @@
         "pwc_id": "66793",
         "abs_url": "https://arxiv.org/abs/2510.07358"
       },
-      "metadata_retrieved": "2026-10-17T14:54:25+00:00",
+      "metadata_retrieved": "2026-10-19T03:16:50+00:00",
       "bibkey": "koishekenov2025encode"
     },
     {
@@ -4927,7 +4927,7 @@
         "pwc_id": "105938",
         "abs_url": "https://arxiv.org/abs/2607.20519"
       },
-      "metadata_retrieved": "2026-10-17T14:54:31+00:00",
+      "metadata_retrieved": "2026-10-19T03:16:57+00:00",
       "bibkey": "popescu2026adaptive"
     },
     {
@@ -5032,7 +5032,7 @@
         "pwc_id": "59604",
         "abs_url": "https://arxiv.org/abs/2603.08391"
       },
-      "metadata_retrieved": "2026-10-17T14:54:38+00:00",
+      "metadata_retrieved": "2026-10-19T03:17:03+00:00",
       "bibkey": "frey2026adaptive"
     },
     {
@@ -5122,7 +5122,7 @@
         "pwc_id": "74500",
         "abs_url": "https://arxiv.org/abs/2502.17416"
       },
-      "metadata_retrieved": "2026-10-17T14:54:44+00:00",
+      "metadata_retrieved": "2026-10-19T03:17:10+00:00",
       "bibkey": "saunshi2025reasoning"
     },
     {
@@ -5221,7 +5221,7 @@
         "pwc_id": "346",
         "abs_url": "https://arxiv.org/abs/1603.08983v6"
       },
-      "metadata_retrieved": "2026-10-17T14:54:51+00:00",
+      "metadata_retrieved": "2026-10-19T03:17:16+00:00",
       "bibkey": "graves2016adaptive"
     },
     {
@@ -5333,7 +5333,7 @@
         "pwc_id": "41251",
         "abs_url": "https://arxiv.org/abs/2412.06769v2"
       },
-      "metadata_retrieved": "2026-10-17T14:54:58+00:00",
+      "metadata_retrieved": "2026-10-19T03:17:23+00:00",
       "bibkey": "hao2024training"
     },
     {
@@ -5412,7 +5412,7 @@
         "pwc_id": "93280",
         "abs_url": "https://arxiv.org/abs/2604.12493"
       },
-      "metadata_retrieved": "2026-10-17T14:55:04+00:00",
+      "metadata_retrieved": "2026-10-19T03:17:30+00:00",
       "bibkey": "hanna2026latent"
     },
     {
@@ -5526,7 +5526,7 @@
         "pwc_id": "53455",
         "abs_url": "https://arxiv.org/abs/2510.11052"
       },
-      "metadata_retrieved": "2026-10-17T14:55:11+00:00",
+      "metadata_retrieved": "2026-10-19T03:17:36+00:00",
       "bibkey": "zhu2025latent"
     },
     {
@@ -5642,7 +5642,7 @@
         "pwc_id": "60786",
         "abs_url": "https://arxiv.org/abs/2602.11590"
       },
-      "metadata_retrieved": "2026-10-17T14:55:17+00:00",
+      "metadata_retrieved": "2026-10-19T03:17:43+00:00",
       "bibkey": "schiff2026learn"
     },
     {
@@ -5740,7 +5740,7 @@
         "pwc_id": "8906",
         "abs_url": "https://arxiv.org/abs/2205.00978"
       },
-      "metadata_retrieved": "2026-10-17T14:55:24+00:00",
+      "metadata_retrieved": "2026-10-19T03:17:49+00:00",
       "bibkey": "fernandes2022quality"
     },
     {
@@ -5836,7 +5836,7 @@
         "pwc_id": "44100",
         "abs_url": "https://arxiv.org/abs/2502.08561"
       },
-      "metadata_retrieved": "2026-10-17T14:55:31+00:00",
+      "metadata_retrieved": "2026-10-19T03:17:56+00:00",
       "bibkey": "koneru2025quality"
     },
     {
@@ -5914,7 +5914,7 @@
         "pwc_id": "22323",
         "abs_url": "https://arxiv.org/abs/2310.13988"
       },
-      "metadata_retrieved": "2026-10-17T14:55:37+00:00",
+      "metadata_retrieved": "2026-10-19T03:18:03+00:00",
       "bibkey": "kocmi2023gemba"
     },
     {
@@ -6025,7 +6025,7 @@
         "pwc_id": "19239",
         "abs_url": "https://arxiv.org/abs/2308.07286"
       },
-      "metadata_retrieved": "2026-10-17T14:55:44+00:00",
+      "metadata_retrieved": "2026-10-19T03:18:09+00:00",
       "bibkey": "fernandes2023devil"
     },
     {
@@ -6114,7 +6114,7 @@
         "pwc_id": "70190",
         "abs_url": "https://arxiv.org/abs/2508.03523"
       },
-      "metadata_retrieved": "2026-10-17T14:55:51+00:00",
+      "metadata_retrieved": "2026-10-19T03:18:16+00:00",
       "bibkey": "miranda2025filbench"
     },
     {
@@ -6228,7 +6228,7 @@
         "pwc_id": "37238",
         "abs_url": "https://arxiv.org/abs/2409.15380v3"
       },
-      "metadata_retrieved": "2026-10-17T14:55:57+00:00",
+      "metadata_retrieved": "2026-10-19T03:18:22+00:00",
       "bibkey": "montalan2024kalahi"
     },
     {
@@ -6343,7 +6343,7 @@
         "pwc_id": "44635",
         "abs_url": "https://arxiv.org/abs/2502.14301"
       },
-      "metadata_retrieved": "2026-10-17T14:56:04+00:00",
+      "metadata_retrieved": "2026-10-19T03:18:29+00:00",
       "bibkey": "susanto2025sea"
     },
     {
@@ -6441,7 +6441,7 @@
         "pwc_id": "23341",
         "abs_url": "https://arxiv.org/abs/2311.08692"
       },
-      "metadata_retrieved": "2026-10-17T14:56:10+00:00",
+      "metadata_retrieved": "2026-10-19T03:18:36+00:00",
       "bibkey": "lu2023routing"
     },
     {
@@ -6527,7 +6527,7 @@
         "pwc_id": "104248",
         "abs_url": "https://arxiv.org/abs/2606.12689"
       },
-      "metadata_retrieved": "2026-10-17T14:56:17+00:00",
+      "metadata_retrieved": "2026-10-19T03:18:42+00:00",
       "bibkey": "aswal2026observable"
     },
     {
@@ -6626,7 +6626,7 @@
         "pwc_id": "103785",
         "abs_url": "https://arxiv.org/abs/2603.25222"
       },
-      "metadata_retrieved": "2026-10-17T14:56:24+00:00",
+      "metadata_retrieved": "2026-10-19T03:18:49+00:00",
       "bibkey": "chen2026translation"
     },
     {
@@ -6712,7 +6712,7 @@
         "pwc_id": "19629",
         "abs_url": "https://arxiv.org/abs/2308.11466v2"
       },
-      "metadata_retrieved": "2026-10-17T14:56:30+00:00",
+      "metadata_retrieved": "2026-10-19T03:18:55+00:00",
       "bibkey": "duquenne2023sonar"
     },
     {
@@ -6873,7 +6873,7 @@
         "pwc_id": "59254",
         "abs_url": "https://arxiv.org/abs/2603.16606"
       },
-      "metadata_retrieved": "2026-10-17T14:56:37+00:00",
+      "metadata_retrieved": "2026-10-19T03:19:02+00:00",
       "bibkey": "team2026omnilinguala"
     },
     {
@@ -6990,7 +6990,7 @@
         "pwc_id": "20235",
         "abs_url": "https://arxiv.org/abs/2309.04662"
       },
-      "metadata_retrieved": "2026-10-17T14:56:43+00:00",
+      "metadata_retrieved": "2026-10-19T03:19:09+00:00",
       "bibkey": "kudugunta2023madlad"
     },
     {
@@ -7076,7 +7076,7 @@
         "pwc_id": "21736",
         "abs_url": "https://arxiv.org/abs/2310.06816"
       },
-      "metadata_retrieved": "2026-10-17T14:56:50+00:00",
+      "metadata_retrieved": "2026-10-19T03:19:15+00:00",
       "bibkey": "morris2023text"
     },
     {
@@ -7159,7 +7159,7 @@
         "pwc_id": "55084",
         "abs_url": "https://arxiv.org/abs/2512.20578"
       },
-      "metadata_retrieved": "2026-10-17T14:56:57+00:00",
+      "metadata_retrieved": "2026-10-19T03:19:22+00:00",
       "bibkey": "ghasemabadi2025llms"
     },
     {
@@ -7392,7 +7392,7 @@
         "pwc_id": "9757",
         "abs_url": "https://arxiv.org/abs/2207.05221v4"
       },
-      "metadata_retrieved": "2026-10-17T14:57:03+00:00",
+      "metadata_retrieved": "2026-10-19T03:19:28+00:00",
       "bibkey": "kadavath2022language"
     },
     {
@@ -7487,7 +7487,7 @@
         "pwc_id": "61451",
         "abs_url": "https://arxiv.org/abs/2602.01897"
       },
-      "metadata_retrieved": "2026-10-17T14:57:10+00:00",
+      "metadata_retrieved": "2026-10-19T03:19:35+00:00",
       "bibkey": "jeong2026internal"
     },
     {
@@ -7586,7 +7586,7 @@
         "pwc_id": "108685",
         "abs_url": "https://arxiv.org/abs/2603.16331v2"
       },
-      "metadata_retrieved": "2026-10-17T14:57:17+00:00",
+      "metadata_retrieved": "2026-10-19T03:19:41+00:00",
       "bibkey": "phan2026decoding"
     },
     {
@@ -7680,7 +7680,7 @@
         "pwc_id": "17059",
         "abs_url": "https://arxiv.org/abs/2306.03856v2"
       },
-      "metadata_retrieved": "2026-10-17T14:57:23+00:00",
+      "metadata_retrieved": "2026-10-19T03:19:48+00:00",
       "bibkey": "chen2023iterative"
     },
     {
@@ -7800,7 +7800,7 @@
         "pwc_id": "50854",
         "abs_url": "https://arxiv.org/abs/2506.08403"
       },
-      "metadata_retrieved": "2026-10-17T14:57:30+00:00",
+      "metadata_retrieved": "2026-10-19T03:19:55+00:00",
       "bibkey": "li2025tactic"
     },
     {
@@ -7883,7 +7883,7 @@
         "pwc_id": "60826",
         "abs_url": "https://arxiv.org/abs/2602.11047"
       },
-      "metadata_retrieved": "2026-10-17T14:57:37+00:00",
+      "metadata_retrieved": "2026-10-19T03:20:01+00:00",
       "bibkey": "xiao2026embedding"
     },
     {
@@ -7989,7 +7989,7 @@
         "pwc_id": "53831",
         "abs_url": "https://arxiv.org/abs/2510.11370"
       },
-      "metadata_retrieved": "2026-10-17T14:57:43+00:00",
+      "metadata_retrieved": "2026-10-19T03:20:08+00:00",
       "bibkey": "ma2025stabilizing"
     },
     {
@@ -8301,7 +8301,7 @@
         "pwc_id": "23453",
         "abs_url": "https://arxiv.org/abs/2311.09828v3"
       },
-      "metadata_retrieved": "2026-10-17T14:57:50+00:00",
+      "metadata_retrieved": "2026-10-19T03:20:14+00:00",
       "bibkey": "wang2023afrimte"
     },
     {
@@ -8416,7 +8416,7 @@
         "pwc_id": "50588",
         "abs_url": "https://arxiv.org/abs/2506.04557"
       },
-      "metadata_retrieved": "2026-10-17T14:57:56+00:00",
+      "metadata_retrieved": "2026-10-19T03:20:21+00:00",
       "bibkey": "li2025ssa"
     },
     {
@@ -8509,7 +8509,7 @@
         "pwc_id": "32409",
         "abs_url": "https://arxiv.org/abs/2406.03893"
       },
-      "metadata_retrieved": "2026-10-17T14:58:03+00:00",
+      "metadata_retrieved": "2026-10-19T03:20:28+00:00",
       "bibkey": "singh2024how"
     },
     {
@@ -8648,7 +8648,7 @@
         "pwc_id": "44442",
         "abs_url": "https://arxiv.org/abs/2502.12404"
       },
-      "metadata_retrieved": "2026-10-17T14:58:10+00:00",
+      "metadata_retrieved": "2026-10-19T03:20:34+00:00",
       "bibkey": "deutsch2025wmt"
     },
     {
@@ -8755,7 +8755,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T14:58:16+00:00",
+      "metadata_retrieved": "2026-10-19T03:20:41+00:00",
       "bibkey": "kocmi2024error"
     },
     {
@@ -8845,7 +8845,7 @@
         "pwc_id": "58061",
         "abs_url": "https://arxiv.org/abs/2604.17393"
       },
-      "metadata_retrieved": "2026-10-17T14:58:23+00:00",
+      "metadata_retrieved": "2026-10-19T03:20:47+00:00",
       "bibkey": "schmidt2026who"
     },
     {
@@ -9960,7 +9960,7 @@
         "pwc_id": "113946",
         "abs_url": "https://arxiv.org/abs/2609.04173"
       },
-      "metadata_retrieved": "2026-10-17T14:58:30+00:00",
+      "metadata_retrieved": "2026-10-19T03:20:54+00:00",
       "bibkey": "zouhar2026last"
     },
     {
@@ -10058,7 +10058,7 @@
         "pwc_id": "110585",
         "abs_url": "https://arxiv.org/abs/2508.20511"
       },
-      "metadata_retrieved": "2026-10-17T14:58:36+00:00",
+      "metadata_retrieved": "2026-10-19T03:21:01+00:00",
       "bibkey": "taguchi2025languages"
     },
     {
@@ -10159,7 +10159,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T14:58:51+00:00",
+      "metadata_retrieved": "2026-10-19T03:21:15+00:00",
       "bibkey": "montalan2025batayan"
     },
     {
@@ -10241,7 +10241,7 @@
         "pwc_id": "49880",
         "abs_url": "https://arxiv.org/abs/2505.20428"
       },
-      "metadata_retrieved": "2026-10-17T14:58:58+00:00",
+      "metadata_retrieved": "2026-10-19T03:21:22+00:00",
       "bibkey": "aquino2025ud"
     },
     {
@@ -10355,7 +10355,7 @@
         "pwc_id": "2769",
         "abs_url": "https://arxiv.org/abs/1911.02116v2"
       },
-      "metadata_retrieved": "2026-10-17T14:59:04+00:00",
+      "metadata_retrieved": "2026-10-19T03:21:28+00:00",
       "bibkey": "conneau2019unsupervised"
     },
     {
@@ -10468,7 +10468,7 @@
         "pwc_id": "4416",
         "abs_url": "https://arxiv.org/abs/2010.11934v3"
       },
-      "metadata_retrieved": "2026-10-17T14:59:11+00:00",
+      "metadata_retrieved": "2026-10-19T03:21:35+00:00",
       "bibkey": "xue2020mt"
     },
     {
@@ -10542,7 +10542,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T14:59:24+00:00",
+      "metadata_retrieved": "2026-10-19T03:21:42+00:00",
       "bibkey": "amrhein2022identifying"
     },
     {
@@ -10629,7 +10629,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T14:59:38+00:00",
+      "metadata_retrieved": "2026-10-19T03:21:57+00:00",
       "bibkey": "freitag2021experts"
     },
     {
@@ -10723,7 +10723,7 @@
         "pwc_id": "22044",
         "abs_url": "https://arxiv.org/abs/2310.10482"
       },
-      "metadata_retrieved": "2026-10-17T14:59:45+00:00",
+      "metadata_retrieved": "2026-10-19T03:22:03+00:00",
       "bibkey": "guerreiro2023xcomet"
     },
     {
@@ -10932,7 +10932,7 @@
         "pwc_id": "56795",
         "abs_url": "https://arxiv.org/abs/2603.16309"
       },
-      "metadata_retrieved": "2026-10-17T14:59:52+00:00",
+      "metadata_retrieved": "2026-10-19T03:22:10+00:00",
       "bibkey": "team2026omnilingualb"
     },
     {
@@ -11170,7 +11170,7 @@
         "pwc_id": "9743",
         "abs_url": "https://arxiv.org/abs/2207.04672v3"
       },
-      "metadata_retrieved": "2026-10-17T14:59:58+00:00",
+      "metadata_retrieved": "2026-10-19T03:22:17+00:00",
       "bibkey": "team2022no"
     },
     {
@@ -11281,7 +11281,7 @@
         "pwc_id": "5896",
         "abs_url": "https://arxiv.org/abs/2106.03193"
       },
-      "metadata_retrieved": "2026-10-17T15:00:05+00:00",
+      "metadata_retrieved": "2026-10-19T03:22:23+00:00",
       "bibkey": "goyal2021flores"
     },
     {
@@ -11397,7 +11397,7 @@
         "pwc_id": "19984",
         "abs_url": "https://arxiv.org/abs/2308.16884v2"
       },
-      "metadata_retrieved": "2026-10-17T15:00:12+00:00",
+      "metadata_retrieved": "2026-10-19T03:22:30+00:00",
       "bibkey": "bandarkar2023belebele"
     },
     {
@@ -11470,7 +11470,7 @@
         "pwc_id": "4343",
         "abs_url": "https://arxiv.org/abs/2010.06354"
       },
-      "metadata_retrieved": "2026-10-17T15:00:18+00:00",
+      "metadata_retrieved": "2026-10-19T03:22:36+00:00",
       "bibkey": "tiedemann2020tatoeba"
     },
     {
@@ -11556,7 +11556,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T15:00:26+00:00",
+      "metadata_retrieved": "2026-10-19T03:22:51+00:00",
       "bibkey": "kocyigit2025overestimation"
     },
     {
@@ -11653,7 +11653,7 @@
         "pwc_id": "39691",
         "abs_url": "https://arxiv.org/abs/2411.03923"
       },
-      "metadata_retrieved": "2026-10-17T15:00:33+00:00",
+      "metadata_retrieved": "2026-10-19T03:22:58+00:00",
       "bibkey": "singh2024evaluation"
     },
     {
@@ -11840,7 +11840,7 @@
         "pwc_id": "35375",
         "abs_url": "https://arxiv.org/abs/2407.21530v2"
       },
-      "metadata_retrieved": "2026-10-17T15:00:39+00:00",
+      "metadata_retrieved": "2026-10-19T03:23:04+00:00",
       "bibkey": "sainz2024data"
     },
     {
@@ -12049,7 +12049,7 @@
         "pwc_id": "3634",
         "abs_url": "https://arxiv.org/abs/2005.14165v4"
       },
-      "metadata_retrieved": "2026-10-17T15:00:46+00:00",
+      "metadata_retrieved": "2026-10-19T03:23:11+00:00",
       "bibkey": "brown2020language"
     },
     {
@@ -12191,7 +12191,7 @@
         "pwc_id": "43765",
         "abs_url": "https://arxiv.org/abs/2502.04314"
       },
-      "metadata_retrieved": "2026-10-17T15:00:53+00:00",
+      "metadata_retrieved": "2026-10-19T03:23:17+00:00",
       "bibkey": "team2025bouquet"
     },
     {
@@ -12300,7 +12300,7 @@
         "pwc_id": "51486",
         "abs_url": "https://arxiv.org/abs/2506.20920"
       },
-      "metadata_retrieved": "2026-10-17T15:00:59+00:00",
+      "metadata_retrieved": "2026-10-19T03:23:24+00:00",
       "bibkey": "penedo2025fineweb"
     },
     {
@@ -12402,7 +12402,7 @@
         "pwc_id": "20543",
         "abs_url": "https://arxiv.org/abs/2309.09400"
       },
-      "metadata_retrieved": "2026-10-17T15:01:06+00:00",
+      "metadata_retrieved": "2026-10-19T03:23:31+00:00",
       "bibkey": "nguyen2023culturax"
     },
     {
@@ -12621,7 +12621,7 @@
         "pwc_id": "46028",
         "abs_url": "https://arxiv.org/abs/2503.10267"
       },
-      "metadata_retrieved": "2026-10-17T15:01:13+00:00",
+      "metadata_retrieved": "2026-10-19T03:23:37+00:00",
       "bibkey": "burchell2025expanded"
     },
     {
@@ -13497,7 +13497,7 @@
         "pwc_id": "42221",
         "abs_url": "https://arxiv.org/abs/2412.19437"
       },
-      "metadata_retrieved": "2026-10-17T15:01:19+00:00",
+      "metadata_retrieved": "2026-10-19T03:23:44+00:00",
       "bibkey": "deepseekai2024deepseeka"
     },
     {
@@ -13831,7 +13831,7 @@
         "pwc_id": "32956",
         "abs_url": "https://arxiv.org/abs/2406.10118v4"
       },
-      "metadata_retrieved": "2026-10-17T15:01:26+00:00",
+      "metadata_retrieved": "2026-10-19T03:23:50+00:00",
       "bibkey": "lovenia2024seacrowd"
     },
     {
@@ -13993,7 +13993,7 @@
         "pwc_id": "109063",
         "abs_url": "https://arxiv.org/abs/2608.09766"
       },
-      "metadata_retrieved": "2026-10-17T15:01:33+00:00",
+      "metadata_retrieved": "2026-10-19T03:23:57+00:00",
       "bibkey": "chen2026cultivar"
     },
     {
@@ -14093,7 +14093,7 @@
         "pwc_id": "568",
         "abs_url": "https://arxiv.org/abs/1701.06538"
       },
-      "metadata_retrieved": "2026-10-17T15:01:39+00:00",
+      "metadata_retrieved": "2026-10-19T03:24:04+00:00",
       "bibkey": "shazeer2017outrageously"
     },
     {
@@ -14185,7 +14185,7 @@
         "pwc_id": "4879",
         "abs_url": "https://arxiv.org/abs/2101.03961v3"
       },
-      "metadata_retrieved": "2026-10-17T15:01:46+00:00",
+      "metadata_retrieved": "2026-10-19T03:24:10+00:00",
       "bibkey": "fedus2021switch"
     },
     {
@@ -14323,7 +14323,7 @@
         "pwc_id": "25711",
         "abs_url": "https://arxiv.org/abs/2401.06066"
       },
-      "metadata_retrieved": "2026-10-17T15:01:52+00:00",
+      "metadata_retrieved": "2026-10-19T03:24:17+00:00",
       "bibkey": "dai2024deepseekmoe"
     },
     {
@@ -14416,7 +14416,7 @@
         "pwc_id": "804",
         "abs_url": "https://arxiv.org/abs/1707.06347v2"
       },
-      "metadata_retrieved": "2026-10-17T15:01:59+00:00",
+      "metadata_retrieved": "2026-10-19T03:24:24+00:00",
       "bibkey": "schulman2017proximal"
     },
     {
@@ -14540,7 +14540,7 @@
         "pwc_id": "26841",
         "abs_url": "https://arxiv.org/abs/2402.03300v3"
       },
-      "metadata_retrieved": "2026-10-17T15:02:06+00:00",
+      "metadata_retrieved": "2026-10-19T03:24:30+00:00",
       "bibkey": "shao2024deepseekmath"
     },
     {
@@ -14663,7 +14663,7 @@
         "pwc_id": "51875",
         "abs_url": "https://arxiv.org/abs/2507.10524"
       },
-      "metadata_retrieved": "2026-10-17T15:02:12+00:00",
+      "metadata_retrieved": "2026-10-19T03:24:37+00:00",
       "bibkey": "bae2025mixture"
     },
     {
@@ -14805,7 +14805,7 @@
         "pwc_id": "22234",
         "abs_url": "https://arxiv.org/abs/2310.12963v5"
       },
-      "metadata_retrieved": "2026-10-17T15:02:19+00:00",
+      "metadata_retrieved": "2026-10-19T03:24:43+00:00",
       "bibkey": "aggarwal2023automix"
     },
     {
@@ -14889,7 +14889,7 @@
         "pwc_id": "15358",
         "abs_url": "https://arxiv.org/abs/2305.05176"
       },
-      "metadata_retrieved": "2026-10-17T15:02:26+00:00",
+      "metadata_retrieved": "2026-10-19T03:24:50+00:00",
       "bibkey": "chen2023frugalgpt"
     },
     {
@@ -15467,7 +15467,7 @@
         "pwc_id": "69958",
         "abs_url": "https://arxiv.org/abs/2508.10925"
       },
-      "metadata_retrieved": "2026-10-17T15:02:32+00:00",
+      "metadata_retrieved": "2026-10-19T03:24:56+00:00",
       "bibkey": "openai2025gpt"
     },
     {
@@ -15555,7 +15555,7 @@
           "note": "complete text of the publisher PDF; layout and math may be garbled"
         }
       },
-      "metadata_retrieved": "2026-10-17T15:02:33+00:00",
+      "metadata_retrieved": "2026-10-19T03:24:58+00:00",
       "bibkey": "xia2017deliberation"
     },
     {
@@ -15632,7 +15632,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T15:02:41+00:00",
+      "metadata_retrieved": "2026-10-19T03:25:06+00:00",
       "bibkey": "juraska2024metricx"
     },
     {
@@ -15764,7 +15764,7 @@
         "pwc_id": "755",
         "abs_url": "https://arxiv.org/abs/1706.03762v7"
       },
-      "metadata_retrieved": "2026-10-17T15:02:48+00:00",
+      "metadata_retrieved": "2026-10-19T03:25:12+00:00",
       "bibkey": "vaswani2017attention"
     },
     {
@@ -15886,7 +15886,7 @@
         "pwc_id": "2715",
         "abs_url": "https://arxiv.org/abs/1910.10683v4"
       },
-      "metadata_retrieved": "2026-10-17T15:02:55+00:00",
+      "metadata_retrieved": "2026-10-19T03:25:19+00:00",
       "bibkey": "raffel2019exploring"
     },
     {
@@ -16045,7 +16045,7 @@
         "pwc_id": "8472",
         "abs_url": "https://arxiv.org/abs/2203.15556"
       },
-      "metadata_retrieved": "2026-10-17T15:03:01+00:00",
+      "metadata_retrieved": "2026-10-19T03:25:25+00:00",
       "bibkey": "hoffmann2022training"
     },
     {
@@ -16127,7 +16127,7 @@
         "pwc_id": "82604",
         "abs_url": "https://arxiv.org/abs/1308.3432"
       },
-      "metadata_retrieved": "2026-10-17T15:03:08+00:00",
+      "metadata_retrieved": "2026-10-19T03:25:32+00:00",
       "bibkey": "bengio2013estimating"
     },
     {
@@ -16218,7 +16218,7 @@
         "pwc_id": "61",
         "abs_url": "https://arxiv.org/abs/1312.4314v3"
       },
-      "metadata_retrieved": "2026-10-17T15:03:15+00:00",
+      "metadata_retrieved": "2026-10-19T03:25:39+00:00",
       "bibkey": "eigen2013learning"
     },
     {
@@ -16326,7 +16326,7 @@
         "pwc_id": "3831",
         "abs_url": "https://arxiv.org/abs/2006.16668"
       },
-      "metadata_retrieved": "2026-10-17T15:03:21+00:00",
+      "metadata_retrieved": "2026-10-19T03:25:45+00:00",
       "bibkey": "lepikhin2020gshard"
     },
     {
@@ -16433,7 +16433,7 @@
         "pwc_id": "8004",
         "abs_url": "https://arxiv.org/abs/2202.08906v2"
       },
-      "metadata_retrieved": "2026-10-17T15:03:28+00:00",
+      "metadata_retrieved": "2026-10-19T03:25:52+00:00",
       "bibkey": "zoph2022st"
     },
     {
@@ -16549,7 +16549,7 @@
         "pwc_id": "8011",
         "abs_url": "https://arxiv.org/abs/2202.09368v2"
       },
-      "metadata_retrieved": "2026-10-17T15:03:35+00:00",
+      "metadata_retrieved": "2026-10-19T03:25:59+00:00",
       "bibkey": "zhou2022mixture"
     },
     {
@@ -16646,7 +16646,7 @@
         "pwc_id": "5914",
         "abs_url": "https://arxiv.org/abs/2106.04426v3"
       },
-      "metadata_retrieved": "2026-10-17T15:03:41+00:00",
+      "metadata_retrieved": "2026-10-19T03:26:05+00:00",
       "bibkey": "roller2021hash"
     },
     {
@@ -16736,7 +16736,7 @@
         "pwc_id": "5324",
         "abs_url": "https://arxiv.org/abs/2103.16716"
       },
-      "metadata_retrieved": "2026-10-17T15:03:48+00:00",
+      "metadata_retrieved": "2026-10-19T03:26:12+00:00",
       "bibkey": "lewis2021base"
     },
     {
@@ -16829,7 +16829,7 @@
         "pwc_id": "18847",
         "abs_url": "https://arxiv.org/abs/2308.00951v2"
       },
-      "metadata_retrieved": "2026-10-17T15:03:54+00:00",
+      "metadata_retrieved": "2026-10-19T03:26:19+00:00",
       "bibkey": "puigcerver2023from"
     },
     {
@@ -16920,7 +16920,7 @@
         "pwc_id": "36313",
         "abs_url": "https://arxiv.org/abs/2408.15664"
       },
-      "metadata_retrieved": "2026-10-17T15:04:01+00:00",
+      "metadata_retrieved": "2026-10-19T03:26:25+00:00",
       "bibkey": "wang2024auxiliary"
     },
     {
@@ -17032,7 +17032,7 @@
         "pwc_id": "11897",
         "abs_url": "https://arxiv.org/abs/2212.05055v2"
       },
-      "metadata_retrieved": "2026-10-17T15:04:08+00:00",
+      "metadata_retrieved": "2026-10-19T03:26:32+00:00",
       "bibkey": "komatsuzaki2022sparse"
     },
     {
@@ -17120,7 +17120,7 @@
         "pwc_id": "11679",
         "abs_url": "https://arxiv.org/abs/2211.15841"
       },
-      "metadata_retrieved": "2026-10-17T15:04:14+00:00",
+      "metadata_retrieved": "2026-10-19T03:26:39+00:00",
       "bibkey": "gale2022megablocks"
     },
     {
@@ -17294,7 +17294,7 @@
         "pwc_id": "25586",
         "abs_url": "https://arxiv.org/abs/2401.04088"
       },
-      "metadata_retrieved": "2026-10-17T15:04:21+00:00",
+      "metadata_retrieved": "2026-10-19T03:26:45+00:00",
       "bibkey": "jiang2024mixtral"
     },
     {
@@ -17466,7 +17466,7 @@
         "pwc_id": "36541",
         "abs_url": "https://arxiv.org/abs/2409.02060"
       },
-      "metadata_retrieved": "2026-10-17T15:04:28+00:00",
+      "metadata_retrieved": "2026-10-19T03:26:52+00:00",
       "bibkey": "muennighoff2024olmoe"
     },
     {
@@ -17586,7 +17586,7 @@
         "pwc_id": "27215",
         "abs_url": "https://arxiv.org/abs/2402.07871"
       },
-      "metadata_retrieved": "2026-10-17T15:04:34+00:00",
+      "metadata_retrieved": "2026-10-19T03:26:58+00:00",
       "bibkey": "krajewski2024scaling"
     },
     {
@@ -17766,7 +17766,7 @@
         "pwc_id": "7848",
         "abs_url": "https://arxiv.org/abs/2202.01169v2"
       },
-      "metadata_retrieved": "2026-10-17T15:04:41+00:00",
+      "metadata_retrieved": "2026-10-19T03:27:05+00:00",
       "bibkey": "clark2022unified"
     },
     {
@@ -17870,7 +17870,7 @@
         "pwc_id": "34336",
         "abs_url": "https://arxiv.org/abs/2407.06204v2"
       },
-      "metadata_retrieved": "2026-10-17T15:04:48+00:00",
+      "metadata_retrieved": "2026-10-19T03:27:12+00:00",
       "bibkey": "cai2024survey"
     },
     {
@@ -17986,7 +17986,7 @@
         "pwc_id": "43046",
         "abs_url": "https://arxiv.org/abs/2501.11873"
       },
-      "metadata_retrieved": "2026-10-17T15:04:54+00:00",
+      "metadata_retrieved": "2026-10-19T03:27:18+00:00",
       "bibkey": "qiu2025demons"
     },
     {
@@ -18086,7 +18086,7 @@
         "pwc_id": "48810",
         "abs_url": "https://arxiv.org/abs/2505.10860"
       },
-      "metadata_retrieved": "2026-10-17T15:05:01+00:00",
+      "metadata_retrieved": "2026-10-19T03:27:25+00:00",
       "bibkey": "nguyen2025deepseekmoe"
     },
     {
@@ -18162,7 +18162,7 @@
         "pwc_id": "58524",
         "abs_url": "https://arxiv.org/abs/2604.04230"
       },
-      "metadata_retrieved": "2026-10-17T15:05:08+00:00",
+      "metadata_retrieved": "2026-10-19T03:27:31+00:00",
       "bibkey": "mouzouni2026three"
     },
     {
@@ -18261,7 +18261,7 @@
         "pwc_id": "55166",
         "abs_url": "https://arxiv.org/abs/2601.03425"
       },
-      "metadata_retrieved": "2026-10-17T15:05:14+00:00",
+      "metadata_retrieved": "2026-10-19T03:27:38+00:00",
       "bibkey": "wang2026illusion"
     },
     {
@@ -18339,7 +18339,7 @@
         "pwc_id": "58170",
         "abs_url": "https://arxiv.org/abs/2604.14419"
       },
-      "metadata_retrieved": "2026-10-17T15:05:21+00:00",
+      "metadata_retrieved": "2026-10-19T03:27:45+00:00",
       "bibkey": "ternovtsii2026equifinality"
     },
     {
@@ -18436,7 +18436,7 @@
         "pwc_id": "53261",
         "abs_url": "https://arxiv.org/abs/2510.04694"
       },
-      "metadata_retrieved": "2026-10-17T15:05:27+00:00",
+      "metadata_retrieved": "2026-10-19T03:27:51+00:00",
       "bibkey": "bandarkar2025multilingual"
     },
     {
@@ -18545,7 +18545,7 @@
         "pwc_id": "70816",
         "abs_url": "https://arxiv.org/abs/2507.17702"
       },
-      "metadata_retrieved": "2026-10-17T15:05:34+00:00",
+      "metadata_retrieved": "2026-10-19T03:27:58+00:00",
       "bibkey": "tian2025towards"
     },
     {
@@ -18678,7 +18678,7 @@
         "pwc_id": "85780",
         "abs_url": "https://arxiv.org/abs/2505.22323"
       },
-      "metadata_retrieved": "2026-10-17T15:05:41+00:00",
+      "metadata_retrieved": "2026-10-19T03:28:04+00:00",
       "bibkey": "guo2025advancing"
     },
     {
@@ -18793,7 +18793,7 @@
         "pwc_id": "70498",
         "abs_url": "https://arxiv.org/abs/2507.23279"
       },
-      "metadata_retrieved": "2026-10-17T15:05:47+00:00",
+      "metadata_retrieved": "2026-10-19T03:28:11+00:00",
       "bibkey": "su2025unveiling"
     },
     {
@@ -18885,7 +18885,7 @@
         "pwc_id": "55004",
         "abs_url": "https://arxiv.org/abs/2512.23447"
       },
-      "metadata_retrieved": "2026-10-17T15:05:54+00:00",
+      "metadata_retrieved": "2026-10-19T03:28:18+00:00",
       "bibkey": "lv2025coupling"
     },
     {
@@ -18969,7 +18969,7 @@
         "pwc_id": "11978",
         "abs_url": "https://arxiv.org/abs/2212.07571"
       },
-      "metadata_retrieved": "2026-10-17T15:06:01+00:00",
+      "metadata_retrieved": "2026-10-19T03:28:24+00:00",
       "bibkey": "elbayad2022fixing"
     },
     {
@@ -19059,7 +19059,7 @@
         "pwc_id": "56527",
         "abs_url": "https://arxiv.org/abs/2603.04445"
       },
-      "metadata_retrieved": "2026-10-17T15:06:08+00:00",
+      "metadata_retrieved": "2026-10-19T03:28:31+00:00",
       "bibkey": "moslem2026dynamic"
     },
     {
@@ -19160,7 +19160,7 @@
         "pwc_id": "81971",
         "abs_url": "https://arxiv.org/abs/1807.03819"
       },
-      "metadata_retrieved": "2026-10-17T15:06:14+00:00",
+      "metadata_retrieved": "2026-10-19T03:28:37+00:00",
       "bibkey": "dehghani2018universal"
     },
     {
@@ -19248,7 +19248,7 @@
         "pwc_id": "6223",
         "abs_url": "https://arxiv.org/abs/2107.05407v2"
       },
-      "metadata_retrieved": "2026-10-17T15:06:21+00:00",
+      "metadata_retrieved": "2026-10-19T03:28:44+00:00",
       "bibkey": "banino2021pondernet"
     },
     {
@@ -19343,7 +19343,7 @@
         "pwc_id": "29865",
         "abs_url": "https://arxiv.org/abs/2404.02258"
       },
-      "metadata_retrieved": "2026-10-17T15:06:27+00:00",
+      "metadata_retrieved": "2026-10-19T03:28:51+00:00",
       "bibkey": "raposo2024mixture"
     },
     {
@@ -19450,7 +19450,7 @@
         "pwc_id": "9799",
         "abs_url": "https://arxiv.org/abs/2207.07061v2"
       },
-      "metadata_retrieved": "2026-10-17T15:06:34+00:00",
+      "metadata_retrieved": "2026-10-19T03:28:57+00:00",
       "bibkey": "schuster2022confident"
     },
     {
@@ -19532,7 +19532,7 @@
         "pwc_id": "10914",
         "abs_url": "https://arxiv.org/abs/2210.10760"
       },
-      "metadata_retrieved": "2026-10-17T15:06:41+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:04+00:00",
       "bibkey": "gao2022scaling"
     },
     {
@@ -20250,7 +20250,7 @@
         "pwc_id": "31121",
         "abs_url": "https://arxiv.org/abs/2405.04434v5"
       },
-      "metadata_retrieved": "2026-10-17T15:06:47+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:10+00:00",
       "bibkey": "deepseekai2024deepseekb"
     },
     {
@@ -20319,7 +20319,7 @@
           "note": "ABSTRACT ONLY: no open full text; claims about this paper are limited to its abstract"
         }
       },
-      "metadata_retrieved": "2026-10-17T15:06:48+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:11+00:00",
       "bibkey": "jacobs1991adaptive"
     },
     {
@@ -20380,7 +20380,7 @@
           "note": "ABSTRACT ONLY: no open full text; claims about this paper are limited to its abstract"
         }
       },
-      "metadata_retrieved": "2026-10-17T15:06:49+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:12+00:00",
       "bibkey": "jordan1994hierarchical"
     },
     {
@@ -20429,7 +20429,7 @@
         "openalex": "W2119717200"
       },
       "files": {},
-      "metadata_retrieved": "2026-10-17T15:06:49+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:12+00:00",
       "bibkey": "williams1992simple"
     },
     {
@@ -20516,7 +20516,7 @@
         "pwc_id": "45187",
         "abs_url": "https://arxiv.org/abs/2502.20395"
       },
-      "metadata_retrieved": "2026-10-17T15:06:56+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:19+00:00",
       "bibkey": "li2025r"
     },
     {
@@ -20598,7 +20598,7 @@
         "pwc_id": "47527",
         "abs_url": "https://arxiv.org/abs/2504.07964"
       },
-      "metadata_retrieved": "2026-10-17T15:07:02+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:26+00:00",
       "bibkey": "li2025c"
     },
     {
@@ -20687,7 +20687,7 @@
         "pwc_id": "53032",
         "abs_url": "https://arxiv.org/abs/2509.22572"
       },
-      "metadata_retrieved": "2026-10-17T15:07:09+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:32+00:00",
       "bibkey": "han2025dynamic"
     },
     {
@@ -20799,7 +20799,7 @@
         "pwc_id": "103752",
         "abs_url": "https://arxiv.org/abs/2604.14246"
       },
-      "metadata_retrieved": "2026-10-17T15:07:16+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:39+00:00",
       "bibkey": "hu2026awakening"
     },
     {
@@ -20894,7 +20894,7 @@
         "pwc_id": "114288",
         "abs_url": "https://arxiv.org/abs/2609.13058"
       },
-      "metadata_retrieved": "2026-10-17T15:07:22+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:45+00:00",
       "bibkey": "he2026expert"
     },
     {
@@ -20990,7 +20990,7 @@
         "pwc_id": "4346",
         "abs_url": "https://arxiv.org/abs/2010.06595"
       },
-      "metadata_retrieved": "2026-10-17T15:07:29+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:52+00:00",
       "bibkey": "card2020with"
     },
     {
@@ -21093,7 +21093,7 @@
         "pwc_id": "32972",
         "abs_url": "https://arxiv.org/abs/2406.10229"
       },
-      "metadata_retrieved": "2026-10-17T15:07:36+00:00",
+      "metadata_retrieved": "2026-10-19T03:29:59+00:00",
       "bibkey": "madaan2024quantifying"
     },
     {
@@ -21182,7 +21182,7 @@
         "pwc_id": "81973",
         "abs_url": "https://arxiv.org/abs/1806.08295"
       },
-      "metadata_retrieved": "2026-10-17T15:07:42+00:00",
+      "metadata_retrieved": "2026-10-19T03:30:05+00:00",
       "bibkey": "colas2018how"
     },
     {
@@ -21255,7 +21255,7 @@
         "pwc_id": "79968",
         "abs_url": "https://arxiv.org/abs/2205.11134"
       },
-      "metadata_retrieved": "2026-10-17T15:07:49+00:00",
+      "metadata_retrieved": "2026-10-19T03:30:12+00:00",
       "bibkey": "bestgen2022please"
     },
     {
@@ -21360,7 +21360,7 @@
         "pwc_id": "120",
         "abs_url": "https://arxiv.org/abs/1411.2664v3"
       },
-      "metadata_retrieved": "2026-10-17T15:07:56+00:00",
+      "metadata_retrieved": "2026-10-19T03:30:18+00:00",
       "bibkey": "dwork2014preserving"
     },
     {
@@ -21455,7 +21455,7 @@
         "pwc_id": "22619",
         "abs_url": "https://arxiv.org/abs/2310.17623v2"
       },
-      "metadata_retrieved": "2026-10-17T15:08:02+00:00",
+      "metadata_retrieved": "2026-10-19T03:30:25+00:00",
       "bibkey": "oren2023proving"
     },
     {
@@ -21558,7 +21558,7 @@
         "pwc_id": "37860",
         "abs_url": "https://arxiv.org/abs/2410.03249v3"
       },
-      "metadata_retrieved": "2026-10-17T15:08:09+00:00",
+      "metadata_retrieved": "2026-10-19T03:30:32+00:00",
       "bibkey": "bordt2024how"
     },
     {
@@ -21677,7 +21677,7 @@
         "pwc_id": "43573",
         "abs_url": "https://arxiv.org/abs/2502.01534"
       },
-      "metadata_retrieved": "2026-10-17T15:08:16+00:00",
+      "metadata_retrieved": "2026-10-19T03:30:38+00:00",
       "bibkey": "li2025preference"
     },
     {
@@ -21801,7 +21801,7 @@
         "pwc_id": "37800",
         "abs_url": "https://arxiv.org/abs/2410.02736v2"
       },
-      "metadata_retrieved": "2026-10-17T15:08:22+00:00",
+      "metadata_retrieved": "2026-10-19T03:30:45+00:00",
       "bibkey": "ye2024justice"
     },
     {
@@ -21929,7 +21929,7 @@
         "pwc_id": "24809",
         "abs_url": "https://arxiv.org/abs/2312.09244v3"
       },
-      "metadata_retrieved": "2026-10-17T15:08:29+00:00",
+      "metadata_retrieved": "2026-10-19T03:30:51+00:00",
       "bibkey": "eisenstein2023helping"
     },
     {
@@ -22020,7 +22020,7 @@
         "pwc_id": "34205",
         "abs_url": "https://arxiv.org/abs/2407.04549"
       },
-      "metadata_retrieved": "2026-10-17T15:08:36+00:00",
+      "metadata_retrieved": "2026-10-19T03:30:58+00:00",
       "bibkey": "pan2024spontaneous"
     },
     {
@@ -22124,7 +22124,7 @@
         "pwc_id": "21298",
         "abs_url": "https://arxiv.org/abs/2310.01798v2"
       },
-      "metadata_retrieved": "2026-10-17T15:08:42+00:00",
+      "metadata_retrieved": "2026-10-19T03:31:04+00:00",
       "bibkey": "huang2023large"
     },
     {
@@ -22228,7 +22228,7 @@
         "pwc_id": "30811",
         "abs_url": "https://arxiv.org/abs/2404.17140v2"
       },
-      "metadata_retrieved": "2026-10-17T15:08:49+00:00",
+      "metadata_retrieved": "2026-10-19T03:31:11+00:00",
       "bibkey": "zhang2024small"
     },
     {
@@ -22321,7 +22321,7 @@
         "pwc_id": "16252",
         "abs_url": "https://arxiv.org/abs/2305.15425v2"
       },
-      "metadata_retrieved": "2026-10-17T15:08:56+00:00",
+      "metadata_retrieved": "2026-10-19T03:31:18+00:00",
       "bibkey": "petrov2023language"
     },
     {
@@ -22422,7 +22422,7 @@
         "pwc_id": "15713",
         "abs_url": "https://arxiv.org/abs/2305.10930v3"
       },
-      "metadata_retrieved": "2026-10-17T15:09:02+00:00",
+      "metadata_retrieved": "2026-10-19T03:31:24+00:00",
       "bibkey": "chen2023off"
     },
     {
@@ -22523,7 +22523,7 @@
         "pwc_id": "21462",
         "abs_url": "https://arxiv.org/abs/2310.03693"
       },
-      "metadata_retrieved": "2026-10-17T15:09:09+00:00",
+      "metadata_retrieved": "2026-10-19T03:31:31+00:00",
       "bibkey": "qi2023fine"
     },
     {
@@ -22600,7 +22600,7 @@
         "pwc_id": "4591",
         "abs_url": "https://arxiv.org/abs/2011.10566"
       },
-      "metadata_retrieved": "2026-10-17T15:09:16+00:00",
+      "metadata_retrieved": "2026-10-19T03:31:38+00:00",
       "bibkey": "chen2020exploring"
     },
     {
@@ -22692,7 +22692,7 @@
         "pwc_id": "1461",
         "abs_url": "https://arxiv.org/abs/1808.09381v2"
       },
-      "metadata_retrieved": "2026-10-17T15:09:22+00:00",
+      "metadata_retrieved": "2026-10-19T03:31:44+00:00",
       "bibkey": "edunov2018understanding"
     },
     {
@@ -22767,7 +22767,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T15:09:37+00:00",
+      "metadata_retrieved": "2026-10-19T03:31:59+00:00",
       "bibkey": "caswell2019tagged"
     },
     {
@@ -22851,7 +22851,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T15:09:51+00:00",
+      "metadata_retrieved": "2026-10-19T03:32:13+00:00",
       "bibkey": "edunov2019evaluation"
     },
     {
@@ -22946,7 +22946,7 @@
         "pwc_id": "417",
         "abs_url": "https://arxiv.org/abs/1606.07947v4"
       },
-      "metadata_retrieved": "2026-10-17T15:09:57+00:00",
+      "metadata_retrieved": "2026-10-19T03:32:19+00:00",
       "bibkey": "kim2016sequence"
     },
     {
@@ -23030,7 +23030,7 @@
         "pwc_id": "3389",
         "abs_url": "https://arxiv.org/abs/2004.09813v2"
       },
-      "metadata_retrieved": "2026-10-17T15:10:04+00:00",
+      "metadata_retrieved": "2026-10-19T03:32:26+00:00",
       "bibkey": "reimers2020making"
     },
     {
@@ -23113,7 +23113,7 @@
         "pwc_id": "9182",
         "abs_url": "https://arxiv.org/abs/2205.12654"
       },
-      "metadata_retrieved": "2026-10-17T15:10:11+00:00",
+      "metadata_retrieved": "2026-10-19T03:32:32+00:00",
       "bibkey": "heffernan2022bitext"
     },
     {
@@ -23294,7 +23294,7 @@
         "pwc_id": "74637",
         "abs_url": "https://arxiv.org/abs/2502.12301"
       },
-      "metadata_retrieved": "2026-10-17T15:10:17+00:00",
+      "metadata_retrieved": "2026-10-19T03:32:39+00:00",
       "bibkey": "caswell2025smol"
     },
     {
@@ -23402,7 +23402,7 @@
         "pwc_id": "49174",
         "abs_url": "https://arxiv.org/abs/2505.14423"
       },
-      "metadata_retrieved": "2026-10-17T15:10:24+00:00",
+      "metadata_retrieved": "2026-10-19T03:32:46+00:00",
       "bibkey": "gibert2025scaling"
     },
     {
@@ -23485,7 +23485,7 @@
         "pwc_id": "52326",
         "abs_url": "https://arxiv.org/abs/2508.08680"
       },
-      "metadata_retrieved": "2026-10-17T15:10:31+00:00",
+      "metadata_retrieved": "2026-10-19T03:32:52+00:00",
       "bibkey": "zebaze2025topxgen"
     },
     {
@@ -23690,7 +23690,7 @@
         "pwc_id": "27131",
         "abs_url": "https://arxiv.org/abs/2402.06619"
       },
-      "metadata_retrieved": "2026-10-17T15:10:38+00:00",
+      "metadata_retrieved": "2026-10-19T03:32:59+00:00",
       "bibkey": "singh2024aya"
     },
     {
@@ -23783,7 +23783,7 @@
         "pwc_id": "57439",
         "abs_url": "https://arxiv.org/abs/2604.11290"
       },
-      "metadata_retrieved": "2026-10-17T15:10:44+00:00",
+      "metadata_retrieved": "2026-10-19T03:33:05+00:00",
       "bibkey": "miranda2026polyglot"
     },
     {
@@ -23882,7 +23882,7 @@
         "pwc_id": "58873",
         "abs_url": "https://arxiv.org/abs/2603.25489"
       },
-      "metadata_retrieved": "2026-10-17T15:10:51+00:00",
+      "metadata_retrieved": "2026-10-19T03:33:12+00:00",
       "bibkey": "vamvas2026translation"
     },
     {
@@ -23984,7 +23984,7 @@
         "pwc_id": "76595",
         "abs_url": "https://arxiv.org/abs/2408.06537"
       },
-      "metadata_retrieved": "2026-10-17T15:10:57+00:00",
+      "metadata_retrieved": "2026-10-19T03:33:19+00:00",
       "bibkey": "finkelstein2024introducing"
     },
     {
@@ -24066,7 +24066,7 @@
         "pwc_id": "26720",
         "abs_url": "https://arxiv.org/abs/2402.01939"
       },
-      "metadata_retrieved": "2026-10-17T15:11:04+00:00",
+      "metadata_retrieved": "2026-10-19T03:33:25+00:00",
       "bibkey": "alam2024morphologically"
     },
     {
@@ -24161,7 +24161,7 @@
         "pwc_id": "2805",
         "abs_url": "https://arxiv.org/abs/1911.04944v2"
       },
-      "metadata_retrieved": "2026-10-17T15:11:11+00:00",
+      "metadata_retrieved": "2026-10-19T03:33:32+00:00",
       "bibkey": "schwenk2019ccmatrix"
     },
     {
@@ -24262,7 +24262,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T15:11:17+00:00",
+      "metadata_retrieved": "2026-10-19T03:33:38+00:00",
       "bibkey": "ranathunga2024quality"
     },
     {
@@ -24373,7 +24373,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T15:11:25+00:00",
+      "metadata_retrieved": "2026-10-19T03:33:52+00:00",
       "bibkey": "abdulmumin2022separating"
     },
     {
@@ -24451,7 +24451,7 @@
         "pwc_id": "38234",
         "abs_url": "https://arxiv.org/abs/2410.07830"
       },
-      "metadata_retrieved": "2026-10-17T15:11:31+00:00",
+      "metadata_retrieved": "2026-10-19T03:33:59+00:00",
       "bibkey": "tan2024nusamt"
     },
     {
@@ -24534,7 +24534,7 @@
         "pwc_id": null,
         "abs_url": null
       },
-      "metadata_retrieved": "2026-10-17T15:11:39+00:00",
+      "metadata_retrieved": "2026-10-19T03:34:06+00:00",
       "bibkey": "briakou2021bitextedit"
     },
     {
@@ -24630,7 +24630,7 @@
         "pwc_id": "25691",
         "abs_url": "https://arxiv.org/abs/2401.05749v2"
       },
-      "metadata_retrieved": "2026-10-17T15:11:45+00:00",
+      "metadata_retrieved": "2026-10-19T03:34:13+00:00",
       "bibkey": "thompson2024shocking"
     },
     {
@@ -24925,7 +24925,7 @@
         "pwc_id": "5251",
         "abs_url": "https://arxiv.org/abs/2103.12028v4"
       },
-      "metadata_retrieved": "2026-10-17T15:11:52+00:00",
+      "metadata_retrieved": "2026-10-19T03:34:19+00:00",
       "bibkey": "kreutzer2021quality"
     },
     {
@@ -25062,7 +25062,7 @@
         "pwc_id": "16319",
         "abs_url": "https://arxiv.org/abs/2305.16307v3"
       },
-      "metadata_retrieved": "2026-10-17T15:11:59+00:00",
+      "metadata_retrieved": "2026-10-19T03:34:26+00:00",
       "bibkey": "gala2023indictrans"
     },
     {
@@ -25270,7 +25270,7 @@
         "pwc_id": "65512",
         "abs_url": "https://arxiv.org/abs/2511.01066"
       },
-      "metadata_retrieved": "2026-10-17T15:12:05+00:00",
+      "metadata_retrieved": "2026-10-19T03:34:33+00:00",
       "bibkey": "oepen2025hplt"
     },
     {
@@ -25392,7 +25392,7 @@
         "pwc_id": "29228",
         "abs_url": "https://arxiv.org/abs/2403.14009"
       },
-      "metadata_retrieved": "2026-10-17T15:12:12+00:00",
+      "metadata_retrieved": "2026-10-19T03:34:39+00:00",
       "bibkey": "gibert2024new"
     },
     {
@@ -25487,7 +25487,7 @@
         "pwc_id": "50316",
         "abs_url": "https://arxiv.org/abs/2506.00469"
       },
-      "metadata_retrieved": "2026-10-17T15:12:19+00:00",
+      "metadata_retrieved": "2026-10-19T03:34:46+00:00",
       "bibkey": "ji2025massively"
     },
     {
@@ -25598,7 +25598,7 @@
         "pwc_id": "14818",
         "abs_url": "https://arxiv.org/abs/2304.09919"
       },
-      "metadata_retrieved": "2026-10-17T15:12:25+00:00",
+      "metadata_retrieved": "2026-10-19T03:34:52+00:00",
       "bibkey": "akerman2023ebible"
     },
     {
@@ -25706,8 +25706,786 @@
         "pwc_id": "16431",
         "abs_url": "https://arxiv.org/abs/2305.17493v3"
       },
-      "metadata_retrieved": "2026-10-17T15:12:32+00:00",
+      "metadata_retrieved": "2026-10-19T03:34:59+00:00",
       "bibkey": "shumailov2023curse"
+    },
+    {
+      "arxiv": "2410.23825",
+      "topics": [
+        "data"
+      ],
+      "items": [
+        7
+      ],
+      "role": "background",
+      "why": "GlotCC: CC0-packaged CommonCrawl corpus for minority languages with a fil-Latn split; candidate monolingual source (2026-10-17 monolingual-text screening, D4; searches S152-S161)",
+      "reviewed": false,
+      "title": "GlotCC: An Open Broad-Coverage CommonCrawl Corpus and Pipeline for Minority Languages",
+      "abstract": "The need for large text corpora has increased with the advent of pretrained language models and, in particular, the discovery of scaling laws for these models. Most available corpora have sufficient data only for languages with large dominant communities. However, there is no corpus available that (i) covers a wide range of minority languages; (ii) is generated by an open-source reproducible pipeline; and (iii) is rigorously cleaned from noise, making it trustworthy to use. We present GlotCC, a clean, document-level, 2TB general domain corpus derived from CommonCrawl, covering more than 1000 languages. We make GlotCC and the system used to generate it - including the pipeline, language identification model, and filters - available to the research community. Corpus v. 1.0 https://huggingface.co/datasets/cis-lmu/GlotCC-v1, Pipeline v. 3.0 https://github.com/cisnlp/GlotCC.",
+      "authors": [
+        {
+          "name": "Amir Hossein Kargaran",
+          "affiliation": []
+        },
+        {
+          "name": "François Yvon",
+          "affiliation": []
+        },
+        {
+          "name": "Hinrich Schütze",
+          "affiliation": []
+        }
+      ],
+      "submitter": "Amir Hossein Kargaran",
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2024-10-31T11:14:12+00:00",
+          "size": "81kb"
+        },
+        {
+          "version": "v2",
+          "date": "2025-03-03T21:51:52+00:00",
+          "size": "81kb"
+        }
+      ],
+      "latest_version": "v2",
+      "first_published": "2024-10-31T11:14:12+00:00",
+      "latest_updated": "2025-03-03T21:51:52+00:00",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "doi": null,
+      "journal_ref": null,
+      "comment": "NeurIPS 2024",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "license_note": null,
+      "pinned_version": "v2",
+      "pinned_version_date": "2025-03-03T21:51:52+00:00",
+      "files": {
+        "pdf": {
+          "path": "pdf/2410.23825v2.pdf",
+          "sha256": "81dd405066813ce85d398e252a5e35aa94e60d22760a291c6d688c5c4780cf03",
+          "bytes": 534823,
+          "source": "https://arxiv.org/pdf/2410.23825v2"
+        },
+        "md": {
+          "path": "md/2410.23825.md",
+          "sha256": "23abc1337bfd7a2badedd501863c812b2d4c0fa2518b1c74f437a0abfe0e89df",
+          "bytes": 108980,
+          "source": "pwc paper read 2410.23825",
+          "note": "catalog text conversion; the catalog does not state which arXiv version it converted",
+          "coverage_vs_pdf_text": 1.25
+        },
+        "txt": {
+          "path": "txt/2410.23825v2.txt",
+          "sha256": "2c171fdd1878a5832360a9df41b5a71d1606a3b3580d9475723f0a96cac44fa4",
+          "bytes": 87532,
+          "source": "pdftotext of 2410.23825v2.pdf",
+          "note": "complete text of the pinned PDF; layout and math may be garbled"
+        }
+      },
+      "catalog": {
+        "source": "paperswithcode.co API v1",
+        "pwc_id": "39436",
+        "abs_url": "https://arxiv.org/abs/2410.23825"
+      },
+      "metadata_retrieved": "2026-10-19T03:35:06+00:00",
+      "bibkey": "kargaran2024glotcc"
+    },
+    {
+      "arxiv": "2409.17892",
+      "topics": [
+        "data"
+      ],
+      "items": [
+        7
+      ],
+      "role": "background",
+      "why": "EMMA-500 / MaLA corpus: aggregated multilingual corpus with fil_Latn and tgl_Latn splits; candidate, provenance per source to check (2026-10-17 monolingual-text screening, D4; searches S152-S161)",
+      "reviewed": false,
+      "title": "EMMA-500: Enhancing Massively Multilingual Adaptation of Large Language Models",
+      "abstract": "In this work, we introduce EMMA-500, a large-scale multilingual language model continue-trained on texts across 546 languages designed for enhanced multilingual performance, focusing on improving language coverage for low-resource languages. To facilitate continual pre-training, we compile the MaLA corpus, a comprehensive multilingual dataset enriched with curated datasets across diverse domains. Leveraging this corpus, we conduct extensive continual pre-training of the Llama 2 7B model, resulting in EMMA-500, which demonstrates robust performance across a wide collection of benchmarks, including a comprehensive set of multilingual tasks. Our results highlight the effectiveness of continual pre-training in expanding large language models' language capacity, particularly for underrepresented languages, demonstrating significant gains in cross-lingual transfer, task generalization, and language adaptability. We release the MaLA corpus, EMMA-500 model weights, scripts, and model generations.",
+      "authors": [
+        {
+          "name": "Shaoxiong Ji",
+          "affiliation": []
+        },
+        {
+          "name": "Zihao Li",
+          "affiliation": []
+        },
+        {
+          "name": "Jaakko Paavola",
+          "affiliation": []
+        },
+        {
+          "name": "Peiqin Lin",
+          "affiliation": []
+        },
+        {
+          "name": "Pinzhen Chen",
+          "affiliation": []
+        },
+        {
+          "name": "Dayyán O'Brien",
+          "affiliation": []
+        },
+        {
+          "name": "Hengyu Luo",
+          "affiliation": []
+        },
+        {
+          "name": "Hinrich Schütze",
+          "affiliation": []
+        },
+        {
+          "name": "Jörg Tiedemann",
+          "affiliation": []
+        },
+        {
+          "name": "Barry Haddow",
+          "affiliation": []
+        }
+      ],
+      "submitter": "Shaoxiong Ji",
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2024-09-26T14:40:45+00:00",
+          "size": "729kb"
+        },
+        {
+          "version": "v2",
+          "date": "2025-02-11T19:24:09+00:00",
+          "size": "805kb"
+        },
+        {
+          "version": "v3",
+          "date": "2025-12-04T16:34:36+00:00",
+          "size": "805kb"
+        }
+      ],
+      "latest_version": "v3",
+      "first_published": "2024-09-26T14:40:45+00:00",
+      "latest_updated": "2025-12-04T16:34:36+00:00",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "doi": null,
+      "journal_ref": null,
+      "comment": null,
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "license_note": null,
+      "pinned_version": "v3",
+      "pinned_version_date": "2025-12-04T16:34:36+00:00",
+      "files": {
+        "pdf": {
+          "path": "pdf/2409.17892v3.pdf",
+          "sha256": "c02ffb334f9e807030ed5528bf93605513a7e561ab33ebb6320a1cfff97d773d",
+          "bytes": 1243481,
+          "source": "https://arxiv.org/pdf/2409.17892v3"
+        },
+        "md": {
+          "path": "md/2409.17892.md",
+          "sha256": "1a4890d280ffadf6d1e72bfdd744a0426a7ef0f5167859393e1bbe43eca79e5d",
+          "bytes": 183019,
+          "source": "pwc paper read 2409.17892",
+          "note": "catalog text conversion; the catalog does not state which arXiv version it converted",
+          "coverage_vs_pdf_text": 0.96
+        },
+        "txt": {
+          "path": "txt/2409.17892v3.txt",
+          "sha256": "27a0c128398c59b0e80be7e9b26ef6e12050b6d16f699029275b6cf84b60adf4",
+          "bytes": 190702,
+          "source": "pdftotext of 2409.17892v3.pdf",
+          "note": "complete text of the pinned PDF; layout and math may be garbled"
+        }
+      },
+      "catalog": {
+        "source": "paperswithcode.co API v1",
+        "pwc_id": "37379",
+        "abs_url": "https://arxiv.org/abs/2409.17892"
+      },
+      "metadata_retrieved": "2026-10-19T03:35:12+00:00",
+      "bibkey": "ji2024emma"
+    },
+    {
+      "arxiv": "2001.08210",
+      "topics": [
+        "data"
+      ],
+      "items": [
+        7
+      ],
+      "role": "background",
+      "why": "mBART: the denoising recipe (span masking ~35%, mean span 3.5) used for the target encoder (experiments/T1-SETUP.md) (2026-10-17 monolingual-text screening, D4; searches S152-S161)",
+      "reviewed": false,
+      "title": "Multilingual Denoising Pre-training for Neural Machine Translation",
+      "abstract": "This paper demonstrates that multilingual denoising pre-training produces significant performance gains across a wide variety of machine translation (MT) tasks. We present mBART -- a sequence-to-sequence denoising auto-encoder pre-trained on large-scale monolingual corpora in many languages using the BART objective. mBART is one of the first methods for pre-training a complete sequence-to-sequence model by denoising full texts in multiple languages, while previous approaches have focused only on the encoder, decoder, or reconstructing parts of the text. Pre-training a complete model allows it to be directly fine tuned for supervised (both sentence-level and document-level) and unsupervised machine translation, with no task-specific modifications. We demonstrate that adding mBART initialization produces performance gains in all but the highest-resource settings, including up to 12 BLEU points for low resource MT and over 5 BLEU points for many document-level and unsupervised models. We also show it also enables new types of transfer to language pairs with no bi-text or that were not in the pre-training corpus, and present extensive analysis of which factors contribute the most to effective pre-training.",
+      "authors": [
+        {
+          "name": "Yinhan Liu",
+          "affiliation": []
+        },
+        {
+          "name": "Jiatao Gu",
+          "affiliation": []
+        },
+        {
+          "name": "Naman Goyal",
+          "affiliation": []
+        },
+        {
+          "name": "Xian Li",
+          "affiliation": []
+        },
+        {
+          "name": "Sergey Edunov",
+          "affiliation": []
+        },
+        {
+          "name": "Marjan Ghazvininejad",
+          "affiliation": []
+        },
+        {
+          "name": "Mike Lewis",
+          "affiliation": []
+        },
+        {
+          "name": "Luke Zettlemoyer",
+          "affiliation": []
+        }
+      ],
+      "submitter": "Jiatao Gu",
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2020-01-22T18:59:17+00:00",
+          "size": "796kb"
+        },
+        {
+          "version": "v2",
+          "date": "2020-01-23T18:58:48+00:00",
+          "size": "941kb"
+        }
+      ],
+      "latest_version": "v2",
+      "first_published": "2020-01-22T18:59:17+00:00",
+      "latest_updated": "2020-01-23T18:58:48+00:00",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "doi": null,
+      "journal_ref": null,
+      "comment": "Work in progress",
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_note": null,
+      "pinned_version": "v2",
+      "pinned_version_date": "2020-01-23T18:58:48+00:00",
+      "files": {
+        "pdf": {
+          "path": "pdf/2001.08210v2.pdf",
+          "sha256": "fe593c892e26c7d2584f7ecd3bf1ceaf5ac68c920724906e9387c84850229b9c",
+          "bytes": 1583986,
+          "source": "https://arxiv.org/pdf/2001.08210v2"
+        },
+        "md": {
+          "path": "md/2001.08210.md",
+          "sha256": "d7fa5d9ea4003a5f19a11f46a7b3f071f84efaf0bf716852573ed6cfed97d1ef",
+          "bytes": 128567,
+          "source": "pwc paper read 2001.08210",
+          "note": "catalog text conversion; the catalog does not state which arXiv version it converted",
+          "coverage_vs_pdf_text": 1.7
+        },
+        "txt": {
+          "path": "txt/2001.08210v2.txt",
+          "sha256": "e0d6cbeff3d9911fbb9f43f38b68253edf134136f9ff8ca685781cbb18682bad",
+          "bytes": 75784,
+          "source": "pdftotext of 2001.08210v2.pdf",
+          "note": "complete text of the pinned PDF; layout and math may be garbled"
+        }
+      },
+      "catalog": {
+        "source": "paperswithcode.co API v1",
+        "pwc_id": "3020",
+        "abs_url": "https://arxiv.org/abs/2001.08210v2"
+      },
+      "metadata_retrieved": "2026-10-19T03:35:19+00:00",
+      "bibkey": "liu2020multilingual"
+    },
+    {
+      "arxiv": "2107.06499",
+      "topics": [
+        "data"
+      ],
+      "items": [
+        7
+      ],
+      "role": "background",
+      "why": "Deduplicating training data: near-duplicates cause memorisation and waste steps; basis for deduplicating the monolingual slice (2026-10-17 monolingual-text screening, D4; searches S152-S161)",
+      "reviewed": false,
+      "title": "Deduplicating Training Data Makes Language Models Better",
+      "abstract": "We find that existing language modeling datasets contain many near-duplicate examples and long repetitive substrings. As a result, over 1% of the unprompted output of language models trained on these datasets is copied verbatim from the training data. We develop two tools that allow us to deduplicate training datasets -- for example removing from C4 a single 61 word English sentence that is repeated over 60,000 times. Deduplication allows us to train models that emit memorized text ten times less frequently and require fewer train steps to achieve the same or better accuracy. We can also reduce train-test overlap, which affects over 4% of the validation set of standard datasets, thus allowing for more accurate evaluation. We release code for reproducing our work and performing dataset deduplication at https://github.com/google-research/deduplicate-text-datasets.",
+      "authors": [
+        {
+          "name": "Katherine Lee",
+          "affiliation": []
+        },
+        {
+          "name": "Daphne Ippolito",
+          "affiliation": []
+        },
+        {
+          "name": "Andrew Nystrom",
+          "affiliation": []
+        },
+        {
+          "name": "Chiyuan Zhang",
+          "affiliation": []
+        },
+        {
+          "name": "Douglas Eck",
+          "affiliation": []
+        },
+        {
+          "name": "Chris Callison-Burch",
+          "affiliation": []
+        },
+        {
+          "name": "Nicholas Carlini",
+          "affiliation": []
+        }
+      ],
+      "submitter": "Daphne Ippolito",
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2021-07-14T06:06:52+00:00",
+          "size": "376kb"
+        },
+        {
+          "version": "v2",
+          "date": "2022-03-24T19:29:45+00:00",
+          "size": "447kb"
+        }
+      ],
+      "latest_version": "v2",
+      "first_published": "2021-07-14T06:06:52+00:00",
+      "latest_updated": "2022-03-24T19:29:45+00:00",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "doi": null,
+      "journal_ref": null,
+      "comment": "Accepted to ACL 2022",
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_note": null,
+      "pinned_version": "v2",
+      "pinned_version_date": "2022-03-24T19:29:45+00:00",
+      "files": {
+        "pdf": {
+          "path": "pdf/2107.06499v2.pdf",
+          "sha256": "dcfa46d7aced43a97b9cf2ebd705919b65d4dd8a44d0914b1e646fe2d59ea8d3",
+          "bytes": 720473,
+          "source": "https://arxiv.org/pdf/2107.06499v2"
+        },
+        "md": {
+          "path": "md/2107.06499.md",
+          "sha256": "f8bf0dfc59042f828a3d8b5a07fcd441e8a34673559de114b42ff826cc3dfe3a",
+          "bytes": 87221,
+          "source": "pwc paper read 2107.06499",
+          "note": "catalog text conversion; the catalog does not state which arXiv version it converted",
+          "coverage_vs_pdf_text": 1.05
+        },
+        "txt": {
+          "path": "txt/2107.06499v2.txt",
+          "sha256": "6e5140400122c7e0c0bf38d8632ae0c74fa4e09218180cc05051e7e7b7046e0b",
+          "bytes": 82900,
+          "source": "pdftotext of 2107.06499v2.pdf",
+          "note": "complete text of the pinned PDF; layout and math may be garbled"
+        }
+      },
+      "catalog": {
+        "source": "paperswithcode.co API v1",
+        "pwc_id": "6240",
+        "abs_url": "https://arxiv.org/abs/2107.06499v2"
+      },
+      "metadata_retrieved": "2026-10-19T03:35:25+00:00",
+      "bibkey": "lee2021deduplicating"
+    },
+    {
+      "arxiv": "2411.05527",
+      "topics": [
+        "data"
+      ],
+      "items": [
+        7
+      ],
+      "role": "background",
+      "why": "How Good is Your Wikipedia?: web-text filtering removes much low-resource Wikipedia text; quality caveat for Wikipedia tl (2026-10-17 monolingual-text screening, D4; searches S152-S161)",
+      "reviewed": false,
+      "title": "How Good is Your Wikipedia? Auditing Data Quality for Low-resource and Multilingual NLP",
+      "abstract": "Wikipedia's perceived high quality and broad language coverage have established it as a fundamental resource in NLP. However, in recent years, such assumptions of high quality have become the subject of scrutiny in low-resource and multilingual contexts. In this study, we subject the entirety of non-English Wikipedia to a data filtering procedure typically reserved for noisy web-text -- a process which removes a large percentage of the collection's data. In analysing the removed data, we reveal numerous systematic quality issues, such as script and language contamination, repeated template and placeholder articles, and a high concentration of bot-generated content. We consolidate these findings into a 4-level quality ranking of Wikipedia, which shows strong correspondence with alternative quality measures and heuristics. Lastly, we evaluate the downstream impact of quality filtering in three practical language modelling scenarios, showing that models trained on filtered data largely match or outperform those trained on raw Wikipedia, with the largest gains observed for lower-quality language editions. Ultimately, our experiments serve as a first step in establishing quality-aware best practices for Wikipedia utilization in NLP, laying groundwork that can inform future dataset creation and curation efforts.",
+      "authors": [
+        {
+          "name": "Kushal Tatariya",
+          "affiliation": []
+        },
+        {
+          "name": "Artur Kulmizev",
+          "affiliation": []
+        },
+        {
+          "name": "Wessel Poelman",
+          "affiliation": []
+        },
+        {
+          "name": "Esther Ploeger",
+          "affiliation": []
+        },
+        {
+          "name": "Marcel Bollmann",
+          "affiliation": []
+        },
+        {
+          "name": "Johannes Bjerva",
+          "affiliation": []
+        },
+        {
+          "name": "Jiaming Luo",
+          "affiliation": []
+        },
+        {
+          "name": "Heather Lent",
+          "affiliation": []
+        },
+        {
+          "name": "Miryam de Lhoneux",
+          "affiliation": []
+        }
+      ],
+      "submitter": "Kushal Jayesh Tatariya",
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2024-11-08T12:35:58+00:00",
+          "size": "929kb"
+        },
+        {
+          "version": "v2",
+          "date": "2025-05-16T12:52:16+00:00",
+          "size": "1376kb"
+        },
+        {
+          "version": "v3",
+          "date": "2026-05-04T11:38:18+00:00",
+          "size": "1029kb"
+        }
+      ],
+      "latest_version": "v3",
+      "first_published": "2024-11-08T12:35:58+00:00",
+      "latest_updated": "2026-05-04T11:38:18+00:00",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "doi": null,
+      "journal_ref": null,
+      "comment": "Accepted to ACL Main, 2026",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "license_note": null,
+      "pinned_version": "v3",
+      "pinned_version_date": "2026-05-04T11:38:18+00:00",
+      "files": {
+        "pdf": {
+          "path": "pdf/2411.05527v3.pdf",
+          "sha256": "9d11bd0c13d77720ee5d0eeb1c5dbabfd8ff9ce3a94c519533a844e5d7fed4f6",
+          "bytes": 1224832,
+          "source": "https://arxiv.org/pdf/2411.05527v3"
+        },
+        "md": {
+          "path": "md/2411.05527.md",
+          "sha256": "b679a256a473c1e83dacd405d021c4a531ffea52b49b05af7b39dbac3b3c9e9f",
+          "bytes": 107354,
+          "source": "pwc paper read 2411.05527",
+          "note": "catalog text conversion; the catalog does not state which arXiv version it converted",
+          "coverage_vs_pdf_text": 1.22
+        },
+        "txt": {
+          "path": "txt/2411.05527v3.txt",
+          "sha256": "e67fc5686cf0c30770edd0642e7d84206e5d2986b57f053616f0e382f22f6fa2",
+          "bytes": 88177,
+          "source": "pdftotext of 2411.05527v3.pdf",
+          "note": "complete text of the pinned PDF; layout and math may be garbled"
+        }
+      },
+      "catalog": {
+        "source": "paperswithcode.co API v1",
+        "pwc_id": "103369",
+        "abs_url": "https://arxiv.org/abs/2411.05527"
+      },
+      "metadata_retrieved": "2026-10-19T03:35:32+00:00",
+      "bibkey": "tatariya2024how"
+    },
+    {
+      "arxiv": "2111.06053",
+      "topics": [
+        "data"
+      ],
+      "items": [
+        7
+      ],
+      "role": "background",
+      "why": "Cruz & Cheng: TLUnified Filipino pretraining corpus; prior Filipino monolingual resource (2026-10-17 monolingual-text screening, D4; searches S152-S161)",
+      "reviewed": false,
+      "title": "Improving Large-scale Language Models and Resources for Filipino",
+      "abstract": "In this paper, we improve on existing language resources for the low-resource Filipino language in two ways. First, we outline the construction of the TLUnified dataset, a large-scale pretraining corpus that serves as an improvement over smaller existing pretraining datasets for the language in terms of scale and topic variety. Second, we pretrain new Transformer language models following the RoBERTa pretraining technique to supplant existing models trained with small corpora. Our new RoBERTa models show significant improvements over existing Filipino models in three benchmark datasets with an average gain of 4.47% test accuracy across the three classification tasks of varying difficulty.",
+      "authors": [
+        {
+          "name": "Jan Christian Blaise Cruz",
+          "affiliation": []
+        },
+        {
+          "name": "Charibeth Cheng",
+          "affiliation": []
+        }
+      ],
+      "submitter": "Jan Christian Blaise Cruz",
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2021-11-11T05:00:58+00:00",
+          "size": "28kb"
+        }
+      ],
+      "latest_version": "v1",
+      "first_published": "2021-11-11T05:00:58+00:00",
+      "latest_updated": "2021-11-11T05:00:58+00:00",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "doi": null,
+      "journal_ref": null,
+      "comment": "Resources are available at blaisecruz.com/resources",
+      "license": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "license_note": null,
+      "pinned_version": "v1",
+      "pinned_version_date": "2021-11-11T05:00:58+00:00",
+      "files": {
+        "pdf": {
+          "path": "pdf/2111.06053v1.pdf",
+          "sha256": "36cff792d7aae59fb6da4037c2eacbb7a847d54a0f15c06ed63d3ca4e60816f3",
+          "bytes": 158000,
+          "source": "https://arxiv.org/pdf/2111.06053v1"
+        },
+        "md": {
+          "path": "md/2111.06053.md",
+          "sha256": "6372a78102336e458945e9357df2bec42883756feb67b4b1c5d6fadbbf1349af",
+          "bytes": 21522,
+          "source": "pwc paper read 2111.06053",
+          "note": "catalog text conversion; the catalog does not state which arXiv version it converted",
+          "coverage_vs_pdf_text": 1.07
+        },
+        "txt": {
+          "path": "txt/2111.06053v1.txt",
+          "sha256": "3bcdfdd1f71fa7b15ec86f08530512ce71f310ad00ce3712b9c4ae012661df17",
+          "bytes": 20146,
+          "source": "pdftotext of 2111.06053v1.pdf",
+          "note": "complete text of the pinned PDF; layout and math may be garbled"
+        }
+      },
+      "catalog": {
+        "source": "paperswithcode.co API v1",
+        "pwc_id": "7197",
+        "abs_url": "https://arxiv.org/abs/2111.06053"
+      },
+      "metadata_retrieved": "2026-10-19T03:35:38+00:00",
+      "bibkey": "cruz2021improving"
+    },
+    {
+      "arxiv": "2512.18834",
+      "topics": [
+        "data"
+      ],
+      "items": [
+        7
+      ],
+      "role": "background",
+      "why": "Mix, MinHash, and Match: large cross-source duplication between web corpora; cross-source agreement as a quality signal (2026-10-17 monolingual-text screening, D4; searches S152-S161)",
+      "reviewed": false,
+      "title": "Mix, MinHash, and Match: Cross-Source Agreement for Multilingual Pretraining Datasets",
+      "abstract": "Multilingual data from the web is essential for LLM pretraining. Yet, scraping it is expensive, and research groups repeatedly crawl the same content. For example, we found that over 40\\% of tokens across major Arabic web corpora are duplicated between sources. In this work, we propose to use this wasteful redundancy as a quality signal to create high-quality pretraining datasets. Our key insight is that cross-source agreement functions as a free, model-free quality filter: content retained by multiple independent pipelines is more likely to represent high-quality text. Crucially, this signal requires no additional computation beyond standard deduplication, which is already performed at scale when pretraining language models. So, we propose MixMinMatch, a method that combines multiple existing web corpora, performs cross-dataset MinHash deduplication, and identifies documents independently recovered by multiple sources. We apply MixMinMatch to Arabic, Turkish, and Hindi, producing corpora that match or exceed the quality of the best single-source baselines, while providing up to 4$\\times$ more unique tokens. On Arabic, our matched subset achieves a 4.5\\% relative improvement over ArabicWeb24, while on Turkish, we improve over FineWeb-2 by 5.5\\%. We release the datasets at: https://huggingface.co/collections/AdaMLLab/mixminmatch",
+      "authors": [
+        {
+          "name": "Sultan Alrashed",
+          "affiliation": []
+        },
+        {
+          "name": "Francesco Orabona",
+          "affiliation": []
+        }
+      ],
+      "submitter": "Sultan Alrashed",
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2025-12-21T17:36:26+00:00",
+          "size": "224kb"
+        },
+        {
+          "version": "v2",
+          "date": "2026-01-29T11:27:20+00:00",
+          "size": "99kb"
+        }
+      ],
+      "latest_version": "v2",
+      "first_published": "2025-12-21T17:36:26+00:00",
+      "latest_updated": "2026-01-29T11:27:20+00:00",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "doi": null,
+      "journal_ref": null,
+      "comment": "Multilingual LLM pretraining dataset curation",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "license_note": null,
+      "pinned_version": "v2",
+      "pinned_version_date": "2026-01-29T11:27:20+00:00",
+      "files": {
+        "pdf": {
+          "path": "pdf/2512.18834v2.pdf",
+          "sha256": "d154cff96cd2988f2b1ec7b321928c2f12243a58b7065b7448c6fd43fc897908",
+          "bytes": 658066,
+          "source": "https://arxiv.org/pdf/2512.18834v2"
+        },
+        "md": {
+          "path": "md/2512.18834.md",
+          "sha256": "a0a79ab89df58aa42171f72eb148e16ab758d108d11f7d06747ed3aab2b7e48f",
+          "bytes": 19646,
+          "source": "pwc paper read 2512.18834",
+          "note": "catalog text conversion; the catalog does not state which arXiv version it converted",
+          "coverage_vs_pdf_text": 0.28,
+          "warning": "catalog Markdown looks truncated; search txt/ instead"
+        },
+        "txt": {
+          "path": "txt/2512.18834v2.txt",
+          "sha256": "8e2d1f5cae8a1cb9c6c0779ebc79467321f5eebc566c2af7596c2973e1410a7f",
+          "bytes": 70659,
+          "source": "pdftotext of 2512.18834v2.pdf",
+          "note": "complete text of the pinned PDF; layout and math may be garbled"
+        }
+      },
+      "catalog": {
+        "source": "paperswithcode.co API v1",
+        "pwc_id": "63462",
+        "abs_url": "https://arxiv.org/abs/2512.18834"
+      },
+      "metadata_retrieved": "2026-10-19T03:35:45+00:00",
+      "bibkey": "alrashed2025mix"
+    },
+    {
+      "arxiv": "2203.08111",
+      "topics": [
+        "data"
+      ],
+      "items": [
+        7
+      ],
+      "role": "background",
+      "why": "Artetxe et al.: corpus quality and low-resource representation learning (Basque); evidence on whether cleaner web text matters (2026-10-17 monolingual-text screening, D4; searches S152-S161)",
+      "reviewed": false,
+      "title": "Does Corpus Quality Really Matter for Low-Resource Languages?",
+      "abstract": "The vast majority of non-English corpora are derived from automatically filtered versions of CommonCrawl. While prior work has identified major issues on the quality of these datasets (Kreutzer et al., 2021), it is not clear how this impacts downstream performance. Taking representation learning in Basque as a case study, we explore tailored crawling (manually identifying and scraping websites with high-quality content) as an alternative to filtering CommonCrawl. Our new corpus, called EusCrawl, is similar in size to the Basque portion of popular multilingual corpora like CC100 and mC4, yet it has a much higher quality according to native annotators. For instance, 66% of documents are rated as high-quality for EusCrawl, in contrast with <33% for both mC4 and CC100. Nevertheless, we obtain similar results on downstream NLU tasks regardless of the corpus used for pre-training. Our work suggests that NLU performance in low-resource languages is not primarily constrained by the quality of the data, and other factors like corpus size and domain coverage can play a more important role.",
+      "authors": [
+        {
+          "name": "Mikel Artetxe",
+          "affiliation": []
+        },
+        {
+          "name": "Itziar Aldabe",
+          "affiliation": []
+        },
+        {
+          "name": "Rodrigo Agerri",
+          "affiliation": []
+        },
+        {
+          "name": "Olatz Perez-de-Viñaspre",
+          "affiliation": []
+        },
+        {
+          "name": "Aitor Soroa",
+          "affiliation": []
+        }
+      ],
+      "submitter": "Mikel Artetxe",
+      "versions": [
+        {
+          "version": "v1",
+          "date": "2022-03-15T17:40:27+00:00",
+          "size": "42kb"
+        },
+        {
+          "version": "v2",
+          "date": "2022-10-26T16:10:31+00:00",
+          "size": "43kb"
+        }
+      ],
+      "latest_version": "v2",
+      "first_published": "2022-03-15T17:40:27+00:00",
+      "latest_updated": "2022-10-26T16:10:31+00:00",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "doi": null,
+      "journal_ref": null,
+      "comment": "EMNLP 2022",
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_note": null,
+      "pinned_version": "v2",
+      "pinned_version_date": "2022-10-26T16:10:31+00:00",
+      "files": {
+        "pdf": {
+          "path": "pdf/2203.08111v2.pdf",
+          "sha256": "9ba16b5bbaef6db182cb03cd3a5fc164f82ca60f7d6ea090cc1de87358f95cf0",
+          "bytes": 251657,
+          "source": "https://arxiv.org/pdf/2203.08111v2"
+        },
+        "md": {
+          "path": "md/2203.08111.md",
+          "sha256": "d1fd59330d3e01e7a788fcab4cabffbd480618ee553ccf9227ebe275a483ba28",
+          "bytes": 34571,
+          "source": "pwc paper read 2203.08111",
+          "note": "catalog text conversion; the catalog does not state which arXiv version it converted",
+          "coverage_vs_pdf_text": 1.09
+        },
+        "txt": {
+          "path": "txt/2203.08111v2.txt",
+          "sha256": "c7cd25baf74e0e0daf510279bb76f7f148908f9936220ecbe22e725482d71d06",
+          "bytes": 31786,
+          "source": "pdftotext of 2203.08111v2.pdf",
+          "note": "complete text of the pinned PDF; layout and math may be garbled"
+        }
+      },
+      "catalog": {
+        "source": "paperswithcode.co API v1",
+        "pwc_id": "8275",
+        "abs_url": "https://arxiv.org/abs/2203.08111v2"
+      },
+      "metadata_retrieved": "2026-10-19T03:35:52+00:00",
+      "bibkey": "artetxe2022does"
     }
   ]
 }

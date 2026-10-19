@@ -2374,6 +2374,102 @@
    "role": "background",
    "reviewed": false,
    "why": "The Curse of Recursion: training on generated data loses distribution tails; risk note for synthetic data (D22 Mix 4, D25) (2026-10-17 corpus survey, research/notes/final_report_en-fil-parallel-corpora-f90c6f.md)"
+  },
+  {
+   "arxiv": "2410.23825",
+   "topics": [
+    "data"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "GlotCC: CC0-packaged CommonCrawl corpus for minority languages with a fil-Latn split; candidate monolingual source (2026-10-17 monolingual-text screening, D4; searches S152-S161)"
+  },
+  {
+   "arxiv": "2409.17892",
+   "topics": [
+    "data"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "EMMA-500 / MaLA corpus: aggregated multilingual corpus with fil_Latn and tgl_Latn splits; candidate, provenance per source to check (2026-10-17 monolingual-text screening, D4; searches S152-S161)"
+  },
+  {
+   "arxiv": "2001.08210",
+   "topics": [
+    "data"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "mBART: the denoising recipe (span masking ~35%, mean span 3.5) used for the target encoder (experiments/T1-SETUP.md) (2026-10-17 monolingual-text screening, D4; searches S152-S161)"
+  },
+  {
+   "arxiv": "2107.06499",
+   "topics": [
+    "data"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Deduplicating training data: near-duplicates cause memorisation and waste steps; basis for deduplicating the monolingual slice (2026-10-17 monolingual-text screening, D4; searches S152-S161)"
+  },
+  {
+   "arxiv": "2411.05527",
+   "topics": [
+    "data"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "How Good is Your Wikipedia?: web-text filtering removes much low-resource Wikipedia text; quality caveat for Wikipedia tl (2026-10-17 monolingual-text screening, D4; searches S152-S161)"
+  },
+  {
+   "arxiv": "2111.06053",
+   "topics": [
+    "data"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Cruz & Cheng: TLUnified Filipino pretraining corpus; prior Filipino monolingual resource (2026-10-17 monolingual-text screening, D4; searches S152-S161)"
+  },
+  {
+   "arxiv": "2512.18834",
+   "topics": [
+    "data"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Mix, MinHash, and Match: large cross-source duplication between web corpora; cross-source agreement as a quality signal (2026-10-17 monolingual-text screening, D4; searches S152-S161)"
+  },
+  {
+   "arxiv": "2203.08111",
+   "topics": [
+    "data"
+   ],
+   "items": [
+    7
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Artetxe et al.: corpus quality and low-resource representation learning (Basque); evidence on whether cleaner web text matters (2026-10-17 monolingual-text screening, D4; searches S152-S161)"
   }
  ]
 }

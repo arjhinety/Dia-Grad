@@ -343,3 +343,24 @@
 {"time": "2026-10-17T04:26:08+00:00", "action": "download_md", "arxiv": "2305.17493", "source": "pwc paper read 2305.17493", "sha256": "7f82a05cf8221ac47c5becf6f79a11fc5c630bd1272fb868c031d70aaf78abe3"}
 {"time": "2026-10-17T04:26:08+00:00", "action": "build", "papers": 171, "unverified": []}
 {"time": "2026-10-17T15:12:32+00:00", "action": "build", "papers": 171, "unverified": []}
+{"time": "2026-10-17T18:08:56+00:00", "action": "unverified", "arxiv": "2603.08391", "error": "<urlopen error [Errno -3] Temporary failure in name resolution>"}
+{"time": "2026-10-17T18:10:49+00:00", "action": "unverified", "arxiv": "2502.14301", "error": "<urlopen error [Errno -3] Temporary failure in name resolution>"}
+{"time": "2026-10-17T18:18:07+00:00", "action": "unverified", "arxiv": "2603.16309", "error": "<urlopen error [Errno -3] Temporary failure in name resolution>"}
+{"time": "2026-10-17T18:32:07+00:00", "action": "download_pdf", "arxiv": "2410.23825", "version": "v2", "url": "https://arxiv.org/pdf/2410.23825v2", "sha256": "81dd405066813ce85d398e252a5e35aa94e60d22760a291c6d688c5c4780cf03"}
+{"time": "2026-10-17T18:32:12+00:00", "action": "download_md", "arxiv": "2410.23825", "source": "pwc paper read 2410.23825", "sha256": "23abc1337bfd7a2badedd501863c812b2d4c0fa2518b1c74f437a0abfe0e89df"}
+{"time": "2026-10-17T18:32:20+00:00", "action": "download_pdf", "arxiv": "2409.17892", "version": "v3", "url": "https://arxiv.org/pdf/2409.17892v3", "sha256": "c02ffb334f9e807030ed5528bf93605513a7e561ab33ebb6320a1cfff97d773d"}
+{"time": "2026-10-17T18:32:25+00:00", "action": "download_md", "arxiv": "2409.17892", "source": "pwc paper read 2409.17892", "sha256": "1a4890d280ffadf6d1e72bfdd744a0426a7ef0f5167859393e1bbe43eca79e5d"}
+{"time": "2026-10-17T18:32:33+00:00", "action": "download_pdf", "arxiv": "2001.08210", "version": "v2", "url": "https://arxiv.org/pdf/2001.08210v2", "sha256": "fe593c892e26c7d2584f7ecd3bf1ceaf5ac68c920724906e9387c84850229b9c"}
+{"time": "2026-10-17T18:32:37+00:00", "action": "download_md", "arxiv": "2001.08210", "source": "pwc paper read 2001.08210", "sha256": "d7fa5d9ea4003a5f19a11f46a7b3f071f84efaf0bf716852573ed6cfed97d1ef"}
+{"time": "2026-10-17T18:32:45+00:00", "action": "download_pdf", "arxiv": "2107.06499", "version": "v2", "url": "https://arxiv.org/pdf/2107.06499v2", "sha256": "dcfa46d7aced43a97b9cf2ebd705919b65d4dd8a44d0914b1e646fe2d59ea8d3"}
+{"time": "2026-10-17T18:32:50+00:00", "action": "download_md", "arxiv": "2107.06499", "source": "pwc paper read 2107.06499", "sha256": "f8bf0dfc59042f828a3d8b5a07fcd441e8a34673559de114b42ff826cc3dfe3a"}
+{"time": "2026-10-17T18:32:58+00:00", "action": "download_pdf", "arxiv": "2411.05527", "version": "v3", "url": "https://arxiv.org/pdf/2411.05527v3", "sha256": "9d11bd0c13d77720ee5d0eeb1c5dbabfd8ff9ce3a94c519533a844e5d7fed4f6"}
+{"time": "2026-10-17T18:33:03+00:00", "action": "download_md", "arxiv": "2411.05527", "source": "pwc paper read 2411.05527", "sha256": "b679a256a473c1e83dacd405d021c4a531ffea52b49b05af7b39dbac3b3c9e9f"}
+{"time": "2026-10-17T18:33:10+00:00", "action": "download_pdf", "arxiv": "2111.06053", "version": "v1", "url": "https://arxiv.org/pdf/2111.06053v1", "sha256": "36cff792d7aae59fb6da4037c2eacbb7a847d54a0f15c06ed63d3ca4e60816f3"}
+{"time": "2026-10-17T18:33:14+00:00", "action": "download_md", "arxiv": "2111.06053", "source": "pwc paper read 2111.06053", "sha256": "6372a78102336e458945e9357df2bec42883756feb67b4b1c5d6fadbbf1349af"}
+{"time": "2026-10-17T18:33:22+00:00", "action": "download_pdf", "arxiv": "2512.18834", "version": "v2", "url": "https://arxiv.org/pdf/2512.18834v2", "sha256": "d154cff96cd2988f2b1ec7b321928c2f12243a58b7065b7448c6fd43fc897908"}
+{"time": "2026-10-17T18:33:27+00:00", "action": "download_md", "arxiv": "2512.18834", "source": "pwc paper read 2512.18834", "sha256": "a0a79ab89df58aa42171f72eb148e16ab758d108d11f7d06747ed3aab2b7e48f"}
+{"time": "2026-10-17T18:33:34+00:00", "action": "download_pdf", "arxiv": "2203.08111", "version": "v2", "url": "https://arxiv.org/pdf/2203.08111v2", "sha256": "9ba16b5bbaef6db182cb03cd3a5fc164f82ca60f7d6ea090cc1de87358f95cf0"}
+{"time": "2026-10-17T18:33:39+00:00", "action": "download_md", "arxiv": "2203.08111", "source": "pwc paper read 2203.08111", "sha256": "d1fd59330d3e01e7a788fcab4cabffbd480618ee553ccf9227ebe275a483ba28"}
+{"time": "2026-10-17T18:33:39+00:00", "action": "build", "papers": 176, "unverified": ["2603.08391", "2502.14301", "2603.16309"]}
+{"time": "2026-10-19T03:35:52+00:00", "action": "build", "papers": 179, "unverified": []}

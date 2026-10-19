@@ -1,11 +1,11 @@
 # Search log
 
-Generated 2026-10-17 by `research/tools/search_log.py report` from `log.jsonl`.
+Generated 2026-10-19 by `research/tools/search_log.py report` from `log.jsonl`.
 Do not edit by hand: add queries to `queries.json`, decisions to `screening.json`, re-run.
 
 Screening status: **included** (in `research/papers/seed.json`) · **excluded** (reason given)
 · **title-screened** (seen in results, not yet assessed).
-Unique papers seen: 897 — included 54, excluded 104, title-screened 701.
+Unique papers seen: 951 — included 58, excluded 104, title-screened 751.
 
 
 ## S01: iterative refinement of latent sentence plan before decoding
@@ -2494,6 +2494,176 @@ Runs: 1 (latest 2026-10-17T03:46:38+00:00, `pwc 0.4.3	api v1`)
 | 6 | 2407.09879 | sPhinX: Sample Efficient Multilingual Instruction Fine-Tuning Through N-shot Guided Prompting | 2024 | title-screened |
 | 7 | 2305.13627 | InstructAlign: High-and-Low Resource Language Alignment via Continual Crosslingual Instruction Tuning | 2023 | title-screened |
 | 8 | 2311.05741 | Efficiently Adapting Pretrained Language Models To New Languages | 2023 | title-screened |
+
+## S152: FineWeb-2 multilingual pretraining data per language
+
+Serves item(s) 7. Purpose: Monolingual Filipino text screening (2026-10-17, D4): FineWeb-2 pipeline and per-language data
+
+Runs: 1 (latest 2026-10-17T17:48:06+00:00, `pwc 0.4.3	api v1`)
+
+| # | arXiv | Title | Year | Status |
+|---|---|---|---|---|
+| 1 | 2506.20920 | FineWeb2: One Pipeline to Scale Them All -- Adapting Pre-Training Data Processing to Every Language | 2025 | included |
+| 2 | 2502.13252 | Multilingual Language Model Pretraining using Machine-translated Data | 2025 | title-screened |
+| 3 | 2411.06402 | Fineweb-Edu-Ar: Machine-translated Corpus to Support Arabic Small Language Models | 2024 | title-screened |
+| 4 | 2410.23956 | Multilingual Pretraining Using a Large Corpus Machine-Translated from a Single Source Language | 2024 | title-screened |
+| 5 | 2408.08003 | Leveraging Web-Crawled Data for High-Quality Fine-Tuning | 2024 | title-screened |
+| 6 | 2512.18834 | Mix, MinHash, and Match: Cross-Source Agreement for Multilingual Pretraining Datasets | 2025 | title-screened |
+| 7 | 2406.17557 | The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale | 2024 | title-screened |
+| 8 | 2512.13884 | FiNERweb: Datasets and Artifacts for Scalable Multilingual Named Entity Recognition | 2025 | excluded (screened 2026-10-17 (data-gathering techniques survey), title-screened off-topic for data gathering) |
+
+## S153: HPLT 2.0 multilingual web corpus
+
+Serves item(s) 7. Purpose: Monolingual Filipino text screening (2026-10-17, D4): HPLT 2.0 corpus
+
+Runs: 1 (latest 2026-10-17T17:48:06+00:00, `pwc 0.4.3	api v1`)
+
+| # | arXiv | Title | Year | Status |
+|---|---|---|---|---|
+| 1 | 2602.11968 | DHPLT: large-scale multilingual diachronic corpora and word representations for semantic change modelling | 2026 | title-screened |
+| 2 | 2503.10267 | An Expanded Massive Multilingual Dataset for High-Performance Language Technologies | 2025 | included |
+| 3 | 2403.14009 | A New Massive Multilingual Dataset for High-Performance Language Technologies | 2024 | title-screened |
+| 4 | 2508.13079 | DocHPLT: A Massively Multilingual Document-Level Translation Dataset | 2025 | title-screened |
+| 5 | 2008.05055 | The Annotation Guideline of LST20 Corpus | 2020 | title-screened |
+| 6 | 1905.01715 | A Parallel Corpus of Theses and Dissertations Abstracts | 2019 | title-screened |
+| 7 | 2511.01066 | HPLT 3.0: Very Large-Scale Multilingual Resources for LLM and MT. Mono- and Bi-lingual Data, Multilingual Evaluation, and Pre-Trained Models | 2025 | title-screened |
+| 8 | 2103.12028 | Quality at a Glance: An Audit of Web-Crawled Multilingual Datasets | 2021 | candidate |
+
+## S154: CulturaX cleaned multilingual dataset
+
+Serves item(s) 7. Purpose: Monolingual Filipino text screening (2026-10-17, D4): CulturaX
+
+Runs: 1 (latest 2026-10-17T17:48:07+00:00, `pwc 0.4.3	api v1`)
+
+| # | arXiv | Title | Year | Status |
+|---|---|---|---|---|
+| 1 | 2309.09400 | CulturaX: A Cleaned, Enormous, and Multilingual Dataset for Large Language Models in 167 Languages | 2023 | included |
+| 2 | — | Wiki-40B: Multilingual Language Model Dataset | 2020 | title-screened |
+| 3 | 2502.11546 | DCAD-2000: A Multilingual Dataset across 2000+ Languages with Data Cleaning as Anomaly Detection | 2025 | title-screened |
+| 4 | 2504.05154 | CARE: Aligning Language Models for Regional Cultural Awareness | 2025 | title-screened |
+| 5 | 2504.08820 | CAReDiO: Enhancing Cultural Alignment of LLM via Representativeness and Distinctiveness Guided Data Optimization | 2025 | title-screened |
+| 6 | 2509.17399 | DIWALI - Diversity and Inclusivity aWare cuLture specific Items for India: Dataset and Assessment of LLMs for Cultural Text Adaptation in Indian Context | 2025 | title-screened |
+| 7 | 2604.19016 | AlignCultura: Towards Culturally Aligned Large Language Models? | 2026 | title-screened |
+| 8 | 2407.12336 | M2DS: Multilingual Dataset for Multi-document Summarisation | 2024 | title-screened |
+
+## S155: quality audit of multilingual web-crawled datasets low-resource languages
+
+Serves item(s) 7. Purpose: Monolingual Filipino text screening (2026-10-17, D4): audits of web corpora for low-resource languages
+
+Runs: 1 (latest 2026-10-17T17:48:07+00:00, `pwc 0.4.3	api v1`)
+
+| # | arXiv | Title | Year | Status |
+|---|---|---|---|---|
+| 1 | 2103.12028 | Quality at a Glance: An Audit of Web-Crawled Multilingual Datasets | 2021 | candidate |
+| 2 | 2203.08111 | Does Corpus Quality Really Matter for Low-Resource Languages? | 2022 | candidate |
+| 3 | 2501.14506 | WanJuanSiLu: A High-Quality Open-Source Webtext Dataset for Low-Resource Languages | 2025 | title-screened |
+| 4 | 2411.05527 | How Good is Your Wikipedia? Auditing Data Quality for Low-resource and Multilingual NLP | 2024 | title-screened |
+| 5 | 2605.12623 | DocAtlas: Multilingual Document Understanding Across 80+ Languages | 2026 | title-screened |
+| 6 | 2603.29244 | The Thiomi Dataset: A Large-Scale Multimodal Corpus for Low-Resource African Languages | 2026 | title-screened |
+| 7 | 2605.31136 | Multilingual and Cross-Lingual Citation Needed Detection on Wikipedia for Lower-Resource Languages | 2026 | title-screened |
+| 8 | 2404.17342 | From Multiple-Choice to Extractive QA: A Case Study for English and Arabic | 2024 | title-screened |
+
+## S156: Tagalog Filipino monolingual corpus language model pretraining
+
+Serves item(s) 7. Purpose: Monolingual Filipino text screening (2026-10-17, D4): existing Filipino monolingual corpora
+
+Runs: 1 (latest 2026-10-17T17:48:08+00:00, `pwc 0.4.3	api v1`)
+
+| # | arXiv | Title | Year | Status |
+|---|---|---|---|---|
+| 1 | 2111.06053 | Improving Large-scale Language Models and Resources for Filipino | 2021 | title-screened |
+| 2 | 2404.01856 | Poro 34B and the Blessing of Multilinguality | 2024 | title-screened |
+| 3 | 2407.13657 | FuLG: 150B Romanian Corpus for Language Model Pretraining | 2024 | title-screened |
+| 4 | 2507.14664 | Mangosteen: An Open Thai Corpus for Language Model Pretraining | 2025 | title-screened |
+| 5 | 2304.07880 | Sabiá: Portuguese Large Language Models | 2023 | title-screened |
+| 6 | 2311.07171 | calamanCy: A Tagalog Natural Language Processing Toolkit | 2023 | candidate |
+| 7 | 2205.06266 | Lifting the Curse of Multilinguality by Pre-training Modular Transformers | 2022 | title-screened |
+| 8 | 2311.07161 | Developing a Named Entity Recognition Dataset for Tagalog | 2023 | title-screened |
+
+## S157: MADLAD-400 multilingual document-level audited dataset
+
+Serves item(s) 7. Purpose: Monolingual Filipino text screening (2026-10-17, D4): MADLAD-400 data audit
+
+Runs: 1 (latest 2026-10-17T17:48:08+00:00, `pwc 0.4.3	api v1`)
+
+| # | arXiv | Title | Year | Status |
+|---|---|---|---|---|
+| 1 | 2309.04662 | MADLAD-400: A Multilingual And Document-Level Large Audited Dataset | 2023 | included |
+| 2 | 2210.09984 | Making a MIRACL: Multilingual Information Retrieval Across a Continuum of Languages | 2022 | title-screened |
+| 3 | — | Wiki-40B: Multilingual Language Model Dataset | 2020 | title-screened |
+| 4 | 2103.12028 | Quality at a Glance: An Audit of Web-Crawled Multilingual Datasets | 2021 | candidate |
+| 5 | 2110.06744 | Masader: Metadata Sourcing for Arabic Text and Speech Data Resources | 2021 | title-screened |
+| 6 | 2502.11546 | DCAD-2000: A Multilingual Dataset across 2000+ Languages with Data Cleaning as Anomaly Detection | 2025 | title-screened |
+| 7 | 2012.03411 | MLS: A Large-Scale Multilingual Dataset for Speech Research | 2020 | title-screened |
+| 8 | 2308.16884 | The Belebele Benchmark: a Parallel Reading Comprehension Dataset in 122 Language Variants | 2023 | included |
+
+## S158: cross-source agreement multilingual pretraining datasets deduplication
+
+Serves item(s) 7. Purpose: Monolingual Filipino text screening (2026-10-17, D4): cross-corpus agreement for multilingual pretraining data
+
+Runs: 1 (latest 2026-10-17T17:48:09+00:00, `pwc 0.4.3	api v1`)
+
+| # | arXiv | Title | Year | Status |
+|---|---|---|---|---|
+| 1 | 2512.18834 | Mix, MinHash, and Match: Cross-Source Agreement for Multilingual Pretraining Datasets | 2025 | title-screened |
+| 2 | 2506.20920 | FineWeb2: One Pipeline to Scale Them All -- Adapting Pre-Training Data Processing to Every Language | 2025 | included |
+| 3 | 2505.22232 | Judging Quality Across Languages: A Multilingual Approach to Pretraining Data Filtering with Language Models | 2025 | title-screened |
+| 4 | 2502.10361 | Enhancing Multilingual LLM Pretraining with Model-Based Data Selection | 2025 | title-screened |
+| 5 | 2202.09583 | Models and Datasets for Cross-Lingual Summarisation | 2022 | title-screened |
+| 6 | 2107.06499 | Deduplicating Training Data Makes Language Models Better | 2021 | title-screened |
+| 7 | 2502.11546 | DCAD-2000: A Multilingual Dataset across 2000+ Languages with Data Cleaning as Anomaly Detection | 2025 | title-screened |
+| 8 | 2406.13236 | Data Contamination Can Cross Language Barriers | 2024 | title-screened |
+
+## S159: multilingual denoising pretraining sequence-to-sequence machine translation
+
+Serves item(s) 7. Purpose: Monolingual Filipino text screening (2026-10-17, D4): denoising pretraining for MT sentence encoders
+
+Runs: 1 (latest 2026-10-17T17:48:09+00:00, `pwc 0.4.3	api v1`)
+
+| # | arXiv | Title | Year | Status |
+|---|---|---|---|---|
+| 1 | 2001.08210 | Multilingual Denoising Pre-training for Neural Machine Translation | 2020 | title-screened |
+| 2 | 2110.08547 | Towards Making the Most of Multilingual Pretraining for Zero-Shot Neural Machine Translation | 2021 | title-screened |
+| 3 | 2201.07365 | Improving Neural Machine Translation by Denoising Training | 2022 | title-screened |
+| 4 | 2407.16222 | PreAlign: Boosting Cross-Lingual Transfer by Early Establishment of Multilingual Alignment | 2024 | title-screened |
+| 5 | 2008.00401 | Multilingual Translation with Extensible Multilingual Pretraining and Finetuning | 2020 | title-screened |
+| 6 | 2408.01394 | Improving Multilingual Neural Machine Translation by Utilizing Semantic and Linguistic Features | 2024 | title-screened |
+| 7 | 2106.06381 | Improving Pretrained Cross-Lingual Language Models via Self-Labeled Word Alignment | 2021 | title-screened |
+| 8 | 2204.07834 | Bridging Cross-Lingual Gaps During Leveraging the Multilingual Sequence-to-Sequence Pretraining for Text Generation and Understanding | 2022 | title-screened |
+
+## S160: Wikipedia data quality low-resource languages audit
+
+Serves item(s) 7. Purpose: Monolingual Filipino text screening (2026-10-17, D4): Wikipedia quality for low-resource languages
+
+Runs: 1 (latest 2026-10-17T17:48:09+00:00, `pwc 0.4.3	api v1`)
+
+| # | arXiv | Title | Year | Status |
+|---|---|---|---|---|
+| 1 | 2411.05527 | How Good is Your Wikipedia? Auditing Data Quality for Low-resource and Multilingual NLP | 2024 | title-screened |
+| 2 | 2605.31136 | Multilingual and Cross-Lingual Citation Needed Detection on Wikipedia for Lower-Resource Languages | 2026 | title-screened |
+| 3 | 2103.12028 | Quality at a Glance: An Audit of Web-Crawled Multilingual Datasets | 2021 | candidate |
+| 4 | 2505.16506 | Utilizing citation index and synthetic quality measure to compare Wikipedia languages across various topics | 2025 | title-screened |
+| 5 | 2203.08111 | Does Corpus Quality Really Matter for Low-Resource Languages? | 2022 | candidate |
+| 6 | 2404.00565 | Leveraging Corpus Metadata to Detect Template-based Translation: An Exploratory Case Study of the Egyptian Arabic Wikipedia Edition | 2024 | title-screened |
+| 7 | 2305.05928 | WikiSQE: A Large-Scale Dataset for Sentence Quality Estimation in Wikipedia | 2023 | title-screened |
+| 8 | 2412.00948 | Uhura: A Benchmark for Evaluating Scientific Question Answering and Truthfulness in Low-Resource African Languages | 2024 | title-screened |
+
+## S161: massively multilingual corpus 500 languages continued pretraining
+
+Serves item(s) 7. Purpose: Monolingual Filipino text screening (2026-10-17, D4): Glot500 / MaLA corpora for Tagalog
+
+Runs: 1 (latest 2026-10-17T17:48:10+00:00, `pwc 0.4.3	api v1`)
+
+| # | arXiv | Title | Year | Status |
+|---|---|---|---|---|
+| 1 | 2305.12182 | Glot500: Scaling Multilingual Corpora and Language Models to 500 Languages | 2023 | title-screened |
+| 2 | 2409.17892 | EMMA-500: Enhancing Massively Multilingual Adaptation of Large Language Models | 2024 | title-screened |
+| 3 | 2506.20920 | FineWeb2: One Pipeline to Scale Them All -- Adapting Pre-Training Data Processing to Every Language | 2025 | included |
+| 4 | 2410.23956 | Multilingual Pretraining Using a Large Corpus Machine-Translated from a Single Source Language | 2024 | title-screened |
+| 5 | 2410.23825 | GlotCC: An Open Broad-Coverage CommonCrawl Corpus and Pipeline for Minority Languages | 2024 | title-screened |
+| 6 | 2404.01856 | Poro 34B and the Blessing of Multilinguality | 2024 | title-screened |
+| 7 | 2506.00469 | Massively Multilingual Adaptation of Large Language Models Using Bilingual Translation Data | 2025 | title-screened |
+| 8 | 2304.09151 | UniMax: Fairer and more Effective Language Sampling for Large-Scale Multilingual Pretraining | 2023 | title-screened |
 
 ## Searches recorded elsewhere
 
