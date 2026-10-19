@@ -1,0 +1,16 @@
+# Tranche-1 probe sets v1 (D29, roadmap A4). Builder: data/probes/build_probes.py. Never published.
+# Paths inside diagrad:t1: ~/data/raw at /raw, ~/data/t1 at /t1.
+seed: 20261019
+source: {registry_id: opus-OpenSubtitles-v2024-en-tl, path: /raw/opus-OpenSubtitles-v2024-en-tl/OPUS-OpenSubtitles.en-tl.txt.zip}
+heldout:                               # as D28 item 6: full D20 rule for the gate set; 8-word runs for MASSIVE and E1
+  full_rule: [/t1/heldout/test_smol.jsonl]
+  eight_word_runs_only: [/t1/heldout/dev_massive.jsonl, /t1/heldout/diag_massive_test.jsonl,
+                         /t1/probes/wmt24pp-as-tests.jsonl]   # E1 WMT24++ in checker format; its 1-2 word sides ("like", "ito ay") matched 16k+ pairs
+max_positives: 2500                    # per feature, by seeded rank; about 60% are expected to pass the screen
+neg_ratio: 2                           # negatives per positive, same length bin
+translator: {repo: google/madlad400-3b-mt, revision: fa184c675da0b5c9e1c8694fccd4e12e2d422094,
+             num_beams: 4, max_new_tokens: 128, batch_size: 32}
+calibration: {n: 200, batches: 2, min_precision: 0.85}   # threshold: >= 85% of calibration pairs above it fully aligned [judgement]
+slice_check: {report: /t1/probes/slice-check/full.json, rule: 8word}   # rule chosen after the check's counts (RUN.md)
+per_class: 1000                        # prereg minimum is 500; 1,000 narrows the bootstrap intervals [judgement]
+out_dir: /t1/probes/v1

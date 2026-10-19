@@ -1,0 +1,186 @@
+{
+ "date": "2026-10-19",
+ "purpose": "D3 probe data: po/opo and ay-inversion candidates in the parallel corpora",
+ "script": "data/mix/measure_probe_sources.py",
+ "unit": "unique Filipino sides (diagrad.t1.contamination.norm) of 3-40 words; rate = labelled sides / unique sides; ay rule provisional",
+ "nllb_bands": "LASER score lower bounds (column 3 of allenai/nllb)",
+ "counts": {
+  "bible_uedin": {
+   "all": {
+    "sides": 26550,
+    "po_opo": 0,
+    "ay": 12919,
+    "both": 0,
+    "po_rate": 0.0,
+    "ay_rate": 0.48659133709981167
+   }
+  },
+  "ccmatrix": {
+   "all": {
+    "sides": 1724462,
+    "po_opo": 22523,
+    "ay": 457081,
+    "both": 3048,
+    "po_rate": 0.013060885076041107,
+    "ay_rate": 0.2650571598562334
+   }
+  },
+  "ebible": {
+   "all": {
+    "sides": 26624,
+    "po_opo": 17,
+    "ay": 10163,
+    "both": 9,
+    "po_rate": 0.0006385216346153846,
+    "ay_rate": 0.38172325721153844
+   }
+  },
+  "globalvoices": {
+   "all": {
+    "sides": 2245,
+    "po_opo": 0,
+    "ay": 395,
+    "both": 0,
+    "po_rate": 0.0,
+    "ay_rate": 0.1759465478841871
+   }
+  },
+  "nllb": {
+   ">=1.2": {
+    "sides": 3904,
+    "po_opo": 23,
+    "ay": 1775,
+    "both": 4,
+    "po_rate": 0.00589139344262295,
+    "ay_rate": 0.4546618852459016
+   },
+   ">=1.1": {
+    "sides": 2090796,
+    "po_opo": 16490,
+    "ay": 920381,
+    "both": 1711,
+    "po_rate": 0.007886948320161317,
+    "ay_rate": 0.4402060267955362
+   },
+   ">=1.06": {
+    "sides": 12369808,
+    "po_opo": 371922,
+    "ay": 1992352,
+    "both": 26434,
+    "po_rate": 0.030066917772692995,
+    "ay_rate": 0.161065717430699
+   },
+   "<1.06": {
+    "sides": 9773604,
+    "po_opo": 315344,
+    "ay": 1332202,
+    "both": 23723,
+    "po_rate": 0.03226486360609659,
+    "ay_rate": 0.13630611594249165
+   }
+  },
+  "opensubs": {
+   "all": {
+    "sides": 687779,
+    "po_opo": 8568,
+    "ay": 21544,
+    "both": 94,
+    "po_rate": 0.012457489978612317,
+    "ay_rate": 0.0313240154177432
+   }
+  },
+  "paracrawl": {
+   "all": {
+    "sides": 191464,
+    "po_opo": 564,
+    "ay": 100618,
+    "both": 91,
+    "po_rate": 0.0029457234780428695,
+    "ay_rate": 0.5255191576484353
+   }
+  },
+  "qed_fil": {
+   "all": {
+    "sides": 33144,
+    "po_opo": 423,
+    "ay": 8522,
+    "both": 29,
+    "po_rate": 0.01276249094858798,
+    "ay_rate": 0.2571204441226165
+   }
+  },
+  "qed_tl": {
+   "all": {
+    "sides": 2428,
+    "po_opo": 10,
+    "ay": 396,
+    "both": 3,
+    "po_rate": 0.004118616144975288,
+    "ay_rate": 0.1630971993410214
+   }
+  },
+  "wikimatrix": {
+   "all": {
+    "sides": 70490,
+    "po_opo": 23,
+    "ay": 42936,
+    "both": 10,
+    "po_rate": 0.00032628741665484466,
+    "ay_rate": 0.6091076748474961
+   }
+  }
+ },
+ "alignment_check": {
+  "judge": "Codex gpt-6.1-sol, blind to source, 2 calls",
+  "sample": "40 po/opo pairs per source from the seeded reservoir sample (seed 20261019); no hidden repeats",
+  "scales": "alignment 0-2 (po's absence in English not penalised); naturalness 0-2 (Filipino side)",
+  "prompts_and_answers": "~/data/t1/probe-measure/alignment-check (not committed: corpus text)",
+  "results": {
+   "opensubs": {
+    "n": 40,
+    "alignment_mean": 1.6,
+    "alignment_2": 24,
+    "alignment_0": 0,
+    "naturalness_mean": 1.95,
+    "po_politeness": 40,
+    "tagalog_or_taglish": 39
+   },
+   "ccmatrix": {
+    "n": 40,
+    "alignment_mean": 0.125,
+    "alignment_2": 1,
+    "alignment_0": 36,
+    "naturalness_mean": 1.95,
+    "po_politeness": 40,
+    "tagalog_or_taglish": 40
+   },
+   "nllb": {
+    "n": 40,
+    "alignment_mean": 0.3,
+    "alignment_2": 0,
+    "alignment_0": 28,
+    "naturalness_mean": 1.825,
+    "po_politeness": 40,
+    "tagalog_or_taglish": 40
+   },
+   "paracrawl": {
+    "n": 40,
+    "alignment_mean": 1.125,
+    "alignment_2": 16,
+    "alignment_0": 11,
+    "naturalness_mean": 1.825,
+    "po_politeness": 39,
+    "tagalog_or_taglish": 40
+   },
+   "qed_fil": {
+    "n": 40,
+    "alignment_mean": 1.575,
+    "alignment_2": 23,
+    "alignment_0": 0,
+    "naturalness_mean": 1.85,
+    "po_politeness": 40,
+    "tagalog_or_taglish": 40
+   }
+  }
+ }
+}
