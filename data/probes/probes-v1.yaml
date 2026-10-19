@@ -6,7 +6,8 @@ heldout:                               # as D28 item 6: full D20 rule for the ga
   full_rule: [/t1/heldout/test_smol.jsonl]
   eight_word_runs_only: [/t1/heldout/dev_massive.jsonl, /t1/heldout/diag_massive_test.jsonl,
                          /t1/probes/wmt24pp-as-tests.jsonl]   # E1 WMT24++ in checker format; its 1-2 word sides ("like", "ito ay") matched 16k+ pairs
-max_positives: 2500                    # per feature, by seeded rank; about 60% are expected to pass the screen
+max_positives: {po_opo: 100000, ay: 2500}   # by seeded rank. po: all (raised from 2,500 after the first select:
+                                       # 636 per class, 478 without an English cue; threshold not recalibrated)
 neg_ratio: 2                           # negatives per positive, same length bin
 translator: {repo: google/madlad400-3b-mt, revision: fa184c675da0b5c9e1c8694fccd4e12e2d422094,
              num_beams: 4, max_new_tokens: 128, batch_size: 32}

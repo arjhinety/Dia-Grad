@@ -100,7 +100,8 @@ def candidates(cfg):
     stats = {"pool": len(rows), "removed_heldout": removed, "features": {}}
     for feat in FEATURES:
         # cap the positives first, then draw negatives for the capped set
-        cap = set(r["id"] for r in sorted((r for r in rows if r[feat]), key=lambda r: rng[r["id"]])[:cfg["max_positives"]])
+        mp = cfg["max_positives"][feat] if isinstance(cfg["max_positives"], dict) else cfg["max_positives"]
+        cap = set(r["id"] for r in sorted((r for r in rows if r[feat]), key=lambda r: rng[r["id"]])[:mp])
         pos, neg = matched_negatives([r for r in rows if not r[feat] or r["id"] in cap], feat, cfg["seed"], cfg["neg_ratio"])
         stats["features"][feat] = {"positives_in_pool": sum(r[feat] for r in rows), "positives": len(pos),
                                    "negatives": len(neg)}
@@ -127,7 +128,11 @@ def translate(cfg):
     model = AutoModelForSeq2SeqLM.from_pretrained(repo, revision=rev, dtype=torch.bfloat16, device_map="cuda").eval()
     bs, gen = cfg["translator"]["batch_size"], dict(num_beams=cfg["translator"]["num_beams"],
                                                      max_new_tokens=cfg["translator"]["max_new_tokens"])
-    with open(out / "translations.jsonl", "w", encoding="utf-8") as f:
+    done = set()
+    if (out / "translations.jsonl").exists():       # resume: candidates translated earlier keep their output
+        done = {r["id"] for r in load_jsonl(out / "translations.jsonl")}
+    rows = [r for r in rows if r["id"] not in done]
+    with open(out / "translations.jsonl", "a", encoding="utf-8") as f:
         for i in range(0, len(rows), bs):
             batch = rows[i:i + bs]
             enc = tok([f"<2en> {r['fil']}" for r in batch], return_tensors="pt", padding=True)
