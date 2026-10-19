@@ -1,0 +1,113 @@
+{
+ "date": "2026-10-19",
+ "builder_commit": "014e801edb385cb4202ba0bbc3b32238eeacfe5b",
+ "config": "data/probes/probes-v1.yaml",
+ "candidates": {
+  "pool": 687682,
+  "removed_heldout": 97,
+  "features": {
+   "po_opo": {
+    "positives_in_pool": 8568,
+    "positives": 8568,
+    "negatives": 17136
+   },
+   "ay": {
+    "positives_in_pool": 21544,
+    "positives": 2500,
+    "negatives": 5000
+   }
+  },
+  "candidates": 32940
+ },
+ "calibration": {
+  "labelled": 200,
+  "fully_aligned": 138,
+  "threshold_chrf": 54.87623129634457,
+  "kept": 61,
+  "kept_fully_aligned": 52,
+  "recall_fully_aligned": 0.37681159420289856,
+  "alignment_counts": {
+   "0": 8,
+   "1": 54,
+   "2": 138
+  }
+ },
+ "select_round1_max_positives_2500": {
+  "threshold_chrf": 54.87623129634457,
+  "excluded_by_slice": 133,
+  "passed_screen": 4476,
+  "features": {
+   "po_opo": {
+    "positives": 636,
+    "negatives": 636,
+    "positives_with_cue": 158,
+    "negatives_with_cue": 37,
+    "mean_words_pos": 7.7751572327044025,
+    "mean_words_neg": 7.70440251572327
+   },
+   "ay": {
+    "positives": 1000,
+    "negatives": 1000,
+    "positives_with_cue": 46,
+    "negatives_with_cue": 54,
+    "mean_words_pos": 11.899,
+    "mean_words_neg": 11.665
+   }
+  },
+  "exclusion_sides": 6407
+ },
+ "select": {
+  "threshold_chrf": 54.87623129634457,
+  "excluded_by_slice": 248,
+  "passed_screen": 9437,
+  "features": {
+   "po_opo": {
+    "positives": 1000,
+    "negatives": 1000,
+    "positives_with_cue": 247,
+    "negatives_with_cue": 51,
+    "mean_words_pos": 7.598,
+    "mean_words_neg": 7.543
+   },
+   "ay": {
+    "positives": 1000,
+    "negatives": 1000,
+    "positives_with_cue": 50,
+    "negatives_with_cue": 55,
+    "mean_words_pos": 11.882,
+    "mean_words_neg": 11.662
+   }
+  },
+  "exclusion_sides": 7834
+ },
+ "verification": {
+  "judge": "Codex gpt-6.1-sol, blind, 1 call",
+  "sample": "60 kept pairs per set (seed 20261022)",
+  "results": {
+   "po_opo": {
+    "n": 60,
+    "alignment": {
+     "0": 0,
+     "1": 7,
+     "2": 53
+    }
+   },
+   "ay": {
+    "n": 60,
+    "alignment": {
+     "0": 0,
+     "1": 15,
+     "2": 45
+    }
+   },
+   "po_label_agrees_with_codex": 60
+  },
+  "rule": "D29: the screen fails if more than 20% of kept pairs are not aligned (alignment 0)"
+ },
+ "slice_check": {
+  "rule": "8-word runs (fold) against t1-mono-slice-v1; whole short sides not used (they flag 25% of po but 10% of negatives in round 1)",
+  "full_rule_flags": 5319,
+  "eight_word_flags_excluded": 248,
+  "candidates": 32940
+ }
+}

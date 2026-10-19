@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "id": "t1-probes-v1",
+  "display_name": "Tranche-1 probe sets v1 (D29): po/opo and ay-inversion, OpenSubtitles en-tl, 1,000 pairs per class",
+  "role": "DERIVED_CORPUS",
+  "lifecycle": "ACTIVE",
+  "purpose": [
+    "PROBE"
+  ],
+  "languages": [
+    "eng_Latn",
+    "tgl_Latn"
+  ],
+  "source_revision": {
+    "kind": "GIT_COMMIT",
+    "value": "014e801edb385cb4202ba0bbc3b32238eeacfe5b",
+    "verified": true,
+    "source": "builder and config commit (data/probes/)"
+  },
+  "distribution": [
+    {
+      "name": "probe-po_opo.jsonl",
+      "content_url": "local build, not published: python -m data.probes.build_probes ... data/probes/probes-v1.yaml @ 014e801edb385cb4202ba0bbc3b32238eeacfe5b",
+      "local_path": "~/data/t1/probes/v1/probe-po_opo.jsonl",
+      "sha256": "f1f284fc99bfbd657979f974fe176abb436186f8c32fd87a54f1e6109f0f92a7",
+      "bytes": 351035,
+      "verified_from": "sha256sum of the built file, 2026-10-19"
+    },
+    {
+      "name": "probe-ay.jsonl",
+      "content_url": "local build, not published: python -m data.probes.build_probes ... data/probes/probes-v1.yaml @ 014e801edb385cb4202ba0bbc3b32238eeacfe5b",
+      "local_path": "~/data/t1/probes/v1/probe-ay.jsonl",
+      "sha256": "c950940645f3aea22becc4c4916f7ef4c181654f9ff23def7e665af06f90864c",
+      "bytes": 451922,
+      "verified_from": "sha256sum of the built file, 2026-10-19"
+    }
+  ],
+  "license": {
+    "spdx": "NOASSERTION",
+    "quote": "OpenSubtitles v2024 terms as in the source record opus-OpenSubtitles-v2024-en-tl",
+    "source": "data/registry/opus-OpenSubtitles-v2024-en-tl.json"
+  },
+  "use_class": "RESEARCH_ONLY",
+  "text_origin": {
+    "kind": "HUMAN",
+    "notes": "Subtitle pairs (human subtitles, automatically aligned by OPUS); English kept as found. MADLAD-400-3B translations used only for the alignment screen, not stored in the probe files."
+  },
+  "redistribution": {
+    "status": "NOT_PERMITTED",
+    "basis": "Held-out probe set: never published (project rule)."
+  },
+  "attribution": {
+    "required": false,
+    "citation_target": "OPUS OpenSubtitles (source record)"
+  },
+  "sample_count": {
+    "published": null,
+    "unit": "sentence pairs",
+    "source": "data/probes/probes-v1-stats.json",
+    "measured": 4000
+  },
+  "contamination": {
+    "status": "IS_HELDOUT_OR_EVALUATION",
+    "report": "data/probes/probes-v1-stats.json (held-out and E1 removal: 97 pairs; slice check: 248 excluded by 8-word runs)"
+  },
+  "forbidden_uses": [
+    "TRAIN",
+    "PUBLISH_IN_TRAINING_DATASET",
+    "PUBLISH"
+  ],
+  "derived_from": [
+    {
+      "id": "opus-OpenSubtitles-v2024-en-tl"
+    }
+  ],
+  "processed_sha256": "13629877e282152ca42806c41ca6f0c3c7d0270ccdcb0a121c97455930aa9169",
+  "decisions": [
+    "D29"
+  ],
+  "retrieved": "2026-10-19",
+  "notes": [
+    "po/opo: 1,000 positives and 1,000 length-matched negatives (7.6 and 7.5 words); 247 positives and 51 negatives have a respect or address cue in the English; 753 cue-free positives.",
+    "ay: 1,000 and 1,000 (11.9 and 11.7 words); cue 50 and 55. The ay labels come from the provisional rule and need the A5 hand labels.",
+    "Alignment screen: sentence chrF of MADLAD-400-3B fil->en against the subtitle English >= 54.88, the lowest threshold with >= 85% of 200 Codex-labelled calibration pairs fully aligned above it (52/61); recall of fully aligned pairs 38%.",
+    "Training exclusion for A3: data/probes/probe-v1-exclusion-sides.json (7,834 hashed normalised sides).",
+    "A pair can appear in both sets (the sets are built independently)."
+  ]
+}
