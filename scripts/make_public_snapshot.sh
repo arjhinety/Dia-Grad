@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
-# Build the public DiaGrad tree from a commit of the private repository, minus scripts/public-exclude.txt.
+# Build the public DiaGrad tree from a commit of the private repository, minus scripts/public-exclude.txt,
+# with the wording in scripts/public-rewrites.yaml replaced. Both lists are read from the working tree,
+# so older commits are built with the current rules.
 #   bash scripts/make_public_snapshot.sh <commit> <empty-target-dir>
-# Writes PUBLIC-SNAPSHOT.json in the target: source commit, file count, excluded files per category.
+# Writes PUBLIC-SNAPSHOT.json in the target: source commit, file count, excluded files per category,
+# rewrites per file.
 set -euo pipefail
 rev=$1; out=$2
 [ -z "$(ls -A "$out" 2>/dev/null)" ] || { echo "target not empty: $out" >&2; exit 1; }
 mkdir -p "$out"
 root=$(git rev-parse --show-toplevel)
 python3 - "$root" "$rev" "$out" <<'PY'
-import fnmatch, io, json, subprocess, sys, tarfile
+import fnmatch, io, json, re, subprocess, sys, tarfile
+from pathlib import Path
+import yaml
 from collections import Counter
 root, rev, out = sys.argv[1:4]
 # Categories are the comment lines above each group of globs in public-exclude.txt. The public record
@@ -36,8 +41,35 @@ for m in tar.getmembers():
     else:
         tar.extract(m, out)
         kept += 1
+# Rewrites: `old` may occur at most once (zero where the commit predates the text); afterwards no
+# forbidden pattern may match anywhere in the tree.
+rules = yaml.safe_load(open(f"{root}/scripts/public-rewrites.yaml", encoding="utf-8"))
+rewritten = Counter()
+for r in rules["rewrites"]:
+    f = Path(out, r["path"])
+    if not f.exists():
+        continue
+    text = f.read_text(encoding="utf-8")
+    n = text.count(r["old"])
+    if n > 1:
+        sys.exit(f"rewrite matches {n} times in {r['path']}: {r['old'][:60]!r}")
+    if n:
+        f.write_text(text.replace(r["old"], r["new"]), encoding="utf-8")
+        rewritten[r["path"]] += 1
+bad = []
+for f in sorted(Path(out).rglob("*")):
+    if not f.is_file():
+        continue
+    try:
+        text = f.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        continue
+    bad += [f"{f.relative_to(out)}: {pat}" for pat in rules["forbidden"] if re.search(pat, text)]
+if bad:
+    sys.exit("forbidden wording left in the public tree:\n" + "\n".join(bad))
 json.dump({"source": "private DiaGrad working repository", "source_commit": sha, "files": kept,
-           "excluded_files_by_category": dict(sorted(dropped.items()))},
+           "excluded_files_by_category": dict(sorted(dropped.items())),
+           "rewrites_by_file": dict(sorted(rewritten.items()))},
           open(f"{out}/PUBLIC-SNAPSHOT.json", "w"), indent=1)
-print(f"kept {kept}, excluded {sum(dropped.values())} from {sha[:12]}")
+print(f"kept {kept}, excluded {sum(dropped.values())}, rewrites {sum(rewritten.values())} from {sha[:12]}")
 PY

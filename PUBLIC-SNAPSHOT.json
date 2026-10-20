@@ -1,11 +1,11 @@
 {
  "source": "private DiaGrad working repository",
- "source_commit": "09f7c149b3a894cd96dd5ad2b83691d010949c5c",
+ "source_commit": "6d317b8734ad6d5ccf233876e8fdaa1f808d71b8",
  "files": 126,
  "excluded_files_by_category": {
   "Dataset rows (fetched by revision and sha256, not republished)": 4,
   "Internal working records: decision logs, working notes and consultations, idea refinement": 39,
-  "Private-repository release configuration": 1,
+  "Private-repository release configuration": 2,
   "Project-management and presentation notes": 54,
   "Research-pipeline scratch files": 53,
   "Verbatim third-party page copies": 1,
