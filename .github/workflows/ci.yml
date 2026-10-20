@@ -13,8 +13,10 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       # The runner's system Python; a venv because Ubuntu 24.04 blocks system-wide pip installs.
       - run: python3 -m venv .venv
-      - run: .venv/bin/pip install pytest numpy pyyaml sacrebleu==2.6.0
+      # scikit-learn as in env/requirements.lock; pyarrow as in the diagrad:t1 container.
+      - run: .venv/bin/pip install pytest numpy pyyaml sacrebleu==2.6.0 scikit-learn==1.7.2 pyarrow==25.0.1
       # tests/test_t1.py needs torch, transformers and the pinned tokenizers: it runs in the GB10 container.
-      - run: PYTHONPATH=src .venv/bin/pytest -q --ignore=tests/test_t1.py
+      # The repository root is on the path too: data/mix and data/probes are imported as packages.
+      - run: PYTHONPATH=src:. .venv/bin/pytest -q --ignore=tests/test_t1.py
       - run: PYTHONPATH=src .venv/bin/python -m diagrad.registry.validate
       - run: .venv/bin/python scripts/check_publication_hygiene.py
