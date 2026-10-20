@@ -4,4 +4,6 @@ Third-party datasets, pretrained models, papers, LaTeX templates and other impor
 their own licenses and terms; see data/registry/, research/papers/REFERENCES.md,
 research/licenses/LICENSES.md and the source pages they name.
 
-DiaGrad is a SapinSapin AI project. Initial setup and GPU allocation: Tim Santos.
+DiaGrad is a research project developed under SapinSapin AI, led by Arjhine Ty. The project's
+initial infrastructure and compute resources, including access to an NVIDIA GB10 workstation for
+the first research tranche, were provided by Tim Santos.

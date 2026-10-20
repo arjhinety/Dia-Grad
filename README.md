@@ -14,8 +14,9 @@ critique router then accepts it, repasses it, or reroutes it to other experts. F
 are the first testbed, Japanese later. The project is built in public: decisions, the papers and
 measurements behind them, failed runs and incidents are kept on the record, not tidied away.
 
-DiaGrad is a **SapinSapin AI** project, led by Arjhine Ty. The initial setup and the GPU
-allocation (an NVIDIA GB10 workstation for tranche 1) come from **Tim Santos**.
+**DiaGrad** is a research project developed under **SapinSapin AI**, led by **Arjhine Ty**. The
+project's initial infrastructure and compute resources, including access to an NVIDIA GB10
+workstation for the first research tranche, were provided by **Tim Santos**.
 
 > **No model results yet.** Nothing here shows that posterior routing works. Tranche 1 is a
 > feasibility gate for the sentence space the design needs; it is in progress.
