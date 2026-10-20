@@ -1,1572 +1,1653 @@
 {
-  "_about": "Literature searches for DiaGrad. S01-S27 reproduce the exploratory searches first run ad hoc on 2026-09-24 (before this log existed); S28+ were added when the protocol started. Tool: Papers with Code CLI (pwc), default hybrid search mode.",
-  "queries": [
-    {
-      "id": "S01",
-      "items": [
-        1
-      ],
-      "purpose": "latent whole-sentence draft refined before writing",
-      "query": "iterative refinement of latent sentence plan before decoding"
-    },
-    {
-      "id": "S02",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "critic/verifier that decides whether to spend more compute",
-      "query": "verifier critic in latent space halting additional computation"
-    },
-    {
-      "id": "S03",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "learned verifier driving refinement",
-      "query": "energy-based transformer verify and refine predictions"
-    },
-    {
-      "id": "S04",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "learned halting",
-      "query": "adaptive computation time learned halting transformer"
-    },
-    {
-      "id": "S05",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "internal repasses without text",
-      "query": "recurrent depth latent reasoning test-time compute"
-    },
-    {
-      "id": "S06",
-      "items": [
-        1,
-        6
-      ],
-      "purpose": "thinking in hidden states instead of text",
-      "query": "continuous latent thought reasoning"
-    },
-    {
-      "id": "S07",
-      "items": [
-        1
-      ],
-      "purpose": "sentence-level latent representations",
-      "query": "sentence-level concept model latent space"
-    },
-    {
-      "id": "S08",
-      "items": [
-        1
-      ],
-      "purpose": "whole-sequence refinement",
-      "query": "diffusion language model iterative refinement whole sequence"
-    },
-    {
-      "id": "S09",
-      "items": [
-        1
-      ],
-      "purpose": "refinement in translation specifically",
-      "query": "non-autoregressive machine translation iterative refinement"
-    },
-    {
-      "id": "S10",
-      "items": [
-        1
-      ],
-      "purpose": "two-pass translation",
-      "query": "deliberation network two-pass decoding translation"
-    },
-    {
-      "id": "S11",
-      "items": [
-        2
-      ],
-      "purpose": "RL-trained routing",
-      "query": "mixture of experts router reinforcement learning"
-    },
-    {
-      "id": "S12",
-      "items": [
-        5
-      ],
-      "purpose": "Engram and lookup memory",
-      "query": "conditional memory lookup n-gram embedding sparsity"
-    },
-    {
-      "id": "S13",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "critic deciding refinement",
-      "query": "critic network decides whether to refine latent representation"
-    },
-    {
-      "id": "S14",
-      "items": [
-        3
-      ],
-      "purpose": "GAN-style discriminator on hidden states",
-      "query": "discriminator on hidden states of language model adversarial training text"
-    },
-    {
-      "id": "S15",
-      "items": [
-        3,
-        7
-      ],
-      "purpose": "predicting translation errors from internals",
-      "query": "predict translation errors from model internal hidden states quality estimation"
-    },
-    {
-      "id": "S16",
-      "items": [
-        1
-      ],
-      "purpose": "plan-then-write",
-      "query": "plan then write latent sentence plan language model"
-    },
-    {
-      "id": "S17",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "halting gates in looped models",
-      "query": "looped transformer learned halting gate"
-    },
-    {
-      "id": "S18",
-      "items": [
-        1,
-        6
-      ],
-      "purpose": "self-correction without text",
-      "query": "self-correction in latent space without generating text"
-    },
-    {
-      "id": "S19",
-      "items": [
-        7
-      ],
-      "purpose": "Filipino MT evaluation",
-      "query": "Filipino Tagalog machine translation evaluation"
-    },
-    {
-      "id": "S20",
-      "items": [
-        7
-      ],
-      "purpose": "Philippine benchmarks",
-      "query": "Philippine languages benchmark large language models"
-    },
-    {
-      "id": "S21",
-      "items": [
-        7
-      ],
-      "purpose": "other Philippine languages",
-      "query": "Cebuano Ilocano low-resource translation"
-    },
-    {
-      "id": "S22",
-      "items": [
-        7
-      ],
-      "purpose": "error annotation",
-      "query": "MQM error annotation machine translation low-resource"
-    },
-    {
-      "id": "S23",
-      "items": [
-        1,
-        5
-      ],
-      "purpose": "confirm DeepSeek V4/V4.1 architecture",
-      "query": "DeepSeek V4"
-    },
-    {
-      "id": "S24",
-      "items": [
-        1
-      ],
-      "purpose": "DSpark, used by V4.1-Flash",
-      "query": "DSpark speculative decoding semi-autoregressive draft confidence-scheduled verification"
-    },
-    {
-      "id": "S25",
-      "items": [
-        1
-      ],
-      "purpose": "YOCO, basis of V4.1-Flash's encoder-decoder",
-      "query": "You Only Cache Once decoder-decoder architecture"
-    },
-    {
-      "id": "S26",
-      "items": [
-        1
-      ],
-      "purpose": "SONAR and successors",
-      "query": "SONAR sentence-level multimodal language-agnostic representations"
-    },
-    {
-      "id": "S27",
-      "items": [
-        1
-      ],
-      "purpose": "decoding text back from embeddings",
-      "query": "text embeddings reveal almost as much as text inversion"
-    },
-    {
-      "id": "S28",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "critic operating on sentence embeddings (gap check for option c)",
-      "query": "critic model evaluates sentence embedding before decoding"
-    },
-    {
-      "id": "S29",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "GAN in a continuous latent space for text (the author's analogy)",
-      "query": "generative adversarial network latent space text generation autoencoder"
-    },
-    {
-      "id": "S30",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "critique-driven expert selection in MoE (gap check for the router-level claim)",
-      "query": "mixture of experts expert selection based on output quality critique"
-    },
-    {
-      "id": "S31",
-      "items": [
-        1,
-        6
-      ],
-      "purpose": "human multi-pass translation as model inspiration",
-      "query": "human translation process revision multi-pass cognitive model machine translation"
-    },
-    {
-      "id": "S32",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "self-evaluation from hidden states",
-      "query": "language model knows when it is wrong hidden state probe self-evaluation"
-    },
-    {
-      "id": "S33",
-      "items": [
-        1
-      ],
-      "purpose": "large concept model follow-ups",
-      "query": "large concept model sentence embedding diffusion follow-up"
-    },
-    {
-      "id": "S34",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "dynamic compute per sentence rather than per token",
-      "query": "adaptive computation per sentence segment level early exit"
-    },
-    {
-      "id": "S35",
-      "items": [
-        3
-      ],
-      "purpose": "critic trained without human labels",
-      "query": "unsupervised verifier learned from pretraining without reward labels"
-    },
-    {
-      "id": "S36",
-      "items": [
-        2
-      ],
-      "purpose": "foundational MoE router papers to define 'prior routing' (write-up)",
-      "query": "sparsely-gated mixture of experts layer router"
-    },
-    {
-      "id": "S37",
-      "items": [
-        2
-      ],
-      "purpose": "RL algorithms to name for the critique router (write-up)",
-      "query": "group relative policy optimization reinforcement learning language model"
-    },
-    {
-      "id": "S38",
-      "items": [
-        2
-      ],
-      "purpose": "PPO reference (write-up)",
-      "query": "proximal policy optimization algorithms"
-    },
-    {
-      "id": "S39",
-      "items": [
-        2
-      ],
-      "purpose": "fine-grained expert routing as used by DeepSeek (write-up)",
-      "query": "DeepSeekMoE expert specialization fine-grained experts"
-    },
-    {
-      "id": "S40",
-      "items": [
-        2
-      ],
-      "purpose": "original sparsely-gated MoE paper (title search)",
-      "query": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer"
-    },
-    {
-      "id": "S41",
-      "items": [
-        2
-      ],
-      "purpose": "paper that introduced GRPO (title search)",
-      "query": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models"
-    },
-    {
-      "id": "S42",
-      "items": [
-        2
-      ],
-      "purpose": "Switch Transformer top-1 routing (title search)",
-      "query": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity"
-    },
-    {
-      "id": "S43",
-      "items": [
-        1
-      ],
-      "purpose": "Deliberation Networks (NIPS 2017) title search; review M4 (2026-09-24). Checks whether the catalogue holds this non-arXiv paper",
-      "query": "Deliberation Networks: Sequence Generation Beyond One-Pass Decoding"
-    },
-    {
-      "id": "S44",
-      "items": [
-        1
-      ],
-      "purpose": "Deliberation Networks, keyword search (same purpose as S43)",
-      "query": "deliberation networks"
-    },
-    {
-      "id": "S45",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "MoE survey (explainer foundations) (explainer extension, 2026-09-24)",
-      "query": "mixture of experts sparsely gated routing survey",
-      "limit": 10
-    },
-    {
-      "id": "S46",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "GShard: first large MoE transformer for multilingual MT (explainer extension, 2026-09-24)",
-      "query": "GShard scaling giant models conditional computation automatic sharding",
-      "limit": 5
-    },
-    {
-      "id": "S47",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "ST-MoE: training stability, router z-loss (explainer extension, 2026-09-24)",
-      "query": "router z-loss stable transferable sparse expert models",
-      "limit": 5
-    },
-    {
-      "id": "S48",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Expert-choice routing (experts pick tokens) (explainer extension, 2026-09-24)",
-      "query": "expert choice routing mixture of experts",
-      "limit": 5
-    },
-    {
-      "id": "S49",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Hash routing (no learned router) (explainer extension, 2026-09-24)",
-      "query": "hash layers large sparse models",
-      "limit": 5
-    },
-    {
-      "id": "S50",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "BASE layers: routing as balanced assignment (explainer extension, 2026-09-24)",
-      "query": "BASE layers balanced assignment of experts",
-      "limit": 5
-    },
-    {
-      "id": "S51",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Soft MoE (weighted token mixtures) (explainer extension, 2026-09-24)",
-      "query": "soft mixture of experts",
-      "limit": 5
-    },
-    {
-      "id": "S52",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Load balancing without auxiliary loss (DeepSeek) (explainer extension, 2026-09-24)",
-      "query": "auxiliary-loss-free load balancing mixture of experts",
-      "limit": 6
-    },
-    {
-      "id": "S53",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Sparse upcycling: MoE from dense checkpoints (relevant to our encoder) (explainer extension, 2026-09-24)",
-      "query": "sparse upcycling dense checkpoint mixture of experts",
-      "limit": 5
-    },
-    {
-      "id": "S54",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "MoE systems: dropless training kernels (explainer extension, 2026-09-24)",
-      "query": "MegaBlocks efficient sparse training mixture of experts",
-      "limit": 5
-    },
-    {
-      "id": "S55",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Mixtral: open MoE model (explainer extension, 2026-09-24)",
-      "query": "Mixtral of experts",
-      "limit": 5
-    },
-    {
-      "id": "S56",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "OLMoE: fully open MoE with specialisation analysis (explainer extension, 2026-09-24)",
-      "query": "OLMoE open mixture of experts language models",
-      "limit": 5
-    },
-    {
-      "id": "S57",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "MoE scaling laws / granularity (explainer extension, 2026-09-24)",
-      "query": "scaling laws fine-grained mixture of experts",
-      "limit": 6
-    },
-    {
-      "id": "S58",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Scaling laws for routed LMs (explainer extension, 2026-09-24)",
-      "query": "unified scaling laws routed language models",
-      "limit": 5
-    },
-    {
-      "id": "S59",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Expert specialisation evidence (explainer extension, 2026-09-24)",
-      "query": "what do experts learn mixture of experts specialization analysis",
-      "limit": 8
-    },
-    {
-      "id": "S60",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Recent MoE routing work (2025+) (explainer extension, 2026-09-24)",
-      "query": "mixture of experts routing",
-      "limit": 15,
-      "start_date": "2025-01-01"
-    },
-    {
-      "id": "S61",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Recent expert specialisation work (2025+) (explainer extension, 2026-09-24)",
-      "query": "mixture of experts expert specialization",
-      "limit": 10,
-      "start_date": "2025-01-01"
-    },
-    {
-      "id": "S62",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Recent load-balancing work (2025+) (explainer extension, 2026-09-24)",
-      "query": "mixture of experts load balancing",
-      "limit": 10,
-      "start_date": "2025-01-01"
-    },
-    {
-      "id": "S63",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "MoE for multilingual MT (explainer extension, 2026-09-24)",
-      "query": "mixture of experts machine translation multilingual",
-      "limit": 8
-    },
-    {
-      "id": "S64",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Mixture-of-Depths: token-level compute routing (explainer extension, 2026-09-24)",
-      "query": "mixture-of-depths dynamically allocating compute transformer",
-      "limit": 5
-    },
-    {
-      "id": "S65",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "PonderNet: learned halting (explainer extension, 2026-09-24)",
-      "query": "PonderNet learning to ponder",
-      "limit": 5
-    },
-    {
-      "id": "S66",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Universal Transformers: recurrent depth with ACT (explainer extension, 2026-09-24)",
-      "query": "universal transformers",
-      "limit": 5
-    },
-    {
-      "id": "S67",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "CALM: early exit per token (explainer extension, 2026-09-24)",
-      "query": "confident adaptive language modeling early exit",
-      "limit": 5
-    },
-    {
-      "id": "S68",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Reward over-optimisation (Goodhart) evidence (explainer extension, 2026-09-24)",
-      "query": "scaling laws reward model overoptimization",
-      "limit": 5
-    },
-    {
-      "id": "S69",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Transformer foundations (explainer extension, 2026-09-24)",
-      "query": "attention is all you need transformer",
-      "limit": 3
-    },
-    {
-      "id": "S70",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "T5: encoder-decoder foundations (explainer extension, 2026-09-24)",
-      "query": "exploring the limits of transfer learning unified text-to-text transformer",
-      "limit": 3
-    },
-    {
-      "id": "S71",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Straight-through estimator for discrete choices (explainer extension, 2026-09-24)",
-      "query": "estimating or propagating gradients through stochastic neurons",
-      "limit": 3
-    },
-    {
-      "id": "S72",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Chinchilla compute accounting (explainer extension, 2026-09-24)",
-      "query": "training compute-optimal large language models",
-      "limit": 3
-    },
-    {
-      "id": "S73",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "MoE survey (explainer) (explainer extension, 2026-09-24)",
-      "query": "a survey on mixture of experts in large language models",
-      "limit": 6
-    },
-    {
-      "id": "S74",
-      "items": [
-        1,
-        2
-      ],
-      "purpose": "Transformer paper, keyword mode (explainer extension, 2026-09-24)",
-      "query": "Attention Is All You Need",
-      "limit": 6,
-      "mode": "keyword"
-    },
-    {
-      "id": "S75",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "test-time expert re-routing mixture of experts",
-      "limit": 8
-    },
-    {
-      "id": "S76",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "test-time optimization of expert routing weights in MoE language models",
-      "limit": 8
-    },
-    {
-      "id": "S77",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "re-route tokens to different experts after verification failure",
-      "limit": 8
-    },
-    {
-      "id": "S78",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "feedback-driven expert selection mixture of experts self-correction",
-      "limit": 8
-    },
-    {
-      "id": "S79",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "dynamic number of experts per token confidence based routing",
-      "limit": 8
-    },
-    {
-      "id": "S80",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "critic guided refinement of latent representation before decoding",
-      "limit": 8
-    },
-    {
-      "id": "S81",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "sentence embedding bottleneck decoder machine translation single vector",
-      "limit": 8
-    },
-    {
-      "id": "S82",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "quality estimation feedback loop iterative machine translation refinement",
-      "limit": 8
-    },
-    {
-      "id": "S83",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "mixture of experts routing reinforcement learning router policy",
-      "limit": 8
-    },
-    {
-      "id": "S84",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "Filipino Tagalog machine translation human evaluation error analysis",
-      "limit": 8
-    },
-    {
-      "id": "S85",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "mixture of experts routing critique verifier",
-      "limit": 8,
-      "start_date": "2026-06-01"
-    },
-    {
-      "id": "S86",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "latent self-correction before generation hidden state draft",
-      "limit": 8,
-      "start_date": "2026-06-01"
-    },
-    {
-      "id": "S87",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "adaptive computation mixture of experts revisit routing decision",
-      "limit": 8,
-      "start_date": "2026-01-01"
-    },
-    {
-      "id": "S88",
-      "items": [
-        1,
-        3
-      ],
-      "purpose": "prior-work audit, novelty gap check (2026-10-02)",
-      "query": "machine translation low-resource Philippine languages",
-      "limit": 8,
-      "start_date": "2026-01-01"
-    },
-    {
-      "id": "S89",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
-      "query": "reuse cached early layer activations recompute later layers transformer",
-      "limit": 8
-    },
-    {
-      "id": "S90",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
-      "query": "iterate middle layers recurrent depth encode think decode latent reasoning",
-      "limit": 8
-    },
-    {
-      "id": "S91",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
-      "query": "KV cache sharing across recursion steps recursive transformer",
-      "limit": 8
-    },
-    {
-      "id": "S92",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
-      "query": "prefix caching LLM serving reuse KV cache shared prefix",
-      "limit": 8
-    },
-    {
-      "id": "S93",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
-      "query": "inject feedback at intermediate layer transformer self-correction hidden states",
-      "limit": 8
-    },
-    {
-      "id": "S94",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
-      "query": "partial recomputation iterative refinement neural machine translation reuse encoder states",
-      "limit": 8
-    },
-    {
-      "id": "S95",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
-      "query": "layer reuse adaptive depth looping pretrained transformer inference",
-      "limit": 8,
-      "start_date": "2025-06-01"
-    },
-    {
-      "id": "S96",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "lambda coupling under layer caching (2026-10-05): compute cost terms biasing policies",
-      "query": "compute penalty reward adaptive computation policy cost sensitivity",
-      "limit": 8
-    },
-    {
-      "id": "S97",
-      "items": [
-        1,
-        4
-      ],
-      "purpose": "lambda coupling under layer caching (2026-10-05): compute cost terms biasing policies",
-      "query": "cost-aware routing reinforcement learning cost penalty trade-off quality",
-      "limit": 8
-    },
-    {
-      "id": "S98",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "matched-compute comparison of the MetricX-24 and chrF++ routers along lambda sweeps (2026-10-05)",
-      "query": "compare adaptive computation methods at matched compute quality compute trade-off curve",
-      "limit": 8
-    },
-    {
-      "id": "S99",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "matched-compute comparison of the MetricX-24 and chrF++ routers along lambda sweeps (2026-10-05)",
-      "query": "reward scale sensitivity penalty coefficient different reward metrics reinforcement learning comparison",
-      "limit": 8
-    },
-    {
-      "id": "S100",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "matched-compute comparison of the MetricX-24 and chrF++ routers along lambda sweeps (2026-10-05)",
-      "query": "compute-matched evaluation test-time compute Pareto frontier comparison methods",
-      "limit": 8
-    },
-    {
-      "id": "S101",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 amendment: choosing lambda on a pilot to hit target compute levels (2026-10-07)",
-      "query": "calibrate threshold on held-out calibration set to target compute budget adaptive computation",
-      "limit": 8
-    },
-    {
-      "id": "S102",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 amendment: choosing lambda on a pilot to hit target compute levels (2026-10-07)",
-      "query": "tune cost penalty to meet target compute budget reinforcement learning router",
-      "limit": 8
-    },
-    {
-      "id": "S103",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 units amendment: per-stage compute penalty when actions differ ~50x in FLOP cost (2026-10-07)",
-      "query": "separate compute penalty per stage heterogeneous action cost adaptive computation reinforcement learning",
-      "limit": 8
-    },
-    {
-      "id": "S104",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 units amendment: per-stage compute penalty when actions differ ~50x in FLOP cost (2026-10-07)",
-      "query": "per-step cost penalty multi-stage cascade early exit reinforcement learning budget constraint lagrangian",
-      "limit": 8
-    },
-    {
-      "id": "S105",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 units amendment: per-stage compute penalty when actions differ ~50x in FLOP cost (2026-10-07)",
-      "query": "ponder cost halting policy collapse always halt never halt adaptive computation time",
-      "limit": 8
-    },
-    {
-      "id": "S106",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 per-stage: replacement test when lambda is tuned to a fixed redo rate (random-at-matched-rate and fixed-iteration baselines) (2026-10-07)",
-      "query": "random halting baseline matched compute rate adaptive computation learned policy versus random",
-      "limit": 8
-    },
-    {
-      "id": "S107",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 per-stage: replacement test when lambda is tuned to a fixed redo rate (random-at-matched-rate and fixed-iteration baselines) (2026-10-07)",
-      "query": "learned refinement decision versus fixed number of refinement iterations matched rate baseline translation",
-      "limit": 8
-    },
-    {
-      "id": "S108",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 per-stage: replacement test when lambda is tuned to a fixed redo rate (random-at-matched-rate and fixed-iteration baselines) (2026-10-07)",
-      "query": "budget-constrained policy fixed action rate Lagrangian degenerate policy evaluation random baseline same rate",
-      "limit": 8
-    },
-    {
-      "id": "S109",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 per-stage: matching the fixed-redo baseline (B4) to a non-integer average redo rate (2026-10-07)",
-      "query": "adaptive computation compared with fixed depth at the same average number of steps",
-      "limit": 8
-    },
-    {
-      "id": "S110",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 per-stage: matching the fixed-redo baseline (B4) to a non-integer average redo rate (2026-10-07)",
-      "query": "adaptive halting versus static fixed iterations matched average compute interpolation baseline",
-      "limit": 8
-    },
-    {
-      "id": "S111",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 per-stage tests: statistical power / sample size for human-label comparisons (2026-10-07)",
-      "query": "statistical power sample size human evaluation machine translation system comparison",
-      "limit": 8
-    },
-    {
-      "id": "S112",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 per-stage tests: statistical power / sample size for human-label comparisons (2026-10-07)",
-      "query": "underpowered NLP experiments statistical power analysis minimum detectable effect",
-      "limit": 8
-    },
-    {
-      "id": "S113",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 stage-1 B5: matching a random baseline in FLOPs when redo cost scales with sentence length (2026-10-07)",
-      "query": "random baseline matched compute stratified by input length adaptive computation sentence length cost",
-      "limit": 8
-    },
-    {
-      "id": "S114",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 stage-1 B5: matching a random baseline in FLOPs when redo cost scales with sentence length (2026-10-07)",
-      "query": "FLOPs-matched comparison input length dependent compute early exit translation length bias",
-      "limit": 8
-    },
-    {
-      "id": "S115",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 compute unit: ratio of sums vs mean of per-example ratios for average compute (2026-10-07)",
-      "query": "average FLOPs per token versus per example compute accounting adaptive computation variable length inputs",
-      "limit": 8
-    },
-    {
-      "id": "S116",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 compute unit: ratio of sums vs mean of per-example ratios for average compute (2026-10-07)",
-      "query": "ratio of sums versus mean of ratios efficiency metric aggregation bias",
-      "limit": 8
-    },
-    {
-      "id": "S117",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 per-language compute matching: tokenizer length disparity across languages (2026-10-07)",
-      "query": "tokenizer length disparity across languages unfairness token premium",
-      "limit": 8
-    },
-    {
-      "id": "S118",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 per-language compute matching: tokenizer length disparity across languages (2026-10-07)",
-      "query": "tokenization parity multilingual number of tokens per sentence differs by language cost",
-      "limit": 8
-    },
-    {
-      "id": "S119",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 per-language compute matching: tokenizer length disparity across languages (2026-10-07)",
-      "query": "tokenizer fertility low-resource languages Tagalog Filipino Austronesian",
-      "limit": 8
-    },
-    {
-      "id": "S120",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 full-run tolerance: RL policy compute drift between short calibration runs and full training (2026-10-07)",
-      "query": "compute budget drift between pilot calibration and full reinforcement learning training penalty coefficient",
-      "limit": 8
-    },
-    {
-      "id": "S121",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 full-run tolerance: RL policy compute drift between short calibration runs and full training (2026-10-07)",
-      "query": "Lagrangian multiplier adaptive cost constraint satisfied at convergence reinforcement learning target rate",
-      "limit": 8
-    },
-    {
-      "id": "S122",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 annotation recount: human MT error-span annotation time and number of systems (2026-10-07)",
-      "query": "error span annotation time per segment machine translation human evaluation cost MQM ESA",
-      "limit": 8
-    },
-    {
-      "id": "S123",
-      "items": [
-        3,
-        4
-      ],
-      "purpose": "D14 annotation unit: sentence-level vs paragraph/document-level human MT evaluation, time and context (2026-10-07)",
-      "query": "sentence-level versus document-level human evaluation machine translation context annotation time",
-      "limit": 8
-    },
-    {
-      "id": "S124",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Tranche-1 data survey: English-Filipino parallel corpora and their sizes (2026-10-07)",
-      "query": "English Tagalog Filipino parallel corpus machine translation low-resource dataset",
-      "limit": 8
-    },
-    {
-      "id": "S125",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Tranche-1 data survey: known quality issues of web-mined en-tl bitext (2026-10-07)",
-      "query": "quality audit of web-mined multilingual parallel corpora CCAligned WikiMatrix ParaCrawl low-resource languages",
-      "limit": 8
-    },
-    {
-      "id": "S126",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Tranche-1 data survey: how mined corpora (CCMatrix, NLLB) were made and filtered (2026-10-07)",
-      "query": "LASER margin-based bitext mining CCMatrix NLLB mined data noise filtering",
-      "limit": 8
-    },
-    {
-      "id": "S127",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Tranche-1 data survey: Philippine-language resource catalogues (SEACrowd and others) (2026-10-07)",
-      "query": "Philippine languages NLP resources survey datasets Tagalog Cebuano",
-      "limit": 8
-    },
-    {
-      "id": "S128",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): back-translation",
-      "query": "back-translation of monolingual target data for low-resource neural machine translation at scale",
-      "limit": 8
-    },
-    {
-      "id": "S129",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): forward translation / self-training",
-      "query": "iterative back-translation self-training forward translation low-resource machine translation",
-      "limit": 8
-    },
-    {
-      "id": "S130",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): sequence-level KD",
-      "query": "sequence-level knowledge distillation teacher student neural machine translation",
-      "limit": 8
-    },
-    {
-      "id": "S131",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): LLM-generated parallel data",
-      "query": "large language model generated synthetic parallel data for low-resource machine translation",
-      "limit": 8
-    },
-    {
-      "id": "S132",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): pivot / triangulation",
-      "query": "pivot language triangulation synthetic parallel corpus zero-resource translation",
-      "limit": 8
-    },
-    {
-      "id": "S133",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): sentence-encoder distillation (LASER3 / SONAR / Reimers)",
-      "query": "multilingual sentence embedding distillation teacher student LASER3 low-resource languages",
-      "limit": 8
-    },
-    {
-      "id": "S134",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): sentence-encoder distillation (Reimers & Gurevych)",
-      "query": "making monolingual sentence embeddings multilingual using knowledge distillation",
-      "limit": 8
-    },
-    {
-      "id": "S135",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): own bitext mining",
-      "query": "bitext mining from monolingual web crawl LaBSE margin scoring new language pairs",
-      "limit": 8
-    },
-    {
-      "id": "S136",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): comparable corpora / document alignment",
-      "query": "comparable corpora document alignment Wikipedia parallel sentence extraction",
-      "limit": 8
-    },
-    {
-      "id": "S137",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): dictionary / code-switching augmentation",
-      "query": "code-switching data augmentation bilingual dictionary substitution machine translation",
-      "limit": 8
-    },
-    {
-      "id": "S138",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): human post-editing",
-      "query": "human post-editing of machine translation to create low-resource parallel data SMOL",
-      "limit": 8
-    },
-    {
-      "id": "S139",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): QE / round-trip filtering of synthetic data",
-      "query": "quality estimation filtering of synthetic back-translated data round-trip consistency",
-      "limit": 8
-    },
-    {
-      "id": "S140",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): use of NLLB outputs as training data",
-      "query": "NLLB distilled synthetic data translation dataset created with NLLB-200 outputs",
-      "limit": 8
-    },
-    {
-      "id": "S141",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): testing synthetic data / translationese",
-      "query": "translationese in back-translated training data evaluation original source test sets",
-      "limit": 8
-    },
-    {
-      "id": "S142",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): back-translation (origin paper)",
-      "query": "Improving neural machine translation models with monolingual data back-translation Sennrich",
-      "limit": 8
-    },
-    {
-      "id": "S143",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): forward translation / self-training",
-      "query": "revisiting self-training for neural sequence generation noise",
-      "limit": 8
-    },
-    {
-      "id": "S144",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): use of NLLB outputs as training data",
-      "query": "Aya dataset collection translated with NLLB multilingual instruction data",
-      "limit": 8
-    },
-    {
-      "id": "S145",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): sentence-encoder distillation (SONAR)",
-      "query": "SONAR sentence-level multimodal and language-agnostic representations",
-      "limit": 8
-    },
-    {
-      "id": "S146",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): Filipino-specific data techniques",
-      "query": "Tagalog Filipino English machine translation low-resource",
-      "limit": 8
-    },
-    {
-      "id": "S147",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): Taglish code-switching",
-      "query": "Taglish code-switched Tagalog English corpus",
-      "limit": 8
-    },
-    {
-      "id": "S148",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): synthetic data for sentence embeddings",
-      "query": "synthetic data for training multilingual sentence embeddings translated pairs",
-      "limit": 8
-    },
-    {
-      "id": "S149",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): pivot / triangulation",
-      "query": "pivot-based transfer learning neural machine translation non-English language pairs",
-      "limit": 8
-    },
-    {
-      "id": "S150",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): dictionary augmentation",
-      "query": "data augmentation for low-resource neural machine translation rare word substitution",
-      "limit": 8
-    },
-    {
-      "id": "S151",
-      "items": [
-        1,
-        7
-      ],
-      "purpose": "Data-gathering techniques survey (2026-10-17): LLM teacher distillation for MT",
-      "query": "multilingual LLM translation fine-tuning with synthetic data from larger teacher distillation low-resource languages",
-      "limit": 8
-    },
-    {
-      "id": "S152",
-      "items": [
-        7
-      ],
-      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): FineWeb-2 pipeline and per-language data",
-      "query": "FineWeb-2 multilingual pretraining data per language",
-      "limit": 8
-    },
-    {
-      "id": "S153",
-      "items": [
-        7
-      ],
-      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): HPLT 2.0 corpus",
-      "query": "HPLT 2.0 multilingual web corpus",
-      "limit": 8
-    },
-    {
-      "id": "S154",
-      "items": [
-        7
-      ],
-      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): CulturaX",
-      "query": "CulturaX cleaned multilingual dataset",
-      "limit": 8
-    },
-    {
-      "id": "S155",
-      "items": [
-        7
-      ],
-      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): audits of web corpora for low-resource languages",
-      "query": "quality audit of multilingual web-crawled datasets low-resource languages",
-      "limit": 8
-    },
-    {
-      "id": "S156",
-      "items": [
-        7
-      ],
-      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): existing Filipino monolingual corpora",
-      "query": "Tagalog Filipino monolingual corpus language model pretraining",
-      "limit": 8
-    },
-    {
-      "id": "S157",
-      "items": [
-        7
-      ],
-      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): MADLAD-400 data audit",
-      "query": "MADLAD-400 multilingual document-level audited dataset",
-      "limit": 8
-    },
-    {
-      "id": "S158",
-      "items": [
-        7
-      ],
-      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): cross-corpus agreement for multilingual pretraining data",
-      "query": "cross-source agreement multilingual pretraining datasets deduplication",
-      "limit": 8
-    },
-    {
-      "id": "S159",
-      "items": [
-        7
-      ],
-      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): denoising pretraining for MT sentence encoders",
-      "query": "multilingual denoising pretraining sequence-to-sequence machine translation",
-      "limit": 8
-    },
-    {
-      "id": "S160",
-      "items": [
-        7
-      ],
-      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): Wikipedia quality for low-resource languages",
-      "query": "Wikipedia data quality low-resource languages audit",
-      "limit": 8
-    },
-    {
-      "id": "S161",
-      "items": [
-        7
-      ],
-      "purpose": "Monolingual Filipino text screening (2026-10-17, D4): Glot500 / MaLA corpora for Tagalog",
-      "query": "massively multilingual corpus 500 languages continued pretraining",
-      "limit": 8
-    }
-  ],
-  "_external": [
-    {
-      "record": "research/diligence/A5-contamination.md",
-      "section": "search appendix",
-      "tools": "pwc, web search/fetch, gh, Hugging Face API",
-      "date": "2026-09-24",
-      "by": "A5 review"
-    },
-    {
-      "record": "research/diligence/A6-metric-validity.md",
-      "section": "Appendix A",
-      "tools": "pwc, web search/fetch, Hugging Face API",
-      "date": "2026-09-24",
-      "by": "A6 review"
-    },
-    {
-      "record": "research/diligence/A7-venues.md",
-      "section": "6. Search appendix",
-      "tools": "web search/fetch, pwc",
-      "date": "2026-09-24",
-      "by": "A7 review"
-    },
-    {
-      "record": "research/data-survey/en-fil-parallel-2026-10-07.md",
-      "section": "Appendix A. Retrieval log",
-      "tools": "OPUS API (curl), Helsinki-NLP/OPUS GitHub corpus metadata, Hugging Face API, SEACrowd HF org listing",
-      "date": "2026-10-07",
-      "by": "data survey"
-    }
-  ]
+ "_about": "Literature searches for DiaGrad. S01-S27 reproduce the exploratory searches first run ad hoc on 2026-09-24 (before this log existed); S28+ were added when the protocol started. Tool: Papers with Code CLI (pwc), default hybrid search mode.",
+ "queries": [
+  {
+   "id": "S01",
+   "items": [
+    1
+   ],
+   "purpose": "latent whole-sentence draft refined before writing",
+   "query": "iterative refinement of latent sentence plan before decoding"
+  },
+  {
+   "id": "S02",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "critic/verifier that decides whether to spend more compute",
+   "query": "verifier critic in latent space halting additional computation"
+  },
+  {
+   "id": "S03",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "learned verifier driving refinement",
+   "query": "energy-based transformer verify and refine predictions"
+  },
+  {
+   "id": "S04",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "learned halting",
+   "query": "adaptive computation time learned halting transformer"
+  },
+  {
+   "id": "S05",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "internal repasses without text",
+   "query": "recurrent depth latent reasoning test-time compute"
+  },
+  {
+   "id": "S06",
+   "items": [
+    1,
+    6
+   ],
+   "purpose": "thinking in hidden states instead of text",
+   "query": "continuous latent thought reasoning"
+  },
+  {
+   "id": "S07",
+   "items": [
+    1
+   ],
+   "purpose": "sentence-level latent representations",
+   "query": "sentence-level concept model latent space"
+  },
+  {
+   "id": "S08",
+   "items": [
+    1
+   ],
+   "purpose": "whole-sequence refinement",
+   "query": "diffusion language model iterative refinement whole sequence"
+  },
+  {
+   "id": "S09",
+   "items": [
+    1
+   ],
+   "purpose": "refinement in translation specifically",
+   "query": "non-autoregressive machine translation iterative refinement"
+  },
+  {
+   "id": "S10",
+   "items": [
+    1
+   ],
+   "purpose": "two-pass translation",
+   "query": "deliberation network two-pass decoding translation"
+  },
+  {
+   "id": "S11",
+   "items": [
+    2
+   ],
+   "purpose": "RL-trained routing",
+   "query": "mixture of experts router reinforcement learning"
+  },
+  {
+   "id": "S12",
+   "items": [
+    5
+   ],
+   "purpose": "Engram and lookup memory",
+   "query": "conditional memory lookup n-gram embedding sparsity"
+  },
+  {
+   "id": "S13",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "critic deciding refinement",
+   "query": "critic network decides whether to refine latent representation"
+  },
+  {
+   "id": "S14",
+   "items": [
+    3
+   ],
+   "purpose": "GAN-style discriminator on hidden states",
+   "query": "discriminator on hidden states of language model adversarial training text"
+  },
+  {
+   "id": "S15",
+   "items": [
+    3,
+    7
+   ],
+   "purpose": "predicting translation errors from internals",
+   "query": "predict translation errors from model internal hidden states quality estimation"
+  },
+  {
+   "id": "S16",
+   "items": [
+    1
+   ],
+   "purpose": "plan-then-write",
+   "query": "plan then write latent sentence plan language model"
+  },
+  {
+   "id": "S17",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "halting gates in looped models",
+   "query": "looped transformer learned halting gate"
+  },
+  {
+   "id": "S18",
+   "items": [
+    1,
+    6
+   ],
+   "purpose": "self-correction without text",
+   "query": "self-correction in latent space without generating text"
+  },
+  {
+   "id": "S19",
+   "items": [
+    7
+   ],
+   "purpose": "Filipino MT evaluation",
+   "query": "Filipino Tagalog machine translation evaluation"
+  },
+  {
+   "id": "S20",
+   "items": [
+    7
+   ],
+   "purpose": "Philippine benchmarks",
+   "query": "Philippine languages benchmark large language models"
+  },
+  {
+   "id": "S21",
+   "items": [
+    7
+   ],
+   "purpose": "other Philippine languages",
+   "query": "Cebuano Ilocano low-resource translation"
+  },
+  {
+   "id": "S22",
+   "items": [
+    7
+   ],
+   "purpose": "error annotation",
+   "query": "MQM error annotation machine translation low-resource"
+  },
+  {
+   "id": "S23",
+   "items": [
+    1,
+    5
+   ],
+   "purpose": "confirm DeepSeek V4/V4.1 architecture",
+   "query": "DeepSeek V4"
+  },
+  {
+   "id": "S24",
+   "items": [
+    1
+   ],
+   "purpose": "DSpark, used by V4.1-Flash",
+   "query": "DSpark speculative decoding semi-autoregressive draft confidence-scheduled verification"
+  },
+  {
+   "id": "S25",
+   "items": [
+    1
+   ],
+   "purpose": "YOCO, basis of V4.1-Flash's encoder-decoder",
+   "query": "You Only Cache Once decoder-decoder architecture"
+  },
+  {
+   "id": "S26",
+   "items": [
+    1
+   ],
+   "purpose": "SONAR and successors",
+   "query": "SONAR sentence-level multimodal language-agnostic representations"
+  },
+  {
+   "id": "S27",
+   "items": [
+    1
+   ],
+   "purpose": "decoding text back from embeddings",
+   "query": "text embeddings reveal almost as much as text inversion"
+  },
+  {
+   "id": "S28",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "critic operating on sentence embeddings (gap check for option c)",
+   "query": "critic model evaluates sentence embedding before decoding"
+  },
+  {
+   "id": "S29",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "GAN in a continuous latent space for text (the author's analogy)",
+   "query": "generative adversarial network latent space text generation autoencoder"
+  },
+  {
+   "id": "S30",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "critique-driven expert selection in MoE (gap check for the router-level claim)",
+   "query": "mixture of experts expert selection based on output quality critique"
+  },
+  {
+   "id": "S31",
+   "items": [
+    1,
+    6
+   ],
+   "purpose": "human multi-pass translation as model inspiration",
+   "query": "human translation process revision multi-pass cognitive model machine translation"
+  },
+  {
+   "id": "S32",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "self-evaluation from hidden states",
+   "query": "language model knows when it is wrong hidden state probe self-evaluation"
+  },
+  {
+   "id": "S33",
+   "items": [
+    1
+   ],
+   "purpose": "large concept model follow-ups",
+   "query": "large concept model sentence embedding diffusion follow-up"
+  },
+  {
+   "id": "S34",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "dynamic compute per sentence rather than per token",
+   "query": "adaptive computation per sentence segment level early exit"
+  },
+  {
+   "id": "S35",
+   "items": [
+    3
+   ],
+   "purpose": "critic trained without human labels",
+   "query": "unsupervised verifier learned from pretraining without reward labels"
+  },
+  {
+   "id": "S36",
+   "items": [
+    2
+   ],
+   "purpose": "foundational MoE router papers to define 'prior routing' (write-up)",
+   "query": "sparsely-gated mixture of experts layer router"
+  },
+  {
+   "id": "S37",
+   "items": [
+    2
+   ],
+   "purpose": "RL algorithms to name for the critique router (write-up)",
+   "query": "group relative policy optimization reinforcement learning language model"
+  },
+  {
+   "id": "S38",
+   "items": [
+    2
+   ],
+   "purpose": "PPO reference (write-up)",
+   "query": "proximal policy optimization algorithms"
+  },
+  {
+   "id": "S39",
+   "items": [
+    2
+   ],
+   "purpose": "fine-grained expert routing as used by DeepSeek (write-up)",
+   "query": "DeepSeekMoE expert specialization fine-grained experts"
+  },
+  {
+   "id": "S40",
+   "items": [
+    2
+   ],
+   "purpose": "original sparsely-gated MoE paper (title search)",
+   "query": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer"
+  },
+  {
+   "id": "S41",
+   "items": [
+    2
+   ],
+   "purpose": "paper that introduced GRPO (title search)",
+   "query": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models"
+  },
+  {
+   "id": "S42",
+   "items": [
+    2
+   ],
+   "purpose": "Switch Transformer top-1 routing (title search)",
+   "query": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity"
+  },
+  {
+   "id": "S43",
+   "items": [
+    1
+   ],
+   "purpose": "Deliberation Networks (NIPS 2017) title search; review M4 (2026-09-24). Checks whether the catalogue holds this non-arXiv paper",
+   "query": "Deliberation Networks: Sequence Generation Beyond One-Pass Decoding"
+  },
+  {
+   "id": "S44",
+   "items": [
+    1
+   ],
+   "purpose": "Deliberation Networks, keyword search (same purpose as S43)",
+   "query": "deliberation networks"
+  },
+  {
+   "id": "S45",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "MoE survey (explainer foundations) (explainer extension, 2026-09-24)",
+   "query": "mixture of experts sparsely gated routing survey",
+   "limit": 10
+  },
+  {
+   "id": "S46",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "GShard: first large MoE transformer for multilingual MT (explainer extension, 2026-09-24)",
+   "query": "GShard scaling giant models conditional computation automatic sharding",
+   "limit": 5
+  },
+  {
+   "id": "S47",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "ST-MoE: training stability, router z-loss (explainer extension, 2026-09-24)",
+   "query": "router z-loss stable transferable sparse expert models",
+   "limit": 5
+  },
+  {
+   "id": "S48",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Expert-choice routing (experts pick tokens) (explainer extension, 2026-09-24)",
+   "query": "expert choice routing mixture of experts",
+   "limit": 5
+  },
+  {
+   "id": "S49",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Hash routing (no learned router) (explainer extension, 2026-09-24)",
+   "query": "hash layers large sparse models",
+   "limit": 5
+  },
+  {
+   "id": "S50",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "BASE layers: routing as balanced assignment (explainer extension, 2026-09-24)",
+   "query": "BASE layers balanced assignment of experts",
+   "limit": 5
+  },
+  {
+   "id": "S51",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Soft MoE (weighted token mixtures) (explainer extension, 2026-09-24)",
+   "query": "soft mixture of experts",
+   "limit": 5
+  },
+  {
+   "id": "S52",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Load balancing without auxiliary loss (DeepSeek) (explainer extension, 2026-09-24)",
+   "query": "auxiliary-loss-free load balancing mixture of experts",
+   "limit": 6
+  },
+  {
+   "id": "S53",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Sparse upcycling: MoE from dense checkpoints (relevant to our encoder) (explainer extension, 2026-09-24)",
+   "query": "sparse upcycling dense checkpoint mixture of experts",
+   "limit": 5
+  },
+  {
+   "id": "S54",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "MoE systems: dropless training kernels (explainer extension, 2026-09-24)",
+   "query": "MegaBlocks efficient sparse training mixture of experts",
+   "limit": 5
+  },
+  {
+   "id": "S55",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Mixtral: open MoE model (explainer extension, 2026-09-24)",
+   "query": "Mixtral of experts",
+   "limit": 5
+  },
+  {
+   "id": "S56",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "OLMoE: fully open MoE with specialisation analysis (explainer extension, 2026-09-24)",
+   "query": "OLMoE open mixture of experts language models",
+   "limit": 5
+  },
+  {
+   "id": "S57",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "MoE scaling laws / granularity (explainer extension, 2026-09-24)",
+   "query": "scaling laws fine-grained mixture of experts",
+   "limit": 6
+  },
+  {
+   "id": "S58",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Scaling laws for routed LMs (explainer extension, 2026-09-24)",
+   "query": "unified scaling laws routed language models",
+   "limit": 5
+  },
+  {
+   "id": "S59",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Expert specialisation evidence (explainer extension, 2026-09-24)",
+   "query": "what do experts learn mixture of experts specialization analysis",
+   "limit": 8
+  },
+  {
+   "id": "S60",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Recent MoE routing work (2025+) (explainer extension, 2026-09-24)",
+   "query": "mixture of experts routing",
+   "limit": 15,
+   "start_date": "2025-01-01"
+  },
+  {
+   "id": "S61",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Recent expert specialisation work (2025+) (explainer extension, 2026-09-24)",
+   "query": "mixture of experts expert specialization",
+   "limit": 10,
+   "start_date": "2025-01-01"
+  },
+  {
+   "id": "S62",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Recent load-balancing work (2025+) (explainer extension, 2026-09-24)",
+   "query": "mixture of experts load balancing",
+   "limit": 10,
+   "start_date": "2025-01-01"
+  },
+  {
+   "id": "S63",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "MoE for multilingual MT (explainer extension, 2026-09-24)",
+   "query": "mixture of experts machine translation multilingual",
+   "limit": 8
+  },
+  {
+   "id": "S64",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Mixture-of-Depths: token-level compute routing (explainer extension, 2026-09-24)",
+   "query": "mixture-of-depths dynamically allocating compute transformer",
+   "limit": 5
+  },
+  {
+   "id": "S65",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "PonderNet: learned halting (explainer extension, 2026-09-24)",
+   "query": "PonderNet learning to ponder",
+   "limit": 5
+  },
+  {
+   "id": "S66",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Universal Transformers: recurrent depth with ACT (explainer extension, 2026-09-24)",
+   "query": "universal transformers",
+   "limit": 5
+  },
+  {
+   "id": "S67",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "CALM: early exit per token (explainer extension, 2026-09-24)",
+   "query": "confident adaptive language modeling early exit",
+   "limit": 5
+  },
+  {
+   "id": "S68",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Reward over-optimisation (Goodhart) evidence (explainer extension, 2026-09-24)",
+   "query": "scaling laws reward model overoptimization",
+   "limit": 5
+  },
+  {
+   "id": "S69",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Transformer foundations (explainer extension, 2026-09-24)",
+   "query": "attention is all you need transformer",
+   "limit": 3
+  },
+  {
+   "id": "S70",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "T5: encoder-decoder foundations (explainer extension, 2026-09-24)",
+   "query": "exploring the limits of transfer learning unified text-to-text transformer",
+   "limit": 3
+  },
+  {
+   "id": "S71",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Straight-through estimator for discrete choices (explainer extension, 2026-09-24)",
+   "query": "estimating or propagating gradients through stochastic neurons",
+   "limit": 3
+  },
+  {
+   "id": "S72",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Chinchilla compute accounting (explainer extension, 2026-09-24)",
+   "query": "training compute-optimal large language models",
+   "limit": 3
+  },
+  {
+   "id": "S73",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "MoE survey (explainer) (explainer extension, 2026-09-24)",
+   "query": "a survey on mixture of experts in large language models",
+   "limit": 6
+  },
+  {
+   "id": "S74",
+   "items": [
+    1,
+    2
+   ],
+   "purpose": "Transformer paper, keyword mode (explainer extension, 2026-09-24)",
+   "query": "Attention Is All You Need",
+   "limit": 6,
+   "mode": "keyword"
+  },
+  {
+   "id": "S75",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "test-time expert re-routing mixture of experts",
+   "limit": 8
+  },
+  {
+   "id": "S76",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "test-time optimization of expert routing weights in MoE language models",
+   "limit": 8
+  },
+  {
+   "id": "S77",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "re-route tokens to different experts after verification failure",
+   "limit": 8
+  },
+  {
+   "id": "S78",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "feedback-driven expert selection mixture of experts self-correction",
+   "limit": 8
+  },
+  {
+   "id": "S79",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "dynamic number of experts per token confidence based routing",
+   "limit": 8
+  },
+  {
+   "id": "S80",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "critic guided refinement of latent representation before decoding",
+   "limit": 8
+  },
+  {
+   "id": "S81",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "sentence embedding bottleneck decoder machine translation single vector",
+   "limit": 8
+  },
+  {
+   "id": "S82",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "quality estimation feedback loop iterative machine translation refinement",
+   "limit": 8
+  },
+  {
+   "id": "S83",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "mixture of experts routing reinforcement learning router policy",
+   "limit": 8
+  },
+  {
+   "id": "S84",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "Filipino Tagalog machine translation human evaluation error analysis",
+   "limit": 8
+  },
+  {
+   "id": "S85",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "mixture of experts routing critique verifier",
+   "limit": 8,
+   "start_date": "2026-06-01"
+  },
+  {
+   "id": "S86",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "latent self-correction before generation hidden state draft",
+   "limit": 8,
+   "start_date": "2026-06-01"
+  },
+  {
+   "id": "S87",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "adaptive computation mixture of experts revisit routing decision",
+   "limit": 8,
+   "start_date": "2026-01-01"
+  },
+  {
+   "id": "S88",
+   "items": [
+    1,
+    3
+   ],
+   "purpose": "prior-work audit, novelty gap check (2026-10-02)",
+   "query": "machine translation low-resource Philippine languages",
+   "limit": 8,
+   "start_date": "2026-01-01"
+  },
+  {
+   "id": "S89",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
+   "query": "reuse cached early layer activations recompute later layers transformer",
+   "limit": 8
+  },
+  {
+   "id": "S90",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
+   "query": "iterate middle layers recurrent depth encode think decode latent reasoning",
+   "limit": 8
+  },
+  {
+   "id": "S91",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
+   "query": "KV cache sharing across recursion steps recursive transformer",
+   "limit": 8
+  },
+  {
+   "id": "S92",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
+   "query": "prefix caching LLM serving reuse KV cache shared prefix",
+   "limit": 8
+  },
+  {
+   "id": "S93",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
+   "query": "inject feedback at intermediate layer transformer self-correction hidden states",
+   "limit": 8
+  },
+  {
+   "id": "S94",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
+   "query": "partial recomputation iterative refinement neural machine translation reuse encoder states",
+   "limit": 8
+  },
+  {
+   "id": "S95",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "layer-caching idea for repass (2026-10-05): prior work on reusing early-layer computation",
+   "query": "layer reuse adaptive depth looping pretrained transformer inference",
+   "limit": 8,
+   "start_date": "2025-06-01"
+  },
+  {
+   "id": "S96",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "lambda coupling under layer caching (2026-10-05): compute cost terms biasing policies",
+   "query": "compute penalty reward adaptive computation policy cost sensitivity",
+   "limit": 8
+  },
+  {
+   "id": "S97",
+   "items": [
+    1,
+    4
+   ],
+   "purpose": "lambda coupling under layer caching (2026-10-05): compute cost terms biasing policies",
+   "query": "cost-aware routing reinforcement learning cost penalty trade-off quality",
+   "limit": 8
+  },
+  {
+   "id": "S98",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "matched-compute comparison of the MetricX-24 and chrF++ routers along lambda sweeps (2026-10-05)",
+   "query": "compare adaptive computation methods at matched compute quality compute trade-off curve",
+   "limit": 8
+  },
+  {
+   "id": "S99",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "matched-compute comparison of the MetricX-24 and chrF++ routers along lambda sweeps (2026-10-05)",
+   "query": "reward scale sensitivity penalty coefficient different reward metrics reinforcement learning comparison",
+   "limit": 8
+  },
+  {
+   "id": "S100",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "matched-compute comparison of the MetricX-24 and chrF++ routers along lambda sweeps (2026-10-05)",
+   "query": "compute-matched evaluation test-time compute Pareto frontier comparison methods",
+   "limit": 8
+  },
+  {
+   "id": "S101",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 amendment: choosing lambda on a pilot to hit target compute levels (2026-10-07)",
+   "query": "calibrate threshold on held-out calibration set to target compute budget adaptive computation",
+   "limit": 8
+  },
+  {
+   "id": "S102",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 amendment: choosing lambda on a pilot to hit target compute levels (2026-10-07)",
+   "query": "tune cost penalty to meet target compute budget reinforcement learning router",
+   "limit": 8
+  },
+  {
+   "id": "S103",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 units amendment: per-stage compute penalty when actions differ ~50x in FLOP cost (2026-10-07)",
+   "query": "separate compute penalty per stage heterogeneous action cost adaptive computation reinforcement learning",
+   "limit": 8
+  },
+  {
+   "id": "S104",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 units amendment: per-stage compute penalty when actions differ ~50x in FLOP cost (2026-10-07)",
+   "query": "per-step cost penalty multi-stage cascade early exit reinforcement learning budget constraint lagrangian",
+   "limit": 8
+  },
+  {
+   "id": "S105",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 units amendment: per-stage compute penalty when actions differ ~50x in FLOP cost (2026-10-07)",
+   "query": "ponder cost halting policy collapse always halt never halt adaptive computation time",
+   "limit": 8
+  },
+  {
+   "id": "S106",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 per-stage: replacement test when lambda is tuned to a fixed redo rate (random-at-matched-rate and fixed-iteration baselines) (2026-10-07)",
+   "query": "random halting baseline matched compute rate adaptive computation learned policy versus random",
+   "limit": 8
+  },
+  {
+   "id": "S107",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 per-stage: replacement test when lambda is tuned to a fixed redo rate (random-at-matched-rate and fixed-iteration baselines) (2026-10-07)",
+   "query": "learned refinement decision versus fixed number of refinement iterations matched rate baseline translation",
+   "limit": 8
+  },
+  {
+   "id": "S108",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 per-stage: replacement test when lambda is tuned to a fixed redo rate (random-at-matched-rate and fixed-iteration baselines) (2026-10-07)",
+   "query": "budget-constrained policy fixed action rate Lagrangian degenerate policy evaluation random baseline same rate",
+   "limit": 8
+  },
+  {
+   "id": "S109",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 per-stage: matching the fixed-redo baseline (B4) to a non-integer average redo rate (2026-10-07)",
+   "query": "adaptive computation compared with fixed depth at the same average number of steps",
+   "limit": 8
+  },
+  {
+   "id": "S110",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 per-stage: matching the fixed-redo baseline (B4) to a non-integer average redo rate (2026-10-07)",
+   "query": "adaptive halting versus static fixed iterations matched average compute interpolation baseline",
+   "limit": 8
+  },
+  {
+   "id": "S111",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 per-stage tests: statistical power / sample size for human-label comparisons (2026-10-07)",
+   "query": "statistical power sample size human evaluation machine translation system comparison",
+   "limit": 8
+  },
+  {
+   "id": "S112",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 per-stage tests: statistical power / sample size for human-label comparisons (2026-10-07)",
+   "query": "underpowered NLP experiments statistical power analysis minimum detectable effect",
+   "limit": 8
+  },
+  {
+   "id": "S113",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 stage-1 B5: matching a random baseline in FLOPs when redo cost scales with sentence length (2026-10-07)",
+   "query": "random baseline matched compute stratified by input length adaptive computation sentence length cost",
+   "limit": 8
+  },
+  {
+   "id": "S114",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 stage-1 B5: matching a random baseline in FLOPs when redo cost scales with sentence length (2026-10-07)",
+   "query": "FLOPs-matched comparison input length dependent compute early exit translation length bias",
+   "limit": 8
+  },
+  {
+   "id": "S115",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 compute unit: ratio of sums vs mean of per-example ratios for average compute (2026-10-07)",
+   "query": "average FLOPs per token versus per example compute accounting adaptive computation variable length inputs",
+   "limit": 8
+  },
+  {
+   "id": "S116",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 compute unit: ratio of sums vs mean of per-example ratios for average compute (2026-10-07)",
+   "query": "ratio of sums versus mean of ratios efficiency metric aggregation bias",
+   "limit": 8
+  },
+  {
+   "id": "S117",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 per-language compute matching: tokenizer length disparity across languages (2026-10-07)",
+   "query": "tokenizer length disparity across languages unfairness token premium",
+   "limit": 8
+  },
+  {
+   "id": "S118",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 per-language compute matching: tokenizer length disparity across languages (2026-10-07)",
+   "query": "tokenization parity multilingual number of tokens per sentence differs by language cost",
+   "limit": 8
+  },
+  {
+   "id": "S119",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 per-language compute matching: tokenizer length disparity across languages (2026-10-07)",
+   "query": "tokenizer fertility low-resource languages Tagalog Filipino Austronesian",
+   "limit": 8
+  },
+  {
+   "id": "S120",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 full-run tolerance: RL policy compute drift between short calibration runs and full training (2026-10-07)",
+   "query": "compute budget drift between pilot calibration and full reinforcement learning training penalty coefficient",
+   "limit": 8
+  },
+  {
+   "id": "S121",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 full-run tolerance: RL policy compute drift between short calibration runs and full training (2026-10-07)",
+   "query": "Lagrangian multiplier adaptive cost constraint satisfied at convergence reinforcement learning target rate",
+   "limit": 8
+  },
+  {
+   "id": "S122",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 annotation recount: human MT error-span annotation time and number of systems (2026-10-07)",
+   "query": "error span annotation time per segment machine translation human evaluation cost MQM ESA",
+   "limit": 8
+  },
+  {
+   "id": "S123",
+   "items": [
+    3,
+    4
+   ],
+   "purpose": "D14 annotation unit: sentence-level vs paragraph/document-level human MT evaluation, time and context (2026-10-07)",
+   "query": "sentence-level versus document-level human evaluation machine translation context annotation time",
+   "limit": 8
+  },
+  {
+   "id": "S124",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Tranche-1 data survey: English-Filipino parallel corpora and their sizes (2026-10-07)",
+   "query": "English Tagalog Filipino parallel corpus machine translation low-resource dataset",
+   "limit": 8
+  },
+  {
+   "id": "S125",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Tranche-1 data survey: known quality issues of web-mined en-tl bitext (2026-10-07)",
+   "query": "quality audit of web-mined multilingual parallel corpora CCAligned WikiMatrix ParaCrawl low-resource languages",
+   "limit": 8
+  },
+  {
+   "id": "S126",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Tranche-1 data survey: how mined corpora (CCMatrix, NLLB) were made and filtered (2026-10-07)",
+   "query": "LASER margin-based bitext mining CCMatrix NLLB mined data noise filtering",
+   "limit": 8
+  },
+  {
+   "id": "S127",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Tranche-1 data survey: Philippine-language resource catalogues (SEACrowd and others) (2026-10-07)",
+   "query": "Philippine languages NLP resources survey datasets Tagalog Cebuano",
+   "limit": 8
+  },
+  {
+   "id": "S128",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): back-translation",
+   "query": "back-translation of monolingual target data for low-resource neural machine translation at scale",
+   "limit": 8
+  },
+  {
+   "id": "S129",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): forward translation / self-training",
+   "query": "iterative back-translation self-training forward translation low-resource machine translation",
+   "limit": 8
+  },
+  {
+   "id": "S130",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): sequence-level KD",
+   "query": "sequence-level knowledge distillation teacher student neural machine translation",
+   "limit": 8
+  },
+  {
+   "id": "S131",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): LLM-generated parallel data",
+   "query": "large language model generated synthetic parallel data for low-resource machine translation",
+   "limit": 8
+  },
+  {
+   "id": "S132",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): pivot / triangulation",
+   "query": "pivot language triangulation synthetic parallel corpus zero-resource translation",
+   "limit": 8
+  },
+  {
+   "id": "S133",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): sentence-encoder distillation (LASER3 / SONAR / Reimers)",
+   "query": "multilingual sentence embedding distillation teacher student LASER3 low-resource languages",
+   "limit": 8
+  },
+  {
+   "id": "S134",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): sentence-encoder distillation (Reimers & Gurevych)",
+   "query": "making monolingual sentence embeddings multilingual using knowledge distillation",
+   "limit": 8
+  },
+  {
+   "id": "S135",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): own bitext mining",
+   "query": "bitext mining from monolingual web crawl LaBSE margin scoring new language pairs",
+   "limit": 8
+  },
+  {
+   "id": "S136",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): comparable corpora / document alignment",
+   "query": "comparable corpora document alignment Wikipedia parallel sentence extraction",
+   "limit": 8
+  },
+  {
+   "id": "S137",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): dictionary / code-switching augmentation",
+   "query": "code-switching data augmentation bilingual dictionary substitution machine translation",
+   "limit": 8
+  },
+  {
+   "id": "S138",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): human post-editing",
+   "query": "human post-editing of machine translation to create low-resource parallel data SMOL",
+   "limit": 8
+  },
+  {
+   "id": "S139",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): QE / round-trip filtering of synthetic data",
+   "query": "quality estimation filtering of synthetic back-translated data round-trip consistency",
+   "limit": 8
+  },
+  {
+   "id": "S140",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): use of NLLB outputs as training data",
+   "query": "NLLB distilled synthetic data translation dataset created with NLLB-200 outputs",
+   "limit": 8
+  },
+  {
+   "id": "S141",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): testing synthetic data / translationese",
+   "query": "translationese in back-translated training data evaluation original source test sets",
+   "limit": 8
+  },
+  {
+   "id": "S142",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): back-translation (origin paper)",
+   "query": "Improving neural machine translation models with monolingual data back-translation Sennrich",
+   "limit": 8
+  },
+  {
+   "id": "S143",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): forward translation / self-training",
+   "query": "revisiting self-training for neural sequence generation noise",
+   "limit": 8
+  },
+  {
+   "id": "S144",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): use of NLLB outputs as training data",
+   "query": "Aya dataset collection translated with NLLB multilingual instruction data",
+   "limit": 8
+  },
+  {
+   "id": "S145",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): sentence-encoder distillation (SONAR)",
+   "query": "SONAR sentence-level multimodal and language-agnostic representations",
+   "limit": 8
+  },
+  {
+   "id": "S146",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): Filipino-specific data techniques",
+   "query": "Tagalog Filipino English machine translation low-resource",
+   "limit": 8
+  },
+  {
+   "id": "S147",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): Taglish code-switching",
+   "query": "Taglish code-switched Tagalog English corpus",
+   "limit": 8
+  },
+  {
+   "id": "S148",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): synthetic data for sentence embeddings",
+   "query": "synthetic data for training multilingual sentence embeddings translated pairs",
+   "limit": 8
+  },
+  {
+   "id": "S149",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): pivot / triangulation",
+   "query": "pivot-based transfer learning neural machine translation non-English language pairs",
+   "limit": 8
+  },
+  {
+   "id": "S150",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): dictionary augmentation",
+   "query": "data augmentation for low-resource neural machine translation rare word substitution",
+   "limit": 8
+  },
+  {
+   "id": "S151",
+   "items": [
+    1,
+    7
+   ],
+   "purpose": "Data-gathering techniques survey (2026-10-17): LLM teacher distillation for MT",
+   "query": "multilingual LLM translation fine-tuning with synthetic data from larger teacher distillation low-resource languages",
+   "limit": 8
+  },
+  {
+   "id": "S152",
+   "items": [
+    7
+   ],
+   "purpose": "Monolingual Filipino text screening (2026-10-17, D4): FineWeb-2 pipeline and per-language data",
+   "query": "FineWeb-2 multilingual pretraining data per language",
+   "limit": 8
+  },
+  {
+   "id": "S153",
+   "items": [
+    7
+   ],
+   "purpose": "Monolingual Filipino text screening (2026-10-17, D4): HPLT 2.0 corpus",
+   "query": "HPLT 2.0 multilingual web corpus",
+   "limit": 8
+  },
+  {
+   "id": "S154",
+   "items": [
+    7
+   ],
+   "purpose": "Monolingual Filipino text screening (2026-10-17, D4): CulturaX",
+   "query": "CulturaX cleaned multilingual dataset",
+   "limit": 8
+  },
+  {
+   "id": "S155",
+   "items": [
+    7
+   ],
+   "purpose": "Monolingual Filipino text screening (2026-10-17, D4): audits of web corpora for low-resource languages",
+   "query": "quality audit of multilingual web-crawled datasets low-resource languages",
+   "limit": 8
+  },
+  {
+   "id": "S156",
+   "items": [
+    7
+   ],
+   "purpose": "Monolingual Filipino text screening (2026-10-17, D4): existing Filipino monolingual corpora",
+   "query": "Tagalog Filipino monolingual corpus language model pretraining",
+   "limit": 8
+  },
+  {
+   "id": "S157",
+   "items": [
+    7
+   ],
+   "purpose": "Monolingual Filipino text screening (2026-10-17, D4): MADLAD-400 data audit",
+   "query": "MADLAD-400 multilingual document-level audited dataset",
+   "limit": 8
+  },
+  {
+   "id": "S158",
+   "items": [
+    7
+   ],
+   "purpose": "Monolingual Filipino text screening (2026-10-17, D4): cross-corpus agreement for multilingual pretraining data",
+   "query": "cross-source agreement multilingual pretraining datasets deduplication",
+   "limit": 8
+  },
+  {
+   "id": "S159",
+   "items": [
+    7
+   ],
+   "purpose": "Monolingual Filipino text screening (2026-10-17, D4): denoising pretraining for MT sentence encoders",
+   "query": "multilingual denoising pretraining sequence-to-sequence machine translation",
+   "limit": 8
+  },
+  {
+   "id": "S160",
+   "items": [
+    7
+   ],
+   "purpose": "Monolingual Filipino text screening (2026-10-17, D4): Wikipedia quality for low-resource languages",
+   "query": "Wikipedia data quality low-resource languages audit",
+   "limit": 8
+  },
+  {
+   "id": "S161",
+   "items": [
+    7
+   ],
+   "purpose": "Monolingual Filipino text screening (2026-10-17, D4): Glot500 / MaLA corpora for Tagalog",
+   "query": "massively multilingual corpus 500 languages continued pretraining",
+   "limit": 8
+  },
+  {
+   "id": "S162",
+   "items": [
+    1
+   ],
+   "purpose": "D30 item 2 (2026-10-20): how the drafter's register setting rho is set in training; register/formality control in MT",
+   "query": "controlling politeness neural machine translation side constraints",
+   "limit": 8
+  },
+  {
+   "id": "S163",
+   "items": [
+    1
+   ],
+   "purpose": "D30 item 2 (2026-10-20): how the drafter's register setting rho is set in training; register/formality control in MT",
+   "query": "formality controlled machine translation",
+   "limit": 8
+  },
+  {
+   "id": "S164",
+   "items": [
+    1
+   ],
+   "purpose": "D30 item 2 (2026-10-20): how the drafter's register setting rho is set in training; register/formality control in MT",
+   "query": "contrastive conditioning formality honorifics machine translation",
+   "limit": 8
+  },
+  {
+   "id": "S165",
+   "items": [
+    1
+   ],
+   "purpose": "D30 item 2 (2026-10-20): how the drafter's register setting rho is set in training; register/formality control in MT",
+   "query": "attribute-controlled translation few-shot formality",
+   "limit": 8
+  },
+  {
+   "id": "S166",
+   "items": [
+    1
+   ],
+   "purpose": "D30 item 2 (2026-10-20): how the drafter's register setting rho is set in training; register/formality control in MT",
+   "query": "control codes conditional generation style tags",
+   "limit": 8
+  },
+  {
+   "id": "S167",
+   "items": [
+    1
+   ],
+   "purpose": "D30 item 2 (2026-10-20): how the drafter's register setting rho is set in training; register/formality control in MT",
+   "query": "classifier-free guidance condition dropout text generation",
+   "limit": 8
+  },
+  {
+   "id": "S168",
+   "items": [
+    1
+   ],
+   "purpose": "D30 item 2 (2026-10-20): how the drafter's register setting rho is set in training; register/formality control in MT",
+   "query": "CoCoA-MT contrastive controlled formality dataset",
+   "limit": 8
+  },
+  {
+   "id": "S169",
+   "items": [
+    1
+   ],
+   "purpose": "D30 item 2 (2026-10-20): how the drafter's register setting rho is set in training; register/formality control in MT",
+   "query": "formality control machine translation shared task IWSLT",
+   "limit": 8
+  },
+  {
+   "id": "S170",
+   "items": [
+    1
+   ],
+   "purpose": "D30 item 2 (2026-10-20): how the drafter's register setting rho is set in training; register/formality control in MT",
+   "query": "politeness honorifics neural machine translation tag",
+   "limit": 8
+  }
+ ],
+ "_external": [
+  {
+   "record": "research/diligence/A5-contamination.md",
+   "section": "search appendix",
+   "tools": "pwc, web search/fetch, gh, Hugging Face API",
+   "date": "2026-09-24",
+   "by": "A5 review"
+  },
+  {
+   "record": "research/diligence/A6-metric-validity.md",
+   "section": "Appendix A",
+   "tools": "pwc, web search/fetch, Hugging Face API",
+   "date": "2026-09-24",
+   "by": "A6 review"
+  },
+  {
+   "record": "research/diligence/A7-venues.md",
+   "section": "6. Search appendix",
+   "tools": "web search/fetch, pwc",
+   "date": "2026-09-24",
+   "by": "A7 review"
+  },
+  {
+   "record": "research/data-survey/en-fil-parallel-2026-10-07.md",
+   "section": "Appendix A. Retrieval log",
+   "tools": "OPUS API (curl), Helsinki-NLP/OPUS GitHub corpus metadata, Hugging Face API, SEACrowd HF org listing",
+   "date": "2026-10-07",
+   "by": "data survey"
+  }
+ ]
 }

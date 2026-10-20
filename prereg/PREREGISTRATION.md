@@ -180,7 +180,11 @@ with the target encoder.
 - **(iv) Readable form:** a linear probe trained on reference z_t with reference labels, applied to
   the drafter's z_t, reaches balanced accuracy ≥ 0.75 against the labels of the drafter's own decoded
   text. For *ay* this needs ≥ 500 drafts of each form; otherwise the *ay* leg is inconclusive, not
-  passed.
+  passed. Each *ay*-set source is drafted under both word-order settings of ρ (D31), and the
+  inversion rate under each setting is reported.
+- **ρ in training (D31):** politeness (polite / plain / neutral) and word order (inverted /
+  predicate-first), both labelled automatically from the reference; a labelled pair is marked with
+  probability 0.5, a neutral pair with a random setting at the same probability, redrawn each epoch.
 - **Diagnostics, not pass conditions:** the probe on the drafter's z_t against reference labels; the
   drafter-minus-z_m gap; a probe on encodings of the English sides (how much the English predicts each
   choice).

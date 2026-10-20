@@ -364,3 +364,12 @@
 {"time": "2026-10-17T18:33:39+00:00", "action": "download_md", "arxiv": "2203.08111", "source": "pwc paper read 2203.08111", "sha256": "d1fd59330d3e01e7a788fcab4cabffbd480618ee553ccf9227ebe275a483ba28"}
 {"time": "2026-10-17T18:33:39+00:00", "action": "build", "papers": 176, "unverified": ["2603.08391", "2502.14301", "2603.16309"]}
 {"time": "2026-10-19T03:35:52+00:00", "action": "build", "papers": 179, "unverified": []}
+{"time": "2026-10-20T12:33:06+00:00", "action": "download_pdf", "paper": "naacl2016-politeness-side-constraints", "url": "https://aclanthology.org/N16-1005.pdf", "sha256": "35036472b8b21fe84b93f38fb6cdabeeba6c707408522279c52fc3c777b229a3"}
+{"time": "2026-10-20T12:33:06+00:00", "action": "build_proceedings_only", "papers": 180, "unverified": []}
+{"time": "2026-10-20T12:53:12+00:00", "action": "download_pdf", "arxiv": "2205.04022", "version": "v1", "url": "https://arxiv.org/pdf/2205.04022v1", "sha256": "9cfacc6bbdab938026723d7009b6bda5a5abfc058ffd373dac40bd5688ccc548"}
+{"time": "2026-10-20T12:53:23+00:00", "action": "download_pdf", "arxiv": "1909.05858", "version": "v2", "url": "https://arxiv.org/pdf/1909.05858v2", "sha256": "ab5e56e3aabe4495f487107d4fceab52d0669d32176159716080cf1d3df48b7e"}
+{"time": "2026-10-20T12:53:28+00:00", "action": "download_md", "arxiv": "1909.05858", "source": "pwc paper read 1909.05858", "sha256": "ae7efc0bca7c10c379e56db5839c01473e62ab965eac11f006e86cb1af5df6aa"}
+{"time": "2026-10-20T12:53:35+00:00", "action": "download_pdf", "arxiv": "1612.06140", "version": "v2", "url": "https://arxiv.org/pdf/1612.06140v2", "sha256": "f2e8b0dac4e8953dff519c9e84779e5b127174e24cb9e7a678e1df21658cf59e"}
+{"time": "2026-10-20T12:53:46+00:00", "action": "download_pdf", "arxiv": "2207.12598", "version": "v1", "url": "https://arxiv.org/pdf/2207.12598v1", "sha256": "ccbdf2da65903ed579d35240165aba2d0e9ad6f015ade81af6e30823eb0a7f24"}
+{"time": "2026-10-20T12:53:51+00:00", "action": "download_md", "arxiv": "2207.12598", "source": "pwc paper read 2207.12598", "sha256": "19cf358fc5216bb9fdf016011d6f103d0dc8ca0cd214066e809ab85952fe90d2"}
+{"time": "2026-10-20T12:53:51+00:00", "action": "build", "papers": 184, "unverified": []}

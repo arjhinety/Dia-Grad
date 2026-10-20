@@ -2470,6 +2470,79 @@
    "role": "background",
    "reviewed": false,
    "why": "Artetxe et al.: corpus quality and low-resource representation learning (Basque); evidence on whether cleaner web text matters (2026-10-17 monolingual-text screening, D4; searches S152-S161)"
+  },
+  {
+   "id": "naacl2016-politeness-side-constraints",
+   "proceedings": {
+    "bibtex_url": "https://aclanthology.org/N16-1005.bib",
+    "pdf_url": "https://aclanthology.org/N16-1005.pdf",
+    "openalex": "W2467834614"
+   },
+   "topics": [
+    "mt",
+    "control",
+    "politeness"
+   ],
+   "items": [
+    1
+   ],
+   "role": "method-source",
+   "reviewed": false,
+   "why": "Sennrich, Haddow and Birch: politeness in NMT controlled by a side-constraint tag, the precedent for conditioning a translation model on a register label (2026-10-20, D30 item 2: how the drafter's register setting is set in training; searches S162-S170)"
+  },
+  {
+   "arxiv": "2205.04022",
+   "topics": [
+    "mt",
+    "control",
+    "formality"
+   ],
+   "items": [
+    1
+   ],
+   "role": "method-source",
+   "reviewed": false,
+   "why": "CoCoA-MT: contrastive controlled MT for formality, dataset and benchmark (2026-10-20, D30 item 2: how the drafter's register setting is set in training; searches S162-S170)"
+  },
+  {
+   "arxiv": "1909.05858",
+   "topics": [
+    "control",
+    "generation"
+   ],
+   "items": [
+    1
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "CTRL: control codes for conditional generation (2026-10-20, D30 item 2: how the drafter's register setting is set in training; searches S162-S170)"
+  },
+  {
+   "arxiv": "1612.06140",
+   "topics": [
+    "mt",
+    "control",
+    "domain"
+   ],
+   "items": [
+    1
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Domain control for NMT with domain tags; a source-derived label as a control input (2026-10-20, D30 item 2: how the drafter's register setting is set in training; searches S162-S170)"
+  },
+  {
+   "arxiv": "2207.12598",
+   "topics": [
+    "control",
+    "diffusion"
+   ],
+   "items": [
+    1
+   ],
+   "role": "background",
+   "reviewed": false,
+   "why": "Classifier-free guidance: a condition dropped at random in training so one model serves conditioned and unconditioned use (2026-10-20, D30 item 2: how the drafter's register setting is set in training; searches S162-S170)"
   }
  ]
 }

@@ -416,3 +416,36 @@ fewer than 80% of *po* sentences) or if the drafter writes fewer than 500 senten
 form. *ay*-inversion is associated with formal or careful style rather than politeness, so a
 politeness setting is not expected to steer it. The thresholds are a judgement; the round-trip
 metric follows 2412.08821. The full rule is in `prereg/PREREGISTRATION.md` §7a.
+
+### D31. The register setting in tranche 1: politeness and word order, derived from the reference
+
+**Decision (2026-10-20).** During tranche-1 training, ρ has two settings, each derived automatically
+from the Filipino reference of a training pair: politeness (polite when *po/opo/ho/oho* is present,
+plain for second-person address without them, otherwise neutral) and word order (inverted when
+*ay*-inversion is detected, otherwise predicate-first). A labelled pair carries its setting with
+probability 0.5; a neutral pair carries a random setting with the same probability; marks are redrawn
+each epoch.
+
+**Rationale.** Target-side labels attached as side constraints to part of the training data controlled
+German politeness in subtitle translation: with the constraint "polite", 1,728 of 2,000 outputs were
+polite and 64 informal [paper: sennrich2016controlling, Table 2]. Marking only part of the data, and
+marking neutral sentences at random, lets the model translate without a setting and ignore one that
+does not apply; classifier-free guidance uses the same device of dropping the condition during
+training [paper: 2207.12598, Algorithm 1]. *ay*-inversion is associated with formal or careful style
+rather than politeness, so a politeness setting alone would not steer it, and inversion is rare
+(3.1% of the subtitle pool). Without a word-order setting the drafter would seldom write inverted
+sentences, and the *ay* leg of the drafter checks (D30) would likely be inconclusive.
+
+**Alternatives considered.** A politeness setting only, which leaves the *ay* question unanswerable in
+tranche 1. A formality setting taken from the source corpus, in the manner of domain tags
+[paper: 1612.06140]; it would encode the corpus as well as formality, and the *ay* probe sentences are
+all from subtitles, so a weak result could not be attributed to the drafter.
+
+**Use in the checks.** Each *ay* probe source is drafted under both order settings. The inversion rate
+under each setting is reported; it is not a pass condition, but if the setting does not take, the *ay*
+leg remains inconclusive.
+
+**Scope.** The order setting is a measurement device for tranche 1, not a register a user would
+declare. The full system's register setting (formality and English–Filipino mix) is unchanged. The
+label rules are checked by a language review before use [judgement for the extension to word order;
+no published work controls word order this way].
