@@ -396,4 +396,23 @@ order, and z_t must carry the form its own decoded text shows. Averaging is the 
 exists to catch: a regression model "generates their average in SONAR space … which may not correspond
 to any relevant point" [paper: 2412.08821, §2.4.1], and the same work measures it by the distance a
 vector moves when decoded and re-encoded. The reference-label probe is still reported as a diagnostic.
-Pass thresholds are set before tranche 1 starts.
+
+**Pass rule (2026-10-20).** Each measurement is also taken on reference z_t over the same sentences,
+and each check uses the conservative end of a 95% bootstrap interval that resamples source sentences:
+1. *Meaning*: decoded chrF++ under each register setting is at least 90% of that of decoded
+   reference z_t, so a drafter cannot pass by producing a few fluent but unrelated sentences.
+2. *No averaging*: the median and 90th-percentile distance a vector moves when decoded and re-encoded
+   are at most 1.5 times those of reference z_t. Synthetic averages serve as a positive control; if
+   they do not move clearly more than real vectors, the check is reported as inconclusive.
+3. *Register control*: *po* appears in at least 70% of drafts with ρ = polite and at most 10% with
+   ρ = plain, with a paired difference of at least 0.60. Because *po* is a clitic whose placement is
+   constrained, a blind sample is also checked for grammatical placement and preserved meaning.
+4. *Readable form*: a linear probe trained on reference z_t, applied to the drafter's z_t, reaches
+   balanced accuracy of at least 0.75 against the labels of the drafter's own decoded text. Training
+   the probe on reference vectors keeps it from simply reading the register setting.
+
+A leg is inconclusive, never passed, if its yardstick is weak (decoded reference z_t keeps *po* in
+fewer than 80% of *po* sentences) or if the drafter writes fewer than 500 sentences of either *ay*
+form. *ay*-inversion is associated with formal or careful style rather than politeness, so a
+politeness setting is not expected to steer it. The thresholds are a judgement; the round-trip
+metric follows 2412.08821. The full rule is in `prereg/PREREGISTRATION.md` §7a.

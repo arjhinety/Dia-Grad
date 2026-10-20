@@ -81,7 +81,7 @@ preregistration before training starts):
 |---|---|
 | Sentence space works | retrieval error ≤ 5% (en↔fil, SMOL); translation decoded from the vector ≥ 80% of MADLAD-400-3B's chrF++ |
 | Meaning draft lacks surface form | linear-probe balanced accuracy ≤ 0.65 for *po/opo* and *ay*-inversion |
-| Target draft carries it | reference encoding ≥ 0.85; the drafter's own output ≥ 0.75, gap to the meaning draft above 0 at 95% |
+| Target draft carries it | reference encoding ≥ 0.85; the drafter's output, decoded, keeps the meaning, is not an average of forms, switches *po* with the register setting, and shows its form readably (D30) |
 
 Any failure has a pre-stated consequence: simplify to one draft, revise the drafter, or stop.
 

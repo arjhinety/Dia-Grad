@@ -154,13 +154,51 @@ cross-validation and at least 500 sentences per class. Labels are automatic: a t
 | Sentence space works | cross-lingual retrieval error ≤ 5% (en↔fil, the clean subset of the 754 SMOL SmolSent pairs; D19, D20), and en→fil translation decoded from the single vector reaches ≥ 80% of MADLAD-400-3B's chrF++ (as released) on the same pairs |
 | z_m lacks surface form | probe on z_m (meaning encoding of the Filipino reference) ≤ 0.65 for *po/opo* and for *ay*-inversion |
 | z_t can carry it | probe on the reference z_t (target encoder) ≥ 0.85 on both |
-| The drafter delivers it | probe on the drafter's z_t ≥ 0.75 on both, and the lower end of the two-sided 95% bootstrap interval of the drafter-minus-z_m gap (2.5th percentile; resampling sentences, 10,000 resamples) is > 0 |
+| The drafter delivers it | the four drafter checks below (D30) all pass |
+
+**Drafter checks (D30, decided 2026-10-20, before any tranche-1 result).** The drafter sees only the
+English source (as z_m), the target language and the register setting ρ, so it cannot carry the
+reference translator's free choices beyond what the English carries. It is therefore scored on what it
+writes, each measurement also taken on reference z_t over the same sentences as the yardstick. Every
+check uses the conservative end of a two-sided 95% bootstrap interval (10,000 resamples) that resamples
+source sentences, keeping a source's polite and plain drafts together; probe folds are grouped by
+source. Decoding settings, distance and normalisation are fixed before the run; vectors are re-encoded
+with the target encoder.
+- **Yardstick (precondition for the *po* legs):** decoded reference z_t keeps *po* in ≥ 80% of *po*
+  sentences and adds it to ≤ 5% of the others. Otherwise the *po* legs are inconclusive.
+- **(i) Meaning:** under each ρ, the drafter's decoded chrF++ against the reference is ≥ 90% of that of
+  decoded reference z_t. A blind LLM-judge check of 200 polite/plain pairs (meaning kept, *po* placed
+  grammatically) is reported beside it.
+- **(ii) No averaging (round-trip consistency):** the median and the 90th percentile of the distance
+  a vector moves when decoded and re-encoded are each ≤ 1.5× those of reference z_t. Positive control:
+  synthetic averages (the mean of a sentence's reference z_t and that of the same sentence with *po*
+  removed) must move clearly more than reference vectors; if not, the check is uninformative and
+  reported as inconclusive.
+- **(iii) Register control:** each *po*-set source is drafted with ρ = polite and with ρ = plain;
+  *po* appears in ≥ 70% of polite drafts and ≤ 10% of plain drafts, and the paired difference is
+  ≥ 0.60.
+- **(iv) Readable form:** a linear probe trained on reference z_t with reference labels, applied to
+  the drafter's z_t, reaches balanced accuracy ≥ 0.75 against the labels of the drafter's own decoded
+  text. For *ay* this needs ≥ 500 drafts of each form; otherwise the *ay* leg is inconclusive, not
+  passed.
+- **Diagnostics, not pass conditions:** the probe on the drafter's z_t against reference labels; the
+  drafter-minus-z_m gap; a probe on encodings of the English sides (how much the English predicts each
+  choice).
+- **Labels for decoded drafts:** the automatic labellers are extended before the run to *ho/oho* and
+  to contracted *'y* forms (*siya'y*, *ito'y*); *Opo* used as "yes" becomes *Oo* in a plain draft. The
+  probe sets `t1-probes-v1` keep their original labels (about 0.5% noise from contracted forms,
+  documented).
 
 Outcomes:
 - all pass: proceed to tranche 2;
-- z_m > 0.65: a single draft may suffice, so simplify the design;
-- reference z_t passes but the drafter does not: regression averaging (LCM) has materialised, so
-  revise the drafter before tranche 2;
+- z_m > 0.65: a single draft may suffice, so simplify the design (the z_m check measures linear
+  readability of the form, not its absence);
+- reference z_t passes but drafter check (ii) fails: regression averaging (LCM) has materialised, so
+  revise the drafter (diffusion or quantised) before tranche 2; (iii) alone fails: revise the
+  conditioning on ρ; (i) or (iv) fails: diagnose before any architecture change;
+- a leg is inconclusive (weak yardstick, too few drafts, failed positive control): it is not counted as
+  passed; one retest of a revised drafter is allowed on this probe set, a second needs fresh probe data
+  (QED is the reserve);
 - sentence space fails: stop and rethink the substrate (e.g. few-vector drafts);
 - a confidence interval straddles a threshold: the tranche margin buys one more seed or a larger
   probe set, and tranche 2 does not start until it is resolved.
