@@ -29,3 +29,6 @@ research/raw/
 research/notes/*.md
 !research/notes/final_report_*.md
 research/runs/*/temp/hplt-html/
+
+# Local virtual environments (CI creates .venv in the checkout)
+.venv/

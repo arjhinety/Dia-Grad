@@ -45,6 +45,24 @@ for m in tar.getmembers():
 # forbidden pattern may match anywhere in the tree.
 rules = yaml.safe_load(open(f"{root}/scripts/public-rewrites.yaml", encoding="utf-8"))
 rewritten = Counter()
+def texts():
+    for f in sorted(Path(out).rglob("*")):
+        if f.is_file():
+            try:
+                yield f, f.read_text(encoding="utf-8")
+            except UnicodeDecodeError:
+                pass
+# Pattern rewrites: every match in every text file (optionally limited to `paths` globs).
+for r in rules.get("patterns", []):
+    pat = re.compile(r["pattern"], re.M)
+    for f, text in texts():
+        rel = str(f.relative_to(out))
+        if r.get("paths") and not any(fnmatch.fnmatchcase(rel, g) for g in r["paths"]):
+            continue
+        new, n = pat.subn(r["replace"], text)
+        if n:
+            f.write_text(new, encoding="utf-8")
+            rewritten[rel] += n
 for r in rules["rewrites"]:
     f = Path(out, r["path"])
     if not f.exists():
@@ -57,14 +75,11 @@ for r in rules["rewrites"]:
         f.write_text(text.replace(r["old"], r["new"]), encoding="utf-8")
         rewritten[r["path"]] += 1
 bad = []
-for f in sorted(Path(out).rglob("*")):
-    if not f.is_file():
-        continue
-    try:
-        text = f.read_text(encoding="utf-8")
-    except UnicodeDecodeError:
-        continue
-    bad += [f"{f.relative_to(out)}: {pat}" for pat in rules["forbidden"] if re.search(pat, text)]
+for f, text in texts():
+    for pat in rules["forbidden"]:
+        for m in re.finditer(pat, text, re.M):
+            line = text[:m.start()].count("\n") + 1
+            bad.append(f"{f.relative_to(out)}:{line}: {pat}")
 if bad:
     sys.exit("forbidden wording left in the public tree:\n" + "\n".join(bad))
 json.dump({"source": "private DiaGrad working repository", "source_commit": sha, "files": kept,
