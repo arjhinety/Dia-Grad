@@ -185,6 +185,8 @@ with the target encoder.
 - **ρ in training (D31):** politeness (polite / plain / neutral) and word order (inverted /
   predicate-first), both labelled automatically from the reference; a labelled pair is marked with
   probability 0.5, a neutral pair with a random setting at the same probability, redrawn each epoch.
+- **Drafter architecture (D32):** the checks above judge a dense drafter. The same checks are then
+  run on a small MoE sparse-upcycled from it and reported beside the gate, not counted in it.
 - **Diagnostics, not pass conditions:** the probe on the drafter's z_t against reference labels; the
   drafter-minus-z_m gap; a probe on encodings of the English sides (how much the English predicts each
   choice).

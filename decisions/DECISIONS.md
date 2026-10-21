@@ -78,7 +78,7 @@ first testbed. The term was not found in our literature searches; this is not a 
 
 **Decision (2026-09-24).**
 1. The target drafter is a small MoE with its own prior router, so that REROUTE is defined in both
-   stages and the MoE-specific test also covers surface errors.
+   stages and the MoE-specific test also covers surface errors. From tranche 2 (D32); the tranche-1 gate uses a dense drafter.
 2. The router's reward uses Q = −MetricX-24 (D14), with a human-label check, plus a comparison router
    rewarded by chrF++. A composite of chrF++ minus the critics' own penalties was rejected: the router
    would be graded by the critics it acts on.
@@ -449,3 +449,30 @@ leg remains inconclusive.
 declare. The full system's register setting (formality and English–Filipino mix) is unchanged. The
 label rules are checked by a language review before use [judgement for the extension to word order;
 no published work controls word order this way].
+
+### D32. A dense drafter for the tranche-1 gate, with an upcycled MoE reported beside it
+
+**Decision (2026-10-21).** The drafter judged by the tranche-1 gate is a dense transformer. After
+training, it is converted into a small MoE by sparse upcycling, in which each expert is initialised
+from the trained dense feed-forward layer; the MoE is trained further and run through the same four
+drafter checks, and its results are reported beside the gate rather than counted in it. The MoE
+drafter of D8 applies from tranche 2 and starts from the upcycled model.
+
+**Rationale.** The MoE drafter exists so that REROUTE is defined at the target stage, which is tested
+in tranche 2; tranche 1 tests the representation. A dense drafter answers whether a drafted vector
+carries surface form with fewer possible causes of failure, and matches the closest precedent: the
+Base-LCM sentence-vector model is "a standard decoder-only Transformer surrounded with a PreNet and a
+PostNet" [paper: 2412.08821, Fig. 4]. Sparse upcycling improved T5-Base and T5-Large over their dense
+versions with about half of the original training cost [paper: 2212.05055], and its authors propose
+it for the case where it is not known whether a dense or an MoE model is better. Small sparse models
+are rarely unstable [paper: 2202.08906, §3]. An MoE does not by itself remove the averaging risk,
+since the same inputs reach the same experts and yield the same vector; that risk is addressed by the
+training loss.
+
+**Alternatives considered.** A dense drafter alone, which defers the question of whether the gate
+result transfers to the MoE drafter; and an MoE drafter as the gate, which adds routing settings and
+failure causes that tranche 1 is not designed to measure.
+
+**What would revise it.** The upcycled MoE failing a check that the dense drafter passes (the result
+does not transfer), or clearly outperforming it on meaning or averaging (routing matters for the
+representation question).
